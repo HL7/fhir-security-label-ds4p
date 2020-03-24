@@ -1,0 +1,32 @@
+{
+  "meta": {
+    "security": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+        "code": "R",
+        "display": "Restricted",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-classifier",
+            "valueContributor": {
+              "type": "reviewer",
+              "name": "John Doe",
+              "contact": [
+                {
+                  "name": "John Doe",
+                  "telecom": [
+                    {
+                      "system": "email",
+                      "value": "john@doe.com",
+                      "use": "work"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
