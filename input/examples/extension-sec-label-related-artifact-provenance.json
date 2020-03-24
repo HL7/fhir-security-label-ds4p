@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "security": [
+      {
+        "system": "https://build.fhir.org/v3/ObservationValue/cs.html",
+        "code": "PATRPT",
+        "display": "patient reported",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact",
+            "valueRelatedArtifact": {
+              "type": "documentation",
+              "resource": {
+                "reference": "http://example.fhir.org/base/Provenance/723840",
+                "type": "Provenance",
+                "display": "patient-provided data"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
