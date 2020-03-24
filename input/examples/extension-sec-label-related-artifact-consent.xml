@@ -1,0 +1,18 @@
+<meta>
+	<security>
+		<system value="http://terminology.hl7.org/CodeSystem/v3-Confidentiality" />
+		<code value="R" />
+		<display value="Restricted" />
+		<extension url="http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact
+">
+			<valueRelatedArtifact>
+				<type value="justification" />
+				<resource>
+					<reference value="http://example.fhir.org/base/Consent/218304" />
+					<type value="Consent" />
+					<display value="restricted by patient consent" />
+				</resource>
+			</valueRelatedArtifact>
+		</extension>
+	</security>
+</meta>

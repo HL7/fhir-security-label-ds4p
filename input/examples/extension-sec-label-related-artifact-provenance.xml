@@ -1,0 +1,18 @@
+<meta>
+	<security>
+		<system value="https://build.fhir.org/v3/ObservationValue/cs.html" />
+		<code value="PATRPT" />
+		<display value="patient reported" />
+		<extension url="http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact
+">
+			<valueRelatedArtifact>
+				<type value="documentation" />
+				<resource>
+					<reference value="http://example.fhir.org/base/Provenance/723840" />
+					<type value="Provenance" />
+					<display value="patient-provided data" />
+				</resource>
+			</valueRelatedArtifact>
+		</extension>
+	</security>
+</meta>

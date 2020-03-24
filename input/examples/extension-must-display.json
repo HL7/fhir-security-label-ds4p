@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/extension-must-display",
+        "valueAnnotation": {
+          "authorReference": {
+            "reference": "http://example.fhir.org/Organization/vha",
+            "type": "Organization",
+            "display": "Veteran Health Administration"
+          },
+          "text": "**CUI//SP-HLTH/HLTH/PRVCY**\r\n\r\n ([Veterans Health Administration, Washington, DC 20420](http://example.fhir.org/Organization/vha))"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+<meta>
+	<security>
+		<system value="http://terminology.hl7.org/CodeSystem/v3-Confidentiality" />
+		<code value="R" />
+		<display value="Restricted" />
+		<extension url="http://hl7.org/fhir/StructureDefinition/extension-sec-label-classifier">
+			<valueContributor>
+				<type value="reviewer" />
+				<name value="John Doe" />
+				<contact>
+					<name value="John Doe" />
+					<telecom>
+						<system value="email" />
+						<value value="john@doe.com" />
+						<use value="work" />
+					</telecom>
+				</contact>
+			</valueContributor>
+		</extension>
+	</security>
+</meta>
