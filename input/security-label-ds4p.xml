@@ -46,7 +46,7 @@
       <page>
         <nameUrl value="index.html"/>
         <title value="Security Label DS4P Home Page"/>
-        <generation value="html"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="background.html"/>
