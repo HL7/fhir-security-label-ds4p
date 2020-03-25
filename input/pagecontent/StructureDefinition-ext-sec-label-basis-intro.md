@@ -1,0 +1,2 @@
+### Introduction
+The Security Label Basis Extension captures the policy or regulation based on which the label has been assigned. This extension can be used to distinguish sets of labels that are assigned based on different policies or regulations, for example, 42 CFR Part 2, or Controlled Unclassified Information (CUI).
