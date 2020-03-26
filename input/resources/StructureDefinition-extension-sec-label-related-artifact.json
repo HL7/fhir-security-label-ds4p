@@ -45,6 +45,12 @@
             "severity": "error",
             "human": "RelatedArtifact.type  must be either 'justification' (for patient consent) or 'documentation' (for provenance)",
             "expression": "type='documentation' or type='justification'"
+          },
+          {
+            "key": "ext-2",
+            "severity": "error",
+            "human": "Must provide at least one of RelatedArtifact.resource or RelatedArtifact.url or RelatedArtifact.document",
+            "expression": "resource.exists() or url.exists() or document.exists()"
           }
         ]
       }
