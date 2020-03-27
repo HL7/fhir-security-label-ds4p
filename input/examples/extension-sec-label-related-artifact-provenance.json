@@ -1,4 +1,5 @@
 {
+  "resourceType": "Observation",
   "meta": {
     "security": [
       {
@@ -20,5 +21,19 @@
         ]
       }
     ]
+  },
+  "id": "O001",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://acmelabs.org",
+        "code": "104177",
+        "display": "Blood culture"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/P001"
   }
 }
