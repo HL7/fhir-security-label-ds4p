@@ -27,9 +27,9 @@
   "code": {
     "coding": [
       {
-        "system": "http://acmelabs.org",
-        "code": "104177",
-        "display": "Blood culture"
+        "system": "http://loinc.org",
+        "code": "8331-1",
+        "display": "Oral temperature"
       }
     ]
   },

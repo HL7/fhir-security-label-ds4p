@@ -21,9 +21,9 @@
 	<status value="final"/>
 	<code>
 		<coding>
-			<system value="http://acmelabs.org"/>
-			<code value="104177"/>
-			<display value="Blood culture"/>
+			<system value="http://loinc.org"/>
+			<code value="8331-1"/>
+			<display value="Oral temperature"/>
 		</coding>
 	</code>
 	<subject>
