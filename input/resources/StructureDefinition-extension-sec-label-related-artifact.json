@@ -1,6 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact",
+  "id": "extension-sec-label-related-artifact",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-related-artifact",
   "name": "extension-sec-label-related-artifact",
   "title": "Related Artifacts to the Security Label",
   "version": "0.1",
@@ -28,7 +29,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact"
+        "fixedUri": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-related-artifact"
       },
       {
         "id": "Extension.valueRelatedArtifact",
