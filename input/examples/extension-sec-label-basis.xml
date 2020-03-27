@@ -1,14 +1,28 @@
-<meta>
-	<security>
-		<system value="http://terminology.hl7.org/CodeSystem/v3-Confidentiality" />
-		<code value="R" />
-		<display value="Restricted" />
-		<extension>
-			<url value="http://hl7.org/fhir/StructureDefinition/extension-sec-label-basis" />
-			<valueCoding>
-				<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
-				<code value="42CFRPart2" />
-			</valueCoding>
-		</extension>
-	</security>
-</meta>
+<Observation xmlns="http://hl7.org/fhir">
+	<meta>
+		<security>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-Confidentiality" />
+			<code value="R" />
+			<display value="Restricted" />
+			<extension>
+				<url value="http://hl7.org/fhir/StructureDefinition/extension-sec-label-basis" />
+				<valueCoding>
+					<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode" />
+					<code value="42CFRPart2" />
+				</valueCoding>
+			</extension>
+		</security>
+	</meta>
+	<id value="O001"/>
+	<status value="final"/>
+	<code>
+		<coding>
+			<system value="http://acmelabs.org"/>
+			<code value="104177"/>
+			<display value="Blood culture"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/P001"/>
+	</subject>
+</Observation>

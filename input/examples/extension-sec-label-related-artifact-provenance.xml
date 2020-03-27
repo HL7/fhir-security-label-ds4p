@@ -1,18 +1,32 @@
-<meta>
-	<security>
-		<system value="https://build.fhir.org/v3/ObservationValue/cs.html" />
-		<code value="PATRPT" />
-		<display value="patient reported" />
-		<extension url="http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact
+<Observation xmlns="http://hl7.org/fhir">
+	<meta>
+		<security>
+			<system value="https://build.fhir.org/v3/ObservationValue/cs.html" />
+			<code value="PATRPT" />
+			<display value="patient reported" />
+			<extension url="http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact
 ">
-			<valueRelatedArtifact>
-				<type value="documentation" />
-				<resource>
-					<reference value="http://example.fhir.org/base/Provenance/723840" />
-					<type value="Provenance" />
-					<display value="patient-provided data" />
-				</resource>
-			</valueRelatedArtifact>
-		</extension>
-	</security>
-</meta>
+				<valueRelatedArtifact>
+					<type value="documentation" />
+					<resource>
+						<reference value="http://example.fhir.org/base/Provenance/723840" />
+						<type value="Provenance" />
+						<display value="patient-provided data" />
+					</resource>
+				</valueRelatedArtifact>
+			</extension>
+		</security>
+	</meta>
+	<id value="O001"/>
+	<status value="final"/>
+	<code>
+		<coding>
+			<system value="http://loinc.org"/>
+			<code value="8331-1"/>
+			<display value="Oral temperature"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/P001"/>
+	</subject>
+</Observation>

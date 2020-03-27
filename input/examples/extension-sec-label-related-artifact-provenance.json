@@ -1,4 +1,5 @@
 {
+  "resourceType": "Observation",
   "meta": {
     "security": [
       {
@@ -20,5 +21,19 @@
         ]
       }
     ]
+  },
+  "id": "O001",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "8331-1",
+        "display": "Oral temperature"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/P001"
   }
 }
