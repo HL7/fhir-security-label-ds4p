@@ -1,0 +1,45 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-classifier",
+  "name": "extension-sec-label-classifier",
+  "title": "Classifier of Security Label",
+  "version": "0.1",
+  "description": "The entity responsible for assigning the security label.",
+  "status": "draft",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "context": [
+    {
+      "type": "fhirpath",
+      "expression": "Resource.meta.security"
+    }
+  ],
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-classifier"
+      },
+      {
+        "id": "Extension.valueContributor",
+        "path": "Extension.valueContributor",
+        "min": 1,
+        "type": [
+          {
+            "code": "Contributor"
+          }
+        ]
+      }
+    ]
+  }
+}

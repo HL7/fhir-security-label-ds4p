@@ -1,0 +1,59 @@
+{
+  "resourceType": "StructureDefinition",
+  "url": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact",
+  "name": "extension-sec-label-related-artifact",
+  "title": "Related Artifacts to the Security Label",
+  "version": "0.1",
+  "description": "Related artifacts to the security label (e.g., consent or provenance).",
+  "status": "draft",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "context": [
+    {
+      "type": "fhirpath",
+      "expression": "Resource.meta.security"
+    }
+  ],
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact"
+      },
+      {
+        "id": "Extension.valueRelatedArtifact",
+        "path": "Extension.valueRelatedArtifact",
+        "min": 1,
+        "type": [
+          {
+            "code": "RelatedArtifact"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ext-1",
+            "severity": "warning",
+            "human": "RelatedArtifact.type  must be either 'justification' (where the RelatedArtifact is the basis for e.g., policy, contract, or patient consent)  or 'documentation' (where the RelatedArtifact further documents the label e.g., provenance)",
+            "expression": "type='documentation' or type='justification'"
+          },
+          {
+            "key": "ext-2",
+            "severity": "error",
+            "human": "Must provide at least one of RelatedArtifact.resource or RelatedArtifact.url or RelatedArtifact.document",
+            "expression": "resource.exists() or url.exists() or document.exists()"
+          }
+        ]
+      }
+    ]
+  }
+}
