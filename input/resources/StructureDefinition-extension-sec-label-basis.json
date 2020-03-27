@@ -1,6 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-basis",
+  "id": "extension-sec-label-basis",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-basis",
   "name": "extension-sec-label-basis",
   "title": "The Basis for Security Label",
   "version": "0.1",
@@ -28,7 +29,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-basis"
+        "fixedUri": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-basis"
       },
       {
         "id": "Extension.valueCoding",

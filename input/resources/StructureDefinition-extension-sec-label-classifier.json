@@ -1,6 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "url": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-classifier",
+  "id": "extension-sec-label-classifier",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-classifier",
   "name": "extension-sec-label-classifier",
   "title": "Classifier of Security Label",
   "version": "0.1",
@@ -28,7 +29,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-classifier"
+        "fixedUri": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-classifier"
       },
       {
         "id": "Extension.valueContributor",
