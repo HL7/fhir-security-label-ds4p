@@ -1,12 +1,26 @@
-<meta>
-	<extension url="http://hl7.org/fhir/StructureDefinition/extension-must-display">
-		<valueAnnotation>
-			<authorReference>
-				<reference value="http://example.fhir.org/Organization/vha" />
-                <type value="Organization" />
-                <display value="Veteran Health Administration" />
-			</authorReference>
-			<text value="**CUI//SP-HLTH/HLTH/PRVCY**\r\n\r\n ([Veterans Health Administration, Washington, DC 20420](http://example.fhir.org/Organization/vha))" />
-		</valueAnnotation>
-	</extension>
-</meta>
+<Observation xmlns="http://hl7.org/fhir">
+	<meta>
+		<extension url="http://hl7.org/fhir/StructureDefinition/extension-must-display">
+			<valueAnnotation>
+				<authorReference>
+					<reference value="http://example.fhir.org/Organization/vha" />
+					<type value="Organization" />
+					<display value="Veteran Health Administration" />
+				</authorReference>
+				<text value="**CUI//SP-HLTH/HLTH/PRVCY**\r\n\r\n ([Veterans Health Administration, Washington, DC 20420](http://example.fhir.org/Organization/vha))" />
+			</valueAnnotation>
+		</extension>
+	</meta>
+	<id value="O001"/>
+	<status value="final"/>
+	<code>
+		<coding>
+			<system value="http://acmelabs.org"/>
+			<code value="104177"/>
+			<display value="Blood culture"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/P001"/>
+	</subject>
+</Observation>
