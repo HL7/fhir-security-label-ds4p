@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
+<ImplementationGuide xmlns="http://hl7.org/fhir" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
   <id value="hl7.fhir.uv.security-label-ds4p"/>
-<!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
-    <valueString value="resources-spreadsheet.xml"/>
-  </extension>-->
+
   <url value="http://hl7.org/fhir/uv/security-label-ds4p/ImplementationGuide/hl7.fhir.uv.security-label-ds4p"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.1.0"/>
@@ -38,6 +37,41 @@
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
   <definition>
+    <resource>
+      <reference>
+        <reference value="Observation/example-extension-must-display"/>
+      </reference>
+      <name value="Simple use of the `extension-must-display` extension."/>
+      <description value="A simple example showing how to use the `extension-must-display` extension to require the consumer to display Controlled Unclassified Information (CUI) markings."/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/example-extension-sec-label-basis"/>
+      </reference>
+      <name value="Simple use of the `extension-sec-label-basis` extension."/>
+      <description value="A simple example showing how to use the `extension-sec-label-basis` extension to specify the basis for assigning the security label."/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/example-extension-sec-label-related-artifact-consent"/>
+      </reference>
+      <name value="Simple use of the `extension-sec-label-related-artifact` extension."/>
+      <description value="A simple example showing how to use the `extension-sec-label-related-artifact` extension to specify related artifacts to a security label, in this case, a patient consent resource."/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/example-extension-sec-label-related-artifact-provenance"/>
+      </reference>
+      <name value="Simple use of the `extension-sec-label-related-artifact` extension."/>
+      <description value="A simple example showing how to use the `extension-sec-label-related-artifact` extension to specify related artifacts to a security label, in this case, a provenance resource."/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/example-extension-sec-label-classifier"/>
+      </reference>
+      <name value="Simple use of the `extension-sec-label-classifier` extension."/>
+      <description value="A simple example showing how to use the `extension-sec-label-classifier` extension to specify the entity that assigned the security label."/>
+    </resource>    
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->
       <nameUrl value="toc.html"/>
@@ -83,7 +117,7 @@
       <code value="find-other-resources"/>
       <value value="true"/>
     </parameter>
-<!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
+    <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
     <parameter>
       <code value="excludexml"/>
       <value value="true"/>
