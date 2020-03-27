@@ -42,8 +42,8 @@
         "constraint": [
           {
             "key": "ext-1",
-            "severity": "error",
-            "human": "RelatedArtifact.type  must be either 'justification' (for patient consent) or 'documentation' (for provenance)",
+            "severity": "warning",
+            "human": "RelatedArtifact.type  must be either 'justification' (where the RelatedArtifact is the basis for e.g., policy, contract, or patient consent)  or 'documentation' (where the RelatedArtifact further documents the label e.g., provenance)",
             "expression": "type='documentation' or type='justification'"
           },
           {
@@ -51,12 +51,6 @@
             "severity": "error",
             "human": "Must provide at least one of RelatedArtifact.resource or RelatedArtifact.url or RelatedArtifact.document",
             "expression": "resource.exists() or url.exists() or document.exists()"
-          },
-          {
-            "key": "ext-3",
-            "severity": "error",
-            "human": "If RelatedArtifact.resource is used, the resource type must be either Consent or Provenance.",
-            "expression": "resource.exists().not() or (resource.type.exists()  and (resource.type='Consent' or resource.type='Provenance'))"
           }
         ]
       }
