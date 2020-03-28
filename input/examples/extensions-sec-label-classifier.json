@@ -35,9 +35,9 @@
   "code": {
     "coding": [
       {
-        "system": "http://acmelabs.org",
-        "code": "104177",
-        "display": "Blood culture"
+        "system": "http://loinc.org",
+        "code": "600-7",
+        "display": "Bacteria identified in Blood by Culture"
       }
     ]
   },
