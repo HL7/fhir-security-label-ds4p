@@ -13,7 +13,7 @@
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
   "context": [
     {
-      "type": "fhirpath",
+      "type": "element",
       "expression": "Resource.meta"
     }
   ],
