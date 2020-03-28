@@ -39,6 +39,13 @@
   <definition>
     <resource>
       <reference>
+        <reference value="StructureDefinition/extension-must-display"/>
+      </reference>
+      <name value="Structure definition for the must-display extension."/>
+      <description value="Structure definition for the must-display extension."/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Observation/example-extension-must-display"/>
       </reference>
       <name value="Simple use of the must-display extension."/>
