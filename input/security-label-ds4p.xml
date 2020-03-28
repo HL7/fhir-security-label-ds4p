@@ -46,6 +46,27 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/extension-sec-label-basis"/>
+      </reference>
+      <name value="Structure definition for the extension-sec-label-basis extension."/>
+      <description value="Structure definition for the extension-sec-label-basis extension."/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-sec-label-classifier"/>
+      </reference>
+      <name value="Structure definition for the extension-sec-label-classifier extension."/>
+      <description value="Structure definition for the extension-sec-label-classifier extension."/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-sec-label-related-artifact"/>
+      </reference>
+      <name value="Structure definition for the extension-sec-label-related-artifact extension."/>
+      <description value="Structure definition for the extension-sec-label-related-artifact extension."/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="Observation/example-extension-must-display"/>
       </reference>
       <name value="Simple use of the must-display extension."/>
