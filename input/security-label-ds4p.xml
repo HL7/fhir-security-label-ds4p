@@ -83,7 +83,7 @@
       </reference>
       <name value="Simple use of the must-display extension."/>
       <description value="A simple example showing how to use the must-display extension to require the consumer to display Controlled Unclassified Information (CUI) markings."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-must-display" />
+      <exampleCanonical value="StructureDefinition/extension-must-display" />
     </resource>
     <resource>
       <reference>
@@ -99,7 +99,7 @@
       </reference>
       <name value="Simple use of the sec-label-related-artifact extension."/>
       <description value="A simple example showing how to use the sec-label-related-artifact extension to specify related artifacts to a security label, in this case, a patient consent resource."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-related-artifact" />
+      <exampleCanonical value="StructureDefinition/extension-sec-label-related-artifact" />
     </resource>
     <resource>
       <reference>
@@ -107,7 +107,7 @@
       </reference>
       <name value="Simple use of the sec-label-related-artifact extension."/>
       <description value="A simple example showing how to use the sec-label-related-artifact extension to specify related artifacts to a security label, in this case, a provenance resource."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-related-artifact" />
+      <exampleCanonical value="StructureDefinition/extension-sec-label-related-artifact" />
     </resource>
     <resource>
       <reference>
@@ -115,7 +115,7 @@
       </reference>
       <name value="Simple use of the sec-label-classifier extension."/>
       <description value="A simple example showing how to use the sec-label-classifier extension to specify the entity that assigned the security label."/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-classifier" />
+      <exampleCanonical value="StructureDefinition/extension-sec-label-classifier" />
     </resource>
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->
