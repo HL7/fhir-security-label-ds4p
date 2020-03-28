@@ -11,7 +11,7 @@
             "url": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact",
             "valueRelatedArtifact": {
               "type": "documentation",
-              "url": "http://example.fhir.org/base/Provenance/723840"
+              "resource": "Provenance/patient-reported-provenance-example"
             }
           }
         ]
