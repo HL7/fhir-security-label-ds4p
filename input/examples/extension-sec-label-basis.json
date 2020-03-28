@@ -8,7 +8,7 @@
         "display": "Restricted",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-basis",
+            "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-basis",
             "valueCoding": {
               "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
               "code": "42CFRPart2"

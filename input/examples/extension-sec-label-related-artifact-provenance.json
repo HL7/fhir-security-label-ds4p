@@ -8,7 +8,7 @@
         "display": "patient reported",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact",
+            "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-related-artifact",
             "valueRelatedArtifact": {
               "type": "documentation",
               "resource": "Provenance/patient-reported-provenance-example"
