@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "extension-sec-label-basis",
   "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-basis",
-  "name": "extension-sec-label-basis",
+  "name": "extensionSecLabelBasis",
   "title": "The Basis for Security Label",
   "version": "0.1",
   "description": "Specifies the basis (e.g., policy, regulation, etc.) for assigning the security label.",
