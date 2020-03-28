@@ -3,7 +3,7 @@
   "meta": {
     "security": [
       {
-        "system": "https://build.fhir.org/v3/ObservationValue/cs.html",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
         "code": "PATRPT",
         "display": "patient reported",
         "extension": [
