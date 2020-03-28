@@ -16,7 +16,8 @@
       "version": "0.1.0",
       "date": "2020-03-30",
       "desc": "Initial STU ballot (Mar 2020 Ballot)",
-      "path": "http://hl7.org/fhir/ig/HL7/security-label-ds4p/2020Mar/security-label-ds4p.html",
+      "fhirversion": "4.0.1",
+      "path": "http://hl7.org/fhir/uv/security-label-ds4p'/2020Mar/security-label-ds4p.html",
       "status": "ballot",
       "sequence": "DSTU 1"
     }
