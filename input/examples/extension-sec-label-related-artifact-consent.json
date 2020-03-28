@@ -11,11 +11,7 @@
             "url": "http://hl7.org/fhir/StructureDefinition/extension-sec-label-related-artifact",
             "valueRelatedArtifact": {
               "type": "justification",
-              "resource": {
-                "reference": "http://example.fhir.org/base/Consent/218304",
-                "type": "Consent",
-                "display": "restricted by patient consent"
-              }
+              "url": "http://example.fhir.org/base/Consent/218304"
             }
           }
         ]
