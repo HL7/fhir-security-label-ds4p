@@ -39,6 +39,14 @@
   <definition>
     <resource>
       <reference>
+        <reference value="ValueSet/valueset-security-authorization"/>
+      </reference>
+      <name value="Value set definition for Security Authorization."/>
+      <description value="Value set definition for Security Authorization."/>
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-must-display"/>
       </reference>
       <name value="Structure definition for the must-display extension."/>
