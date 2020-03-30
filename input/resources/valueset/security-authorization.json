@@ -1,0 +1,83 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-security-authorization",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/ValueSet/valueset-security-authorization",
+  "version": "0.1.0",
+  "name": "ValueSetSecurityAuthorization",
+  "title": "Security Authorization ValueSet",
+  "status": "draft",
+  "date": "2020-03-30",
+  "publisher": "HL7 International - Security Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/security"
+        }
+      ]
+    }
+  ],
+  "description": "Security label metadata that 'segments' an IT resource by conveying specific permissions used for access control. Part of SecurityControl Named Tag Set.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "concept": [
+          {
+            "code": "AUTHPOL",
+            "display": "authorization policy"
+          },
+          {
+            "code": "ACCESSCONSCHEME",
+            "display": "access control scheme"
+          },
+          {
+            "code": "DELEPOL",
+            "display": "delegation policy"
+          },
+          {
+            "code": "INFOACCESS",
+            "display": "access information"
+          },
+          {
+            "code": "INFOCOLLECT",
+            "display": "collect information"
+          },
+          {
+            "code": "INFODEIDENTIFIY",
+            "display": "deidentify information"
+          },
+          {
+            "code": "INFODISCLOSE",
+            "display": "disclose information"
+          },
+          {
+            "code": "INFOMASK",
+            "display": "mask information"
+          },
+          {
+            "code": "INFOREADONLY",
+            "display": "read only information"
+          },
+          {
+            "code": "INFOREDACT",
+            "display": "redact information"
+          },
+          {
+            "code": "INFOREDISCLOSE",
+            "display": "redisclose information"
+          },
+          {
+            "code": "INFOREIDENTIFY",
+            "display": "reidentify information"
+          },
+          {
+            "code": "INFOUSE",
+            "display": "use information"
+          }
+        ]
+      }
+    ]
+  }
+}
