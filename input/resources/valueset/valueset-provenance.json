@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Provenance Value Set.",
+  "description": "Security label metadata that 'segments' an IT resource by conveying the provenance of the IT resource's asserted or reported source.",
   "compose": {
     "include": [
       {
