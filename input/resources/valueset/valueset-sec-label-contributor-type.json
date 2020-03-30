@@ -22,7 +22,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/ValueSet/contributor-type",
+        "system": "http://hl7.org/fhir/codesystem-contributor-type.html",
         "concept": [
           { "code": "author" },
           { "code": "editor" },
