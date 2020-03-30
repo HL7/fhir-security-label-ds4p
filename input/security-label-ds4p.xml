@@ -63,6 +63,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/valueset-trust"/>
+      </reference>
+      <name value="Value set definition for Trust."/>
+      <description value="Value set definition for Trust."/>
+      <exampleBoolean value="false" />
+    </resource>    
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-must-display"/>
       </reference>
       <name value="Structure definition for the must-display extension."/>
