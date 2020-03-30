@@ -25,10 +25,10 @@
         "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
         "concept": [
           { "code": "ABSTRED", "display": "abstracted" },
-          { "code": "AGGRED", "display": " aggregated" },
+          { "code": "AGGRED", "display": "aggregated" },
           { "code": "ANONYED", "display": "anonymized" },
-          { "code": "MAPPED", "display": " mapped" },
-          { "code": "MASKED", "display": " masked" },
+          { "code": "MAPPED", "display": "mapped" },
+          { "code": "MASKED", "display": "masked" },
           { "code": "PSEUDED", "display": "pseudonymized" },
           { "code": "REDACTED", "display": "redacted" },
           { "code": "SUBSETTED", "display": "subsetted" },
