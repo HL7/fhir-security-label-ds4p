@@ -23,9 +23,17 @@
     "include": [
       {
         "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
-        "concept": [
-          { "code": "_SECINTPRVABOBV"},
-          { "code": "_SECINTPRVRBOBV" }
+        "filter": [
+          {
+            "property": "parent",
+            "op": "descendent-of",
+            "value": "_SECINTPRVABOBV"
+          },
+          {
+            "property": "parent",
+            "op": "descendent-of",
+            "value": "_SECINTPRVRBOBV"
+          }
         ]
       }
     ]
