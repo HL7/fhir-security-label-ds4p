@@ -86,7 +86,7 @@
           },
           { "code": "HIPAAROAD", "display": "HIPAA Right of Access Directive" },
           {
-            "code": "viii) InformedAssentCD",
+            "code": "InformedAssentCD",
             "display": "Informed Assent for Research"
           },
           {
@@ -190,7 +190,6 @@
             "display": "GDPR health or social system management"
           },
           { "code": "GDPRVITALINTEREST", "display": "GDPR vital interest" },
-          { "code": "_ActUSPrivacyLaw", "display": "_ActUSPrivacyLaw" },
           { "code": "42CFRPart2", "display": "42 CFR Part2" },
           { "code": "CommonRule", "display": "Common Rule" },
           {
