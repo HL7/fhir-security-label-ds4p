@@ -74,7 +74,7 @@
       <reference>
         <reference value="ValueSet/valueset-trust"/>
       </reference>
-      <name value="Value set definition for Trust."/>
+      <name value="Value set definition for Trust"/>
       <description value="Value set definition for Trust."/>
       <exampleBoolean value="false" />
     </resource>    
