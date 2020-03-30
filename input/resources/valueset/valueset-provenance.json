@@ -26,12 +26,12 @@
         "filter": [
           {
             "property": "parent",
-            "op": "descendent-of",
+            "op": "=",
             "value": "_SECINTPRVABOBV"
           },
           {
             "property": "parent",
-            "op": "descendent-of",
+            "op": "=",
             "value": "_SECINTPRVRBOBV"
           }
         ]
