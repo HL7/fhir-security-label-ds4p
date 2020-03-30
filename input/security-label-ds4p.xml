@@ -37,6 +37,15 @@
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
   <definition>
+    
+    <resource>
+      <reference>
+        <reference value="ValueSet/valueset-privacy-policy"/>
+      </reference>
+      <name value="Value set definition for Privacy Policy."/>
+      <description value="Value set definition for Privacy Policy."/>
+      <exampleBoolean value="false" />
+    </resource>
     <resource>
       <reference>
         <reference value="ValueSet/valueset-security-authorization"/>

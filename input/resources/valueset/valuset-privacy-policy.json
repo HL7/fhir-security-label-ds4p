@@ -1,0 +1,213 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-privacy-policy",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/ValueSet/valueset-privacy-policy",
+  "version": "0.1.0",
+  "name": "ValueSetPrivacyPolicy",
+  "title": "Privacy Policy ValueSet",
+  "status": "draft",
+  "date": "2020-03-30",
+  "publisher": "HL7 International - Security Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/security"
+        }
+      ]
+    }
+  ],
+  "description": "Privacy Policy ValueSet.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "concept": [
+          { "code": "ICOL", "display": "information collection" },
+          { "code": "IDSCL", "display": "information disclosure" },
+          { "code": "INFA", "display": "information access" },
+          { "code": "INFAO", "display": "access only" },
+          { "code": "INFASO", "display": "access and save only" },
+          { "code": "IRDSCL", "display": "information redisclosure" },
+          { "code": "RESEARCH", "display": "research information access" },
+          { "code": "RSDID", "display": "de-identified information access" },
+          { "code": "RSREID", "display": "re-identifiable information access" },
+          { "code": "GRANTORCHOICE", "display": "grantor choice" },
+          { "code": "IMPLIED", "display": "implied consent" },
+          {
+            "code": "IMPLIEDD",
+            "display": "implied consent with opportunity to dissent"
+          },
+          { "code": "NOCONSENT", "display": "no consent" },
+          { "code": "OPTIN", "display": "opt-in" },
+          { "code": "OPTINR", "display": "opt-in with restrictions" },
+          { "code": "OPTOUT", "display": "op-out" },
+          { "code": "OPTOUTE", "display": "opt-out with exceptions" },
+          { "code": "GDPRCD", "display": "GDPR Consent Directive" },
+          {
+            "code": "GDPRResearchCD",
+            "display": "GDPR Research Consent Directive"
+          },
+          { "code": "EMRGONLY", "display": "emergency only" },
+          { "code": "NOPP", "display": "notice of privacy practices" },
+          {
+            "code": "OIC",
+            "display": "opt-in to personal information or effect collection in a registry or repository"
+          },
+          {
+            "code": "OIS",
+            "display": "opt-in to personal information or effect sharing via a registry or repository"
+          },
+          {
+            "code": "OOC",
+            "display": "opt-out of personal information or effect collection in a registry or repository"
+          },
+          {
+            "code": "OOS",
+            "display": "opt-out of personal information or effect sharing via a registry or repository"
+          },
+          {
+            "code": "42CFRPart2CD",
+            "display": "42 CFR Part 2 consent directive"
+          },
+          {
+            "code": "CompoundResearchCD",
+            "display": "Compound HIPAA Research Authorization and Informed Consent for Research"
+          },
+          {
+            "code": "HIPAAAuthCD",
+            "display": "HIPAA Authorization Consent Directive"
+          },
+          { "code": "HIPAAConsentCD", "display": "HIPAA Consent Directive" },
+          {
+            "code": "HIPAAResearchAuthCD",
+            "display": "HIPAA Authorization for Disclosure for Research Consent Directive"
+          },
+          { "code": "HIPAAROAD", "display": "HIPAA Right of Access Directive" },
+          {
+            "code": "viii) InformedAssentCD",
+            "display": "Informed Assent for Research"
+          },
+          {
+            "code": "InformedConsentCD",
+            "display": "Informed Consent for Research"
+          },
+          {
+            "code": "MDHHS-5515",
+            "display": "Michigan Consent to Share Behavioral Health Information for Care Coordination Purposes"
+          },
+          {
+            "code": "MDHHS-5515MMHC",
+            "display": "Michigan Consent to Share Behavioral Health Information for Care Coordination Purposes-Michigan Mental Health Code"
+          },
+          {
+            "code": "MDHHS-5515Part2",
+            "display": "Michigan Consent to Share Behavioral Health Information for Care Coordination Purposes-US 42 CFR Part 2"
+          },
+          { "code": "JurisIP", "display": "jurisdictional information policy" },
+          {
+            "code": "JurisCUI",
+            "display": "jurisdictional controlled unclassified information policy"
+          },
+          {
+            "code": "JurisDEID",
+            "display": "jurisdictional de-identified information poli"
+          },
+          { "code": "JurisLDS", "display": "jurisdictional limited data set" },
+          {
+            "code": "JurisNSI",
+            "display": "jurisdictional non-sensitive information policy"
+          },
+          {
+            "code": "JurisPI",
+            "display": "jurisdictional public information policy"
+          },
+          {
+            "code": "JurisSP-CUI",
+            "display": "jurisdictional specified controlled unclassified information policy"
+          },
+          {
+            "code": "JurisUUI",
+            "display": "jurisdictional uncontrolled unclassified information policy"
+          },
+          { "code": "OrgIP", "display": "organizational information policy" },
+          {
+            "code": "OrgCUI",
+            "display": "organizational basic controlled unclassified information policy"
+          },
+          {
+            "code": "OrgDEID",
+            "display": "organizational de-identified information policy"
+          },
+          {
+            "code": "OrgLDS",
+            "display": "organizational limited data set information policy"
+          },
+          {
+            "code": "OrgNSI",
+            "display": "organizational non-sensitive information policy"
+          },
+          {
+            "code": "OrgPI",
+            "display": "organizational public information policy"
+          },
+          {
+            "code": "OrgSP-CUI",
+            "display": "Organizational policy on collection, access, use, or disclosure of specified controlled unclassified information as defined by the organization or by applicable jurisdictional law."
+          },
+          {
+            "code": "OrgUUI",
+            "display": "organizational uncontrolled unclassified information policy"
+          },
+          { "code": "PersIP", "display": "personal information policy" },
+          {
+            "code": "PersDEID",
+            "display": "personal de-identified information policy"
+          },
+          {
+            "code": "PersLDS",
+            "display": "personal limited data set information policy"
+          },
+          {
+            "code": "PersNSI",
+            "display": "personal non-sensitive information policy"
+          },
+          { "code": "PersPI", "display": "personal public information policy" },
+          { "code": "GDPRCONSENT", "display": "GDPR consent" },
+          { "code": "GDPRCONTRACT", "display": "GDPR contract" },
+          { "code": "GDPRLEGALCLAIM", "display": "GDPR legal claim" },
+          { "code": "GDPRLEGALOBL", "display": "GDPR legal obligation" },
+          {
+            "code": "GDPRLEGITINTEREST",
+            "display": "GDPR legitimate interest"
+          },
+          { "code": "GDPRPUBLICHEALTH", "display": "GDPR public health" },
+          { "code": "GDPRPUBLICINTEREST", "display": "GDPR public interest" },
+          { "code": "GDPRRESEARCH", "display": "GDPR research" },
+          {
+            "code": "GDPRHTHSOCSYS",
+            "display": "GDPR health or social system management"
+          },
+          { "code": "GDPRVITALINTEREST", "display": "GDPR vital interest" },
+          { "code": "_ActUSPrivacyLaw", "display": "_ActUSPrivacyLaw" },
+          { "code": "42CFRPart2", "display": "42 CFR Part2" },
+          { "code": "CommonRule", "display": "Common Rule" },
+          {
+            "code": "HIPAAAuth",
+            "display": "HIPAA Authorization for Disclosure"
+          },
+          { "code": "HIPAAConsent", "display": "HIPAA Consent" },
+          {
+            "code": "HIPAANOPP",
+            "display": "HIPAA notice of privacy practices"
+          },
+          { "code": "HIPAAPsyNotes", "display": "HIPAA psychotherapy notes" },
+          { "code": "HIPAAROA", "display": "HIPAA Right of Access" },
+          { "code": "HIPAASelfPay", "display": "HIPAA self-pay" },
+          { "code": "Title38Section7332", "display": "Title 38 Section 7332" }
+        ]
+      }
+    ]
+  }
+}
