@@ -24,70 +24,22 @@
       {
         "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
         "concept": [
-          {
-            "code": "CLINAST",
-            "display": "clinician asserted"
-          },
-          {
-            "code": "DEVAST",
-            "display": "device asserted"
-          },
-          {
-            "code": "HCPAST",
-            "display": "healthcare professional asserted"
-          },
-          {
-            "code": "PACQAST",
-            "display": "patient acquaintance asserted"
-          },
-          {
-            "code": "PATAST",
-            "display": "patient asserted"
-          },
-          {
-            "code": "PAYAST",
-            "display": "payer asserted"
-          },
-          {
-            "code": "PROAST",
-            "display": "professional asserted"
-          },
-          {
-            "code": "SDMAST",
-            "display": "substitute decision maker asserted"
-          },
-          {
-            "code": "CLINRPT",
-            "display": "clinician reported"
-          },
-          {
-            "code": "DEVRPT",
-            "display": "device reported"
-          },
-          {
-            "code": "HCPRPT",
-            "display": "healthcare professional reported"
-          },
-          {
-            "code": "PACQRPT",
-            "display": "patient acquaintance reported"
-          },
-          {
-            "code": "PATRPT",
-            "display": "patient reported"
-          },
-          {
-            "code": "PAYRPT",
-            "display": "payer reported"
-          },
-          {
-            "code": "PRORPT",
-            "display": "professional reported"
-          },
-          {
-            "code": "SDMRPT",
-            "display": "substitute decision maker reported"
-          }
+          { "code": "CLINAST", "display": "clinician asserted" },
+          { "code": "DEVAST", "display": "device asserted" },
+          { "code": "HCPAST", "display": "healthcare professional asserted" },
+          { "code": "PACQAST", "display": "patient acquaintance asserted" },
+          { "code": "PATAST", "display": "patient asserted" },
+          { "code": "PAYAST", "display": "payer asserted" },
+          { "code": "PROAST", "display": "professional asserted" },
+          { "code": "SDMAST", "display": "substitute decision maker asserted" },
+          { "code": "CLINRPT", "display": "clinician reported" },
+          { "code": "DEVRPT", "display": "device reported" },
+          { "code": "HCPRPT", "display": "healthcare professional reported" },
+          { "code": "PACQRPT", "display": "patient acquaintance reported" },
+          { "code": "PATRPT", "display": "patient reported" },
+          { "code": "PAYRPT", "display": "payer reported" },
+          { "code": "PRORPT", "display": "professional reported" },
+          { "code": "SDMRPT", "display": "substitute decision maker reported" }
         ]
       }
     ]
