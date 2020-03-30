@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Trust Value Set.",
+  "description": "Security label metadata that 'segments' an IT resource by conveying the basis for trusting the source.",
   "compose": {
     "include": [
       {

@@ -37,13 +37,13 @@
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
   <definition>
-    
+
     <resource>
       <reference>
         <reference value="ValueSet/valueset-privacy-policy"/>
       </reference>
       <name value="Value set definition for Privacy Policy."/>
-      <description value="Value set definition for Privacy Policy."/>
+      <description value="Security label metadata that 'segments' an IT resource by conveying a mandate, obligation, requirement, rule, or expectation relating to its privacy."/>
       <exampleBoolean value="false" />
     </resource>
     <resource>
@@ -51,7 +51,7 @@
         <reference value="ValueSet/valueset-security-authorization"/>
       </reference>
       <name value="Value set definition for Security Authorization."/>
-      <description value="Value set definition for Security Authorization."/>
+      <description value="Security label metadata that 'segments' an IT resource by conveying specific permissions used for access control."/>
       <exampleBoolean value="false" />
     </resource>
     <resource>
@@ -59,7 +59,7 @@
         <reference value="ValueSet/valueset-provenance"/>
       </reference>
       <name value="Value set definition for Provenance."/>
-      <description value="Value set definition for Provenance."/>
+      <description value="Security label metadata that 'segments' an IT resource by conveying the provenance of the IT resource's asserted or reported source."/>
       <exampleBoolean value="false" />
     </resource>
     <resource>
@@ -67,7 +67,7 @@
         <reference value="ValueSet/valueset-integrity"/>
       </reference>
       <name value="Value set definition for Integrity."/>
-      <description value="Value set definition for Integrity."/>
+      <description value="Security label metadata that 'segments' an IT resource by conveying the completeness, veracity, reliability, trustworthiness, and provenance of an IT resource."/>
       <exampleBoolean value="false" />
     </resource>
     <resource>
@@ -75,9 +75,9 @@
         <reference value="ValueSet/valueset-trust"/>
       </reference>
       <name value="Value set definition for Trust"/>
-      <description value="Value set definition for Trust."/>
+      <description value="Security label metadata that 'segments' an IT resource by conveying the basis for trusting the source."/>
       <exampleBoolean value="false" />
-    </resource>    
+    </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/extension-must-display"/>

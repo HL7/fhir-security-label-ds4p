@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Integrity Value Set.",
+  "description": "Security label metadata that 'segments' an IT resource by conveying the completeness, veracity, reliability, trustworthiness, and provenance of an IT resource.",
   "compose": {
     "include": [
       {
