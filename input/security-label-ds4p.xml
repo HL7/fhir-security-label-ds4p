@@ -37,6 +37,47 @@
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
   <definition>
+    
+    <resource>
+      <reference>
+        <reference value="ValueSet/valueset-privacy-policy"/>
+      </reference>
+      <name value="Value set definition for Privacy Policy."/>
+      <description value="Value set definition for Privacy Policy."/>
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/valueset-security-authorization"/>
+      </reference>
+      <name value="Value set definition for Security Authorization."/>
+      <description value="Value set definition for Security Authorization."/>
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/valueset-provenance"/>
+      </reference>
+      <name value="Value set definition for Provenance."/>
+      <description value="Value set definition for Provenance."/>
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/valueset-integrity"/>
+      </reference>
+      <name value="Value set definition for Integrity."/>
+      <description value="Value set definition for Integrity."/>
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/valueset-trust"/>
+      </reference>
+      <name value="Value set definition for Trust."/>
+      <description value="Value set definition for Trust."/>
+      <exampleBoolean value="false" />
+    </resource>    
     <resource>
       <reference>
         <reference value="StructureDefinition/extension-must-display"/>
