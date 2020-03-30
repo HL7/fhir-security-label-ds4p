@@ -55,6 +55,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/valueset-integrity"/>
+      </reference>
+      <name value="Value set definition for Integrity."/>
+      <description value="Value set definition for Integrity."/>
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-must-display"/>
       </reference>
       <name value="Structure definition for the must-display extension."/>
