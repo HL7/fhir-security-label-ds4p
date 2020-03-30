@@ -4,7 +4,7 @@
   "url": "http://hl7.org/fhir/uv/security-label-ds4p/ValueSet/valueset-security-authorization",
   "version": "0.1.0",
   "name": "ValueSetSecurityAuthorization",
-  "title": "Security Authorization",
+  "title": "Security Authorization ValueSet",
   "status": "draft",
   "date": "2020-03-30",
   "publisher": "HL7 International - Security Work Group",
