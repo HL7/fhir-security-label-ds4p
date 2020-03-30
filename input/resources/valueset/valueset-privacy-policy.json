@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Privacy Policy ValueSet.",
+  "description": "Security label metadata that 'segments' an IT resource by conveying a mandate, obligation, requirement, rule, or expectation relating to its privacy.",
   "compose": {
     "include": [
       {
