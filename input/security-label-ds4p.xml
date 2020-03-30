@@ -37,12 +37,19 @@
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
   <fhirVersion value="4.0.1"/>
   <definition>
-
+    <resource>
+      <reference>
+        <reference value="ValueSet/valueset-sec-label-contributor-type"/>
+      </reference>
+      <name value="Value set definition for Security Label Contributor Type."/>
+      <description value="Value set definition for Security Label Contributor Type."/>
+      <exampleBoolean value="false" />
+    </resource>
     <resource>
       <reference>
         <reference value="ValueSet/valueset-privacy-policy"/>
       </reference>
-      <name value="Value set definition for Privacy Policy."/>
+      <name value="Value set definition for Privacy Policy"/>
       <description value="Security label metadata that 'segments' an IT resource by conveying a mandate, obligation, requirement, rule, or expectation relating to its privacy."/>
       <exampleBoolean value="false" />
     </resource>
@@ -50,7 +57,7 @@
       <reference>
         <reference value="ValueSet/valueset-security-authorization"/>
       </reference>
-      <name value="Value set definition for Security Authorization."/>
+      <name value="Value set definition for Security Authorization"/>
       <description value="Security label metadata that 'segments' an IT resource by conveying specific permissions used for access control."/>
       <exampleBoolean value="false" />
     </resource>
@@ -58,7 +65,7 @@
       <reference>
         <reference value="ValueSet/valueset-provenance"/>
       </reference>
-      <name value="Value set definition for Provenance."/>
+      <name value="Value set definition for Provenance"/>
       <description value="Security label metadata that 'segments' an IT resource by conveying the provenance of the IT resource's asserted or reported source."/>
       <exampleBoolean value="false" />
     </resource>
@@ -66,7 +73,7 @@
       <reference>
         <reference value="ValueSet/valueset-integrity"/>
       </reference>
-      <name value="Value set definition for Integrity."/>
+      <name value="Value set definition for Integrity"/>
       <description value="Security label metadata that 'segments' an IT resource by conveying the completeness, veracity, reliability, trustworthiness, and provenance of an IT resource."/>
       <exampleBoolean value="false" />
     </resource>
@@ -82,7 +89,7 @@
       <reference>
         <reference value="StructureDefinition/extension-must-display"/>
       </reference>
-      <name value="Structure definition for the must-display extension."/>
+      <name value="Structure definition for the must-display extension"/>
       <description value="Structure definition for the must-display extension."/>
       <exampleBoolean value="false" />
     </resource>
@@ -90,7 +97,7 @@
       <reference>
         <reference value="StructureDefinition/extension-sec-label-basis"/>
       </reference>
-      <name value="Structure definition for the extension-sec-label-basis extension."/>
+      <name value="Structure definition for the extension-sec-label-basis extension"/>
       <description value="Structure definition for the extension-sec-label-basis extension."/>
       <exampleBoolean value="false" />
     </resource>
@@ -98,7 +105,7 @@
       <reference>
         <reference value="StructureDefinition/extension-sec-label-classifier"/>
       </reference>
-      <name value="Structure definition for the extension-sec-label-classifier extension."/>
+      <name value="Structure definition for the extension-sec-label-classifier extension"/>
       <description value="Structure definition for the extension-sec-label-classifier extension."/>
       <exampleBoolean value="false" />
     </resource>
@@ -106,7 +113,7 @@
       <reference>
         <reference value="StructureDefinition/extension-sec-label-related-artifact"/>
       </reference>
-      <name value="Structure definition for the extension-sec-label-related-artifact extension."/>
+      <name value="Structure definition for the extension-sec-label-related-artifact extension"/>
       <description value="Structure definition for the extension-sec-label-related-artifact extension."/>
       <exampleBoolean value="false" />
     </resource>
@@ -114,7 +121,7 @@
       <reference>
         <reference value="Observation/example-extension-must-display"/>
       </reference>
-      <name value="Simple use of the must-display extension."/>
+      <name value="Simple use of the must-display extension"/>
       <description value="A simple example showing how to use the must-display extension to require the consumer to display Controlled Unclassified Information (CUI) markings."/>
       <exampleBoolean value="true" />
     </resource>
@@ -122,7 +129,7 @@
       <reference>
         <reference value="Patient/P001"/>
       </reference>
-      <name value="Simple use of the must-display extension."/>
+      <name value="Simple use of the must-display extension"/>
       <description value="A simple example showing how to use the must-display extension to require the consumer to display Controlled Unclassified Information (CUI) markings."/>
       <exampleBoolean value="true" />
     </resource>
@@ -130,7 +137,7 @@
       <reference>
         <reference value="Observation/example-extension-sec-label-basis"/>
       </reference>
-      <name value="Simple use of the sec-label-basis extension."/>
+      <name value="Simple use of the sec-label-basis extension"/>
       <description value="A simple example showing how to use the sec-label-basis extension to specify the basis for assigning the security label."/>
       <exampleBoolean value="true" />
     </resource>
@@ -138,7 +145,7 @@
       <reference>
         <reference value="Observation/example-extension-sec-label-related-artifact-consent"/>
       </reference>
-      <name value="Simple use of the sec-label-related-artifact extension."/>
+      <name value="Simple use of the sec-label-related-artifact extension"/>
       <description value="A simple example showing how to use the sec-label-related-artifact extension to specify related artifacts to a security label, in this case, a patient consent resource."/>
       <exampleBoolean value="true" />
     </resource>
@@ -146,7 +153,7 @@
       <reference>
         <reference value="Observation/example-extension-sec-label-related-artifact-provenance"/>
       </reference>
-      <name value="Simple use of the sec-label-related-artifact extension."/>
+      <name value="Simple use of the sec-label-related-artifact extension"/>
       <description value="A simple example showing how to use the sec-label-related-artifact extension to specify related artifacts to a security label, in this case, a provenance resource."/>
       <exampleBoolean value="true" />
     </resource>
@@ -154,7 +161,7 @@
       <reference>
         <reference value="Observation/example-extension-sec-label-classifier"/>
       </reference>
-      <name value="Simple use of the sec-label-classifier extension."/>
+      <name value="Simple use of the sec-label-classifier extension"/>
       <description value="A simple example showing how to use the sec-label-classifier extension to specify the entity that assigned the security label."/>
       <exampleBoolean value="true" />
     </resource>

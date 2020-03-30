@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-sec-label-contributor-type",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/ValueSet/valueset-sec-label-contributor-type",
+  "version": "0.1.0",
+  "name": "ValueSetSecurityLabelContributorType",
+  "title": "Security Label Contributor Type ValueSet",
+  "status": "draft",
+  "date": "2020-03-30",
+  "publisher": "HL7 International - Security Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/security"
+        }
+      ]
+    }
+  ],
+  "description": "Type of security label contributor.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/ValueSet/contributor-type",
+        "concept": [
+          { "code": "author" },
+          { "code": "editor" },
+          { "code": "reviewer" },
+          { "code": "endorser" },
+          { "code": "CLASSIFIER", "display": "classifier" },
+          { "code": "DECLASSIFIER", "display": "declassifier" },
+          { "code": "DOWNGRADER", "display": "downgrader" },
+          { "code": "DRIVCLASSIFIER", "display": "drivclassifier" },
+          { "code": "RECLASSIFIER", "display": "reclassifier" },
+          { "code": "UPGRADER", "display": "upgrader" }
+        ]
+      }
+    ]
+  }
+}
