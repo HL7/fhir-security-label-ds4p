@@ -23,121 +23,12 @@
     "include": [
       {
         "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
-        "concept": [
+        "filter": [
           {
-            "code": "TRSTACCRDOBV",
-            "display": "trust accreditation observation"
-          },
-          { "code": "TRSTAGREOBV", "display": "trust agreement observation" },
-          { "code": "TRSTCERTOBV", "display": "trust certificate observation" },
-          {
-            "code": "LOAAN1",
-            "display": "low authentication level of assurance"
-          },
-          {
-            "code": "LOAAN2",
-            "display": "basic authentication level of assurance"
-          },
-          {
-            "code": "LOAAN3",
-            "display": "medium authentication level of assurance"
-          },
-          {
-            "code": "LOAAN4",
-            "display": "high authentication level of assurance"
-          },
-          {
-            "code": "LOAAP1",
-            "display": "low authentication process level of assurance"
-          },
-          {
-            "code": "LOAAP2",
-            "display": "basic authentication process level of assurance"
-          },
-          {
-            "code": "LOAAP3",
-            "display": "medium authentication process level of assurance"
-          },
-          {
-            "code": "LOAAP4",
-            "display": "high authentication process level of assurance"
-          },
-          { "code": "LOAAS1", "display": "low assertion level of assurance" },
-          { "code": "LOAAS2", "display": "basic assertion level of assurance" },
-          {
-            "code": "LOAAS3",
-            "display": "medium assertion level of assurance"
-          },
-          { "code": "LOAAS4", "display": "high assertion level of assurance" },
-          {
-            "code": "LOACM1",
-            "display": "low token and credential management level of assurance"
-          },
-          {
-            "code": "LOACM2",
-            "display": "basic token and credential management level of assurance"
-          },
-          {
-            "code": "LOACM3",
-            "display": "medium token and credential management level of assurance"
-          },
-          {
-            "code": "LOACM4",
-            "display": "high token and credential management level of assurance"
-          },
-          {
-            "code": "LOAID1",
-            "display": "low identity proofing level of assurance"
-          },
-          {
-            "code": "LOAID2",
-            "display": "basic identity proofing level of assurance"
-          },
-          {
-            "code": "LOAID3",
-            "display": "medium identity proofing level of assurance"
-          },
-          {
-            "code": "LOAID4",
-            "display": "high identity proofing level of assurance"
-          },
-          {
-            "code": "LOANR1",
-            "display": "low non-repudiation level of assurance"
-          },
-          {
-            "code": "LOANR2",
-            "display": "basic non-repudiation level of assurance"
-          },
-          {
-            "code": "LOANR3",
-            "display": "medium non-repudiation level of assurance"
-          },
-          {
-            "code": "LOANR4",
-            "display": "high non-repudiation level of assurance"
-          },
-          {
-            "code": "LOARA1",
-            "display": "low remote access level of assurance"
-          },
-          {
-            "code": "LOARA2",
-            "display": "basic remote access level of assurance"
-          },
-          {
-            "code": "LOARA3",
-            "display": "medium remote access level of assurance"
-          },
-          {
-            "code": "LOARA4",
-            "display": "high remote access level of assurance"
-          },
-          { "code": "LOATK1", "display": "low token level of assurance" },
-          { "code": "LOATK2", "display": "basic token level of assurance" },
-          { "code": "LOATK3", "display": "medium token level of assurance" },
-          { "code": "LOATK4", "display": "high token level of assurance" },
-          { "code": "TRSTMECOBV", "display": "none supplied 6" }
+            "property": "concept",
+            "op": "is-a",
+            "value": "SECTRSTOBV"
+          }
         ]
       }
     ]
