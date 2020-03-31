@@ -73,6 +73,7 @@ Value-sets used and defined by this IG are discussed below.
 (*) Value-sets defined by this IG.
 
 #### Security Control
+
 |Tag Set|Card. |  Description | Example Tags | 
 |-------|------|-------------|---------------|
 |[Purpose of Use](https://www.hl7.org/fhir/v3/PurposeOfUse/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by conveying the reason for performing one or more operations on information, which may be permitted by source system's security policy in accordance with one or more privacy policies and consent directives.| Treatment, Payment, Operation, Research  |
@@ -86,6 +87,7 @@ Value-sets used and defined by this IG are discussed below.
 (*) Value-sets defined by this IG.
 
 #### Not a Security Label
+
 |Tag Set|Card. |  Description | Example Tags | 
 |-------|------|-------------|---------------|
 |Contributor Type* |`0..1`|  The type of security label contributor.| author, editor, classifier, declassifier|
