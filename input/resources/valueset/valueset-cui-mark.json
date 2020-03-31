@@ -34,7 +34,7 @@
           { "code": "CUISP-HLTH", "display": "CUI//SP-HLTH" },
           { "code": "CUISP-HLTHP", "display": "(CUI//SP-HLTH)" },
           { "code": "CUISP-PRVCY", "display": "CUI//SP-PRVCY" },
-          { "code": "CUISP-PRVCYP", "display": "(CUI//SP-PRVCY)" }
+          { "code": "CUISP-PRVCYP", "display": "(CUI//SP-PRVCY)" },
           { "code": "UUI", "display": "(U)" }
         ]
       }
