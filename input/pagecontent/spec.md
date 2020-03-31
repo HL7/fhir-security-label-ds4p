@@ -49,3 +49,44 @@ The ability to convey the authority or agent name, contact, and classification r
 The `sec-label-related-artifact extension` is based on the Related Artifact [`MetaData` Type](http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact). The `RelatedArtifact` structure defines resources related to a module such as previous and next versions of documents, documentation, citations, etc. Note that the name resource here is being used in a more general sense than the FHIR-specific Resource. The related resource may be a FHIR resource, or it may be another type of resource, represented using the Attachment data type.
 
 This extension SHOULD be used on a security label code for which justification or documentation can be found in an attached or discoverable information instance.  Examples include a policy security label code, which is justified based on a law, patient consent directive, or organizational policy; a provenance security label, which is documented by a Provenance Resource; a trust security label code, which is documented by a trust accreditation certificate, trust mark,  or a trust agreement such as a DURSA.
+
+### Value Sets Summary
+#### Security Classification
+
+
+|Tag Set|Card. | Description | Example Tags | 
+|-------|------|-------------|--------------|
+|[Confidentiality](http://hl7.org/fhir/R4/v3/Confidentiality/vs.html)|`1..1` | Security label metadata classifying an IT resource (clinical fact, data, information object, service, or system capability) according to its level of sensitivity, which is based on an analysis of applicable privacy policies and the risk of financial, reputational, or other harm to an individual or entity that could result if made available or disclosed to unauthorized individuals, entities, or processes.|Unrestricted, Normal, Very Restricted |
+
+#### Security Category
+
+|Tag Set|Card. |  Description | Example Tags | 
+|-------|------|-------------|--------------|
+| Policy*|`0..1`| Security label metadata that "segments" an IT resource by conveying a mandate, obligation, requirement, rule, or expectation relating to its privacy.|  |
+| [Sensitivity](https://www.hl7.org/fhir/v3/InformationSensitivityPolicy/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by categorizing the value, importance, and vulnerability of an IT resource perceived as undesirable to share.| `STD`, `HIV`, `SUD`  |
+| [Compartment](https://www.hl7.org/fhir/v3/Compartment/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by indicating that access and use is restricted to members of a defined community or project.| Care Team, Research Project  |
+| Integrity*  |`0..1`| Security label metadata that "segments" an IT resource by conveying the completeness, veracity, reliability, trustworthiness, and provenance of an IT resource.| Anonymized,  Digitally signed  |
+| Provenance*  |`0..1`| Security label metadata that "segments" an IT resource by conveying the provenance of the IT resource's asserted or reported source.| Patient reported, Clinician asserted  |
+| Trust*  |`0..1`| Security label metadata that "segments" an IT resource by conveying the basis for trusting the source.| Trust Accreditation, Trust Agreement  |
+
+(*) Value-sets defined by this IG.
+
+#### Security Control
+|Tag Set|Card. |  Description | Example Tags | 
+|-------|------|-------------|---------------|
+|[Purpose of Use](https://www.hl7.org/fhir/v3/PurposeOfUse/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by conveying the reason for performing one or more operations on information, which may be permitted by source system's security policy in accordance with one or more privacy policies and consent directives.| Treatment, Payment, Operation, Research  |
+|[General Purpose of Use](https://www.hl7.org/fhir/v3/GeneralPurposeOfUse/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by conveying the reason for performing one or more operations on information of purpose of use at a general level.| Coverage, Patient Requested, Emergency Treatment |
+|[Obligation](https://www.hl7.org/fhir/v3/ObligationPolicy/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by conveying the mandated workflow action that an information custodian, receiver, or user must perform.| Encrypt, mask, comply wih policy |
+|[Refrain](https://www.hl7.org/fhir/v3/RefrainPolicy/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by conveying prohibited actions which an information custodian, receiver, or user is not permitted to perform unless otherwise authorized or permitted under specified circumstances.| Do not disclose without consent, no reuse |
+|CUI Privacy Mark* |`0..1`|  Security label metadata that "segments" an IT resource by conveying a displayed mark, required to be rendered to indicate that the electronic or hardcopy information is protected at the level of the subset of CUI for which the authorizing law, regulation, or Government-wide policy does not set out specific handling or dissemination controls.| `CUI`, `SP-CUI` |
+|Security Label  Mark* |`0..1`|  Security label metadata that "segments" an IT resource by conveying a displayed mark rendered as specified.| Draft, Confidential|
+|Security Authorization Policy* |`0..1`|  Security label metadata that "segments" an IT resource by conveying specific permissions used for access control.| Authorization policy, Delegation policy|
+
+(*) Value-sets defined by this IG.
+
+#### Not a Security Label
+|Tag Set|Card. |  Description | Example Tags | 
+|-------|------|-------------|---------------|
+|Contributor Type* |`0..1`|  The type of security label contributor.| author, editor, classifier, declassifier|
+
+(*) Value-sets defined by this IG.
