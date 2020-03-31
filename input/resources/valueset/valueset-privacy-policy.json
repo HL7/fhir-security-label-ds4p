@@ -191,6 +191,7 @@
           },
           { "code": "GDPRVITALINTEREST", "display": "GDPR vital interest" },
           { "code": "42CFRPart2", "display": "42 CFR Part2" },
+          { "code": "32CFRPart2002", "display": "32 CFR Part 2002" }
           { "code": "CommonRule", "display": "Common Rule" },
           {
             "code": "HIPAAAuth",
