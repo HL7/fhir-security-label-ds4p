@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-cui-mark",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/ValueSet/valueset-cui-mark",
+  "version": "0.1.0",
+  "name": "ValueSetCUIMark",
+  "title": "CUI Mark ValueSet",
+  "status": "draft",
+  "date": "2020-03-30",
+  "publisher": "HL7 International - Security Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/security"
+        }
+      ]
+    }
+  ],
+  "description": "Security label metadata that 'segments' an IT resource by conveying a displayed mark, required to be rendered to indicate that the electronic or hardcopy information is protected at the level of the subset of CUI for which the authorizing law, regulation, or Government-wide policy does not set out specific handling or dissemination controls.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "concept": [
+          { "code": "CONTROLLED"},
+          { "code": "CUI"},
+          { "code": "CUIHLTH"},
+          { "code": "CUIHLTHP" },
+          { "code": "CUIP"},
+          { "code": "CUIPRVCY"},
+          { "code": "CUIPRVCYP"},
+          { "code": "CUISP-HLTH"},
+          { "code": "CUISP-HLTHP"},
+          { "code": "CUISP-PRVCY"},
+          { "code": "CUISP-PRVCYP"}
+        ]
+      }
+    ]
+  }
+}

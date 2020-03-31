@@ -47,6 +47,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/valueset-cui-mark"/>
+      </reference>
+      <name value="Value set definition for CUI Mark."/>
+      <description value="Security label metadata that 'segments' an IT resource by conveying a displayed mark, required to be rendered to indicate that the electronic or hardcopy information is protected at the level of the subset of CUI for which the authorizing law, regulation, or Government-wide policy does not set out specific handling or dissemination controls."/>
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/valueset-privacy-policy"/>
       </reference>
       <name value="Value set definition for Privacy Policy"/>
