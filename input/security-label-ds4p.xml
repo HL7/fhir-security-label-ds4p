@@ -47,6 +47,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/security-label-mark"/>
+      </reference>
+      <name value="Value set definition for Security Label Mark"/>
+      <description value="Security label metadata that 'segments' an IT resource by conveying a displayed mark rendered as specified."/>
+      <exampleBoolean value="false" />
+    </resource>    
+    <resource>
+      <reference>
         <reference value="ValueSet/valueset-cui-mark"/>
       </reference>
       <name value="Value set definition for CUI Mark."/>
