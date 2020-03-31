@@ -51,8 +51,9 @@ The `sec-label-related-artifact extension` is based on the Related Artifact [`Me
 This extension SHOULD be used on a security label code for which justification or documentation can be found in an attached or discoverable information instance.  Examples include a policy security label code, which is justified based on a law, patient consent directive, or organizational policy; a provenance security label, which is documented by a Provenance Resource; a trust security label code, which is documented by a trust accreditation certificate, trust mark,  or a trust agreement such as a DURSA.
 
 ### Value Sets Summary
-#### Security Classification
+Value-sets used and defined by this IG are discussed below.
 
+#### Security Classification
 
 |Tag Set|Card. | Description | Example Tags | 
 |-------|------|-------------|--------------|
