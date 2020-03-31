@@ -63,12 +63,12 @@ Value-sets used and defined by this IG are discussed below.
 
 |Tag Set|Card. |  Description | Example Tags | 
 |-------|------|-------------|--------------|
-| Policy*|`0..1`| Security label metadata that "segments" an IT resource by conveying a mandate, obligation, requirement, rule, or expectation relating to its privacy.|  |
+| [Policy](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-privacy-policy.html)*|`0..1`| Security label metadata that "segments" an IT resource by conveying a mandate, obligation, requirement, rule, or expectation relating to its privacy.|  |
 | [Sensitivity](https://www.hl7.org/fhir/v3/InformationSensitivityPolicy/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by categorizing the value, importance, and vulnerability of an IT resource perceived as undesirable to share.| `STD`, `HIV`, `SUD`  |
 | [Compartment](https://www.hl7.org/fhir/v3/Compartment/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by indicating that access and use is restricted to members of a defined community or project.| Care Team, Research Project  |
-| Integrity*  |`0..1`| Security label metadata that "segments" an IT resource by conveying the completeness, veracity, reliability, trustworthiness, and provenance of an IT resource.| Anonymized,  Digitally signed  |
-| Provenance*  |`0..1`| Security label metadata that "segments" an IT resource by conveying the provenance of the IT resource's asserted or reported source.| Patient reported, Clinician asserted  |
-| Trust*  |`0..1`| Security label metadata that "segments" an IT resource by conveying the basis for trusting the source.| Trust Accreditation, Trust Agreement  |
+| [Integrity](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-integrity.html)*  |`0..1`| Security label metadata that "segments" an IT resource by conveying the completeness, veracity, reliability, trustworthiness, and provenance of an IT resource.| Anonymized,  Digitally signed  |
+| [Provenance](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-provenance.html)*  |`0..1`| Security label metadata that "segments" an IT resource by conveying the provenance of the IT resource's asserted or reported source.| Patient reported, Clinician asserted  |
+| [Trust](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-trust.html)*  |`0..1`| Security label metadata that "segments" an IT resource by conveying the basis for trusting the source.| Trust Accreditation, Trust Agreement  |
 
 (*) Value-sets defined by this IG.
 
@@ -80,9 +80,9 @@ Value-sets used and defined by this IG are discussed below.
 |[General Purpose of Use](https://www.hl7.org/fhir/v3/GeneralPurposeOfUse/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by conveying the reason for performing one or more operations on information of purpose of use at a general level.| Coverage, Patient Requested, Emergency Treatment |
 |[Obligation](https://www.hl7.org/fhir/v3/ObligationPolicy/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by conveying the mandated workflow action that an information custodian, receiver, or user must perform.| Encrypt, mask, comply wih policy |
 |[Refrain](https://www.hl7.org/fhir/v3/RefrainPolicy/vs.html) |`0..1`| Security label metadata that "segments" an IT resource by conveying prohibited actions which an information custodian, receiver, or user is not permitted to perform unless otherwise authorized or permitted under specified circumstances.| Do not disclose without consent, no reuse |
-|CUI Privacy Mark* |`0..1`|  Security label metadata that "segments" an IT resource by conveying a displayed mark, required to be rendered to indicate that the electronic or hardcopy information is protected at the level of the subset of CUI for which the authorizing law, regulation, or Government-wide policy does not set out specific handling or dissemination controls.| `CUI`, `SP-CUI` |
-|Security Label  Mark* |`0..1`|  Security label metadata that "segments" an IT resource by conveying a displayed mark rendered as specified.| Draft, Confidential|
-|Security Authorization Policy* |`0..1`|  Security label metadata that "segments" an IT resource by conveying specific permissions used for access control.| Authorization policy, Delegation policy|
+|[CUI Privacy Mark](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-cui-mark.html)* |`0..1`|  Security label metadata that "segments" an IT resource by conveying a displayed mark, required to be rendered to indicate that the electronic or hardcopy information is protected at the level of the subset of CUI for which the authorizing law, regulation, or Government-wide policy does not set out specific handling or dissemination controls.| `CUI`, `SP-CUI` |
+|[Security Label  Mark](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-security-label-mark.html)* |`0..1`|  Security label metadata that "segments" an IT resource by conveying a displayed mark rendered as specified.| Draft, Confidential|
+|[Security Authorization Policy](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-security-authorization.html)* |`0..1`|  Security label metadata that "segments" an IT resource by conveying specific permissions used for access control.| Authorization policy, Delegation policy|
 
 (*) Value-sets defined by this IG.
 
@@ -90,6 +90,6 @@ Value-sets used and defined by this IG are discussed below.
 
 |Tag Set|Card. |  Description | Example Tags | 
 |-------|------|-------------|--------------|
-|Contributor Type* |`0..1`|  The type of security label contributor.| author, editor, classifier, declassifier|
+|[Contributor Type](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-sec-label-contributor-type.html)* |`0..1`|  The type of security label contributor.| author, editor, classifier, declassifier|
 
 (*) Value-sets defined by this IG.
