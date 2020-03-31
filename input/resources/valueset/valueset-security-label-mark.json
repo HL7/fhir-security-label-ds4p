@@ -23,12 +23,22 @@
     "include": [
       {
         "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-        "filter": [
+        "concept": [
+          { "code": "ConfidentialMark", "display": "confidential mark" },
+          { "code": "COPYMark", "display": "copy of original mark" },
           {
-            "property" : "concept",
-            "op" : "is-a",
-            "value" : "SecurityLabelMark"
-          }
+            "code": "DeliverToAddresseeOnlyMark",
+            "display": "deliver only to addressee mark"
+          },
+          {
+            "code": "RedisclosureProhibitionMark",
+            "display": "prohibition against redisclosure mark"
+          },
+          {
+            "code": "RestrictedConfidentialityMark",
+            "display": "restricted confidentiality mark"
+          },
+          { "code": "DRAFTMark", "display": "draft mark" }
         ]
       }
     ]
