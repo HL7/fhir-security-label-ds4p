@@ -24,17 +24,18 @@
       {
         "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
         "concept": [
-          { "code": "CONTROLLED"},
-          { "code": "CUI"},
-          { "code": "CUIHLTH"},
-          { "code": "CUIHLTHP" },
-          { "code": "CUIP"},
-          { "code": "CUIPRVCY"},
-          { "code": "CUIPRVCYP"},
-          { "code": "CUISP-HLTH"},
-          { "code": "CUISP-HLTHP"},
-          { "code": "CUISP-PRVCY"},
-          { "code": "CUISP-PRVCYP"}
+          { "code": "CONTROLLED", "display": "CONTROLLED" },
+          { "code": "CUI", "display": "CUI" },
+          { "code": "CUIHLTH", "display": "CUI//HLTH" },
+          { "code": "CUIHLTHP", "display": "(CUI//HLTH)" },
+          { "code": "CUIP", "display": "(CUI)" },
+          { "code": "CUIPRVCY", "display": "CUI//PRVCY" },
+          { "code": "CUIPRVCYP", "display": "(CUI//PRVCY)" },
+          { "code": "CUISP-HLTH", "display": "CUI//SP-HLTH" },
+          { "code": "CUISP-HLTHP", "display": "(CUI//SP-HLTH)" },
+          { "code": "CUISP-PRVCY", "display": "CUI//SP-PRVCY" },
+          { "code": "CUISP-PRVCYP", "display": "(CUI//SP-PRVCY)" }
+          { "code": "UUI", "display": "(U)" }
         ]
       }
     ]
