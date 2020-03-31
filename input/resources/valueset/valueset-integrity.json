@@ -23,24 +23,17 @@
     "include": [
       {
         "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
-        "concept": [
-          { "code": "ABSTRED", "display": "abstracted" },
-          { "code": "AGGRED", "display": "aggregated" },
-          { "code": "ANONYED", "display": "anonymized" },
-          { "code": "MAPPED", "display": "mapped" },
-          { "code": "MASKED", "display": "masked" },
-          { "code": "PSEUDED", "display": "pseudonymized" },
-          { "code": "REDACTED", "display": "redacted" },
-          { "code": "SUBSETTED", "display": "subsetted" },
-          { "code": "SYNTAC", "display": "syntactic transform" },
-          { "code": "TRSLT", "display": "translated" },
-          { "code": "VERSIONED", "display": "versioned" },
-          { "code": "CRYTOHASH", "display": "cryptographic hash function" },
-          { "code": "DIGSIG", "display": "digital signature" },
-          { "code": "HRELIABLE", "display": "highly reliable" },
-          { "code": "RELIABLE", "display": "reliable" },
-          { "code": "UNCERTREL", "display": "uncertain reliability" },
-          { "code": "UNRELIABLE", "display": "unreliable" }
+        "filter": [
+          {
+            "property" : "concept",
+            "op" : "is-a",
+            "value" : "_SECALTINTOBV"           
+          },
+          {
+            "property" : "concept",
+            "op" : "is-a",
+            "value": "_SECDATINTOBV"
+          }
         ]
       }
     ]
