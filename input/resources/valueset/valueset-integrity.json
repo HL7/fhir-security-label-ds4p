@@ -25,13 +25,18 @@
         "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
         "filter": [
           {
-            "property" : "concept",
-            "op" : "is-a",
-            "value" : "_SECALTINTOBV"           
-          },
+            "property": "concept",
+            "op": "is-a",
+            "value": "_SECALTINTOBV"
+          }
+        ]
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+        "filter": [
           {
-            "property" : "concept",
-            "op" : "is-a",
+            "property": "concept",
+            "op": "is-a",
             "value": "_SECDATINTOBV"
           }
         ]
