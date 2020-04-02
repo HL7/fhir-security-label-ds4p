@@ -2,17 +2,9 @@ Concern is frequently raised that use of HL7 security labels for data segmentati
 
 Security labeling technology is used for enforcing more than just privacy policies expressed as an individual's meaningful choice as afforded by law.  It is also used to enforce organizational and jurisdictional privacy, security, and business policies primarily to computably determine whether a requester to collect, access, use, disclose or receive information should be permitted to do so and what, if any, security controls are required by senders and receivers such as limitation on workflows/contexts in which the information may be handled, and obligations and prohibitions related to handling the information. 
 
-Security labeling technology also includes risk mitigation techniques to ensure that policy priorities prevail when risks related to security labeling must be averted, such enabling a Clinical Decision Support Systems to alert clinicians about the potential for a patient safety issue related to filtered health information, which the clinician might not have previously had a "need to know".  Together, these security labeling technologies comprise the suit of standards that support "Sharing with Protections".
+Security labeling technology also includes risk mitigation techniques to ensure that policy priorities prevail when risks related to security labeling must be averted, such enabling a Clinical Decision Support Systems to alert clinicians about the potential for a patient safety issue related to filtered health information, which the clinician might not have previously had a "need to know".  
 
-For more information on standards-based approaches for balancing patient safety and patient privacy, see:
-
-- [HIMSS 201902 Sharing with Protections](https://confluence.hl7.org/display/SEC/HIMSS+201902+Sharing+with+Protections?src=contextnavpagetreemod)
-
-- [Share with Protections White Paper](https://confluence.hl7.org/display/SEC/Share+with+Protections+Documents?preview=/54690141/76159265/DS4P_Share%20with%20Protections%202020%200220%20V2.2.pdf)
-
-- [Share with Protections Presentation](https://confluence.hl7.org/display/SEC/Share+with+Protections+Documents?preview=/54690141/76159218/Share%20with%20Protections%20with%20Citations%202020%200210.pptx)
-
-### Sharing with Protections FAQ
+### Security Labeling FAQ
 
 #### Information Blocking
 
