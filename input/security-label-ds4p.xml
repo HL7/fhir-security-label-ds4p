@@ -145,7 +145,7 @@
       <reference>
         <reference value="Patient/P001"/>
       </reference>
-      <name value="Simple use of the must-display extension"/>
+      <name value="Simple use of the must-display extension on a patient"/>
       <description value="A simple example showing how to use the must-display extension to require the consumer to display Controlled Unclassified Information (CUI) markings."/>
       <exampleBoolean value="true" />
     </resource>
@@ -153,7 +153,7 @@
       <reference>
         <reference value="Observation/example-extension-sec-label-basis"/>
       </reference>
-      <name value="Simple use of the sec-label-basis extension"/>
+      <name value="Simple use of the sec-label-basis extension on an observation"/>
       <description value="A simple example showing how to use the sec-label-basis extension to specify the basis for assigning the security label."/>
       <exampleBoolean value="true" />
     </resource>
@@ -161,7 +161,7 @@
       <reference>
         <reference value="Observation/example-extension-sec-label-related-artifact-consent"/>
       </reference>
-      <name value="Simple use of the sec-label-related-artifact extension"/>
+      <name value="Simple use of the sec-label-related-artifact extension with a consent"/>
       <description value="A simple example showing how to use the sec-label-related-artifact extension to specify related artifacts to a security label, in this case, a patient consent resource."/>
       <exampleBoolean value="true" />
     </resource>
@@ -169,7 +169,7 @@
       <reference>
         <reference value="Observation/example-extension-sec-label-related-artifact-provenance"/>
       </reference>
-      <name value="Simple use of the sec-label-related-artifact extension"/>
+      <name value="Simple use of the sec-label-related-artifact extension with a provenance"/>
       <description value="A simple example showing how to use the sec-label-related-artifact extension to specify related artifacts to a security label, in this case, a provenance resource."/>
       <exampleBoolean value="true" />
     </resource>
