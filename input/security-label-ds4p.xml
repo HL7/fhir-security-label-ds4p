@@ -15,7 +15,7 @@
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
       <system value="url"/>
-      <value value="http://hl7.org/Special/committees/security"/>
+      <value value="http://hl7.org/Special/committees/secure"/>
     </telecom>
   </contact>
   <description value="Application of FHIR meta.security to segment FHIR Bundles and Resources per applicable policy."/>
