@@ -195,7 +195,12 @@
         <nameUrl value="background.html"/>
         <title value="Background"/>
         <generation value="markdown"/>
-      </page>   
+      </page>
+      <page>
+        <nameUrl value="security.html"/>
+        <title value="Security and Privacy Considerations"/>
+        <generation value="markdown"/>
+      </page>
       <page>
         <nameUrl value="spec.html"/>
         <title value="Detailed Specification"/>
