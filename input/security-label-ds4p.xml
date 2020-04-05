@@ -195,12 +195,12 @@
         <nameUrl value="background.html"/>
         <title value="Background"/>
         <generation value="markdown"/>
-      </page>
-      <page>
-        <nameUrl value="usecases.html"/>
-        <title value="Use-Cases"/>
-        <generation value="markdown"/>
-      </page>      
+        <page>
+          <nameUrl value="usecases.html"/>
+          <title value="Use-Cases"/>
+          <generation value="markdown"/>
+        </page>   
+      </page>   
       <page>
         <nameUrl value="spec.html"/>
         <title value="Detailed Specification"/>
