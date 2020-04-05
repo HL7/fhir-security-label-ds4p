@@ -195,11 +195,6 @@
         <nameUrl value="background.html"/>
         <title value="Background"/>
         <generation value="markdown"/>
-        <page>
-          <nameUrl value="usecases.html"/>
-          <title value="Use-Cases"/>
-          <generation value="markdown"/>
-        </page>   
       </page>   
       <page>
         <nameUrl value="spec.html"/>
@@ -225,7 +220,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel"/>
-      <value value="CI Build"/>
+      <value value="2020May"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>
