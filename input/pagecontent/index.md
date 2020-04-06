@@ -29,5 +29,5 @@ The main sections of this IG are:
 
 - [Background](background.html) 
 - [Detailed Specification](spec.html)
-- [ecurity and Privacy Considerations](security.html)
+- [Security and Privacy Considerations](security.html)
 - [Downloads](downloads.html)
