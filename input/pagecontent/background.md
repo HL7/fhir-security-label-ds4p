@@ -43,7 +43,7 @@ Discoverable Capability Statement, which includes:
 
 Appropriately labeled Bundles and Resources.
 
-#### Receiver SL Capabilit
+#### Receiver SL Capability
 
 ##### Assumption
 Receiver has implemented SL and Privacy Preserving Authorization Services.
