@@ -49,7 +49,7 @@ The appropriate level of confidentiality protection is determined by the Classif
 
 According to the [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345) (HCS), one, and only one, Confidentiality Tag code is assigned by a Custodian (information holder) to a Security Label when "classifying" the information. The Custodian may be the originator of the information to be protected, a Receiver of information from the Custodian, and may further disclose that information to a downstream Recipient. Any Custodian may be permitted to reclassify information per applicable policies and trading partner agreements.
 
-The confidentiality protection afforded sensitive information differs by applicable law. For example, in the US, HIV sensitive information has "normal" (the norm) level of confidentiality if governed by HIPAA. However, if HIV sensitive information is governed under Title 38 Section 7332, 42 CFR Part  (as comorbid with substance use disorder), or under some state laws, the level of confidentiality protection is coded as "restricted", because these laws are more protective than HIPAA. 
+The confidentiality protection afforded sensitive information differs by applicable law. For example, in the US, HIV sensitive information has "normal" (the norm) level of confidentiality if governed by HIPAA. However, if HIV sensitive information is governed under Title 38 Section 7332, 42 CFR Part 2 (as comorbid with substance use disorder), or under some state laws, the level of confidentiality protection is coded as "restricted", because these laws are more protective than HIPAA. 
 
 The criterion for assigning HL7 confidentiality codes is whether applicable policy deems the misuse of information as posing a greater or lesser risk of harm to or stigmatization of the data subject or an organization. The information may be about a sensitive health condition, but not necessarily, for example, it could be Business or Security policy sensitive.
 
@@ -62,7 +62,7 @@ The following HL7 Confidentiality code criteria are intended to meet a healthcar
 -   _Low_: The "low" confidentiality code applies to sensitive and non-sensitive information that has been altered in such a way as to minimize the need for confidentiality protections with some residual risks associated with re-linking.
 -   _Unrestricted_: The "unrestricted" confidentiality code applies to sensitive and non-sensitive information that has been disclosed with few or no restrictions on its use, which may be stipulated contractually between the data subject and a data user (e.g., via terms of service or data user privacy policies such as disclosure for marketing purposes or on social media).
 
-The descriptions of Confidentiality codes is based on variance from "normative" level of protection as a metric for differentiating the total order hierarchical demarcations for this multi-level security model.
+The descriptions of Confidentiality codes are based on variance from "normative" level of protection as a metric for differentiating the total order hierarchical demarcations for this multi-level security model.
 
 This results in the following subsumption relationships which form a hierarchy (or *total order*) in which Very Restricted is the parent and each lower child _IS-A_ lesser protection level than its predecessor with Unrestricted being the lowest protection level:
 
@@ -81,10 +81,10 @@ Sensitive information is data that must be protected from unauthorized access an
 
 Sensitivity of information may be dictated by law, for example: A law, such as 42 CFR Part 2, which dictates that information about an individual's substance use disorder is sensitive; a law dictating that information custodians conduct a risk assessment of information sensitivity; or by an individual with a right to opt-out of sharing behavioral health information through a Health Information Exchange network.
 
-Depending on the policy context, the Authority  determining information sensitivity may be a jurisdiction, an organization, or an individual.
+Depending on the policy context, the Authority determining information sensitivity may be a jurisdiction, an organization, or an individual.
 
 -   For example, in the US, HIPAA, 42 CFR Part 2, and Title 38 Section 7332 are Federal health privacy laws, which dictate that information relating to the diagnosis, treatment, or referral for specific conditions is deemed sensitive. 
--   Many States have health privacy laws that are more stringent than HIPAA Privacy Rule, which is considered the US "norm" for the protection of Protected Health Information (PHI) . This PHI is labeled with a Confidentiality code `N`, meaning that the normal level of confidentiality protection applies. 
+-   Many States have health privacy laws that are more stringent than HIPAA Privacy Rule, which is considered the US "norm" for the protection of Protected Health Information (PHI). This PHI is labeled with a Confidentiality code `N`, meaning that the normal level of confidentiality protection applies. 
 -   Organizations may determine that some PHI is sensitive, and may therefore assign a higher level of confidentiality such as `R`, meaning that access/use/disclosure of this PHI is restricted. Under certain circumstances, organizations may determine that PHI is especially vulnerable to risk of stigmatization or harm.  This PHI is labeled with a Confidentiality code `V`, meaning that access/use/disclosure is very restricted.
 -   Healthcare consumers and patients have discretion under some privacy laws to determine the sensitivity of their information, and may have the information custodian label their PHI with more or less restrictive Confidentiality codes. For example:
 
