@@ -24,7 +24,7 @@ The IG describes how to structure `meta.security` to meet the HL7 Healthcare Pri
 
 It also defines a set of extensions to enable specifying: 
 
-- the manner in which "privacy marks" are rendered per CUI requirements,
+- the manner in which "privacy marks" are rendered per Controlled Unclassified Information (CUI) requirements,
 
 - the policy based on which the labels have been assigned (e.g., reference policy, contract, or consent directive instances),
 
