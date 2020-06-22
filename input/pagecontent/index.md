@@ -9,7 +9,7 @@ This provides guidance in the following areas:
 The IG describes how to select a security label based on the HL7 Privacy and Security Healthcare Classification System (HCS) label adjudication algorithms, the value in establishing consensus on a default security label for representing policies or consent directives within an exchange ecosystem, and the value of establishing default security labels for information exchanged within the Trust Framework of a policy domain.
 
 #### Consuming Security Labels
-The IG describes how an Access Control System can use security labels to filter responses to person- or population-based queries and pushed disclosures that meets the following criteria:
+The IG describes how an Access Control System can use security labels to adjudicate responses to person- or population-based queries and pushed disclosures that meets the following criteria:
 
 - Authorization Requirements specifying control over whether or not a client’s request for access to person- or population-level FHIR resources will be permitted.
           
