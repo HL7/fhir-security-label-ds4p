@@ -22,7 +22,15 @@ The IG describes how an Access Control System can use security labels to filter 
 #### Structure of `meta.security` and Extensions
 The IG describes how to structure `meta.security` to meet the HL7 Healthcare Privacy and Security Classification System syntactic and semantic rules and convey computable and interoperable policy within a policy domain based on Trust Contracts with binding capability statements.
 
-It also defined a set of extensions to enable specification of the manner in which security label "privacy marks" are rendered, e.g., per CUI requirements; reference policy, contract, or consent directive instances; indicate the authority responsible for the assigned security label; and indicate whether a label has been upgraded, downgraded, or declassified, and the party responsible for doing so.
+It also defines a set of extensions to enable specifying: 
+
+- the manner in which "privacy marks" are rendered per CUI requirements,
+
+- the policy based on which the labels have been assigned (e.g., reference policy, contract, or consent directive instances),
+
+- the related artifacts to that further explain or justify the label such as provenance or patient consent.
+
+- the authority responsible for assigning security label, and whether a label has been upgraded, downgraded, or declassified.
 
 ### Walk-Through
 The main sections of this IG are:

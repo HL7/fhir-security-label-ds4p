@@ -10,7 +10,7 @@ HL7 has developed standards for segmenting sensitive data for HL7 v2 and CDA usi
 
 There is a need to develop FHIR implementation guidance for the use of FHIR `Resource.meta.security` labels to emulate the syntactical structure for security labeling as defined in the HL7 HCS, which is the normative, conceptual model upon which both HL7 v2 and the Data Segmentation for Privacy CDA IG are based. The syntactical structure of security labels dictates how the security tag sets (HL7 security labeling terminology) are used to populate specific fields in a security label with appropriate tags so as to represent a computable policy.  
 
-In addition, there is a need for guidance and examples for how a community can develop consensus security labels for specific policies so as to minimize variance in policy representations, so that rules engines are apply to uniformly enforce them to enable trusted exchange of health information among trading partners who ascribe to the same consensus labels.
+In addition, there is a need for guidance and examples for how a community can develop consensus security labels for specific policies to minimize variance in policy representations, to ensure uniform enforcement among trading partners.
 
 #### Security Labeling Conceptual Guidance
 
@@ -75,7 +75,7 @@ This results in the following subsumption relationships which form a hierarchy (
 
 **Sensitivity Tags**
 
-Information Sensitivity if the  characteristic of an IT resource which implies its value or importance and may include its vulnerability (ISO 7492-2).  Privacy metadata for information perceived as undesirable to share (HL7 Healthcare Classification System).
+Information Sensitivity is the  characteristic of an IT resource which implies its value or importance and may include its vulnerability (ISO 7492-2).  Privacy metadata for information perceived as undesirable to share (HL7 Healthcare Classification System).
 
 Sensitive information is data that must be protected from unauthorized access and disclosure to safeguard the privacy or security of an individual or organization. 
 
@@ -115,7 +115,7 @@ CUI Recipients of federal health CUI must manage persist, and enforce CUI secur
 
 **Interoperability Issue**
 
-If CUI markings on same HIE content differ, recipients will have difficulty discerning their security control requirements. If each agency adopts a different CUI marking policy, then the burden on downstream HIE participants would increase exponentially. Federal Agencies in collaboration with Sequoia are working towards a consensus policy for marking CUI to ensure that the burden on downstream HIE participants is minimized.
+If CUI markings on some HIE content differ, recipients will have difficulty discerning their security control requirements. If each agency adopts a different CUI marking policy, the burden on downstream HIE participants would increase exponentially. Federal Agencies in collaboration with Sequoia are working towards a consensus policy for marking CUI to ensure that the burden on downstream HIE participants is minimized.
 
 **CUI Solutions**
 
@@ -236,7 +236,7 @@ It is important to delineate the policy-neutral technological infrastructure tha
 
 __Security Labels Could be Informative__
 
-Even though some security labels such as confidentiality and sensitivity labels could be used for blocking access to certain information for unauthorized parties, there is more to security labels than that. Some security labels such as handling instructions or integrity labels are informative and assist the recipient with understanding how the information should be handled or how much it can be reliable.
+Even though some security labels such as confidentiality and sensitivity labels could be used for blocking access to certain information for unauthorized parties, there is more to security labels than that. Some security labels such as handling instructions or integrity labels are informative and assist the recipient with understanding the reliability of the information and how it should be handled.
 
 Enforcement of authorization policies based on law is not information blocking
 
@@ -250,7 +250,7 @@ As clinical practices, societal norms, and common-sense expectations of privacy 
 
 Can security labeling and data segmentation jeopardize patient safety by enabling patients to hide information from a clinician and thereby impeding the clinician’s ability to make the best decision based on a complete picture?
 
-__Security labeling does not equate unfettered patient control over all the information__
+__Security labeling does not equate to unfettered patient control over all the information__
 
 Security labeling does not enable patients to have complete and unfettered control over sharing their healthcare information. Identifying and marking different type of healthcare information does not automatically grant the patient control over sharing them. What the patient, and other policy makers, get to control, and the extent to which such control is permitted, is a matter of policy determined by applicable laws and regulations. So, the patient’s ability to hide information from certain clinicians is strictly controlled by existing laws and regulations and is not determined by the security labeling technology.
 
