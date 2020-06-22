@@ -27,7 +27,7 @@ Information governed by policies addressing ad hoc, extremely sensitive informat
 
 It is critical that the policy dictating the sensitivity of labeled information be included in Security Label as the single Policy Tag indicating governed sensitive information, the level of confidentiality, other pertinent security categories relevant to the information, access limitations to a "compartment" of end users with a "need to know" such as a Care Team or Research Project.
 
-In addition, the driving policy may include the need to specify:
+In addition, the policy may include the need to specify:
 
 -   The integrity, provenance, and trust attributes pertinent to the governed information.  For example, policy may require that only legally-attested information is available to those other than the author; that any syntactic/semantic transformation of the information is known by end users; that the provenance of the information be accessible to end users to determine their level of confidence in the trustworthiness, authenticity, and reliability of the labeled information; and the degree to which the information has been exchanged within a trust framework. 
 
