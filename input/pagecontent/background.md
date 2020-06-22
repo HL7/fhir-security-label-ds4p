@@ -17,13 +17,13 @@ In addition, there is a need for guidance and examples for how a community can d
 
 ##### How to assign a Security Label
 
-Generally, a Security Label is assigned based on a policy specifying sensitive information. If the sensitive information increases the risk of the information target (i.e., a patient) to stigmatization or discrimination, which might in turn deter the information target seeking treatment or services for the sensitive information, then the need to protect the confidentiality of that information is more stringent than the "normal" confidentiality protections afforded most health information, so, the Confidentiality protections will be heightened beyond the "norm". 
+Generally, a Security Label is assigned based on a policy specifying sensitive information. If the sensitive information increases the risk of the information target (i.e., a patient) to stigmatization or discrimination (which might in turn deter seeking treatment or other services), then, the need to protect the confidentiality of that information is more stringent than the "normal". Therefore, the confidentiality protections will be heightened beyond the "norm". 
 
-In the US, the norm of confidentiality protections under HIPAA are the baseline. Privacy laws that preempt HIPAA by offering more stringent protections, which require heightened levels of Confidentiality protection are assigned Security Labels with more restrictive Confidentiality tag, i.e., `R` (restricted).  
+In the US, the norm of confidentiality protections under HIPAA are the baseline. Privacy laws that preempt HIPAA by offering more stringent protections, which require heightened levels of confidentiality protection are assigned Security Labels with more restrictive Confidentiality Tag, i.e., `R` (restricted).
 
-Information governed by privacy laws, which do not preempt HIPAA, such as protections under FTC, Workers Compensation, or Gramm-Leach-Bliley Act, will be assigned the Confidentiality tag `M` (moderate).
+Information governed by privacy laws, which do not preempt HIPAA, such as protections under FTC, Workers Compensation, or Gramm-Leach-Bliley Act, will be assigned the Confidentiality Tag `M` (moderate).
 
-Information governed by policies addressing ad hoc, extremely sensitive information, such as victim of abuse or a legal hold, are typically assigned `VR` (very restricted) by privacy officials.
+Information governed by policies addressing ad hoc, extremely sensitive information, such as victim of abuse or a legal hold, are typically assigned `V` (very restricted) by privacy officials.
 
 It is critical that the policy dictating the sensitivity of labeled information be included in Security Label as the single Policy Tag indicating governed sensitive information, the level of confidentiality, other pertinent security categories relevant to the information, access limitations to a "compartment" of end users with a "need to know" such as a Care Team or Research Project.
 
@@ -39,7 +39,7 @@ In addition, the driving policy may include the need to specify:
 
 **Classification**
 
-Classification is the act or process by which information, which is determined to be sensitive or non-sensitive per applicable policy, is assigned a level of Confidentiality protection.
+Classification is the act or process by which information, which is determined to be sensitive or non-sensitive per applicable policy, is assigned a level of confidentiality protection.
 
 Classification is at the discretion of the Authority (Classifier), which controls the classified information, and determines the appropriate level of protection, i.e., the confidentiality of the information. A Classifier may be required to retain the Security Label assigned by a previous Classifier per policy or trading partner agreement.
 
@@ -53,7 +53,7 @@ The confidentiality protection afforded sensitive information differs by applica
 
 The criterion for assigning HL7 confidentiality codes is whether applicable policy deems the misuse of information as posing a greater or lesser risk of harm to or stigmatization of the data subject or an organization. The information may be about a sensitive health condition, but not necessarily, for example, it could be Business or Security policy sensitive.
 
-The following HL7 Confidentiality code criteria are intended to meet a healthcare-specific multi-level security model for access control by stipulating clearly distinguishable levels of protection, which can be specialized by realm:
+The following HL7 Confidentiality Code criteria are intended to meet a healthcare-specific multi-level security model for access control by stipulating clearly distinguishable levels of protection, which can be specialized by realm:
 
 -   _Normal_: The "normal" confidentiality code applies the "normative" level of protection to sensitive and non-sensitive information within the context of healthcare delivery in a general policy domain (e.g., HIPAA in US, GDPR in EU).
 -   _Restricted_: The "restricted" confidentiality code applies when a narrower policy domain preempts the "normative" level of protection in a wider policy domain (e.g., HIPAA in US, GDPR in EU) of sensitive information within the context of healthcare delivery. Examples include State behavioral health, reproductive health, minors' health, and HIV laws; Medicaid Confidentiality; Title 38 Section 7332; and 42 CFR Part 2.
@@ -62,7 +62,7 @@ The following HL7 Confidentiality code criteria are intended to meet a healthcar
 -   _Low_: The "low" confidentiality code applies to sensitive and non-sensitive information that has been altered in such a way as to minimize the need for confidentiality protections with some residual risks associated with re-linking.
 -   _Unrestricted_: The "unrestricted" confidentiality code applies to sensitive and non-sensitive information that has been disclosed with few or no restrictions on its use, which may be stipulated contractually between the data subject and a data user (e.g., via terms of service or data user privacy policies such as disclosure for marketing purposes or on social media).
 
-The descriptions of Confidentiality codes are based on variance from "normative" level of protection as a metric for differentiating the total order hierarchical demarcations for this multi-level security model.
+The descriptions of Confidentiality Codes are based on variance from "normative" level of protection as a metric for differentiating the total order hierarchical demarcations for this multi-level security model.
 
 This results in the following subsumption relationships which form a hierarchy (or *total order*) in which Very Restricted is the parent and each lower child _IS-A_ lesser protection level than its predecessor with Unrestricted being the lowest protection level:
 
@@ -84,12 +84,12 @@ Sensitivity of information may be dictated by law, for example: A law, such as 4
 Depending on the policy context, the Authority determining information sensitivity may be a jurisdiction, an organization, or an individual.
 
 -   For example, in the US, HIPAA, 42 CFR Part 2, and Title 38 Section 7332 are Federal health privacy laws, which dictate that information relating to the diagnosis, treatment, or referral for specific conditions is deemed sensitive. 
--   Many States have health privacy laws that are more stringent than HIPAA Privacy Rule, which is considered the US "norm" for the protection of Protected Health Information (PHI). This PHI is labeled with a Confidentiality code `N`, meaning that the normal level of confidentiality protection applies. 
--   Organizations may determine that some PHI is sensitive, and may therefore assign a higher level of confidentiality such as `R`, meaning that access/use/disclosure of this PHI is restricted. Under certain circumstances, organizations may determine that PHI is especially vulnerable to risk of stigmatization or harm.  This PHI is labeled with a Confidentiality code `V`, meaning that access/use/disclosure is very restricted.
--   Healthcare consumers and patients have discretion under some privacy laws to determine the sensitivity of their information, and may have the information custodian label their PHI with more or less restrictive Confidentiality codes. For example:
+-   Many States have health privacy laws that are more stringent than HIPAA Privacy Rule, which is considered the US "norm" for the protection of Protected Health Information (PHI). This PHI is labeled with a Confidentiality Code `N`, meaning that the normal level of confidentiality protection applies. 
+-   Organizations may determine that some PHI is sensitive, and may therefore assign a higher level of confidentiality such as `R`, meaning that access/use/disclosure of this PHI is restricted. Under certain circumstances, organizations may determine that PHI is especially vulnerable to risk of stigmatization or harm.  This PHI is labeled with a Confidentiality Code `V`, meaning that access/use/disclosure is very restricted.
+-   Healthcare consumers and patients have discretion under some privacy laws to determine the sensitivity of their information, and may have the information custodian label their PHI with more or less restrictive Confidentiality Codes. For example:
 
-    -   Under HIPAA consent provisions, a patient may request that the Covered Entity custodian restrict access/use/disclosure of their PHI, and the Covered Entity may agree to this request by labeling with a Confidentiality code `R` (restricted).
-    -   Under HIPAA Authorization for Disclosure, a patient requests that the Covered Entity custodian disclose PHI to a third party, which is not a Covered Entity. Since the third party is not a Covered Entity, the custodian labels the disclosed information, which is no longer PHI, with a Confidentiality code `M` for moderate confidentiality protections afforded by other applicable laws, such as Worker Compensation privacy laws, or by the privacy policies and terms of service of an entity, which may be governed by Federal Trade Commission privacy laws.
+    -   Under HIPAA consent provisions, a patient may request that the Covered Entity custodian restrict access/use/disclosure of their PHI, and the Covered Entity may agree to this request by labeling with a Confidentiality Code `R` (restricted).
+    -   Under HIPAA Authorization for Disclosure, a patient requests that the Covered Entity custodian disclose PHI to a third party, which is not a Covered Entity. Since the third party is not a Covered Entity, the custodian labels the disclosed information, which is no longer PHI, with a Confidentiality Code `M` for moderate confidentiality protections afforded by other applicable laws, such as Worker Compensation privacy laws, or by the privacy policies and terms of service of an entity, which may be governed by Federal Trade Commission privacy laws.
 
 **Purpose of Use**
 
