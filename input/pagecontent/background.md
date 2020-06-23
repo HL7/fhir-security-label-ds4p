@@ -43,7 +43,7 @@ Classification is the act or process by which information, which is determined t
 
 Classification is at the discretion of the Authority (Classifier), which controls the classified information, and determines the appropriate level of protection, i.e., the confidentiality of the information. A Classifier may be required to retain the Security Label assigned by a previous Classifier per policy or trading partner agreement.
 
-The appropriate level of confidentiality protection is determined by the Classifier's assessment of the disclosure risks of the information, which usually are identified by the magnitude, amount or kind of damage that could be caused by disclosure, such as the risk of harm, discrimination, or safety to an individual.  The level of confidentiality protection for a type of sensitive information is set by jurisdictional, organizational, or individual data subject policy.
+The appropriate level of confidentiality protection is determined by the Classifier's assessment of the disclosure risks of the information, which usually are identified by the magnitude or type of damage that could be caused by disclosure, such as the risk of harm, discrimination, or safety to an individual. The level of confidentiality protection for a type of sensitive information is set by jurisdictional, organizational, or individual data subject policy. The appropriate level of confidentiality protection for a type of sensitive information is ultimately dictated by jurisdictional, organizational, or individual policy.
 
 **Confidentiality Tags**
 
