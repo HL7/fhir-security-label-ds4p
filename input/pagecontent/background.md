@@ -282,7 +282,7 @@ In the healthcare sector as well, security labeling has already been implanted b
 
 __Security labeling does not have to be implemented in the EHR system__
 
-While existing EHRs can certainly implement the security labeling service inside their products, this is not the only approach and the labeling service can be implemented as a separate product that interacts with a standard EHR and applies labels to the outgoing information on-the-fly or on the existing information in a batch mode. This reduces the net costs of implementation and creates a competitive free marketplace for security labeling products that can work with different existing EHR systems.
+While existing EHRs can certainly implement the security labeling service inside their products, this is not the only approach and the labeling service can be implemented as a separate product that interacts with a standard EHR and applies labels to the outgoing information on-the-fly or on the existing information in a batch mode. This could reduce the net costs of implementation and create a competitive free marketplace for security labeling products that can work with different existing EHR systems.
 
 __Implementation can be iterative and gradual and not every application needs all the features__
 
