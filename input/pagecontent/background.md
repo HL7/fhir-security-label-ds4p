@@ -6,7 +6,7 @@ Security labeling technology also includes risk mitigation techniques to ensure 
 
 ### Introduction
 
-HL7 has developed standards for segmenting sensitive data for HL7 v2 and CDA using Security Labels in accordance with the [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345)(HCS).  No such guidance is available for FHIR implementers because the core is agnostic to the HCS syntax requirements.
+HL7 has developed standards for segmenting sensitive data for HL7 v2 and CDA using Security Labels in accordance with the [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345). No such guidance is available for FHIR implementers because the core is agnostic to the HCS syntax requirements.
 
 There is a need to develop FHIR implementation guidance for the use of FHIR `Resource.meta.security` labels to emulate the syntactical structure for security labeling as defined in the HL7 HCS, which is the normative, conceptual model upon which both HL7 v2 and the Data Segmentation for Privacy CDA IG are based. The syntactical structure of security labels dictates how the security tag sets (HL7 security labeling terminology) are used to populate specific fields in a security label with appropriate tags so as to represent a computable policy.  
 
