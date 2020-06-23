@@ -75,7 +75,7 @@ This results in the following subsumption relationships which form a hierarchy (
 
 **Sensitivity Tags**
 
-Information Sensitivity is the  characteristic of an IT resource which implies its value or importance and may include its vulnerability (ISO 7492-2).  Privacy metadata for information perceived as undesirable to share (HL7 Healthcare Classification System).
+Information Sensitivity is the characteristic of an IT resource which implies its value or importance and may include its vulnerability (ISO 7492-2). This label captures privacy metadata for information perceived as undesirable to share (HL7 Healthcare Classification System).
 
 Sensitive information is data that must be protected from unauthorized access and disclosure to safeguard the privacy or security of an individual or organization. 
 
