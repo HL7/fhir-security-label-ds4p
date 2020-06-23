@@ -19,7 +19,7 @@ In addition, there is a need for guidance and examples for how a community can d
 
 Generally, a Security Label is assigned based on a policy specifying sensitive information. If the sensitive information increases the risk of the information target (i.e., a patient) to stigmatization or discrimination (which might in turn deter seeking treatment or other services), then, the need to protect the confidentiality of that information is more stringent than the "normal". Therefore, the confidentiality protections will be heightened beyond the "norm". 
 
-In the US, the norm of confidentiality protections under HIPAA are the baseline policy. Privacy laws that preempt HIPAA by offering more stringent protections, which require heightened levels of confidentiality protection are assigned Security Labels with more restrictive Confidentiality Tag, i.e., `R` (restricted).
+In the US, the norm of confidentiality protections under HIPAA are the baseline policy. Privacy laws that preempt HIPAA by offering more stringent protections  (for example, state laws related to adolescent health or an individual’s HIV-status), which require heightened levels of confidentiality protection are assigned Security Labels with more restrictive Confidentiality Tag, i.e., `R` (restricted).
 
 Information governed by privacy laws, which do not preempt HIPAA, such as protections under FTC, Workers Compensation, or Gramm-Leach-Bliley Act, will be assigned the Confidentiality Tag `M` (moderate).
 
