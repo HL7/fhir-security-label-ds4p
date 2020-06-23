@@ -27,11 +27,16 @@
           { "code": "author" },
           { "code": "editor" },
           { "code": "reviewer" },
-          { "code": "endorser" },
-          { "code": "CLASSIFIER", "display": "classifier" },
-          { "code": "DECLASSIFIER", "display": "declassifier" },
-          { "code": "DOWNGRADER", "display": "downgrader" },
-          { "code": "DRIVCLASSIFIER", "display": "drivclassifier" },
+          { "code": "endorser" }
+        ]
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+        "concept": [
+          { "code": "CLASSIFIER" },
+          { "code": "DECLASSIFIER" },
+          { "code": "DOWNGRADER" },
+          { "code": "DRIVCLASSIFIER" },
           { "code": "RECLASSIFIER", "display": "reclassifier" },
           { "code": "UPGRADER", "display": "upgrader" }
         ]
