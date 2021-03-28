@@ -21,3 +21,6 @@ Thumbs.db
 ################
 *.bak
 org.hl7.fhir.publisher.jar
+
+
+publisher.jar
