@@ -103,6 +103,22 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/extension-has-inline-sec-label"/>
+      </reference>
+      <name value="Structure definition for the has-inline-sec-label extension"/>
+      <description value="Structure definition for the has-inline-sec-label extension."/>
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/extension-inline-sec-label"/>
+      </reference>
+      <name value="Structure definition for the inline-sec-label extension"/>
+      <description value="Structure definition for the inline-sec-label extension."/>
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-must-display"/>
       </reference>
       <name value="Structure definition for the must-display extension"/>

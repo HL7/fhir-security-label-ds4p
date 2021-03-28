@@ -1,0 +1,46 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "extension-inline-sec-label",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-inline-sec-label",
+  "name": "ExtensionInlineSecLabel",
+  "title": "Inline Security Label",
+  "version": "0.1",
+  "description": "An element-specific security label appearing inline within the element.",
+  "status": "draft",
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "context": [
+    {
+      "type": "fhirpath",
+      "expression": "Resource"
+    }
+  ],
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-inline-sec-label"
+      },
+      {
+        "id": "Extension.valueCoding",
+        "path": "Extension.valueCoding",
+        "min": 1,
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ]
+      }
+    ]
+  }
+}
