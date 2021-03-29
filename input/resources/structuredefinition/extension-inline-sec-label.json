@@ -13,8 +13,8 @@
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
   "context": [
     {
-      "type": "fhirpath",
-      "expression": "Resource"
+      "type": "element",
+      "expression": "Element"
     }
   ],
   "derivation": "constraint",
