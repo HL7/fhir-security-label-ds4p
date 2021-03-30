@@ -175,6 +175,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="Immunization/I001"/>
+      </reference>
+      <name value="Simple use of inline security labels on a reference"/>
+      <description value="A simple example showing how to use the has-inline-sec-label and inline-sec-label extensions to 1) indicate that the resource contains inline security labels and 2) mark the link between the immunization resource and the patient resource (the reference to the patient) with integrity and provenance labels indicating the confidence in the link and its origin."/>
+      <exampleBoolean value="true" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="Observation/example-extension-sec-label-basis"/>
       </reference>
       <name value="Simple use of the sec-label-basis extension on an observation"/>
