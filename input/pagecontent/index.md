@@ -19,8 +19,8 @@ The IG describes how an Access Control System can use security labels to adjudic
 
 - Provenance Requirements specifying the recording and consumption of provenance information in releasing or receiving personal or population-level FHIR resources.
 
-#### Structure of `meta.security` and Extensions
-The IG describes how to structure `meta.security` to meet the HL7 Healthcare Privacy and Security Classification System syntactic and semantic rules and convey computable and interoperable policy within a policy domain based on Trust Contracts with binding capability statements.
+#### Structure of `Resource.meta.security` and Extensions
+The IG describes how to structure `Resource.meta.security` to meet the HL7 Healthcare Privacy and Security Classification System syntactic and semantic rules and convey computable and interoperable policy within a policy domain based on Trust Contracts with binding capability statements.
 
 It also defines a set of extensions to enable specifying: 
 
@@ -32,10 +32,14 @@ It also defines a set of extensions to enable specifying:
 
 - the authority responsible for assigning security label, and whether a label has been upgraded, downgraded, or declassified.
 
+#### Granular Labeling using Inline Security Labels
+The IG also defines extension for [Inline Security Labels](inline.html). This enables more fine-grained security labels that only apply to a portion of the resource.
+
 ### Walk-Through
 The main sections of this IG are:
 
 - [Background](background.html) 
+- [Inline Security Labels](inline.html) 
 - [Detailed Specification](spec.html)
 - [Security and Privacy Considerations](security.html)
 - [Downloads](downloads.html)

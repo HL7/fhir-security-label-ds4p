@@ -5,6 +5,12 @@ The following extensions are defined by this IG:
 - The `sec-label-related-artifact` extension which enables recording a pointer to an artifact related to the label, particularly, a consent directive based on which the label has been assigned, or a provenance resource which further backs up the integrity label.
 - the `sec-label-classifer` extension which enables recording the entity that has assigned or updated the label.
 
+Furthermore, the following extensions are defined to enable fine-grained labeling at the sub-resource level using inline security labels. 
+- the `inline-sec-label` extension enables specifying a security label inline on any element in a resource where an extension is allowed to appear.
+- the `has-inline-sec-label` extension enables specifying whether a resource contains any inline security labels to assist consumers in deciding whether they should to a deep inspection of the resource content to look for inline security labels.
+
+The concept of inline security labels and the corresponding extensions are defined in a [separate page](inline.html).
+
 #### `must-display` Extension
 The must-display extension is based on the [`Annotation` Data Type](https://www.hl7.org/fhir/datatypes.html#Annotation), which is text note that also contains information about who made the statement and when.
 
