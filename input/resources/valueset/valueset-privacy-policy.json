@@ -105,37 +105,13 @@
         "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
         "concept": [
           {
-            "code": "InformedAssentCD",
-            "display": "Informed Assent for Research"
-          },
-          {
-            "code": "InformedConsentCD",
-            "display": "Informed Consent for Research"
-          },
-
-          {
             "code": "MDHHS-5515MMHC",
             "display": "Michigan Consent to Share Behavioral Health Information for Care Coordination Purposes-Michigan Mental Health Code"
           },
           {
             "code": "MDHHS-5515Part2",
             "display": "Michigan Consent to Share Behavioral Health Information for Care Coordination Purposes-US 42 CFR Part 2"
-          },
-          { "code": "GDPRCONTRACT", "display": "GDPR contract" },
-          { "code": "GDPRLEGALCLAIM", "display": "GDPR legal claim" },
-          { "code": "GDPRLEGALOBL", "display": "GDPR legal obligation" },
-          {
-            "code": "GDPRLEGITINTEREST",
-            "display": "GDPR legitimate interest"
-          },
-          { "code": "GDPRPUBLICHEALTH", "display": "GDPR public health" },
-          { "code": "GDPRPUBLICINTEREST", "display": "GDPR public interest" },
-          { "code": "GDPRRESEARCH", "display": "GDPR research" },
-          {
-            "code": "GDPRHTHSOCSYS",
-            "display": "GDPR health or social system management"
-          },
-          { "code": "GDPRVITALINTEREST", "display": "GDPR vital interest" }
+          }
         ]
       }
     ]
