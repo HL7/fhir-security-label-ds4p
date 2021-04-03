@@ -135,8 +135,7 @@
             "code": "GDPRHTHSOCSYS",
             "display": "GDPR health or social system management"
           },
-          { "code": "GDPRVITALINTEREST", "display": "GDPR vital interest" },
-          { "code": "32CFRPart2002", "display": "32 CFR Part 2002" }
+          { "code": "GDPRVITALINTEREST", "display": "GDPR vital interest" }
         ]
       }
     ]
