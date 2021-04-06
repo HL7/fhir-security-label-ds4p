@@ -11,7 +11,7 @@ Inline security labels may be used in conjunction with resource-wide labels. Res
 
 When both inline and resource-wide labels are present, a consumer must apply the highest level of protection resulting from all the resource-wide as well as inline labels, when processing the labeled portion of the resource. For example, when a resource is labeled with CUI marking and a portion of the resource is marked with an inline confidentiality label, the labeled portion is subject to the protective measures implied by both of those labels (e.g., masking _and_ privacy marking when unmasked).
 
-The following excerpt shows an example of using of extensions for inline lableing. First, the `extension-has-inline-sec-label` indicates that the resource includes inline security labels. Then, in the `identifier` element, using the `extension-inline-sec-label` extension, one of the identifiers that records the US Social Security Number (SSN) is tagged with a _restricted_ (`R`) confidentiality label. A resource-wide label is also present to indicate the CUI marking.
+The following excerpt shows an example of using of extensions for inline labeling. First, the `extension-has-inline-sec-label` indicates that the resource includes inline security labels. Then, in the `identifier` element, using the `extension-inline-sec-label` extension, one of the identifiers that records the US Social Security Number (SSN) is tagged with a _restricted_ (`R`) confidentiality label. A resource-wide label is also present to indicate the CUI marking.
 
 ```json
 {
