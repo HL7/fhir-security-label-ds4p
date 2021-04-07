@@ -35,9 +35,9 @@
         "concept": [
           { "code": "CLASSIFIER" },
           { "code": "DECLASSIFIER" },
-          { "code": "DOWNGRADER" },
+          { "code": "DOWNGRDER" },
           { "code": "DRIVCLASSIFIER" },
-          { "code": "UPGRADER", "display": "upgrader" }
+          { "code": "UPGRDER" }
         ]
       }
     ]
