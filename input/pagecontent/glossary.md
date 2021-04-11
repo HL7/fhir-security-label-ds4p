@@ -5,7 +5,6 @@ These defintions are based on the glossary of the [HL7 Healthcare Privacy and Se
 The combination of a hierarchical security classification and a security category that represents the sensitivity of an object or the security clearance of an individual. [[ISO 2382-8](#ISO23823)]
 A level associated with an individual who may be accessing information (for example, a clearance level) or with the information which may be accessed (for example, a classification level). [[HIPAA Security Glossary](http://aspe.hhs.gov/admnsimp/nprm/seclist.htm)].
 
-<!---
 ### Access Control Decision Information (ADI)
 The portion (possibly all) of the ACI made available to the ADF in making a particular access control decision. [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
 
@@ -13,6 +12,7 @@ The portion (possibly all) of the ACI made available to the ADF in making a part
 ### Access Control Information (ACI) 
 Any information used for access control purposes, including contextual information. [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
 
+<!--- 
 ### Access Control Service
 A service that provides the basic operational aspects of access control such as making access control decision information (ADI) available to access decision components and performing access control functions. The service also provides security labeling and privacy and security protection functions.The service, known as an Access Control Service (ACS), requires the following information: access policy rules, contextual information needed to interpret ADI, initiator, target, and access request ADI, security labeling rules and vocabulary, and transform rules and services.
 
