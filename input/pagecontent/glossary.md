@@ -139,7 +139,7 @@ Characteristic of a subject, resource, action or environment that may be referen
 ### Security Classification
 The determination of which specific degree of protection against access the data or information requires, together with a designation of that degree of protection. Examples: &quot;Top secret&quot;, &quot;secret&quot;, &quot;confidential&quot;. [ISO 2382-8/T-REC-X.812-1995](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.812-199511-I!!PDF-E&amp;type=items).
 
-### Security Label (synonymous with_ _Target Label_)
+### Security Label (synonymous with _Target Label_)
 
 _(Note to Readers: In the definitions below, &quot;security label&quot; is defined as both a verb: &quot;means used to associate_ [_security attributes_](#SecurityAttributeDF)_&quot; as in &quot;security labeling&quot;, and as noun: &quot;the markings bound to a resource&quot;. As a noun, the term is sometimes considered synonymous with &quot;security metadata&quot; and &quot;_[_security tag_](#SecurityTagDF)_.&quot; As a verb, the term is sometimes considered synonymous with &quot;tagging&quot;. However, authoritative security standards sometimes use the term &quot;security label&quot; for both the classification given to IT resources and the classification level in an initiator&#39;s clearance. In addition, some authoritative standards use the term &quot;marking bound to a resource&quot; to refer to both computable security labels and the human readable rendering of security label fields better known as &quot;privacy markings&quot;)._
 
@@ -194,5 +194,5 @@ The set of decision requests, identified by definitions for resource, subject an
 A target is an [IT resource](#ITResourceDF) for which an initiator seeks access.
 --->
 
-### Target Label_Synonymous with_ _Security Label_ 
+### Target Label (synonymous with _Security Label_)
 A security label can be used as target ACI to protect a target. Access rules define the access permissions (operations) granted given the security label of the initiator and the security label assigned to a target.If the security policy requires that the ACI held in the security label are used for target ACI, then overall flow of data in and out of that target can be controlled. Hence, the overall flow of data in and out of targets may be analyzed for security domains applying the same security policy. Targets can be created within other targets. The security label of the containing target limits the security labels that may be assigned to the contained target under the rules for the appropriate security policy. Examples of targets to which labels may be applied include: OSI n-entities; Directory Service entries; files held in a file store; database entries. [[ISO/IEC 10181-3](#ISO101813) p. 24].
