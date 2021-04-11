@@ -2,15 +2,16 @@
 These defintions are based on the glossary of the [HL7 Healthcare Privacy and Security Classification System (HCS)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345), Release 1, Volume 1.
 
 ### Access (Security) Level
-The combination of a hierarchical security classification and a security category that represents the sensitivity of an object or the security clearance of an individual. [[ISO 2382-8](#ISO23823)]
-A level associated with an individual who may be accessing information (for example, a clearance level) or with the information which may be accessed (for example, a classification level). [[HIPAA Security Glossary](http://aspe.hhs.gov/admnsimp/nprm/seclist.htm)].
+The combination of a hierarchical security classification and a security category that represents the sensitivity of an object or the security clearance of an individual [[ISO 2382-8](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.812-199511-I!!PDF-E&amp;type=items)].
+
+A level associated with an individual who may be accessing information (for example, a clearance level) or with the information which may be accessed (for example, a classification level) [[HIPAA Security Glossary](http://aspe.hhs.gov/admnsimp/nprm/seclist.htm)].
 
 ### Access Control Decision Information (ADI)
-The portion (possibly all) of the ACI made available to the ADF in making a particular access control decision. [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
+The portion (possibly all) of the ACI made available to the ADF in making a particular access control decision [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
 
 
 ### Access Control Information (ACI) 
-Any information used for access control purposes, including contextual information. [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
+Any information used for access control purposes, including contextual information [[ISO 10181-3](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
 
 <!--- 
 ### Access Control Service
@@ -20,12 +21,12 @@ ACS generates information made available to other elements includes transformed 
 --->
 
 ### Classification
-Confidential protection of data elements by segmentation into restricted and specifically controlled categories set by policies. [Adapted from [ASTM E-1986](#ASTME1986)]
+Confidential protection of data elements by segmentation into restricted and specifically controlled categories set by policies [Adapted from [ASTM E-1986](#ASTME1986)].
 
 ### Clearance
-Initiator-bound access control information (ACI) that can be compared with security labels of targets. [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
+Initiator-bound access control information (ACI) that can be compared with security labels of targets [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
 
-Permission granted to an individual to access data or information at or below a particular security level. [[ISO/IEC 2382-8:1998](#ISOIEC2382Pt8)].
+Permission granted to an individual to access data or information at or below a particular security level [[ISO/IEC 2382-8:1998](http://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.812-199511-I!!PDF-E&type=items)].
 
 
 ### Clinical attribute 
@@ -45,14 +46,13 @@ A computational algorithm used for assigning a clinical attribute to a clinical 
 
 ### Compartment
 A security label tag that "segments" an IT resource by indicating that access and use is restricted to members of a defined community or project.
-A set of categories in a security label. [[Sandhu](#Sandhu)] 
+A set of categories in a security label [Sandhu].
 
 ### Compartment-based policies:
-In a compartment-based policy, sets of targets are associated with a named security compartment or category, which isolates them from other targets. Users need to be given a distinct clearance for a compartment to be able to access targets in the compartment. ([Ford](#Ford) Chapter 6 p.155).
+In a compartment-based policy, sets of targets are associated with a named security compartment or category, which isolates them from other targets. Users need to be given a distinct clearance for a compartment to be able to access targets in the compartment [Ford; chapter 6, p.155].
 
 ### Compartmentalization
-A division of data into isolated blocks with separate security controls for the purpose of reducing risk. [[ISO 7498-2](#ISO74982)]
-Example: The division of data relative to a major project into blocks corresponding to subprojects, each with its own security protection, in order to limit exposure of the overall project. 
+A division of data into isolated blocks with separate security controls for the purpose of reducing risk [[ISO 7498-2](http://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.800-199103-I!!PDF-E&type=items)]. For example, the division of data in a major project into blocks corresponding to sub-projects, each with its own security protection, in order to limit exposure of the overall project.
 
 ### Confidentiality 
 Privacy metadata classifying an IT resource (data, information object, service, or system capability) according to its level of sensitivity, which is based on an analysis of applicable privacy policies and the risk of financial, reputational, or other harm to an individual or entity that could result if made available or disclosed to unauthorized individuals, entities, or processes.Usage Notes: Confidentiality codes are used in security labels and privacy markings to classify IT resources based on sensitivity to indicate the custodian or receiver obligation to ensure that the protected resource is not made available or redisclosed to individuals, entities, or processes (security principals) per applicable policies. Confidentiality codes are also used in the clearances of initiators requesting access to protected resources. 
@@ -63,17 +63,15 @@ Definition aligns with ISO 7498-2: Confidentiality is the property that informat
 CUI is information the Government creates or possesses, or that an entity creates or possesses for or on behalf of the Government, that a law, regulation, or Government-wide policy requires or permits an agency to handle using safeguarding or dissemination controls. However, CUI does not include classified information (see definition above) or information a non-executive branch entity possesses and maintains in its own systems that did not come from, or was not created or possessed by or for, an executive branch agency or an entity acting for an agency. Law, regulation, or Government-wide policy may require or permit safeguarding or dissemination controls in three ways: Requiring or permitting agencies to control or protect the information but providing no specific controls, which makes the information CUI Basic; requiring or permitting agencies to control or protect the information and providing specific controls for doing so, which makes the information CUI Specified; or requiring or permitting agencies to control the information and specifying only some of those controls, which makes the information CUI Specified, but with CUI Basic controls where the authority does not specify.
 
 ### Data Segmentation 
-
-Process of sequestering from capture, access or view certain data elements that are perceived by a legal entity, institution, organization or individual as being undesirable to share. [[Goldstein GWU](#GWU)].
+Process of sequestering from capture, access or view certain data elements that are perceived by a legal entity, institution, organization or individual as being undesirable to share [GWU].
 
 ### Healthcare Privacy and Security Classification System (HCS)
-
 A defined scheme for the classification and handling of health care and healthcare related information.
 
-<!---
 ### IT Resource
 Any data, information object, operation, process, service, or system capability. An IT resource that is assigned a security label is sometimes referred to as a "security object". An IT resource that is represented as a requested security object of an initiator's access request is sometimes referred to as a "target".
 
+<!---
 Data, service or system component. [[XACML](#XACML)]
 
 The term resource embraces, e.g., information resources, processing resources, communication resources, and physical resources. [[Ford](#Ford)]
@@ -93,7 +91,7 @@ Security labels are a type of security metadata that is associated with a securi
 -->
 
 ### Named Tag Set
-Field containing a Tag Set Name and its associated set of security tags. [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
+Field containing a Tag Set Name and its associated set of security tags [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
 <!---
 ### Object
@@ -116,48 +114,48 @@ Individual&#39;s or organization&#39;s right to determine whether, when, and to 
 -->
 
 ### Privacy Mark
-Human readable security labels, which are rendered in the graphic user interface on accessed electronic information, are called &quot;privacy marks.&quot; The act of enabling the rendering of a privacy mark is called &quot;privacy marking&quot;.
+Human readable security labels, which are rendered in the graphic user interface on accessed electronic information, are called privacy marks. The act of enabling the rendering of a privacy mark is called "privacy marking."
 
-If present, the privacy-mark is not used for access control. The content of the privacy-mark may be defined by the security policy in force (identified by the security-policy-identifier) which may define a list of values to be used. Alternately, the value may be determined by the originator of the security-label. [[ISO 22600-3](#ISO226003) Section A.3.4.3].
+If present, the privacy-mark is not used for access control. The content of the privacy-mark may be defined by the security policy in force (identified by the security-policy-identifier) which may define a list of values to be used. Alternately, the value may be determined by the originator of the security-label [[ISO 22600-3](https://www.iso.org/standard/45376.html) Section A.3.4.3].
 
 ### Provenance
-The history of the ownership of an object, especially when documented or authenticated.   For example, references to a type of equipment, standard clinical procedure, attestable content author, data source, provider or other clinical facts. [[PCAST](http://www.whitehouse.gov/sites/default/files/microsites/ostp/pcast-health-it-report.pdf)].
+The history of the ownership of an object, especially when documented or authenticated.   For example, references to a type of equipment, standard clinical procedure, attestable content author, data source, provider or other clinical facts [[PCAST](http://www.whitehouse.gov/sites/default/files/microsites/ostp/pcast-health-it-report.pdf)].
 
-Information about entities, activities, and people involved in producing a piece of data or thing, which can be used to form assessments about its quality, reliability or trustworthiness. [[W3C PROV-Overview](http://www.w3.org/TR/2012/WD-prov-overview-20121211/)].
+Information about entities, activities, and people involved in producing a piece of data or thing, which can be used to form assessments about its quality, reliability or trustworthiness [[W3C PROV-Overview](http://www.w3.org/TR/2012/WD-prov-overview-20121211/)].
 
-Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance. [[W3C Provenance XG Final Report](http://www.w3.org/2005/Incubator/prov/XGR-prov-20101214/#Importance_of_provenance)].
+Provenance of a resource is a record that describes entities and processes involved in producing and delivering or otherwise influencing that resource. Provenance provides a critical foundation for assessing authenticity, enabling trust, and allowing reproducibility. Provenance assertions are a form of contextual metadata and can themselves become important records with their own provenance [[W3C Provenance XG Final Report](http://www.w3.org/2005/Incubator/prov/XGR-prov-20101214/#Importance_of_provenance)].
 
-Data provenance is information that helps determine the derivation history of a data product, starting from its original sources.  Data product or dataset refers to data in any form, such as files, tables, and virtual collections. […] Two important features of the provenance of a data product are the ancestral data products from which this data product evolved, and the process of transformation of these ancestral data product(s), potentially through workflows, that helped derive this data product. [[Simmhan](#Simmhan)].
+Data provenance is information that helps determine the derivation history of a data product, starting from its original sources. Data product or dataset refers to data in any form, such as files, tables, and virtual collections. Two important features of the provenance of a data product are the ancestral data products from which this data product evolved, and the process of transformation of these ancestral data product(s), potentially through workflows, that helped derive this data product [Simmhan].
 
-The information that documents the history of the Content Information. This information tells the origin or source of the Content Information, any changes that may have taken place since it was originated, and who has had custody of it since it was originated. The archive is responsible for creating and preserving Provenance Information from the point of Ingest; however, earlier Provenance Information should be provided by the Producer. Provenance Information adds to the evidence to support Authenticity. [[ISO 14721](#ISO14721)).
+The information that documents the history of the Content Information. This information tells the origin or source of the Content Information, any changes that may have taken place since it was originated, and who has had custody of it since it was originated. The archive is responsible for creating and preserving Provenance Information from the point of Ingest; however, earlier Provenance Information should be provided by the Producer. Provenance Information adds to the evidence to support Authenticity [[ISO 14721](http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=24683)].
 
 ### Security Attribute
-A security-related quality of an object. Security attributes may be represented as hierarchical levels, bits in a bit map, or numbers. Compartments, caveats, and release markings are examples of security attributes. [NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm).
+A security-related quality of an object. Security attributes may be represented as hierarchical levels, bits in a bit map, or numbers. Compartments, caveats, and release markings are examples of security attributes [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
-Characteristic of a subject, resource, action or environment that may be referenced in a predicate or target. [[XACML](#XACML)].
+Characteristic of a subject, resource, action or environment that may be referenced in a predicate or target [[XACML](http://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-cs-01-en.pdf)].
 
 ### Security Classification
-The determination of which specific degree of protection against access the data or information requires, together with a designation of that degree of protection. Examples: &quot;Top secret&quot;, &quot;secret&quot;, &quot;confidential&quot;. [ISO 2382-8/T-REC-X.812-1995](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.812-199511-I!!PDF-E&amp;type=items).
+The determination of which specific degree of protection against access the data or information requires, together with a designation of that degree of protection; for example, "Top Secret", "Secret", "Confidential" [[ISO 2382-8](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.812-199511-I!!PDF-E&amp;type=items)].
 
 ### Security Label (synonymous with _Target Label_)
 
-_(Note to Readers: In the definitions below, &quot;security label&quot; is defined as both a verb: &quot;means used to associate_ [_security attributes_](#SecurityAttributeDF)_&quot; as in &quot;security labeling&quot;, and as noun: &quot;the markings bound to a resource&quot;. As a noun, the term is sometimes considered synonymous with &quot;security metadata&quot; and &quot;_[_security tag_](#SecurityTagDF)_.&quot; As a verb, the term is sometimes considered synonymous with &quot;tagging&quot;. However, authoritative security standards sometimes use the term &quot;security label&quot; for both the classification given to IT resources and the classification level in an initiator&#39;s clearance. In addition, some authoritative standards use the term &quot;marking bound to a resource&quot; to refer to both computable security labels and the human readable rendering of security label fields better known as &quot;privacy markings&quot;)._
+_(In the definitions below, &quot;security label&quot; is defined as both a verb: "means used to associate security attributes" as in "security labeling", and as noun: "the markings bound to a resource." As a noun, the term is sometimes considered synonymous with "security metadata" and "security tag." As a verb, the term is sometimes considered synonymous with "tagging." However, security standards sometimes use the term "security label" for both the classification given to IT resources and the classification level in an initiator's clearance. In addition, some standards use the term "marking bound to a resource" to refer to both computable security labels and the human-readable rendering of security label fields, better known as "privacy markings")._
 
 The means used to associate a set of security attributes with a specific information object as part of the data structure for that object [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
 
-Access control information associated with the attribute values being accessed. [[ISO/IEC 9594-2:2008/ITU X.501](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.501-200508-S!!PDF-E&amp;type=items)].
+Access control information associated with the attribute values being accessed [[ISO/IEC 9594-2:2008/ITU X.501](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.501-200508-S!!PDF-E&amp;type=items)].
 
-The marking bound to a resource (which may be a data unit) that names or designates the security attributes of that resource. NOTE - The marking and/or binding may be explicit or implicit. [[ISO 7498-2/CCITT Rec. X.800](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.800-199103-I!!PDF-E&amp;type=items)].
+The marking bound to a resource (which may be a data unit) that names or designates the security attributes of that resource. NOTE - The marking and/or binding may be explicit or implicit [[ISO 7498-2](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.800-199103-I!!PDF-E&amp;type=items)].
 
-The means used to associate a set of security attributes with a specific information object as part of the data structure for that object. [[NIST SP 800-53](http://csrc.nist.gov/publications/nistpubs/800-53-Rev3/sp800-53-rev3-final_updated-errata_05-01-2010.pdf)].
+The means used to associate a set of security attributes with a specific information object as part of the data structure for that object [[NIST SP 800-53](http://csrc.nist.gov/publications/nistpubs/800-53-Rev3/sp800-53-rev3-final_updated-errata_05-01-2010.pdf)].
 
-Security labels may be used to associate security-relevant information with attributes within the Directory. Security labels may be assigned to an attribute value in line with the security policy in force for that attribute. The security policy may also define how security labels are to be used to enforce that security policy. A security label comprises a set of elements optionally including a security policy identifier, a security classification, a privacy mark, and a set of security categories. The security label is bound to the attribute value using a digital signature or other integrity mechanism. [[ISO/IEC 9594-2:2008/ITU X.501] ](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.501-200508-S!!PDF-E&amp;type=items).
+Security labels may be used to associate security-relevant information with attributes within the Directory. Security labels may be assigned to an attribute value in line with the security policy in force for that attribute. The security policy may also define how security labels are to be used to enforce that security policy. A security label comprises a set of elements optionally including a security policy identifier, a security classification, a privacy mark, and a set of security categories. The security label is bound to the attribute value using a digital signature or other integrity mechanism [[ISO/IEC 9594-2:2008/ITU X.501](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.501-200508-S!!PDF-E&amp;type=items)].
 
-Sensitivity labels are security labels which support data confidentiality models, like the Bell and LaPadula model.  The sensitivity label tells the amount of damage that will result from the disclosure of the data and also indicates which measures the data requires for protection from disclosure.  The amount of damage that results from unauthorized disclosure depends on who obtains the data; the sensitivity label should reflect the worst case. [[IETF RFC 1457](http://www.faqs.org/rfcs/rfc1457.html)].
+Sensitivity labels are security labels which support data confidentiality models, like the Bell and LaPadula model.  The sensitivity label tells the amount of damage that will result from the disclosure of the data and also indicates which measures the data requires for protection from disclosure.  The amount of damage that results from unauthorized disclosure depends on who obtains the data; the sensitivity label should reflect the worst case [[IETF RFC 1457](http://www.faqs.org/rfcs/rfc1457.html)].
 
-A security label, sometimes referred to as a confidentiality label, is a structured representation of the sensitivity of a piece of information. A security label is used in conjunction with a clearance, a structured representation of what information sensitivities a person (or other entity) is authorized to access and a security policy to control access to each piece of information. [[XMPP Core](#XMPPCore)].
+A security label, sometimes referred to as a confidentiality label, is a structured representation of the sensitivity of a piece of information. A security label is used in conjunction with a clearance, a structured representation of what information sensitivities a person (or other entity) is authorized to access and a security policy to control access to each piece of information [[XMPP Core](http://xmpp.org/rfcs/rfc6120.html)].
 
-A security label is a type of [PCAST](http://www.whitehouse.gov/sites/default/files/microsites/ostp/pcast-health-it-report.pdf) Metadata Tag defined as &quot;information that characterizes data, such as contextual information.&quot;
+A security label is a type of [PCAST](http://www.whitehouse.gov/sites/default/files/microsites/ostp/pcast-health-it-report.pdf) metadata tag defined as _information that characterizes data, such as contextual information_.
 
 ### Security (Labeling) Policy
 The definition of which classification and category values are used and how security labels are checked against clearances.
@@ -166,33 +164,39 @@ The definition of which classification and category values are used and how secu
 A computational algorithm used for assigning a security label to an IT resource such as a clinical fact.
 
 ### Security Policy Information File (SPIF) 
-A construct that conveys domain-specific security policy information. [[ISO/IEC 15816](#ISOIEC2382Pt8)].
+A construct that conveys domain-specific security policy information [[ISO/IEC 15816](http://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.841-200010-I!!PDF-E&type=items)].
 
-An XML schema, that provides a high level representation of a security labeling policy in a generic and open fashion. [[Open XML SPIF](http://www.xmlspif.org/?page_id=51)].
+An XML schema, that provides a high level representation of a security labeling policy in a generic and open fashion [[Open XML SPIF](http://www.xmlspif.org/?page_id=51)].
 
 ### Security Tag
-Information unit containing a representation of certain security-related information (e.g., a restrictive attribute bit map). [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
+Information unit containing a representation of certain security-related information (e.g., a restrictive attribute bit map) [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
 ### Segmentation 
-The process of sequestering from capture, access or view certain data elements or &quot;datatypes&quot; (clinical information categories) that are perceived by a legal entity, institution, organization, or individual as being undesirable to share.
+The process of sequestering from capture, access or view certain data elements or "datatypes" (clinical information categories) that are perceived by a legal entity, institution, organization, or individual as being undesirable to share.
 
 ### Sensitivity 
-The characteristic of a resource which implies its value or importance and may include its vulnerability. [[ISO/IEC 7498-2:1989/CCITT Rec. X.800](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.800-199103-I!!PDF-E&amp;type=items)].
+The characteristic of a resource which implies its value or importance and may include its vulnerability [[ISO/IEC 7498-2](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.800-199103-I!!PDF-E&amp;type=items)].
 
 ### Sensitivity Label 
-Security labels which support data confidentiality models, like the Bell and LaPadula model. The sensitivity label tells the amount of damage that will result from the disclosure of the data and also indicates which measures the data requires for protection from disclosure. The amount of damage that results from unauthorized disclosure depends on who obtains the data; the sensitivity label should reflect the worst case. [[IETF RFC 1457](http://www.faqs.org/rfcs/rfc1457.html)].
+Security labels which support data confidentiality models, like the Bell and LaPadula model. The sensitivity label tells the amount of damage that will result from the disclosure of the data and also indicates which measures the data requires for protection from disclosure. The amount of damage that results from unauthorized disclosure depends on who obtains the data; the sensitivity label should reflect the worst case [[IETF RFC 1457](http://www.faqs.org/rfcs/rfc1457.html)].
 
 ### Tag Set Name 
-Numeric identifier associated with a set of security tags. [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
+Numeric identifier associated with a set of security tags [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
+
+### Target
+A target is a IT resource subject to access control [Ford].
 
 <!---
-### Target
-A target is a resource subject to access control. [[Ford](#Ford)].
-
 The set of decision requests, identified by definitions for resource, subject and action that a rule, policy or policy set is intended to evaluate. [[XACML](#XACML)].
 
 A target is an [IT resource](#ITResourceDF) for which an initiator seeks access.
 --->
 
 ### Target Label (synonymous with _Security Label_)
-A security label can be used as target ACI to protect a target. Access rules define the access permissions (operations) granted given the security label of the initiator and the security label assigned to a target.If the security policy requires that the ACI held in the security label are used for target ACI, then overall flow of data in and out of that target can be controlled. Hence, the overall flow of data in and out of targets may be analyzed for security domains applying the same security policy. Targets can be created within other targets. The security label of the containing target limits the security labels that may be assigned to the contained target under the rules for the appropriate security policy. Examples of targets to which labels may be applied include: OSI n-entities; Directory Service entries; files held in a file store; database entries. [[ISO/IEC 10181-3](#ISO101813) p. 24].
+A security label can be used as target ACI to protect a target. Access rules define the access permissions (operations) granted given the security label of the initiator and the security label assigned to a target.If the security policy requires that the ACI held in the security label are used for target ACI, then overall flow of data in and out of that target can be controlled. Hence, the overall flow of data in and out of targets may be analyzed for security domains applying the same security policy. Targets can be created within other targets. The security label of the containing target limits the security labels that may be assigned to the contained target under the rules for the appropriate security policy. Examples of targets to which labels may be applied include: OSI n-entities; Directory Service entries; files held in a file store; database entries [[ISO/IEC 10181-3](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
+
+**References:**
+- [GWU] Mellissa M. Goldstein, JD et al, Data Segmentation in Electronic Health Information Exchange: Policy Considerations and Analysis, George Washington University Medical Center, September 29, 2010.
+- [Ford] Warwick Ford, Computer Communications Security, Prentice Hall, ISBN 0-13-799453-2, 1994.
+- [Sandhu] Sandhu, Ravi S. (1993). "Lattice-based access control models". IEEE Computer 26 (11): 9–19. doi:10.1109/2.241422
+- [Simmhan] Yogesh, L. Simmhan, et al, A survey of data provenance in e-science, Newsletter ACM SIGMOD Record, Volume 34 Issue 3, Pages 31 - 36, ACM New York, NY, USA, September 2005.
