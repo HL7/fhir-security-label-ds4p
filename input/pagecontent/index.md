@@ -65,4 +65,5 @@ The main sections of this IG are:
 - [Inline Security Labels](inline.html) 
 - [Detailed Specification](spec.html)
 - [Security and Privacy Considerations](security.html)
+- [Glossary](glossary.html)
 - [Downloads](downloads.html)
