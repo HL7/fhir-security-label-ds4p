@@ -5,8 +5,10 @@ These defintions are based on the glossary of the [HL7 Healthcare Privacy and Se
 The combination of a hierarchical security classification and a security category that represents the sensitivity of an object or the security clearance of an individual. [[ISO 2382-8](#ISO23823)]
 A level associated with an individual who may be accessing information (for example, a clearance level) or with the information which may be accessed (for example, a classification level). [[HIPAA Security Glossary](http://aspe.hhs.gov/admnsimp/nprm/seclist.htm)].
 
+<!---
 ### Access Control Decision Information (ADI)
 The portion (possibly all) of the ACI made available to the ADF in making a particular access control decision. [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
+
 
 ### Access Control Information (ACI) 
 Any information used for access control purposes, including contextual information. [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
@@ -15,6 +17,7 @@ Any information used for access control purposes, including contextual informati
 A service that provides the basic operational aspects of access control such as making access control decision information (ADI) available to access decision components and performing access control functions. The service also provides security labeling and privacy and security protection functions.The service, known as an Access Control Service (ACS), requires the following information: access policy rules, contextual information needed to interpret ADI, initiator, target, and access request ADI, security labeling rules and vocabulary, and transform rules and services.
 
 ACS generates information made available to other elements includes transformed information response to an information request as well as handling caveats. [[HL7 PASS-Security Labeling Service](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=360)].
+--->
 
 ### Classification
 Confidential protection of data elements by segmentation into restricted and specifically controlled categories set by policies. [Adapted from [ASTM E-1986](#ASTME1986)]
@@ -67,6 +70,7 @@ Process of sequestering from capture, access or view certain data elements that 
 
 A defined scheme for the classification and handling of health care and healthcare related information.
 
+<!---
 ### IT Resource
 Any data, information object, operation, process, service, or system capability. An IT resource that is assigned a security label is sometimes referred to as a "security object". An IT resource that is represented as a requested security object of an initiator's access request is sometimes referred to as a "target".
 
@@ -86,10 +90,12 @@ Structured information that describes, explains, locates, and otherwise makes it
 Information that characterizes data, such as contextual information. [[PCAST](http://www.whitehouse.gov/sites/default/files/microsites/ostp/pcast-health-it-report.pdf)].
 
 Security labels are a type of security metadata that is associated with a security object/IT resource and considered a [security attribute](#SecurityAttributeDF).
+-->
 
 ### Named Tag Set
 Field containing a Tag Set Name and its associated set of security tags. [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
+<!---
 ### Object
 An object is an entity that contains or receives information. The objects can represent information containers (e.g., files or directories in an operating system, and/or columns, rows, tables, and views within a database management system) or objects can represent exhaustible system resources, such as printers, disk space, and central processing unit (CPU) cycles. [[ANSI RBAC](#HL7RBAC)] Synonymous with [IT resource.](#ITResourceDF). 
 
@@ -107,6 +113,7 @@ The right of individuals to control or influence what information related to the
 [T]he right to control access to one&#39;s person and information about one&#39;s self. The right to privacy means that individuals get to decide what and how much information to give up, to whom it is given, and for what uses.&quot; June 13, 2002, speech to the Freedom of Information and Protection of Privacy Conference [Privacy Commissioner of Canada June 13, 2002](http://www.tbs-sct.gc.ca/pgol-pged/piatp-pfefvp/course1/mod1/mod1-2-eng.asp)].
 
 Individual&#39;s or organization&#39;s right to determine whether, when, and to whom, personal or organizational information is released. Also, the right of individuals to control or influence information that is related to them, in terms of who may collect or store it, and to whom that information may be disclosed. [[HITSP Glossary](http://www.hitsp.org/Handlers/HitspFileServer.aspx?FileGuid=fbd8c2af-1c67-460c-a1f0-2cd6655d0f2d)].
+-->
 
 ### Privacy Mark
 Human readable security labels, which are rendered in the graphic user interface on accessed electronic information, are called &quot;privacy marks.&quot; The act of enabling the rendering of a privacy mark is called &quot;privacy marking&quot;.
@@ -178,12 +185,14 @@ Security labels which support data confidentiality models, like the Bell and LaP
 ### Tag Set Name 
 Numeric identifier associated with a set of security tags. [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
+<!---
 ### Target
 A target is a resource subject to access control. [[Ford](#Ford)].
 
 The set of decision requests, identified by definitions for resource, subject and action that a rule, policy or policy set is intended to evaluate. [[XACML](#XACML)].
 
 A target is an [IT resource](#ITResourceDF) for which an initiator seeks access.
+--->
 
 ### Target Label_Synonymous with_ _Security Label_ 
 A security label can be used as target ACI to protect a target. Access rules define the access permissions (operations) granted given the security label of the initiator and the security label assigned to a target.If the security policy requires that the ACI held in the security label are used for target ACI, then overall flow of data in and out of that target can be controlled. Hence, the overall flow of data in and out of targets may be analyzed for security domains applying the same security policy. Targets can be created within other targets. The security label of the containing target limits the security labels that may be assigned to the contained target under the rules for the appropriate security policy. Examples of targets to which labels may be applied include: OSI n-entities; Directory Service entries; files held in a file store; database entries. [[ISO/IEC 10181-3](#ISO101813) p. 24].
