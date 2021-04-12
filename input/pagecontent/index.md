@@ -1,7 +1,8 @@
 ### Introduction
 This IG provides guidance for applying security labels in FHIR. Security labels  are used in access control systems governing the collection, access, use, and disclosure of the target information, such as FHIR resource(s), as required by applicable organizational, jurisdictional, or personal policies related to privacy, security, and trust.
 
-Using security labels is an essential part of the Share with Protection paradigm  by enabling information to be shared after assigning the security labels specifying how the information can be used and the restrictions to which it may be subject.  Regardless of the content syntax, “Security Labels enable more data to flow as they enable policy fragments to accompany the resource data.”
+Using security labels is an essential part of the Share with Protection paradigm  by enabling information to be shared after assigning the security labels specifying how the information can be used and the restrictions to which it may be subject.  Regardless of the content syntax, “Security Labels enable more data to flow as they enable policy fragments to accompany the resource data.” [[FHIR Security Label Module](http://hl7.org/fhir/security-labels.html#6.1.1)].
+
 While stated with respect to FHIR content, this holds for other labeled content as well, “The intent of a security label is that the recipient of resources or bundles with security tags is obligated to enforce the handling caveats of the tags and carry the security labels forward as appropriate.”
 
 This IG describes how to structure FHIR security labels (in `Resource.meta.security` or [inline](inline.html) as defined by this IG) to meet the syntactic and semantic rules of the [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1 (HCS)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345), and to convey computable and interoperable privacy, security, and trust policies within a policy domain, which are typically based on trust contracts with binding capability statements including recipient obligations.
@@ -28,7 +29,19 @@ An implementer relying on the general documentation of [`Resource.meta.security`
 
 This provides guidance in the following areas:
 
-#### Assigning Security Labels
+- Use Cases.
+- FAQ.
+- Conceptual Syntactic Structure.
+- Constructing a Security Label to Convey a Policy.
+- Assigning and Enforcing Security Labels.
+
+### Informative Sections
+The following sections are informative:
+•	Glossary
+•	FAQ
+•	Use Cases
+
+### Assigning Security Labels
 The IG describes how to select a security label based on the HL7 Privacy and Security Healthcare Classification System (HCS) label adjudication algorithms, the value in establishing consensus on a default security label for representing policies or consent directives within an exchange ecosystem, and the value of establishing default security labels for information exchanged within the Trust Framework of a policy domain.
 
 #### Consuming Security Labels
@@ -61,7 +74,8 @@ The IG also defines extension for [Inline Security Labels](inline.html). This en
 ### Walk-Through
 The main sections of this IG are:
 
-- [Background](background.html) 
+- [Background](background.html)
+- [Security Labeling Conceptual Structure](concept.html)
 - [Inline Security Labels](inline.html) 
 - [Detailed Specification](spec.html)
 - [Artifacts Index](artifacts.html)

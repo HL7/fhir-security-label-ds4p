@@ -229,8 +229,8 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="security.html"/>
-        <title value="Security and Privacy Considerations"/>
+        <nameUrl value="concept.html"/>
+        <title value="Security Labeling Conceptual Structure"/>
         <generation value="markdown"/>
       </page>
       <page>
@@ -241,6 +241,11 @@
       <page>
         <nameUrl value="spec.html"/>
         <title value="Detailed Specification"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="security.html"/>
+        <title value="Security and Privacy Considerations"/>
         <generation value="markdown"/>
       </page>
       <page>
