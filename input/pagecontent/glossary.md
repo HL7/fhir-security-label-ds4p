@@ -189,6 +189,14 @@ The characteristic of a resource which implies its value or importance and may i
 **Sensitivity Label** 
 Security labels which support data confidentiality models, like the Bell and LaPadula model. The sensitivity label tells the amount of damage that will result from the disclosure of the data and also indicates which measures the data requires for protection from disclosure. The amount of damage that results from unauthorized disclosure depends on who obtains the data; the sensitivity label should reflect the worst case [[IETF RFC 1457](http://www.faqs.org/rfcs/rfc1457.html)].
 
+**Share with Protections** 
+Share with Protections is an information exchange paradigm that describes an environment of continuous end-to-end protection and trust for information shared by senders, thereafter received, retained and used by receivers, and backed by healthcare systems using automation. Core features include:
+- Senders attach standards-based security labels to information indicating its relative sensitivity for sharing with trusted recipients and any handling instructions,
+- Recipients honor, retain, and enforce senders’ labels  by managing policy-driven access to information based on machine-computable sensitivity rules, “need to know,” and application of least privilege and segregation of duties within their own workforce, and
+- Patient safety enabled through Emergency Access, utilizing Clinical Decision Support, and clinician break-glass priorities.
+
+Share with Protections recommends standard Role- or Attribute-based access control (RBAC/ABAC) services for information classification and user clearances as a best approach to protecting an organization’s healthcare mission, patient privacy and to optimize clinician support. See the [Share with Protections White Paper Project](https://confluence.hl7.org/display/SEC/Share+with+Protections+White+Paper+Project).
+
 **Tag Set Name** 
 Numeric identifier associated with a set of security tags [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
