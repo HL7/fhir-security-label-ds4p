@@ -134,11 +134,20 @@ A security-related quality of an object. Security attributes may be represented 
 
 Characteristic of a subject, resource, action or environment that may be referenced in a predicate or target [[XACML](http://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-cs-01-en.pdf)].
 
+**Security Category**
+A non-hierarchical grouping of sensitive information used to control access to data more finely than with hierarchical security classification alone [[ISO 2382-8](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.812-199511-I!!PDF-E&amp;type=items)].
+
+The characterization of information or an information system based on an assessment of the potential impact that a loss of confidentiality, integrity, or availability of such information or information system would have on organizational operations, organizational assets, or individuals [[FIPS](http://fismapedia.org/index.php?title=Security_category)].
+
+If present, the security categories provide further granularity for the sensitivity of the message. The security policy in force is used to indicate the syntaxes that are allowed to be present in the security-categories. Alternately, the security-categories and their values may be defined by bilateral agreement [[ISO 22600-3](https://www.iso.org/standard/45376.html) Section A.3.4.3].
+
 **Security Classification**
 The determination of which specific degree of protection against access the data or information requires, together with a designation of that degree of protection; for example, "Top Secret", "Secret", "Confidential" [[ISO 2382-8](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.812-199511-I!!PDF-E&amp;type=items)].
 
-**Security Label (synonymous with _Target Label_)**
+**Security Clearance**
+See _Clearance_.
 
+**Security Label**
 _(In the definitions below, &quot;security label&quot; is defined as both a verb: "means used to associate security attributes" as in "security labeling", and as noun: "the markings bound to a resource." As a noun, the term is sometimes considered synonymous with "security metadata" and "security tag." As a verb, the term is sometimes considered synonymous with "tagging." However, security standards sometimes use the term "security label" for both the classification given to IT resources and the classification level in an initiator's clearance. In addition, some standards use the term "marking bound to a resource" to refer to both computable security labels and the human-readable rendering of security label fields, better known as "privacy markings")._
 
 The means used to associate a set of security attributes with a specific information object as part of the data structure for that object [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
@@ -192,8 +201,17 @@ The set of decision requests, identified by definitions for resource, subject an
 A target is an [IT resource](#ITResourceDF) for which an initiator seeks access.
 --->
 
-**Target Label (synonymous with _Security Label_)**
-A security label can be used as target ACI to protect a target. Access rules define the access permissions (operations) granted given the security label of the initiator and the security label assigned to a target.If the security policy requires that the ACI held in the security label are used for target ACI, then overall flow of data in and out of that target can be controlled. Hence, the overall flow of data in and out of targets may be analyzed for security domains applying the same security policy. Targets can be created within other targets. The security label of the containing target limits the security labels that may be assigned to the contained target under the rules for the appropriate security policy. Examples of targets to which labels may be applied include: OSI n-entities; Directory Service entries; files held in a file store; database entries [[ISO/IEC 10181-3](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
+**Target Label**
+See _Security Label_.
+
+**Trust Contract**
+Sets of rules followed by the parties involved for achieving interoperability [[ISO 22600-2](https://www.iso.org/standard/62654.html)].
+
+**Trust Framework**
+Policy that rules the behavior of a system. The Trust Framework facilitates trustworthy co-operation between domains by defining a common set of security and privacy policies that applies to all collaborating entities, derived from the relevant domain-specific policies across all of those policy domains [[ISO 22600-2](https://www.iso.org/standard/62654.html)].
+
+**Trustmark**
+Trustmarks are a visual indication that a service provider is compliant with a federation’s requirements. Trustmarks comprise a very specific subset of compliance marks. In addition to being electronically verifiable, these logos or seals are backed by rigorous third party validation, assessment, or auditing. Certification of conformance and associated trustmarks may be issued by the assessor, the federation, or a separate certifying body on behalf of the federation. The key point is that certification trustmarks result from independent 3rd- party assessments and both the assessing and the certifying organizations stand behind the certifications with their own brand name and reputation. Therefore, trustmarks serve as a reliable and high assurance means to convey compliance with federation rules [[NISTIR 8149](https://www.nist.gov/privacy-framework/nistir-8149)].
 
 **_References:_**
 - [GWU] Mellissa M. Goldstein, JD et al, Data Segmentation in Electronic Health Information Exchange: Policy Considerations and Analysis, George Washington University Medical Center, September 29, 2010.
