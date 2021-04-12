@@ -64,6 +64,7 @@ The main sections of this IG are:
 - [Background](background.html) 
 - [Inline Security Labels](inline.html) 
 - [Detailed Specification](spec.html)
+- [Artifacts Index](artifacts.html)
 - [Security and Privacy Considerations](security.html)
 - [Glossary](glossary.html)
 - [Downloads](downloads.html)
