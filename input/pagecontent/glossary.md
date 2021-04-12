@@ -169,10 +169,10 @@ A security label is a type of [PCAST](http://www.whitehouse.gov/sites/default/fi
 **Security (Labeling) Policy**
 The definition of which classification and category values are used and how security labels are checked against clearances.
 
-**Security Label Rule **
+**Security Label Rule**
 A computational algorithm used for assigning a security label to an IT resource such as a clinical fact.
 
-**Security Policy Information File (SPIF) **
+**Security Policy Information File (SPIF)**
 A construct that conveys domain-specific security policy information [[ISO/IEC 15816](http://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.841-200010-I!!PDF-E&type=items)].
 
 An XML schema, that provides a high level representation of a security labeling policy in a generic and open fashion [[Open XML SPIF](http://www.xmlspif.org/?page_id=51)].
