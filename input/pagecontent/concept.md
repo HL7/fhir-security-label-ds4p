@@ -1,53 +1,100 @@
+
+### FHIR DS4P IG Goal
+The goal of this specification is to develop FHIR implementation guidance for the use of FHIR Resource.meta.security and at the Resource element level to emulate the syntactical structure for security labeling as defined in the HL7 Healthcare Privacy and Security Classification System (HCS), Release 1 (HCS).  The HCS is the normative, conceptual model upon which both L7 Version 2.9, and the HL7 Implementation Guide: Data Segmentation for Privacy (DS4P), Release 1and the HL7 CDA® R2 Implementation Guide: Data Provenance, Release 1 - US Realm are based. The syntactical structure of security labels dictates how HL7 security labeling terminology is used to populate specific fields or “Named Tag Sets” in a security label with appropriate “Security Label Tags” in order to represent a computable policy.  
+In addition, there is a need for guidance and examples for how a community can develop consensus security labels for specific policies to minimize variance in policy representations, to ensure uniform enforcement among trading partners.
+
+### Security Labeling requires Classification
+
+Classification is the act or process by which information, which is determined to be sensitive or non-sensitive per applicable policy, is assigned a level of confidentiality protection.
+Classification is at the discretion of the Authority (Classifier), which controls the classified information, and determines the appropriate level of protection, i.e., the confidentiality of the information. A Classifier may be required to retain the Security Label assigned by a previous Classifier per policy or trading partner agreement.
+The appropriate level of confidentiality protection is determined by the Classifier’s assessment of the disclosure risks of the information, which usually are identified by the magnitude or type of damage that could be caused by disclosure, such as the risk of harm, discrimination, or safety to an individual. The level of confidentiality protection for a type of sensitive information is set by jurisdictional, organizational, or individual data subject policy. The appropriate level of confidentiality protection for a type of sensitive information is ultimately dictated by jurisdictional, organizational, or individual policy.
+HL7 HCS leverages the security label models from foundational standards   as diagrammed at a high level below and available in detail here.
+
+
+![HCS](hcs.png)
+<br clear="all" />
+
+The HCS designated four Named Tag Set fields: Security Classification, Security Category, Security Control (aka Handling Caveat), and Security Trust. A Named Tag Set is an field type within a security label, which has characteristics that indicate what types of elements or “Tag Set Names” it may contain.  
+A Tag Set Name is the identifier associated with a set of security tags (aka “privacy tags”). In HL7 terms, this is the name of the value set from which allowable codes may be drawn to populate a Named Tag Set field.
+The HCS adopted characteristics for these that follow the allowable types specified in the foundational standards, which are suitable for conveying policies governing access control in healthcare. For example, the Security Classification Label Field is mandatory and only one value `[1..1]` from the HL7 Confidentiality code system is permitted because this field is used to determine whether a requester meets the minimum bar for accessing information protected at or below a given level of confidentiality protection. For this reason, the Confidentiality code system is a total range hierarchy of protection levels.   In HCS terms, a security label without a Confidentiality code is not a security label because without this minimum bar for entry, such a label would be useless for interoperable access control, and should be regarded as some other type of meta data.  
+Unlike Security Classification, all of the other Named Tag Set fields are non-hierarchical and are not mandatory, i.e., `[0..*]` unless required by a policy. Their characteristics, how they are assigned to convey policy, and how they are used for access control is discussed below.  The following discussion is high level.  For a more complete explanation of the terms, please reference the definitions of the Named Tag Sets and the Tag Set Names included in the [Detailed Specification Value Sets Summary](spec.html#value-sets-summary).
+
 ### How to assign a Security Label
+Generally, a Security Label is assigned in accordance with a policy, which deems an aspects of a valued information object as warranting a level of confidentiality protection. The policy is “based on an assessment of the potential impact that a loss of confidentiality, integrity, or availability of such information or information system would have on organizational operations, organizational assets, or individuals”. 
 
-Generally, a Security Label is assigned based on a policy specifying sensitive information. If the sensitive information increases the risk of the information target (i.e., a patient) to stigmatization or discrimination (which might in turn deter seeking treatment or other services), then, the need to protect the confidentiality of that information is more stringent than the "normal". Therefore, the confidentiality protections will be heightened beyond the "norm". 
+#### Step 1: Determine the Security Categories indicated by the policy governing the information
+To be conveyed as a security label, a policy must categorize the aspects of information that require a specific level of confidentiality protection.  
+These aspects are valued as “tags” in the Security Category portion of a security label using the codes in the value sets associated with the Security Category “Tag Set Names”.
 
-In the US, the norm of confidentiality protections under HIPAA are the baseline policy. Privacy laws that preempt HIPAA by offering more stringent protections  (for example, state laws related to adolescent health or an individual’s HIV-status), which require heightened levels of confidentiality protection are assigned Security Labels with more restrictive Confidentiality Tag, i.e., `R` (restricted).
+The current HCS-conformant Security Category Tag Set Names are: Sensitivity, Policy , Compartment, Integrity, and Provenance. These value sets are listed in the [Detailed Specification Value Sets Summary](spec.html#value-sets-summary).
+
+##### Assigning Sensitivity Tag `0..*`
+
+A key Security Category Tag Set is sensitivity. Along with any relevant policy, information sensitivity is a strong determinant of the level of confidentiality protection required.
+If the sensitive information increases the risk of the information target (i.e., a patient) to stigmatization or discrimination (which might in turn deter seeking treatment or other services), then, the need to protect the confidentiality of that information is more stringent than the “normal”. Therefore, the confidentiality protections will be heightened beyond the “norm”. 
+
+In the US, the norm of confidentiality protections under HIPAA are the baseline policy. Privacy laws that preempt HIPAA by offering more stringent protections (for example, state laws related to adolescent health or an individual’s HIV-status), which require heightened levels of confidentiality protection are assigned Security Labels with more restrictive Confidentiality Tag, i.e., R (restricted).
 
 Information governed by privacy laws, which do not preempt HIPAA, such as protections under FTC, Workers Compensation, or Gramm-Leach-Bliley Act, will be assigned the Confidentiality Tag `M` (moderate).
 
-Information governed by policies addressing ad hoc, extremely sensitive information, such as victim of abuse or a legal hold, are typically assigned `V` (very restricted) by privacy officials.
+Information governed by policies addressing ad hoc, extremely sensitive information, such as victim of abuse or a legal hold, are typically assigned V (very restricted) by privacy officials.
 
-It is critical that the policy dictating the sensitivity of labeled information be included in Security Label as the single Policy Tag indicating governed sensitive information, the level of confidentiality, other pertinent security categories relevant to the information, access limitations to a "compartment" of end users with a "need to know" such as a Care Team or Research Project.
+Information Sensitivity is the characteristic of an IT resource which implies its value or importance and may include its vulnerability (ISO 7492-2). This label captures privacy metadata for information perceived as undesirable to share (HL7 Healthcare Classification System).
+Sensitive information is data that must be protected from unauthorized access and disclosure to safeguard the privacy or security of an individual or organization. 
 
-In addition, the policy should include the need to specify:
+Sensitivity of information may be dictated by law, for example: A law, such as 42 CFR Part 2, which dictates that information about an individual’s substance use disorder is sensitive; a law dictating that information custodians conduct a risk assessment of information sensitivity; or by an individual with a right to opt-out of sharing behavioral health information through a Health Information Exchange network.
 
--   The integrity, provenance, and trust attributes pertinent to the governed information.  For example, policy may require that only legally-attested information is available to those other than the author; that any syntactic/semantic transformation of the information is known by end users; that the provenance of the information be accessible to end users to determine their level of confidence in the trustworthiness, authenticity, and reliability of the labeled information; and the degree to which the information has been exchanged within a trust framework. 
+Depending on the policy context, the Authority determining information sensitivity may be a jurisdiction, an organization, or an individual.
 
--   The handling instructions to which Senders and Receivers must comply including:
+- For example, in the US, HIPAA, 42 CFR Part 2, and Title 38 Section 7332 are Federal health privacy laws, which dictate that information relating to the diagnosis, treatment, or referral for specific conditions is deemed sensitive. 
+- Many States have health privacy laws that are more stringent than HIPAA Privacy Rule, which is considered the US “norm” for the protection of Protected Health Information (PHI). This PHI is labeled with a Confidentiality Code N, meaning that the normal level of confidentiality protection applies. 
+- Organizations may determine that some PHI is sensitive, and may therefore assign a higher level of confidentiality such as R, meaning that access/use/disclosure of this PHI is restricted. Under certain circumstances, organizations may determine that PHI is especially vulnerable to risk of stigmatization or harm.  This PHI is labeled with a Confidentiality Code V, meaning that access/use/disclosure is very restricted.
+- Healthcare consumers and patients have discretion under some privacy laws to determine the sensitivity of their information, and may have the information custodian label their PHI with more or less restrictive Confidentiality Codes. For example:
+- Under HIPAA consent provisions, a patient may request that the Covered Entity custodian restrict access/use/disclosure of their PHI, and the Covered Entity may agree to this request by labeling with a Confidentiality Code R (restricted).
+- Under HIPAA Authorization for Disclosure, a patient requests that the Covered Entity custodian disclose PHI to a third party, which is not a Covered Entity. Since the third party is not a Covered Entity, the custodian labels the disclosed information, which is no longer PHI, with a Confidentiality Code M for moderate confidentiality protections afforded by other applicable laws, such as Worker Compensation privacy laws, or by the privacy policies and terms of service of an entity, which may be governed by Federal Trade Commission privacy laws.
 
-    -   _Purpose of Use_: Limitations on the contexts and processes in which the information may be collected, accessed, used, and disclosed.
-    -   _Obligation Policies_: Mandated Sender and Receiver actions.
-    -   _Refrain Policies_: Prohibitions on Sender and Receiver actions.
+##### Assigning Policy Tag – preferable `1..1`
 
-**Classification**
+It is critical that the policy dictating the sensitivity of labeled information be included in Security Label as the single Policy Tag indicating governed sensitive information, the level of confidentiality, other pertinent security categories relevant to the information, access limitations to a “compartment” of end users with a “need to know” such as a Care Team or Research Project.
 
-Classification is the act or process by which information, which is determined to be sensitive or non-sensitive per applicable policy, is assigned a level of confidentiality protection.
+If more than one policy applies to the information, such as the case with consent directives for Health Information Exchanges operating under multiple laws, or for compound research consent directives, which combine both a privacy consent to disclose information for research, as well as consent to participate in a clinical study and to donate biospecimen, a best practice for interoperable consumption of labels is to create distinct labels for all aspects of such policies/consent directives.
 
-Classification is at the discretion of the Authority (Classifier), which controls the classified information, and determines the appropriate level of protection, i.e., the confidentiality of the information. A Classifier may be required to retain the Security Label assigned by a previous Classifier per policy or trading partner agreement.
+##### Assigning Other Security Category Tags
 
-The appropriate level of confidentiality protection is determined by the Classifier's assessment of the disclosure risks of the information, which usually are identified by the magnitude or type of damage that could be caused by disclosure, such as the risk of harm, discrimination, or safety to an individual. The level of confidentiality protection for a type of sensitive information is set by jurisdictional, organizational, or individual data subject policy. The appropriate level of confidentiality protection for a type of sensitive information is ultimately dictated by jurisdictional, organizational, or individual policy.
+Additional Security Category Tag Sets specified by policy may include compartment, integrity, provenance, and trust attributes pertinent to the governed information.  Examples of use cases for their inclusion.
 
-**Confidentiality Tags**
+##### Assigning Compartment `0..*`
+A policy may require that the information may only be made available within a specific workflow or project, thereby isolating the information and limiting access to entities provisioned with clearance for that compartment, i.e., are members of a group entitled to access.  An entity’s access to information in a compartment may be further constrained by privileges based on roles or attributes.
 
-According to the [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345) (HCS), one, and only one, Confidentiality Tag code is assigned by a Custodian (information holder) to a Security Label when "classifying" the information. The Custodian may be the originator of the information to be protected, a Receiver of information from the Custodian, and may further disclose that information to a downstream Recipient. Any Custodian may be permitted to reclassify information per applicable policies and trading partner agreements.
+##### Assigning Integrity `0..*` 
+A policy may require that information be tagged to indicate confidence in its reliability, its status in being attested to or verified, any data alteration or syntactic/semantic transformation that it may have undergone, and whether it has been protected against any tampering or non-reputable. A hierarchical grading of confidence tag may be accompanied with other integrity or with provenance tags to support the assigned confidence level.
 
-The confidentiality protection afforded sensitive information differs by applicable law. For example, in the US, HIV sensitive information has "normal" (the norm) level of confidentiality if governed by HIPAA. However, if HIV sensitive information is governed under Title 38 Section 7332, 42 CFR Part 2 (as comorbid with substance use disorder), or under some state laws, the level of confidentiality protection is coded as "restricted", because these laws are more protective than HIPAA. 
+##### Assigning Provenance `0..*`
+A policy may require that the provenance of the information be accessible to end users to assist with the determination of their level of confidence in the trustworthiness, authenticity, and reliability of the labeled information; and the degree to which the information has been exchanged within a trust framework. Provenance tags are not a replacement for a provenance record, but can be considered a flag indicating that such a record may be important. E.g., a patient reports that a provider asserted the patient’s allergy has a different weight in terms of reliability than a provider asserting a patient reported family history.
+
+#### Step 2: Determine the Security Classification Tag indicated by the Security Categories
+
+##### Assigning Confidentiality Tag `1..1`
+A Confidentiality tag indicates the obligation of a custodian or receiver to ensure that the protected resource is not made available or disclosed to individuals, entities, or processes unless authorized per applicable policies. Confidentiality codes may also be used in the clearances of initiators requesting access to protected resources. 
+
+According to the [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345), one, and only one, Confidentiality Tag code is assigned by a Custodian (information holder) to a Security Label when “classifying” the information. The Custodian may be the originator of the information to be protected, a Receiver of information from the Custodian, and may further disclose that information to a downstream Recipient. Any Custodian may be permitted to reclassify information per applicable policies and trading partner agreements.
+
+The confidentiality protection afforded sensitive information differs by applicable law. For example, in the US, HIV sensitive information has “normal” (the norm) level of confidentiality if governed by HIPAA. However, if HIV sensitive information is governed under Title 38 Section 7332, 42 CFR Part 2 (as comorbid with substance use disorder), or under some state laws, the level of confidentiality protection is coded as “restricted”, because these laws are more protective than HIPAA. 
 
 The criterion for assigning HL7 confidentiality codes is whether applicable policy deems the misuse of information as posing a greater or lesser risk of harm to or stigmatization of the data subject or an organization. The information may be about a sensitive health condition, but not necessarily, for example, it could be Business or Security policy sensitive.
 
-The following HL7 Confidentiality Code criteria are intended to meet a healthcare-specific multi-level security model for access control by stipulating clearly distinguishable levels of protection, which can be specialized by realm:
+The following HL7 Confidentiality Code criteria are intended to meet a healthcare-specific multi-level security model for access control by stipulating clearly distinguishable levels of protection, which can be specialized by realm:
 
--   _Normal_: The "normal" confidentiality code applies the "normative" level of protection to sensitive and non-sensitive information within the context of healthcare delivery in a general policy domain (e.g., HIPAA in US, GDPR in EU).
--   _Restricted_: The "restricted" confidentiality code applies when a narrower policy domain preempts the "normative" level of protection in a wider policy domain (e.g., HIPAA in US, GDPR in EU) of sensitive information within the context of healthcare delivery. Examples include State behavioral health, reproductive health, minors' health, and HIV laws; Medicaid Confidentiality; Title 38 Section 7332; and 42 CFR Part 2.
--   _Moderate_: The "moderate" confidentiality code lessens the "normative" level of protection in a policy domain based on a data subject's authorization to disclose for purposes of policy domains outside the context of healthcare delivery, e.g., for research, coverage determination such as Social Security Administration(SSA), personal health record systems/apps, marketing where other privacy laws may apply.
--   _Very Restricted_: The "very restricted" confidentiality code applies to sensitive and non-sensitive information, and raises the level of protection beyond "normal" or "restricted" in ad hoc situations such as legal hold or patient safety.
--   _Low_: The "low" confidentiality code applies to sensitive and non-sensitive information that has been altered in such a way as to minimize the need for confidentiality protections with some residual risks associated with re-linking.
--   _Unrestricted_: The "unrestricted" confidentiality code applies to sensitive and non-sensitive information that has been disclosed with few or no restrictions on its use, which may be stipulated contractually between the data subject and a data user (e.g., via terms of service or data user privacy policies such as disclosure for marketing purposes or on social media).
+- _Normal_: The “normal” confidentiality code applies the “normative” level of protection to sensitive and non-sensitive information within the context of healthcare delivery in a general policy domain (e.g., HIPAA in US, GDPR in EU).
+-	_Restricted_: The “restricted” confidentiality code applies when a narrower policy domain preempts the “normative” level of protection in a wider policy domain (e.g., HIPAA in US, GDPR in EU) of sensitive information within the context of healthcare delivery. Examples include State behavioral health, reproductive health, minors’ health, and HIV laws; Medicaid Confidentiality; Title 38 Section 7332; and 42 CFR Part 2.
+- _Moderate_: The “moderate” confidentiality code lessens the “normative” level of protection in a policy domain based on a data subject’s authorization to disclose for purposes of policy domains outside the context of healthcare delivery, e.g., for research, coverage determination such as Social Security Administration(SSA), personal health record systems/apps, marketing where other privacy laws may apply.
+- _Very Restricted_: The “very restricted” confidentiality code applies to sensitive and non-sensitive information, and raises the level of protection beyond “normal” or “restricted” in ad hoc situations such as legal hold or patient safety.
+- _Low_: The “low” confidentiality code applies to sensitive and non-sensitive information that has been altered in such a way as to minimize the need for confidentiality protections with some residual risks associated with re-linking.
+- _Unrestricted_: The “unrestricted” confidentiality code applies to sensitive and non-sensitive information that has been disclosed with few or no restrictions on its use, which may be stipulated contractually between the data subject and a data user (e.g., via terms of service or data user privacy policies such as disclosure for marketing purposes or on social media).
 
-The descriptions of Confidentiality Codes are based on variance from "normative" level of protection as a metric for differentiating the total order hierarchical demarcations for this multi-level security model.
+The descriptions of Confidentiality Codes are based on variance from “normative” level of protection as a metric for differentiating the total order hierarchical demarcations for this multi-level security model.
 
-This results in the following subsumption relationships which form a hierarchy (or *total order*) in which Very Restricted is the parent and each lower child _IS-A_ lesser protection level than its predecessor with Unrestricted being the lowest protection level:
+This results in the following relationships, which form a hierarchy (or total order) in which Very Restricted is the parent and each lower child IS-A lesser protection level than its predecessor with Unrestricted being the lowest protection level:
 
 -   _Very Restricted_ (`V`) is the highest protection level and subsumes all other protection levels, i.e. `R`, `N`, `M`, `L`, and `U`.
 -   _Restricted_ (`R`) is less protective than `V`, and subsumes all other protection levels, i.e. `N`, `M`, `L`, and `U`.
@@ -56,59 +103,37 @@ This results in the following subsumption relationships which form a hierarchy (
 -   _Low_ (`L`) is less protective than `V`, `R`, `N`, and `M`, and subsumes `U`.
 -   _Unrestricted_ (`U`) is less protective than `V`, `R`, `N`, `M`, and `L`, and is the lowest protection levels.
 
-**Sensitivity Tags**
+#### Step 3 Determine the Security Control Tags indicated by the Security Categories
+To convey a policies handling instructions or “caveats” to which senders and receivers must comply to access information labeled with specific Security Category tags, e.g., sensitivity tags, a security label includes `0..*`, Security Control Tags, each of which may have `1..*` values.
 
-Information Sensitivity is the characteristic of an IT resource which implies its value or importance and may include its vulnerability (ISO 7492-2). This label captures privacy metadata for information perceived as undesirable to share (HL7 Healthcare Classification System).
+##### HCS Handling Caveat Description
+Handling caveats are instructions about mandatory and prohibited actions (obligations and refrain policies) within a permitted use context or “purpose of use”.
 
-Sensitive information is data that must be protected from unauthorized access and disclosure to safeguard the privacy or security of an individual or organization. 
+Assign handling caveats as access control decision information to an information resource as required by policy to obtain an end user’s implicit or explicit acceptance of a source rule prior to use or access.
 
-Sensitivity of information may be dictated by law, for example: A law, such as 42 CFR Part 2, which dictates that information about an individual's substance use disorder is sensitive; a law dictating that information custodians conduct a risk assessment of information sensitivity; or by an individual with a right to opt-out of sharing behavioral health information through a Health Information Exchange network.
+The acceptance of a handling caveat may be implicit (e.g., in an MOU, DURSA or contract) or explicit as in a returned response (e.g. a promise). The trust framework established between parties provides specific rules for complying with handling caveat codes used in security labels.  
+Security Controls include: 
 
-Depending on the policy context, the Authority determining information sensitivity may be a jurisdiction, an organization, or an individual.
+-	Purpose of Use, which are limitations on what a recipient may do with the information
+-	Obligations and Refrains, which are operations specified in a policy, which are to be performed in conjunction with the enforcement of an authorization decision
+-	Privacy Marks, which are mandatory information that must be rendered to end users, e.g., that the accessed information is a copy or a draft.
 
--   For example, in the US, HIPAA, 42 CFR Part 2, and Title 38 Section 7332 are Federal health privacy laws, which dictate that information relating to the diagnosis, treatment, or referral for specific conditions is deemed sensitive. 
--   Many States have health privacy laws that are more stringent than HIPAA Privacy Rule, which is considered the US "norm" for the protection of Protected Health Information (PHI). This PHI is labeled with a Confidentiality Code `N`, meaning that the normal level of confidentiality protection applies. 
--   Organizations may determine that some PHI is sensitive, and may therefore assign a higher level of confidentiality such as `R`, meaning that access/use/disclosure of this PHI is restricted. Under certain circumstances, organizations may determine that PHI is especially vulnerable to risk of stigmatization or harm.  This PHI is labeled with a Confidentiality Code `V`, meaning that access/use/disclosure is very restricted.
--   Healthcare consumers and patients have discretion under some privacy laws to determine the sensitivity of their information, and may have the information custodian label their PHI with more or less restrictive Confidentiality Codes. For example:
+##### Assigning Purpose of Use Tags `0..*`
+Purpose of Use (POU) tags indicates the circumstances under which an authorized receiver is permitted by policy to perform an activity such as create, collect, access, use, or disclose.  Information privacy, security, and trust policies typically include the list of permissible actions, which senders require receivers to limit use, i.e., if the action is not permitted, it’s denied. 
 
-    -   Under HIPAA consent provisions, a patient may request that the Covered Entity custodian restrict access/use/disclosure of their PHI, and the Covered Entity may agree to this request by labeling with a Confidentiality Code `R` (restricted).
-    -   Under HIPAA Authorization for Disclosure, a patient requests that the Covered Entity custodian disclose PHI to a third party, which is not a Covered Entity. Since the third party is not a Covered Entity, the custodian labels the disclosed information, which is no longer PHI, with a Confidentiality Code `M` for moderate confidentiality protections afforded by other applicable laws, such as Worker Compensation privacy laws, or by the privacy policies and terms of service of an entity, which may be governed by Federal Trade Commission privacy laws.
+The HL7 POU codes were drawn from a number of narrower US and international POU code systems, augmented with new use cases, e.g., for research, healthcare payment and operations, quality measures, legal and public health, and organized according to workflows in order to ensure comprehensive coverage for healthcare activities.
 
-**Purpose of Use**
+##### Assigning Obligation Tags `0..*`
+Obligations tags represent explicit mandatory actions, which may be required by policy of custodians, senders, and receivers about how information is to be handled and actions specified to be performed in conjunction with enforcement of an access control decision, for example, instructions to disclose only the minimum necessary and to encrypt while in transit.  
 
-Purpose of Use codes are part of the Healthcare Privacy and Security Classification System (HCS) vocabulary, which have been adopted in HL7 Version 3, and are available for use in HL7 Version 2, CDA, and FHIR. A convenient place to find these online is in the FHIR Value Set [PurposeOfUse](http://build.fhir.org/v3/PurposeOfUse/vs.html).
+##### Assigning Refrain Tags `0..*`
+Refrain tags represent explicitly prohibited actions, which may be required by policy of custodians, senders, and receivers about how information is not to be handled and actions not to be performed, such as constraints on collection, disclosure, routing, and communication path expected to be enforced by access control systems. Examples include a prohibition on persisting information for purposes other than explicitly permitted, and no redisclosure without patient consent.
 
-POU codes indicate the circumstances under which an authorized recipient is permitted to perform a permitted activity such as create, collect, access, use, or disclose.
+##### Assigning Privacy Marks `0..*`
+Privacy Marks are human readable security labels, which are rendered in the graphic user interface on accessed electronic information, are called “privacy marks.” The act of enabling the rendering of a privacy mark is called “privacy marking”.
 
-**Interoperability Issue**
+Per ISO 22600-3 Section A.3.4.3:  “If present, the privacy-mark is not used for access control. The content of the privacy-mark may be defined by the security policy in force (identified by the security-policy-identifier) which may define a list of values to be used. Alternately, the value may be determined by the originator of the security-label.” 
 
-If CUI markings on some HIE content differ, recipients will have difficulty discerning their security control requirements. If each agency adopts a different CUI marking policy, the burden on downstream HIE participants would increase exponentially. Federal Agencies in collaboration with Sequoia are working towards a consensus policy for marking CUI to ensure that the burden on downstream HIE participants is minimized.
-
-**CUI Solutions**
-
-Easing CUI implementation is possible if agencies decide on a consensus CUI marking based on the adoption of standard HL7 CUI codes ensures interoperability across HL7 Version 2, CDA, and FHIR content using syntax specific security labeling.
-
-**CUI Reference Material**
-- [Executive Order 13556](https://www.federalregister.gov/articles/2010/11/09/2010-28360/controlled-unclassified-information)
-- [Controlled Unclassified Information Executive Order 13556 presentation](https://csrc.nist.gov/csrc/media/projects/forum/documents/feb2014/pviscuso_cui-briefing.pdf) 
-- [Information Security Oversight Office (ISOO)](https://csrc.nist.gov/csrc/media/projects/forum/documents/feb2014/pviscuso_cui-briefing.pdf)
-- [Protection of Controlled Unclassified Information - CSRC](https://csrc.nist.gov/publications/detail/itl-bulletin/2015/10/protection-of-controlled-unclassified-information/final)
-- [Controlled Unclassified Information (CUI) -- NIST](https://csrc.nist.gov/csrc/media/projects/forum/documents/2011/forum-oct2011-cui-briefing_pviscuso.pdf)
-- [CUI Rule 32 CFR Part 2002](https://www.federalregister.gov/documents/2016/09/14/2016-21665/controlled-unclassified-information)
-- [SP 800-171A](https://doi.org/10.6028/NIST.SP.800-171A)
-- [CUI Marking Handbook](https://www.archives.gov/files/cui/20161206-cui-marking-handbook-v1-1.pdf)
-- [CUI Registry - Health Information Category](https://www.archives.gov/cui/registry/category-detail/health-info)
-- [CUI Registry: Limited Dissemination Controls](https://www.archives.gov/cui/registry/limited-dissemination)
-- [CUI Policy and Guidance](https://www.archives.gov/cui/registry/policy-guidance)
-- [CUI Glossary](https://www.archives.gov/cui/registry/cui-glossary.html)
-- [Compliance Plan Overview for Departments and Agencies](https://www.archives.gov/files/2011-overview-for-compliance-plans.pdf)
-- [Executive Order 13556 Overview for Departments and Agencies](https://www.archives.gov/cui/registry/policy-guidance/registry-documents/2010-overview-for-depts-and-agencies-from-ea.pdf)
-
-
-##### Artifacts
-Discoverable Capability Statement, which includes:
-- Labeling levels supported: Bundle & Resource
-- Supported Extensions
-
-Verification of persisted and enforced SL.
-  
+### Security Label with Example Tags
+![HCS](hcs-example.png)
+<br clear="all" />
