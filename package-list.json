@@ -17,7 +17,7 @@
     {
       "version": "0.2.0",
       "date": "2021-04-06",
-      "desc": "DSTU 1 ballot (May 2021 Ballot)",
+      "desc": "STU 1 ballot (May 2021 Ballot)",
       "fhirversion": "4.0.1",
       "path": "http://hl7.org/fhir/uv/security-label-ds4p/2021May",
       "status": "ballot",
