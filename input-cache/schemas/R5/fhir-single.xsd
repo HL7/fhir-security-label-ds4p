@@ -47,9 +47,9 @@
   POSSIBILITY OF SUCH DAMAGE.
   
 
-  Generated on Wed, Apr 7, 2021 21:53+0000 for FHIR v4.5.0 
+  Generated on Wed, Apr 14, 2021 05:30+0000 for FHIR v4.6.0 
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.5.0">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace" targetNamespace="http://hl7.org/fhir" elementFormDefault="qualified" version="4.6.0">
   <!-- Note: When using this schema with some tools, it may also be necessary to declare xmlns:xml="http://www.w3.org/XML/1998/namespace", however this causes performance issues with other tools and thus is not in the base schemas. -->
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <xs:import namespace="http://www.w3.org/1999/xhtml" schemaLocation="fhir-xhtml.xsd"/>
@@ -4177,7 +4177,7 @@ Normal practice is to use the 'mo' code as a calendar month when calculating the
   </xs:complexType>
   <xs:complexType name="MetadataResource">
     <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">Common Ancestor declaration for conformance and knowledge artifact resources.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="CanonicalResource">
@@ -4186,7 +4186,7 @@ Normal practice is to use the 'mo' code as a calendar month when calculating the
   </xs:complexType>
   <xs:complexType name="DomainResource">
     <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">A resource that includes narrative, extensions, and contained resources.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="Resource">
@@ -4219,7 +4219,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   </xs:complexType>
   <xs:complexType name="Resource">
     <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">This is the base resource type for everything.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="Base">
@@ -4250,7 +4250,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   </xs:complexType>
   <xs:complexType name="CanonicalResource">
     <xs:annotation>
-      <xs:documentation xml:lang="en"></xs:documentation>
+      <xs:documentation xml:lang="en">Common Ancestor declaration for conformance and knowledge artifact resources.</xs:documentation>
     </xs:annotation>
     <xs:complexContent>
       <xs:extension base="DomainResource">
@@ -5208,6 +5208,11 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       <xs:enumeration value="4.5.0">
         <xs:annotation>
           <xs:documentation xml:lang="en">4.5.0</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="4.6.0">
+        <xs:annotation>
+          <xs:documentation xml:lang="en">4.6.0</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
@@ -19990,6 +19995,11 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
               <xs:documentation xml:lang="en">A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).</xs:documentation>
            </xs:annotation>
           </xs:element>
+          <xs:element name="composition" minOccurs="0" maxOccurs="1" type="Reference">
+            <xs:annotation>
+              <xs:documentation xml:lang="en">Reference to a Composition resource instance that provides structure for organizing the contents of the DiagnosticReport.</xs:documentation>
+           </xs:annotation>
+          </xs:element>
           <xs:element name="conclusion" minOccurs="0" maxOccurs="1" type="string">
             <xs:annotation>
               <xs:documentation xml:lang="en">Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report.</xs:documentation>
@@ -26236,7 +26246,7 @@ UDILabelName | UserFriendlyName | PatientReportedName | ManufactureDeviceName | 
           </xs:element>
           <xs:element name="fhirVersion" minOccurs="1" maxOccurs="unbounded" type="FHIRVersion">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The version(s) of the FHIR specification that this ImplementationGuide targets - e.g. describes how to use. The value of this element is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 4.5.0. for this version.</xs:documentation>
+              <xs:documentation xml:lang="en">The version(s) of the FHIR specification that this ImplementationGuide targets - e.g. describes how to use. The value of this element is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 4.6.0. for this version.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="dependsOn" type="ImplementationGuide.DependsOn" minOccurs="0" maxOccurs="unbounded">
@@ -43941,7 +43951,7 @@ Deceased patients may also be marked as inactive for the same reasons, but may b
           </xs:element>
           <xs:element name="fhirVersion" minOccurs="0" maxOccurs="1" type="FHIRVersion">
             <xs:annotation>
-              <xs:documentation xml:lang="en">The version of the FHIR specification on which this StructureDefinition is based - this is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 4.5.0. for this version.</xs:documentation>
+              <xs:documentation xml:lang="en">The version of the FHIR specification on which this StructureDefinition is based - this is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 4.6.0. for this version.</xs:documentation>
            </xs:annotation>
           </xs:element>
           <xs:element name="mapping" type="StructureDefinition.Mapping" minOccurs="0" maxOccurs="unbounded">

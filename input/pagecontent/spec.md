@@ -66,19 +66,19 @@ Security classification metadata is based on an analysis of applicable policies 
 
 |Tag Set|Card. | Description | Example Tags | 
 |-------|------|-------------|--------------|
-|[Confidentiality](http://hl7.org/fhir/R4/v3/Confidentiality/vs.html)|`1..1` | Security label metadata classifying an IT resource (clinical fact, data, information object, service, or system capability) according to its level of sensitivity, which is based on an analysis of applicable privacy policies and the risk of financial, reputational, or other harm to an individual or entity that could result if made available or disclosed to unauthorized individuals, entities, or processes.|Unrestricted, Normal, Very Restricted |
+|[Confidentiality](https://terminology.hl7.org/ValueSet-v3-Confidentiality.html)|`1..1` | Security label metadata classifying an IT resource (clinical fact, data, information object, service, or system capability) according to its level of sensitivity, which is based on an analysis of applicable privacy policies and the risk of financial, reputational, or other harm to an individual or entity that could result if made available or disclosed to unauthorized individuals, entities, or processes.|Unrestricted, Normal, Very Restricted |
 
 #### [Security Category](https://terminology.hl7.org/ValueSet-v3-SecurityCategoryObservationType.html)
 Type of security metadata observation made about the category of an IT resource (data, information object, service, or system capability), which may be used to make access control decisions. Security category metadata is defined by ISO/IEC 2382-8:1998(E/F)/ T-REC-X.812-1995 as: _"A nonhierarchical grouping of sensitive information used to control access to data more finely than with hierarchical security classification alone."_
 
 |Tag Set|Card. |  Description | Example Tags | 
 |-------|------|-------------|--------------|
-| [Policy](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-privacy-policy.html)*|`0..1`| Security label metadata that segments an IT resource by conveying a mandate, obligation, requirement, rule, or expectation relating to its privacy.|  |
-| [Sensitivity](https://www.hl7.org/fhir/v3/InformationSensitivityPolicy/vs.html) |`0..*`| Security label metadata that segments an IT resource by categorizing the value, importance, and vulnerability of an IT resource perceived as undesirable to share.| `STD`, `HIV`, `SUD`  |
-| [Compartment](https://www.hl7.org/fhir/v3/Compartment/vs.html) |`0..*`| Security label metadata that segments an IT resource by indicating that access and use is restricted to members of a defined community or project.| Care Team, Research Project  |
-| [Integrity](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-integrity.html)*  |`0..*`| Security label metadata that segments an IT resource by conveying the completeness, veracity, reliability, trustworthiness, and provenance of an IT resource.| Anonymized,  Digitally signed  |
-| [Provenance](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-provenance.html)*  |`0..*`| Security label metadata that segments an IT resource by conveying the provenance of the IT resource's asserted or reported source.| Patient reported, Clinician asserted  |
-| [Trust](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-trust.html)*  |`0..*`| Security label metadata that segments an IT resource by conveying the basis for trusting the source.| Trust Accreditation, Trust Agreement  |
+| [Policy](https://terminology.hl7.org/ValueSet-v3-ActPolicyType.html)*|`0..1`| Security label metadata that segments an IT resource by conveying a mandate, obligation, requirement, rule, or expectation relating to its privacy.|  |
+| [Sensitivity](https://terminology.hl7.org/ValueSet-v3-InformationSensitivityPolicy.html) |`0..*`| Security label metadata that segments an IT resource by categorizing the value, importance, and vulnerability of an IT resource perceived as undesirable to share.| `STD`, `HIV`, `SUD`  |
+| [Compartment](https://terminology.hl7.org/ValueSet-v3-Compartment.html) |`0..*`| Security label metadata that segments an IT resource by indicating that access and use is restricted to members of a defined community or project.| Care Team, Research Project  |
+| [Integrity](https://terminology.hl7.org/ValueSet-v3-SecurityIntegrityObservationValue.html)*  |`0..*`| Security label metadata that segments an IT resource by conveying the completeness, veracity, reliability, trustworthiness, and provenance of an IT resource.| Anonymized,  Digitally signed  |
+| [Provenance](https://terminology.hl7.org/ValueSet-v3-SecurityIntegrityProvenanceObservationValue.html)*  |`0..*`| Security label metadata that segments an IT resource by conveying the provenance of the IT resource's asserted or reported source.| Patient reported, Clinician asserted  |
+| [Trust](https://terminology.hl7.org/ValueSet-v3-SecurityTrustObservationValue.html)*  |`0..*`| Security label metadata that segments an IT resource by conveying the basis for trusting the source.| Trust Accreditation, Trust Agreement  |
 
 (*) Value-sets defined by this IG.
 
@@ -87,13 +87,13 @@ Type of security metadata observation made about the control of an IT resource (
 
 |Tag Set|Card. |  Description | Example Tags | 
 |-------|------|-------------|--------------|
-|[Purpose of Use](https://www.hl7.org/fhir/v3/PurposeOfUse/vs.html) |`0..*`| Security label metadata that segments an IT resource by conveying the reason for performing one or more operations on information, which may be permitted by source system's security policy in accordance with one or more privacy policies and consent directives.| Treatment, Payment, Operation, Research  |
-|[General Purpose of Use](https://www.hl7.org/fhir/v3/GeneralPurposeOfUse/vs.html) |`0..*`| Security label metadata that segments an IT resource by conveying the reason for performing one or more operations on information of purpose of use at a general level.| Coverage, Patient Requested, Emergency Treatment |
-|[Obligation](https://www.hl7.org/fhir/v3/ObligationPolicy/vs.html)** |`0..*`| Security label metadata that segments an IT resource by conveying the mandated workflow action that an information custodian, receiver, or user must perform.| Encrypt, mask, comply wih policy |
-|[Refrain](https://www.hl7.org/fhir/v3/RefrainPolicy/vs.html)** |`0..*`| Security label metadata that segments an IT resource by conveying actions which an information custodian, receiver, or user is not permitted to perform unless otherwise authorized or permitted under specified circumstances.| Do not disclose without consent, no reuse |
-|[CUI Privacy Mark](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-cui-mark.html)* |`0..*`|  Security label metadata that segments an IT resource by conveying a displayed mark, required to be rendered to indicate that the electronic or hardcopy information is protected at the level of the subset of CUI for which the authorizing law, regulation, or Government-wide policy does not set out specific handling or dissemination controls.| `CUI`, `SP-CUI` |
-|[Security Label  Mark](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-security-label-mark.html)* |`0..*`|  Security label metadata that segments an IT resource by conveying a displayed mark rendered as specified.| Draft, Confidential|
-|[Security Authorization Policy](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-security-authorization.html)* |`0..*`|  Security label metadata that segments an IT resource by conveying specific permissions used for access control.| Authorization policy, Delegation policy|
+|[Purpose of Use](https://terminology.hl7.org/ValueSet-v3-PurposeOfUse.html) |`0..*`| Security label metadata that segments an IT resource by conveying the reason for performing one or more operations on information, which may be permitted by source system's security policy in accordance with one or more privacy policies and consent directives.| Treatment, Payment, Operation, Research  |
+|[General Purpose of Use](https://terminology.hl7.org/ValueSet-v3-GeneralPurposeOfUse.html) |`0..*`| Security label metadata that segments an IT resource by conveying the reason for performing one or more operations on information of purpose of use at a general level.| Coverage, Patient Requested, Emergency Treatment |
+|[Obligation](https://terminology.hl7.org/ValueSet-v3-ObligationPolicy.html) |`0..*`| Security label metadata that segments an IT resource by conveying the mandated workflow action that an information custodian, receiver, or user must perform.| Encrypt, mask, comply wih policy |
+|[Refrain](https://terminology.hl7.org/ValueSet-v3-RefrainPolicy.html) |`0..*`| Security label metadata that segments an IT resource by conveying actions which an information custodian, receiver, or user is not permitted to perform unless otherwise authorized or permitted under specified circumstances.| Do not disclose without consent, no reuse |
+|[CUI Privacy Mark](ValueSet-valueset-cui-mark.html) * |`0..*`|  Security label metadata that segments an IT resource by conveying a displayed mark, required to be rendered to indicate that the electronic or hardcopy information is protected at the level of the subset of CUI for which the authorizing law, regulation, or Government-wide policy does not set out specific handling or dissemination controls.| `CUI`, `SP-CUI` |
+|[Security Label  Mark](ValueSet-valueset-security-label-mark.html) * |`0..*`|  Security label metadata that segments an IT resource by conveying a displayed mark rendered as specified.| Draft, Confidential|
+|[Security Authorization Policy](ValueSet-valueset-security-authorization.html) * |`0..*`|  Security label metadata that segments an IT resource by conveying specific permissions used for access control.| Authorization policy, Delegation policy|
 
 (*) Value-sets defined by this IG.
 (**) Privacy-revealing Obligation or Refrain tags (e.g., the Obligation Policy `MASK` (mask) or the Refrain Policy `NODSCLCD` (no disclosure without consent directive)) shall not be included in the High Watermark labels of a `Bundle`, `DocumentReference`, or `Message Resources`.
@@ -102,6 +102,6 @@ Type of security metadata observation made about the control of an IT resource (
 
 |Tag Set|Card. |  Description | Example Tags | 
 |-------|------|-------------|--------------|
-|[Contributor Type](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/ValueSet-valueset-sec-label-contributor-type.html)* |`0..1`|  The type of security label contributor.| author, editor, classifier, declassifier|
+|[Contributor Type](ValueSet-valueset-sec-label-contributor-type.html) * |`0..1`|  The type of security label contributor.| author, editor, classifier, declassifier|
 
 (*) Value-sets defined by this IG.
