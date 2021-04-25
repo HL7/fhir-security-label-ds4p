@@ -1,0 +1,102 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "ControlledUnclassifiedInformation"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to locate code ControlledUnclassifiedInformation"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "_ActConsentType"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "_ActConsentDirective"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "_ActPrivacyLaw"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "_ActGDPRConsentDirective"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "_ActGenericConsentDirective"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "_ActUSPrivacyConsentDirective"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "_ActInformationPolicy"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "_ActGDPRPrivacyLaw"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "concept" : [{
+        "code" : "MDHHS-5515MMHC",
+        "display" : "Michigan Consent to Share Behavioral Health Information for Care Coordination Purposes-Michigan Mental Health Code"
+      },
+      {
+        "code" : "MDHHS-5515Part2",
+        "display" : "Michigan Consent to Share Behavioral Health Information for Care Coordination Purposes-US 42 CFR Part 2"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to locate code _ActGDPRConsentDirective"
+}
+-------------------------------------------------------------------------------------
