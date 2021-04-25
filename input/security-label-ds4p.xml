@@ -234,13 +234,13 @@
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="inline.html"/>
-        <title value="Inline Security Labels"/>
+        <nameUrl value="spec.html"/>
+        <title value="Detailed Specification"/>
         <generation value="markdown"/>
       </page>
       <page>
-        <nameUrl value="spec.html"/>
-        <title value="Detailed Specification"/>
+        <nameUrl value="inline.html"/>
+        <title value="Inline Security Labels"/>
         <generation value="markdown"/>
       </page>
       <page>
