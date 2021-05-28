@@ -2,12 +2,15 @@
   <li><a href="index.html">IG Home</a></li>
   <li><a href="toc.html">Table of Contents</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Security Label DS4P Background<b class="caret">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction and Background<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
       <li>
         <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="concept.html">Security Labeling Conceptual Structure</a>
       </li>
     </ul>
   </li>
@@ -18,6 +21,12 @@
     <ul class="dropdown-menu">
       <li>
         <a href="spec.html">Detailed Specification</a>
+      </li>
+      <li>
+        <a href="inline.html">Inline Security Labels</a>
+      </li>
+      <li>
+        <a href="security.html">Security and Privacy Considerations</a>
       </li>
     </ul>
   </li>
