@@ -131,7 +131,7 @@ Handling caveats are instructions about mandatory and prohibited actions (obliga
 
 Assign handling caveats as access control decision information to an information resource as required by policy to obtain an end-user’s implicit or explicit acceptance of a source rule prior to use or access.
 
-The acceptance of a handling caveat may be implicit (e.g., in an MOU, DURSA or contract) or explicit as in a returned response (e.g. a promise). The pre-established trust framework defines specific rules for complying with such handling caveat codes.  
+The acceptance of a handling caveat may be implicit (e.g., in an Memorandum of Understanding, Data Use and Reciprocal Support Agreement, or contract) or explicit as in a returned response (e.g. a promise). The pre-established trust framework defines specific rules for complying with such handling caveat codes.  
 
 The Security Controls include: 
 

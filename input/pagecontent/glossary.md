@@ -65,6 +65,9 @@ CUI is information the Government creates or possesses, or that an entity create
 **Data Segmentation** 
 Process of sequestering from capture, access or view certain data elements that are perceived by a legal entity, institution, organization or individual as being undesirable to share [GWU].
 
+**Data Use and Reciprocal Support Agreement (DURSA)**
+A comprehensive, multi-party trust agreement signed by all eligible entities who wish to exchange data.
+
 **Healthcare Privacy and Security Classification System (HCS)**
 A defined scheme for the classification and handling of health care and healthcare related information.
 
