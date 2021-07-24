@@ -123,7 +123,7 @@ This results in the following relationships, which form a hierarchy (or total or
 -   _Restricted_ (`R`) is less protective than `V`, and subsumes all other protection levels, i.e. `N`, `M`, `L`, and `U`.
 -   _Very Restricted_ (`V`) is the highest protection level and subsumes all other protection levels, i.e. `R`, `N`, `M`, `L`, and `U`.
 
-#### Step 3 Determine the Security Control Tags indicated by the Security Categories
+#### Step 3: Determine the Security Control Tags indicated by the Security Categories
 This is to convey the handling instructions or “caveats” to which senders and receivers must comply to access information labeled with specific Security Category tags (e.g., sensitivity tags). This security label includes `0..*` Security Control Tags, each of which may have `1..*` values.
 
 ##### HCS Handling Caveat Description
