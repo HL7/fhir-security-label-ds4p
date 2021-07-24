@@ -1,7 +1,7 @@
 ### Introduction
 This IG provides guidance for applying security labels in FHIR. Security labels  are used in access control systems governing the collection, access, use, and disclosure of the target information, such as FHIR resource(s), as required by applicable organizational, jurisdictional, or personal policies related to privacy, security, and trust.
 
-Using security labels is an essential part of the Share with Protection paradigm  by enabling information to be shared after assigning the security labels specifying how the information can be used and the restrictions to which it may be subject.  Regardless of the content syntax, “Security Labels enable more data to flow as they enable policy fragments to accompany the resource data.” [[FHIR Security Label Module](http://hl7.org/fhir/security-labels.html#6.1.1)].
+Using security labels is an essential part of [the Share with Protection paradigm](https://confluence.hl7.org/display/SEC/Share+with+Protections+White+Paper+Project) by enabling information to be shared after assigning the security labels specifying how the information can be used and the restrictions to which it may be subject.  Regardless of the content syntax, “Security Labels enable more data to flow as they enable policy fragments to accompany the resource data.” [[FHIR Security Label Module](http://hl7.org/fhir/security-labels.html#6.1.1)].
 
 While stated with respect to FHIR content, this holds for other labeled content as well, “The intent of a security label is that the recipient of resources or bundles with security tags is obligated to enforce the handling caveats of the tags and carry the security labels forward as appropriate.”
 
