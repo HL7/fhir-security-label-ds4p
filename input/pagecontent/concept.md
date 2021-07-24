@@ -12,8 +12,7 @@ Classification is at the discretion of the Authority ("Classifier"), which contr
 
 The appropriate level of confidentiality protection is determined by the Classifier’s assessment of the disclosure risks, usually identified by the magnitude or type of damage caused by disclosure, such as the risk of harm, discrimination, or safety to an individual. 
 
-The level of confidentiality protection for a type of sensitive information is set by jurisdictional, organizational, or individual data subject policy. The appropriate level of confidentiality protection for a type of sensitive information is ultimately dictated by jurisdictional, organizational, or individual policy.
-HL7 HCS leverages the security label models from foundational standards   as diagrammed at a high level below and available in detail [here](hcs-detail.png).
+The appropriate level of confidentiality protection for a type of sensitive information is ultimately dictated by jurisdictional, organizational, or individual policy. HL7 HCS leverages the security label models from foundational standards as diagrammed at a high level below and available in detail [here](hcs-detail.png).
 
 
 ![HCS](hcs.png)
