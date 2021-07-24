@@ -105,23 +105,23 @@ The criterion for assigning HL7 confidentiality codes is whether applicable poli
 
 The following HL7 Confidentiality Code criteria are intended to meet a healthcare-specific multi-level security model for access control by stipulating clearly distinguishable levels of protection, which can be specialized by realm:
 
-- _Normal_: The “normal” confidentiality code applies the “normative” level of protection to sensitive and non-sensitive information within the context of healthcare delivery in a general policy domain (e.g., HIPAA in US, GDPR in EU).
--	_Restricted_: The “restricted” confidentiality code applies when a narrower policy domain preempts the “normative” level of protection in a wider policy domain (e.g., HIPAA in US, GDPR in EU) of sensitive information within the context of healthcare delivery. Examples include State behavioral health, reproductive health, minors’ health, and HIV laws; Medicaid Confidentiality; Title 38 Section 7332; and 42 CFR Part 2.
-- _Moderate_: The “moderate” confidentiality code lessens the “normative” level of protection in a policy domain based on a data subject’s authorization to disclose for purposes of policy domains outside the context of normal healthcare delivery (i.e., Treatment, Payment, and Healthcare Operations); for example, for research, coverage determination such as Social Security Administration(SSA), personal health record systems/apps, or marketing, where other privacy laws may apply.
-- _Very Restricted_: The “very restricted” confidentiality code applies to sensitive and non-sensitive information, and raises the level of protection beyond “normal” or “restricted” in ad hoc situations such as legal hold or patient safety.
-- _Low_: The “low” confidentiality code applies to sensitive and non-sensitive information that has been altered in such a way as to minimize the need for confidentiality protections with some residual risks associated with re-linking.
 - _Unrestricted_: The “unrestricted” confidentiality code applies to sensitive and non-sensitive information that has been disclosed with few or no restrictions on its use, which may be stipulated contractually between the data subject and a data user (e.g., via terms of service or data user privacy policies such as disclosure for marketing purposes or on social media).
+- _Low_: The “low” confidentiality code applies to sensitive and non-sensitive information that has been altered in such a way as to minimize the need for confidentiality protections with some residual risks associated with re-linking.
+- _Moderate_: The “moderate” confidentiality code lessens the “normative” level of protection in a policy domain based on a data subject’s authorization to disclose for purposes of policy domains outside the context of normal healthcare delivery (i.e., Treatment, Payment, and Healthcare Operations); for example, for research, coverage determination such as Social Security Administration(SSA), personal health record systems/apps, or marketing, where other privacy laws may apply.
+- _Normal_: The “normal” confidentiality code applies the “normative” level of protection to sensitive and non-sensitive information within the context of healthcare delivery in a general policy domain (e.g., HIPAA in US, GDPR in EU).
+- _Restricted_: The “restricted” confidentiality code applies when a narrower policy domain preempts the “normative” level of protection in a wider policy domain (e.g., HIPAA in US, GDPR in EU) of sensitive information within the context of healthcare delivery. Examples include State behavioral health, reproductive health, minors’ health, and HIV laws; Medicaid Confidentiality; Title 38 Section 7332; and 42 CFR Part 2.
+- _Very Restricted_: The “very restricted” confidentiality code applies to sensitive and non-sensitive information, and raises the level of protection beyond “normal” or “restricted” in ad hoc situations such as legal hold or patient safety.
 
 The descriptions of Confidentiality Codes are based on variance from “normative” level of protection as a metric for differentiating the total order hierarchical demarcations for this multi-level security model.
 
-This results in the following relationships, which form a hierarchy (or total order) in which Very Restricted is the parent and each lower child IS-A lesser protection level than its predecessor with Unrestricted being the lowest protection level:
+This results in the following relationships, which form a hierarchy (or total order) in which _Very Restricted_ is the parent and each lower child _is-a_ lesser protection level than its predecessor with _Unrestricted_ being the lowest protection level:
 
--   _Very Restricted_ (`V`) is the highest protection level and subsumes all other protection levels, i.e. `R`, `N`, `M`, `L`, and `U`.
--   _Restricted_ (`R`) is less protective than `V`, and subsumes all other protection levels, i.e. `N`, `M`, `L`, and `U`.
--   _Normal_ (`N`) is less protective than `V` and `R`, and subsumes all other protection levels, i.e. `M`, `L`, and `U`.
--   _Moderate_ (`M`) is less protective than `V`, `R`, and `N`, and subsumes all other protection levels, i.e. `L` and `U`.
--   _Low_ (`L`) is less protective than `V`, `R`, `N`, and `M`, and subsumes `U`.
 -   _Unrestricted_ (`U`) is less protective than `V`, `R`, `N`, `M`, and `L`, and is the lowest protection levels.
+-   _Low_ (`L`) is less protective than `V`, `R`, `N`, and `M`, and subsumes `U`.
+-   _Moderate_ (`M`) is less protective than `V`, `R`, and `N`, and subsumes all other protection levels, i.e. `L` and `U`.
+-   _Normal_ (`N`) is less protective than `V` and `R`, and subsumes all other protection levels, i.e. `M`, `L`, and `U`.
+-   _Restricted_ (`R`) is less protective than `V`, and subsumes all other protection levels, i.e. `N`, `M`, `L`, and `U`.
+-   _Very Restricted_ (`V`) is the highest protection level and subsumes all other protection levels, i.e. `R`, `N`, `M`, `L`, and `U`.
 
 #### Step 3 Determine the Security Control Tags indicated by the Security Categories
 This is to convey the handling instructions or “caveats” to which senders and receivers must comply to access information labeled with specific Security Category tags (e.g., sensitivity tags). This security label includes `0..*` Security Control Tags, each of which may have `1..*` values.
