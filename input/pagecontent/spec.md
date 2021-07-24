@@ -7,7 +7,7 @@ The following extensions are defined by this IG:
 
 Furthermore, the following extensions are defined to enable fine-grained labeling at the sub-resource level using inline security labels. 
 - the `inline-sec-label` extension enables specifying a security label inline on any element in a resource where an extension is allowed to appear.
-- the `has-inline-sec-label` extension enables specifying whether a resource contains any inline security labels to assist consumers in deciding whether they should to a deep inspection of the resource content to look for inline security labels.
+- the `has-inline-sec-label` extension enables specifying whether a resource contains any inline security labels to assist consumers in deciding whether they should do a deep inspection of the resource content to look for inline security labels.
 
 The concept of inline security labels and the corresponding extensions are defined in a [separate page](inline.html).
 
