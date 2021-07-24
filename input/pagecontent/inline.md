@@ -50,7 +50,7 @@ The following excerpt shows an example of using of extensions for inline labelin
 
 ### Sample Use-Cases
 
-This section briefly discussed some of the use-cases where inline labels can be used to address the need for fine-grained labeling at the sub-resource level.
+This section briefly discusses some of the use-cases where inline labels can be used to address the need for fine-grained labeling at the sub-resource level.
 
 #### Level of Confidence
 
