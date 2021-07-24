@@ -30,7 +30,20 @@
       </li>
     </ul>
   </li>
-  <li><a href="artifacts.html">Artifact Index</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Artifact Index <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="artifacts.html#structures-extension-definitions">Structures: Extension Definitions</a>
+      </li>
+      <li>
+        <a href="artifacts.html#terminology-value-sets">Terminology: Value Sets</a>
+      </li>
+      <li>
+        <a href="artifacts.html#example-example-instances">Example: Example Instances</a>
+      </li>
+    </ul>
+  </li>
   <li class="dropdown">
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Support<b class="caret">
       </b>
