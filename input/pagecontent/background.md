@@ -74,9 +74,12 @@ __Some vendors have already implemented this technology__
 
 In the healthcare sector as well, security labeling has already been implanted by some vendors and its usage has been shown in some limited applications.
 
-__Security labeling does not have to be implemented in the EHR system__
+__Security Labeling Service (SLS) does not have to be implemented within the EHR system__
 
-While existing EHRs can certainly implement the security labeling service inside their products, this is not the only approach and the labeling service can be implemented as a separate product that interacts with a standard EHR and applies labels to the outgoing information on-the-fly or on the existing information in a batch mode. This could reduce the net costs of implementation and create a competitive free marketplace for security labeling products that can work with different existing EHR systems.
+While Security Labeling Service can be implemented as a component in existing EHRs, it may also be implemented as a separate product, with hooks within the EHR to apply labels on data, either on-the-fly on a per-transaction basis, or in batch mode –or a hybrid of both. Relying on SLS products can reduce the net costs of implementing the SLS in an EHR and can create a competitive free marketplace for SLS products that can work with different EHRs.
+
+Note that this only applies to the SLS; on the consumer side, proper processing of labeled data requires incorporating security labels into various aspects of the product including (but not limited to) access control system, business workflows, and user interfaces, and abiding by the corresponding policies.
+
 
 __Implementation can be iterative and gradual and not every application needs all the features__
 
