@@ -1,12 +1,19 @@
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li><a href="index.html">IG Home</a></li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Introduction and Background<b class="caret">
-      </b>
-    </a>
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guidance<b class="caret" ></b></a>
     <ul class="dropdown-menu">
       <li>
+        <a href="index.html">Introduction</a>
+      </li>
+      <li>
         <a href="background.html">Background</a>
+      </li>
+      <li>
+        <a href="background.html#security-labeling-faq">Security Labeling FAQ</a>
+      </li>
+      <li>
+        <a href="background.html#use-cases">Use-Cases</a>
       </li>
       <li>
         <a href="concept.html">Security Labeling Conceptual Structure</a>
@@ -14,9 +21,7 @@
     </ul>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret">
-      </b>
-    </a>
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret"></b></a>
     <ul class="dropdown-menu">
       <li>
         <a href="spec.html">Detailed Specification</a>
