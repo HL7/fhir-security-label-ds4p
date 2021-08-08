@@ -61,7 +61,7 @@ Generally, this guide is not intended or expected to be implemented except as a 
  
 The main utility of this GI is to enable the development of  privacy, security, provenance, or trust policy specific security label implementation guides to address use case requirements.
  
-It is necessary for solutions to be designed with a policy use-case in mind to ensure that there's affirmation of technical support between systems, and a shared understanding of business obligations required by the policy represented by security labeled resources.
+It is necessary for solutions to be designed with a policy use case in mind to ensure that there's affirmation of technical support between systems, and a shared understanding of business obligations required by the policy represented by security labeled resources.
 
 ### FHIR DS4P IG Road Map 
 FHIR DS4P IG is an evolving specification that will encompass increasing capabilities in future ballots. Anticipated enhancements on the roadmap for the 2022 ballot cycles include clean up and additions to the label tag value sets as well as exploration of more new capabilities such as:
@@ -84,25 +84,31 @@ This provides guidance in the following areas:
 ### Walk-Through
 The main sections of this IG are:
 
-- [Background](background.html)
-- [Security Labeling Conceptual Structure](concept.html)
-- [Detailed Specification](spec.html)
+- Guidance
+    - [Introduction](index.html)
+    - [Background](background.html)
+    - [Security Labeling FAQ](background.html#security-labeling-faq)
+    - [Use Cases](background.html#use-cases)
+    - [Security Labeling Conceptual Structure](concept.html)
+- Specification
+    - [Detailed Specification](spec.html)
     - [Extensions Summary](spec.html#extensions-summary)
     - [Value Sets Summary](spec.html#value-sets-summary)
-- [Inline Security Labels](inline.html) 
+    - [Inline Security Labels](inline.html) 
+    - [Inline Security Labels Sample Use Cases](inline.html#sample-use-cases)
+    - [Security and Privacy Considerations](security.html)
 - [Artifacts Index](artifacts.html)
     - [Structures: Extension Definitions](artifacts.html#structures-extension-definitions)
     - [Terminology: Value Sets](artifacts.html#terminology-value-sets)
     - [Examples](artifacts.html#example-example-instances)
-- [Security and Privacy Considerations](security.html)
 - [Glossary](glossary.html)
 - [Downloads](downloads.html)
 
 ### Informative Sections
 The following sections are informative:
-- Glossary
-- FAQ
-- Use Cases
+- [Glossary](glossary.html)
+- [Security Labeling FAQ](background.html#security-labeling-faq)
+- [Use Cases](background.html#use-cases)
 
 ### End Notes
 
