@@ -54,6 +54,14 @@ Likewise, the [FHIR Security Label Module](http://hl7.org/fhir/security-labels.h
 While stated with respect to FHIR content, this [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) caveat holds for other labeled content as well: “The intent of a security label is that the recipient of resources or bundles with security tags is obligated to enforce the handling caveats of the tags and carry the security labels forward as appropriate.” And, regardless of the content syntax, “Security Labels enable more data to flow as they enable policy fragments to accompany the resource data.”
 
 
+### FHIR DS4P IG Road Map 
+FHIR DS4P IG is an evolving specification that will encompass increasing capabilities in future ballots. Anticipated enhancements on the roadmap for the 2022 ballot cycles include clean up and additions to the label tag value sets as well as exploration of more new capabilities such as:
+- How security labels are used in Attribute Based Access Control (ABAC) 
+- Use cases for security labels representing trust contracts and inclusion of trust tags in security labels generally to convey expectations of senders and receivers such as persisting labels and whether labels can be reclassified or removed
+- Using Structured Definitions and Capability Statements as Security Policy Information Files (SPIF) to establish rules for constructing and interpreting shared security labels, which can be negotiated, executed, and registered in a discoverable manner
+- Use of [Clinical Quality Language (CQL)](https://cql.hl7.org) to specify the access control rules for enforcing security labels 
+- Use of Business Process Modeling Notation (BPMN) to describe shared workflows in which labeled content is collected, accessed, used or disclosed.  Purpose of use labels are not sufficient to convey the activities that a policy may permit or deny a recipient to conduct. A security label conveying a FHIR Consent for example, where a patient only permits access and use, but not collection or disclosure of protected health information for treatment purposes in an emergency and inpatient setting needs more than a policy tag with a reference to the specific FHIR consent and a purpose of use tag for treatment. 
+
 ### Technical Overview
 
 This provides guidance in the following areas:
