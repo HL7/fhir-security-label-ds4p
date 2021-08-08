@@ -1,5 +1,5 @@
 In FHIR core, any security label that applies to a resource is recorded at the resource level on `Resource.meta.security`. This mechanism works well for cases where either the security label applies to the entire resource, or where tracking the precise part of the resource to which the label applies is not important.
-There are some use-cases, however, where a security label only applies to an element or portion of a resource, and it is important for the use-case to track accurately the precise portions of the resource to which the label applies. Some of these use-cases are briefly discussed below.
+There are some use cases, however, where a security label only applies to an element or portion of a resource, and it is important for the use case to track accurately the precise portions of the resource to which the label applies. Some of these use cases are briefly discussed below.
 
 Inline security labels are defined to enable recording a security label on a portion of a FHIR resource via an extension (`extension-inline-sec-label`). This extension can appear on any element of a resource where an extension is allowed, so, it provides a powerful mechanism to assign security labels at the sub-resources level and at various levels of granularity.
 
@@ -48,9 +48,9 @@ The following excerpt shows an example of using of extensions for inline labelin
 }
 ```
 
-### Sample Use-Cases
+### Sample Use Cases
 
-This section briefly discusses some of the use-cases where inline labels can be used to address the need for fine-grained labeling at the sub-resource level.
+This section briefly discusses some of the use cases where inline labels can be used to address the need for fine-grained labeling at the sub-resource level.
 
 #### Level of Confidence
 
@@ -62,6 +62,6 @@ Note that putting these labels at the resource level is of little value since it
 
 #### Confidentiality
 
-An inline confidentiality label can specify the additional sensitivity of a piece of information in a resource. For example, confidential identifiers (such as Social Security Number) can be marked with a confidentiality label to indicate the sensitivity of the identifier. Or as another example, in use-cases regarding at-risk individuals (e.g., victims of violence or individuals staying at a shelter), the current address is considered _very restricted_ while old addresses or mailing addresses do not have such sensitivity.
+An inline confidentiality label can specify the additional sensitivity of a piece of information in a resource. For example, confidential identifiers (such as Social Security Number) can be marked with a confidentiality label to indicate the sensitivity of the identifier. Or as another example, in use cases regarding at-risk individuals (e.g., victims of violence or individuals staying at a shelter), the current address is considered _very restricted_ while old addresses or mailing addresses do not have such sensitivity.
 
 Granular application of security labels using the inline labeling mechanism enables the consumers to apply additional protective measures (such as masking the particular data element on the screen to prevent accidental exposure).
