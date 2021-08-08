@@ -53,6 +53,15 @@ Likewise, the [FHIR Security Label Module](http://hl7.org/fhir/security-labels.h
 
 While stated with respect to FHIR content, this [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) caveat holds for other labeled content as well: “The intent of a security label is that the recipient of resources or bundles with security tags is obligated to enforce the handling caveats of the tags and carry the security labels forward as appropriate.” And, regardless of the content syntax, “Security Labels enable more data to flow as they enable policy fragments to accompany the resource data.”
 
+### Intended Applications
+
+Like the abstract FHIR Resource definition, this guide provides a foundation for a variety of security labeling capabilities that systems may find useful to communicate the policy governing  information conveyed by concrete Resources. This IG is policy-agnostic.
+ 
+Generally, this guide is not intended or expected to be implemented except as a tool to enable development of use case specific security labels.
+ 
+The main utility of this GI is to enable the development of  privacy, security, provenance, or trust policy specific security label implementation guides to address use case requirements.
+ 
+It is necessary for solutions to be designed with a policy use-case in mind to ensure that there's affirmation of technical support between systems, and a shared understanding of business obligations required by the policy represented by security labeled resources.
 
 ### FHIR DS4P IG Road Map 
 FHIR DS4P IG is an evolving specification that will encompass increasing capabilities in future ballots. Anticipated enhancements on the roadmap for the 2022 ballot cycles include clean up and additions to the label tag value sets as well as exploration of more new capabilities such as:
