@@ -83,9 +83,9 @@ Note that this only applies to the SLS; on the consumer side, proper processing 
 
 __Implementation can be iterative and gradual and not every application needs all the features__
 
-Although the HL7 standards for security labeling is quite thorough and defines a rather comprehensive system, not every implementation or every application area needs to implement all the aspects of this technology. By defining profiles and maturity models for the security labeling system, subsets of the security labeling systems can be selected in a way that is tailored to suit specific application areas and use-cases. This creates an incremental roadmap for implementers and enables different systems to adhere to a subset of the security labeling technology sufficient for their application. In other words, instead of an all-or-nothing approach, we can take a more gradual approach to implementing security labeling.
+Although the HL7 standards for security labeling is quite thorough and defines a rather comprehensive system, not every implementation or every application area needs to implement all the aspects of this technology. By defining profiles and maturity models for the security labeling system, subsets of the security labeling systems can be selected in a way that is tailored to suit specific application areas and use cases. This creates an incremental roadmap for implementers and enables different systems to adhere to a subset of the security labeling technology sufficient for their application. In other words, instead of an all-or-nothing approach, we can take a more gradual approach to implementing security labeling.
 
-### Use-Cases
+### Use Cases
 
 #### Sender Security Labeling (SL) Capability
 
