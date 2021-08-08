@@ -71,6 +71,13 @@ A comprehensive, multi-party trust agreement signed by all eligible entities who
 **Healthcare Privacy and Security Classification System (HCS)**
 A defined scheme for the classification and handling of health care and healthcare related information.
 
+**High Water Mark (HWM)**
+"Rule that when information is combined from several targets, the result is assigned the highest classification level."
+[_Warwick Ford, Computer Communications Security: Principles, Standard Protocols & Techniques 29-30 (1994)_]
+ 
+"If individual portions are classified at one level, but the compilation is a higher classification, mark each portion with its own classification, and mark the document and pages with the classification of the compilation."
+[_DOD Information Security Chapter 5 Marking:  5-206 Identification of Specific Classified Information_]
+
 **IT Resource**
 Any data, information object, operation, process, service, or system capability. An IT resource that is assigned a security label is sometimes referred to as a "security object". An IT resource that is represented as a requested security object of an initiator's access request is sometimes referred to as a "target".
 
