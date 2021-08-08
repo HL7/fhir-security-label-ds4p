@@ -15,7 +15,7 @@ The HL7 V2 security label guidance is incorporated in HL7 Version 2.9, Chapter 3
 
 The [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P), Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354) (IG) specifies the use of security labeling at the CDA Header, Section and Entry levels.
 
-Implementation of the CDA DS4P IG at the Header Level was included as an optional Certified EHR Certification criteria in the original 2015 Edition Health Information Technology (Health IT) Certification Criteria, 2015 Edition Base Electronic Health Record (EHR) Definition, and ONC Health IT Certification Program Modifications [*] [Final Rule – October 16, 2015](https://www.federalregister.gov/articles/2015/10/16/2015-25597/2015-edition-health-information-technology-certification-criteria-2015-edition-base-electronic).
+Implementation of the CDA DS4P IG at the Header Level was included as an optional Certified EHR Certification criteria in the original 2015 Edition Health Information Technology (Health IT) Certification Criteria, 2015 Edition Base Electronic Health Record (EHR) Definition, and ONC Health IT Certification Program Modifications [[1]](index.html#end-notes) ([Final Rule – October 16, 2015](https://www.federalregister.gov/articles/2015/10/16/2015-25597/2015-edition-health-information-technology-certification-criteria-2015-edition-base-electronic)).
 
 In the [21st Century Cures Act: Interoperability, Information Blocking, and the ONC Health IT Certification Program](https://www.federalregister.gov/documents/2020/05/01/2020-07419/21st-century-cures-act-interoperability-information-blocking-and-the-onc-health-it-certification), ONC revised the security tag certification criteria in [45 CFR § 170.315 - 2015 Edition health IT certification criteria](https://www.law.cornell.edu/cfr/text/45/170.315) at [(b)(7)](https://www.federalregister.gov/d/2020-07419/p-3368) and [(b)(8)](https://www.federalregister.gov/d/2020-07419/p-3371) by requiring certification at the more granular Section and Entry levels after December 31, 2022.
 
@@ -106,7 +106,7 @@ The following sections are informative:
 
 ### End Notes
 
-#### [*] [45 CFR § 170.315 - 2015 Edition health IT certification criteria](https://www.law.cornell.edu/cfr/text/45/170.315)
+[1] [45 CFR § 170.315 - 2015 Edition health IT certification criteria](https://www.law.cornell.edu/cfr/text/45/170.315)
 
 _(7) Security tags - summary of care - send._
 
