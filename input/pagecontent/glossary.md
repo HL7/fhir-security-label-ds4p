@@ -178,6 +178,23 @@ A construct that conveys domain-specific security policy information [[ISO/IEC 1
 
 An XML schema, that provides a high level representation of a security labeling policy in a generic and open fashion [[Open XML SPIF](http://www.xmlspif.org/?page_id=51)].
 
+[ISO/IEC 15816:2002 Information technology — Security techniques — Security information objects for access control](https://www.iso.org/standard/29139.html)
+
+The Security Policy Information File contains a sequence of the following:
+
+- `versionInformation` – indicates the version of the ASN.1 syntax and associated semantics of the Security Policy Information File specification.
+- `updateInformation` – indicates the currency of the security policy information file data.
+- `securityPolicyIdData` – identifies the security policy to which the Security Policy Information File applies.
+- `privilegeId` – indicates the OID that identifies the syntax included in the clearance attribute security category of relying certificates used in conjunction with the Security Policy Information File. The syntax indicated by privilegeId must be consistent with that indicated by rbacId.
+- `securityClassifications` – maps the classification of the security label to a classification in the clearance
+attribute, and also provides equivalency mappings.
+- `rbacId` – rule based access control object identifier which identifies the syntax included in the securityLabel security category that is used in conjunction with the Security Policy Information File. The syntax indicated by rbacId must be consistent with that indicated by privilegeId.
+- `securityCategories` – maps the security categories of the security label to the security categories in the clearance attribute, and also provides equivalency mappings.
+- `equivalentPolicies` – consolidates all equivalent policies in the SPIF.
+- `defaultSecurityPolicyIdData` – identifies the security policy which will apply if data is received without a security label.
+- `extensions` – provides a mechanism to include additional capabilities as future requirements are identified.
+The Security Policy Information File is a signed object to protect it from unauthorized changes.
+
 **Security Tag**
 Information unit containing a representation of certain security-related information (e.g., a restrictive attribute bit map) [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
