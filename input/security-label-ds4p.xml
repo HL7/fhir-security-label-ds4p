@@ -5,7 +5,7 @@
 
   <url value="http://hl7.org/fhir/uv/security-label-ds4p/ImplementationGuide/hl7.fhir.uv.security-label-ds4p"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.2.0"/>
+  <version value="0.3.0"/>
   <name value="SecurityLabelDS4P"/>
   <title value="FHIR Data Segmentation for Privacy"/>
   <status value="draft"/>
@@ -272,7 +272,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel"/>
-      <value value="2021May Ballot"/>
+      <value value="2021Sep Ballot"/>
     </parameter>
     <parameter>
       <code value="find-other-resources"/>
