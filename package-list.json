@@ -17,11 +17,11 @@
     {
       "version": "0.3.0",
       "date": "2021-08-08",
-      "desc": "STU 2 ballot (Sep 2021 Ballot)",
+      "desc": "STU 1 ballot (Sep 2021 Ballot)",
       "fhirversion": "4.0.1",
       "path": "http://hl7.org/fhir/uv/security-label-ds4p/2021Sep",
       "status": "ballot",
-      "sequence": "STU 2"
+      "sequence": "STU 1"
     },
     {
       "version": "0.2.0",
