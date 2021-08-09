@@ -96,7 +96,7 @@ Type of security metadata observation made about the control of an IT resource (
 |[Security Authorization Policy](ValueSet-valueset-security-authorization.html) * |`0..*`|  Security label metadata that segments an IT resource by conveying specific permissions used for access control.| Authorization policy, Delegation policy|
 
 (*) Value-sets defined by this IG.
-(**) Privacy-revealing Obligation or Refrain tags (e.g., the Obligation Policy `MASK` (mask) or the Refrain Policy `NODSCLCD` (no disclosure without consent directive)) shall not be included in the High Watermark labels of a `Bundle`, `DocumentReference`, or `Message Resources`.
+(**) Privacy-revealing Obligation or Refrain tags (e.g., the Obligation Policy `MASK` (mask) or the Refrain Policy `NODSCLCD` (no disclosure without consent directive)) shall not be included in the High Water Mark labels of a `Bundle`, `DocumentReference`, or `Message Resources`.
 
 #### Not a Security Label
 

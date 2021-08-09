@@ -106,7 +106,7 @@ Sender creates a discoverable/shareable Security Labeling (SL) Capability Statem
 - Listing the SL tags required to convey each applicable policy, using the `sec-label-basis` extension.
 - Indicating that the Sender supports `must-display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
 
-Sender implements ability to assign SLs at both the Bundle (High Watermark) and `Resource.meta.security`.
+Sender implements ability to assign SLs at both the Bundle (High Water Mark) and `Resource.meta.security`.
 
 Sender posts discoverable SL Capability Statements for each supported policy.
 
@@ -146,7 +146,7 @@ Receiver creates a discoverable/shareable Security Labeling (SL) Capability Stat
 - Listing the SL tags required to convey each applicable policy, using the `sec-label-basis` extension.
 - Indicating that the Receiver supports `must-display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
 
-Receiver implements ability to assign SLs at both the Bundle (High Watermark) and `Resource.meta.security`.
+Receiver implements ability to assign SLs at both the Bundle (High Water Mark) and `Resource.meta.security`.
 
 Receiver posts discoverable SL Capability Statements for each supported policy.
 
