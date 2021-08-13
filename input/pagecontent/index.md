@@ -110,6 +110,7 @@ The following sections are informative:
 - [Glossary](glossary.html)
 - [Security Labeling FAQ](background.html#security-labeling-faq)
 - [Use Cases](background.html#use-cases)
+- [Road Map](index.html#fhir-ds4p-ig-road-map)
 
 ### End Notes
 
