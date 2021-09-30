@@ -3,7 +3,7 @@
   "meta": {
     "extension": [
       {
-        "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-must-display",
+        "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-display",
         "valueAnnotation": {
           "authorReference": {
             "type": "Organization",
@@ -14,7 +14,7 @@
       }
     ]
   },
-  "id": "example-extension-must-display",
+  "id": "example-extension-display",
   "status": "final",
   "code": {
     "coding": [
