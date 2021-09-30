@@ -1,6 +1,6 @@
 ### Extensions Summary
 The following extensions are defined by this IG:
-- The `must-display` extension to require the consumer to display a specific mark on any rendering of the resource in print or electronic user interfaces.
+- The `display` extension to require the consumer to display a specific mark on any rendering of the resource in print or electronic user interfaces.
 - The `sec-label-basis` extension which enables specifying the policy or regulation based on which a label has been assigned.
 - The `sec-label-related-artifact` extension which enables recording a pointer to an artifact related to the label, particularly, a consent directive based on which the label has been assigned, or a provenance resource which further backs up the integrity label.
 - the `sec-label-classifier` extension which enables recording the entity that has assigned or updated the label.
@@ -11,10 +11,10 @@ Furthermore, the following extensions are defined to enable fine-grained labelin
 
 The concept of inline security labels and the corresponding extensions are defined in a [separate page](inline.html).
 
-#### `must-display` Extension
-The must-display extension is based on the [`Annotation` Data Type](https://www.hl7.org/fhir/datatypes.html#Annotation), which is text note that also contains information about who made the statement and when.
+#### `display` Extension
+The display extension is based on the [`Annotation` Data Type](https://www.hl7.org/fhir/datatypes.html#Annotation), which is text note that also contains information about who made the statement and when.
 
-This extension SHOULD be used in the context of `Resource.meta` when codes from the `PrivacyMark` or `SecurityLabelMark`  value sets, e.g., CUI or COPYMark codes, are used on the Resource which indicate that certain information is to be rendered to end users. The `PrivacyMark` or `SecurityLabelMark` code definitions include the information to be displayed. The must-display extension supports inclusion of the Annotation’s author and contact, and markdown for how the information is to be displayed.
+This extension SHOULD be used in the context of `Resource.meta` when codes from the `PrivacyMark` or `SecurityLabelMark`  value sets, e.g., CUI or COPYMark codes, are used on the Resource which indicate that certain information is to be rendered to end users. The `PrivacyMark` or `SecurityLabelMark` code definitions include the information to be displayed. The display extension supports inclusion of the Annotation’s author and contact, and markdown for how the information is to be displayed.
 
 The ability to convey renderable `PrivacyMark` or `SecurityLabelMark` security labels, including the author and the markdown role may be required by classification policies within a domain.
 
@@ -29,7 +29,7 @@ This pattern is followed explicitly in HL7 V2.9 and DS4P CDA IG.
 In FHIR, there's no differentiation between Named Tag Sets/Tag Sets, so there is no built-in way to delineate the `<security>` elements belonging to a specific policy.
 In order to address this in the FHIR DS4P IG, we propose the use of `extension-sec-label-basis` on each `<security>` within a group of `<security>` elements belonging to a specific policy.
 
-The `sec-label-basis` extension is not based on an existing FHIR artifact, unlike the `must-display` extension which is based on the [Annotation](https://www.hl7.org/fhir/datatypes.html#Annotation), and the The `sec-label-classifier` extension which is based on [Contributor](http://build.fhir.org/metadatatypes.html#contributor).
+The `sec-label-basis` extension is not based on an existing FHIR artifact, unlike the `display` extension which is based on the [Annotation](https://www.hl7.org/fhir/datatypes.html#Annotation), and the The `sec-label-classifier` extension which is based on [Contributor](http://build.fhir.org/metadatatypes.html#contributor).
  
 #### `sec-label-classifier` Extension
 
