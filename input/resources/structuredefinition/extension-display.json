@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "extension-must-display",
-  "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-must-display",
+  "id": "extension-display",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-display",
   "name": "ExtensionMustDisplay",
   "title": "Must Display",
   "version": "0.1",
@@ -29,7 +29,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-must-display"
+        "fixedUri": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-display"
       },
       {
         "id": "Extension.valueAnnotation",
