@@ -19,7 +19,7 @@ This extension SHOULD be used in the context of `Resource.meta` when codes from 
 The ability to convey renderable `PrivacyMark` or `SecurityLabelMark` security labels, including the author and the markdown role may be required by classification policies within a domain.
 
 #### `sec-label-basis` Extension 
-This extension SHALL be used on a security label (i.e., in the context of `Resource.meta.security`) if there is only one policy being conveyed by the all of the security label elements in meta.  When more than one policy is conveyed by the security label elements in meta, this extension SHALL be used with each security label element used to convey a specific policy. 
+This extension MAY be used on a security label (i.e., in the context of `Resource.meta.security`) if there is only one policy being conveyed by the all of the security label elements in meta.  When more than one policy is conveyed by the security label elements in meta, this extension SHALL be used with each security label element used to convey a specific policy. 
  
 For example, if a federal agency labels a Resource as 42 CFR Part 2 information, then the Resource would have both Part 2 and CUI security labels in the meta.  As a result, all the Part 2 security labels would have a sec-label-basis extension indicating that the basis for the label is Part 2, and all the CUI security labels would have a sec-label-basis indicating that the basis for the label is CFR 32 Part 2002.
  
