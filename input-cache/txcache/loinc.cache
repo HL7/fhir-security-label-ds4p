@@ -6,6 +6,8 @@
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Oral temperature",
+  "code" : "8331-1",
+  "system" : "http://loinc.org",
   "severity" : null,
   "error" : ""
 }
@@ -17,6 +19,8 @@ v: {
 }, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS"}####
 v: {
   "display" : "Bacteria identified in Blood by Culture",
+  "code" : "600-7",
+  "system" : "http://loinc.org",
   "severity" : null,
   "error" : ""
 }
