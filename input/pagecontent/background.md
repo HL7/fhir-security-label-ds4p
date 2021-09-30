@@ -104,7 +104,7 @@ Sender is able to determine whether the Receiver reclassified disclosed Resource
 Sender creates a discoverable/shareable Security Labeling (SL) Capability Statement:
 
 - Listing the SL tags required to convey each applicable policy, using the `sec-label-basis` extension.
-- Indicating that the Sender supports `must-display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
+- Indicating that the Sender supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
 
 Sender implements ability to assign SLs at both the Bundle (High Water Mark) and `Resource.meta.security`.
 
@@ -144,7 +144,7 @@ Receiver is able to determine whether a downstream Recipient reclassified disclo
 Receiver creates a discoverable/shareable Security Labeling (SL) Capability Statement: 
 
 - Listing the SL tags required to convey each applicable policy, using the `sec-label-basis` extension.
-- Indicating that the Receiver supports `must-display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
+- Indicating that the Receiver supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
 
 Receiver implements ability to assign SLs at both the Bundle (High Water Mark) and `Resource.meta.security`.
 
