@@ -119,10 +119,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/extension-must-display"/>
+        <reference value="StructureDefinition/extension-display"/>
       </reference>
-      <name value="Structure definition for the must-display extension"/>
-      <description value="Structure definition for the must-display extension."/>
+      <name value="Structure definition for the display extension"/>
+      <description value="Structure definition for the display extension."/>
       <exampleBoolean value="false" />
     </resource>
     <resource>
@@ -151,18 +151,18 @@
     </resource>
     <resource>
       <reference>
-        <reference value="Observation/example-extension-must-display"/>
+        <reference value="Observation/example-extension-display"/>
       </reference>
-      <name value="Simple use of the must-display extension"/>
-      <description value="A simple example showing how to use the must-display extension to require the consumer to display Controlled Unclassified Information (CUI) markings."/>
+      <name value="Simple use of the display extension"/>
+      <description value="A simple example showing how to use the display extension to require the consumer to display Controlled Unclassified Information (CUI) markings."/>
       <exampleBoolean value="true" />
     </resource>
     <resource>
       <reference>
         <reference value="Patient/P001"/>
       </reference>
-      <name value="Simple use of the must-display extension on a patient"/>
-      <description value="A simple example showing how to use the must-display extension to require the consumer to display Controlled Unclassified Information (CUI) markings."/>
+      <name value="Simple use of the display extension on a patient"/>
+      <description value="A simple example showing how to use the display extension to require the consumer to display Controlled Unclassified Information (CUI) markings."/>
       <exampleBoolean value="true" />
     </resource>
     <resource>
