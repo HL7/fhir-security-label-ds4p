@@ -23,4 +23,4 @@ Thumbs.db
 org.hl7.fhir.publisher.jar
 
 
-publisher.jar
+publisher*.jar
