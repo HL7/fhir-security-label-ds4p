@@ -87,36 +87,36 @@ Although the HL7 standards for security labeling is quite thorough and defines a
 
 ### Use Cases
 
-#### Sender Security Labeling (SL) Capability
+#### Sender Security Labeling Capability
 
 ##### Assumption
-Sender has implemented SL.
+Sender has implemented Security Labeling.
 
 ##### Pre-Condition
-Sender determines applicable SLs to convey applicable policy.
+Sender determines applicable security labels to convey applicable policy.
 
 ##### Post-Condition
-Sender is able to audit Receiver enforcement of disclosed Resource SL.
+Sender is able to audit Receiver enforcement of disclosed labeled Resource.
 
-Sender is able to determine whether the Receiver reclassified disclosed Resource SL upon further disclosure by monitoring Resource Provenance chain.
+Sender is able to determine whether the Receiver reclassified disclosed labeled Resource upon further disclosure by monitoring Resource Provenance chain.
 
 ##### Actors & Actions
-Sender creates a discoverable/shareable Security Labeling (SL) Capability Statement:
+Sender creates a discoverable/shareable Security Labeling Capability Statement, including:
 
-- Listing the SL tags required to convey each applicable policy, using the `sec-label-basis` extension.
+- Listing the security label tags required to convey each applicable policy, using the `sec-label-basis` extension.
 - Indicating that the Sender supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
 
-Sender implements ability to assign SLs at both the Bundle (High Water Mark) and `Resource.meta.security`.
+Sender implements ability to assign security labels at both the Bundle (High Water Mark) and `Resource.meta.security`.
 
-Sender posts discoverable SL Capability Statements for each supported policy.
+Sender posts discoverable Security Labeling Capability Statements for each supported policy.
 
 Sender receives Receiver Client Registration request, which includes Receiver Capability Statement.
 
-Sender compares Sender and Receiver SL Capability Statements to determine whether Receiver Capabilities exceed, match, or are less than Sender SL Capabilities.
+Sender inspects Receiver's Security Labeling Capability Statements to determine whether Receiver Capabilities exceed, match, or are less than Sender Security Labeling Capabilities.
 
-(Happy Path) Receiver SL Capabilities matches Sender SL Capabilities.
+(Happy Path) Receiver Security Labeling Capabilities matches Sender Security Labeling Capabilities.
 
-Sender returns requested Resources with applicable SL.
+Sender returns requested Resources with applicable security labels.
 
 ##### Artifacts
 Discoverable Capability Statement, which includes:
@@ -125,39 +125,39 @@ Discoverable Capability Statement, which includes:
 
 Appropriately labeled Bundles and Resources.
 
-#### Receiver SL Capability
+#### Receiver Security Labeling Capability
 
 ##### Assumption
-Receiver has implemented SL and Privacy Preserving Authorization Services.
+Receiver has implemented Security Labeling and Privacy-Preserving Authorization Services.
 
 ##### Pre-Condition
-Receiver determines applicable SLs to convey applicable policy.
+Receiver determines applicable security labels to convey applicable policy.
 
 ##### Post-Condition
-Receiver manages and monitors its adherence to Sender Resource SLs.
+Receiver manages and monitors its adherence to Sender Resource security labels.
 
-Receiver is able to audit downstream Recipient enforcement of disclosed Resource SL. 
+Receiver is able to audit downstream Recipient enforcement of disclosed Resource security labels. 
 
-Receiver is able to determine whether a downstream Recipient reclassified disclosed Resource SL by monitoring Resource Provenance chain.
+Receiver is able to determine whether a downstream Recipient reclassified disclosed Resource security labels by monitoring Resource Provenance chain.
 
 ##### Actors & Actions
-Receiver creates a discoverable/shareable Security Labeling (SL) Capability Statement: 
+Receiver creates a discoverable/shareable Security Labeling Capability Statement: 
 
-- Listing the SL tags required to convey each applicable policy, using the `sec-label-basis` extension.
+- Listing the security label tags required to convey each applicable policy, using the `sec-label-basis` extension.
 - Indicating that the Receiver supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
 
-Receiver implements ability to assign SLs at both the Bundle (High Water Mark) and `Resource.meta.security`.
+Receiver implements ability to assign security labels at both the Bundle (High Water Mark) and `Resource.meta.security`.
 
-Receiver posts discoverable SL Capability Statements for each supported policy.
+Receiver posts discoverable Security Labeling Capability Statements for each supported policy.
 
-Receiver discovers and retrieves prospective Sender SL Capability Statement.
+Receiver discovers and retrieves prospective Sender Security Labeling Capability Statement.
 
-(Happy Path) Receiver compares Sender SL Capability Statements with Receiver SL Capability Statements, and determines that it is able to support SLs for applicable policies.
+(Happy Path) Receiver compares Sender Security Labeling Capability Statements with Receiver Security Labeling Capability Statements, and determines that it is able to support security labels for applicable policies.
 
-Receiver requests Client Registration, thereby agreeing to the Sender SL Capability Statement.
+Receiver requests Client Registration, thereby agreeing to the Sender Security Labeling Capability Statement.
 
-Receiver requests SL Resource.
+Receiver requests Resource with security labels.
 
-Sender sends Receiver the SL Resource.
+Sender sends Receiver the labeled Resource.
 
-Receiver consumes SL Resource and persists associated SL.
+Receiver consumes labeled Resource and persists associated security labels.
