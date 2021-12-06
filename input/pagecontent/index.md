@@ -13,7 +13,7 @@ HL7 has already developed HL7 Version 2 (V2) and Clinical Document Architecture 
 
 The HL7 V2 security label guidance is incorporated in HL7 Version 2.9, Chapter 3, Patient Administration [Access Control Restriction Value Segment (ARV)](http://www.hl7.eu/refactored/segARV.html), and the Chapter 2 Control description of the [Batch Header Segment (BHS)](http://www.hl7.eu/refactored/segBHS.html), the [File Header Segment (FHS)](http://www.hl7.eu/refactored/segFHS.html), and the [Message Header Segment (MSH)](http://www.hl7.eu/refactored/segMSH.html). 
 
-The [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P), Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354) (IG) specifies the use of security labeling at the CDA Header, Section and Entry levels.
+The [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P) [for CDA], Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354) specifies the use of security labeling at the CDA Header, Section and Entry levels.
 
 Implementation of the CDA DS4P IG at the Header Level was included as an optional Certified EHR Certification criteria in the original 2015 Edition Health Information Technology (Health IT) Certification Criteria, 2015 Edition Base Electronic Health Record (EHR) Definition, and ONC Health IT Certification Program Modifications [[1]](index.html#end-notes) ([Final Rule – October 16, 2015](https://www.federalregister.gov/articles/2015/10/16/2015-25597/2015-edition-health-information-technology-certification-criteria-2015-edition-base-electronic)).
 
