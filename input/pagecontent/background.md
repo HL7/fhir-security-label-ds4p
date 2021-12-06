@@ -20,13 +20,15 @@ Wide adoption of security labels can help build trust between physicians, patien
 
 #### Information Blocking
 
-Does the implementation of security labeling and data segmentation for privacy lead to information blocking?
+Does the implementation of security labeling and data segmentation for privacy lead to "information blocking"?
 
 __Information blocking is a matter of policy; security labeling is a policy-neutral technology__
 
-Security labeling is a technological building block which enables fine-grained control over healthcare information by identifying and marking different types of sensitive data. It does not determine per se whether or not access to any part of the information should be blocked for a requester based on these markings. Information blocking, i.e. whether a provider blocks access to all or parts of a patient’s health information, is a matter of policy that can happen with or without security labels based on the policy decisions made by a provider. Simply because a piece of information is marked with a certain sensitivity or confidentiality label does not mean that the provider must block access to that piece of information.
+Security labeling is a technological building block which enables fine-grained control over healthcare information by identifying and marking different types of sensitive data. It does not prescribe, per se, whether or not access to any part of the information should be blocked for a requester based on these markings. On the contrary, it can be argued that security labeling enables more data to flow as the data can be tagged for special handling enabled by a Data Use and Reciprocal Support Agreement (DURSA).
 
-It is important to delineate the policy-neutral technological infrastructure that is provided by the security labeling system, from different types of policy decisions that may rely, among other factors, on security labels. Particularly, disagreeing with a specific policy which can be implemented based on security labels should not be conflated as an argument against security labeling technology.
+Information blocking (i.e. when a provider blocks access to all or parts of a patient’s health information), is a matter of policy and can happen with or without security labels based on the policy decisions made by a provider. Simply because a piece of information is marked with a certain sensitivity or confidentiality label does not mean that the provider must block access to that piece of information.
+
+It is important to delineate the policy-enhancing, yet policy-neutral technological infrastructure, provided by the security labeling system, from different types of policy decisions that may rely, among other factors, on security labels. Particularly, disagreeing with a specific policy which can be implemented based on security labels should not be conflated as an argument against the security labeling technology.
 
 __Security Labels Could be Informative__
 
@@ -46,7 +48,7 @@ Can security labeling and data segmentation jeopardize patient safety by enablin
 
 __Security labeling does not equate to unfettered patient control over all the information__
 
-Security labeling does not enable patients to have complete and unfettered control over sharing their healthcare information. Identifying and marking different type of healthcare information does not automatically grant the patient control over sharing them. What the patient, and other policy makers, get to control, and the extent to which such control is permitted, is a matter of policy determined by applicable laws and regulations. So, the patient’s ability to hide information from certain clinicians is strictly controlled by existing laws and regulations and is not determined by the security labeling technology.
+Security labeling does not enable patients to have complete and unfettered control over sharing their healthcare information. Identifying and marking different type of healthcare information does not automatically grant the patient control over sharing them. What the patient, and other policy makers, get to control, and the extent to which such control is permitted, is a matter of policy determined by applicable laws and regulations. So, the patient’s ability to hide information from certain clinicians is strictly controlled by existing laws and regulations and is not determined by the security labeling technology. Ultimately, any clinician with legitimate treatment relationship with the patient has elevated privileges including the ability to invoke a break-glass access when justified by patient safety concerns.
 
 __Lack of control over sharing can also jeopardize patient safety__
 
@@ -74,11 +76,11 @@ __Some vendors have already implemented this technology__
 
 In the healthcare sector as well, security labeling has already been implanted by some vendors and its usage has been shown in some limited applications.
 
-__Security Labeling Service (SLS) does not have to be implemented within the EHR system__
+__Security Labeling Service does not have to be implemented within the EHR system__
 
-While Security Labeling Service can be implemented as a component in existing EHRs, it may also be implemented as a separate product, with hooks within the EHR to apply labels on data, either on-the-fly on a per-transaction basis, or in batch mode –or a hybrid of both. Relying on SLS products can reduce the net costs of implementing the SLS in an EHR and can create a competitive free marketplace for SLS products that can work with different EHRs.
+An essential component in data segmentation for privacy is the Security Labeling Service (SLS), a software service that assigns security labels to data objects based on applicable business rules and policies. The SLS may be implemented as a component in existing EHRs, but it can also be implemented as a separate product integrated with the EHR to apply labels to data objects, either on a per-transaction basis, or in batch mode –or a hybrid of both. Using readily-available SLS products as a service can reduce the net costs of implementing the SLS in an EHR and can create a competitive free marketplace for SLS products working with different EHR systems.
 
-Note that this only applies to the SLS; on the consumer side, proper processing of labeled data requires incorporating security labels into various aspects of the product including (but not limited to) access control system, business workflows, and user interfaces, and abiding by the corresponding policies.
+Note that this only applies on the provider side; on the consumer side, proper processing of labeled data requires incorporating security labels into various aspects of the product including (but not limited to) access control system, business workflows, user interfaces, and abiding by the corresponding policies.
 
 
 __Implementation can be iterative and gradual and not every application needs all the features__
