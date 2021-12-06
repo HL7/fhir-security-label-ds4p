@@ -74,11 +74,11 @@ __Some vendors have already implemented this technology__
 
 In the healthcare sector as well, security labeling has already been implanted by some vendors and its usage has been shown in some limited applications.
 
-__Security Labeling Service (SLS) does not have to be implemented within the EHR system__
+__Security Labeling Service does not have to be implemented within the EHR system__
 
-While Security Labeling Service can be implemented as a component in existing EHRs, it may also be implemented as a separate product, with hooks within the EHR to apply labels on data, either on-the-fly on a per-transaction basis, or in batch mode –or a hybrid of both. Relying on SLS products can reduce the net costs of implementing the SLS in an EHR and can create a competitive free marketplace for SLS products that can work with different EHRs.
+An essential component in data segmentation for privacy is the Security Labeling Service (SLS), a software service that assigns security labels to data objects based on applicable business rules and policies. The SLS may be implemented as a component in existing EHRs, but it can also be implemented as a separate product integrated with the EHR to apply labels to data objects, either on a per-transaction basis, or in batch mode –or a hybrid of both. Using readily-available SLS products as a service can reduce the net costs of implementing the SLS in an EHR and can create a competitive free marketplace for SLS products working with different EHR systems.
 
-Note that this only applies to the SLS; on the consumer side, proper processing of labeled data requires incorporating security labels into various aspects of the product including (but not limited to) access control system, business workflows, and user interfaces, and abiding by the corresponding policies.
+Note that this only applies on the provider side; on the consumer side, proper processing of labeled data requires incorporating security labels into various aspects of the product including (but not limited to) access control system, business workflows, user interfaces, and abiding by the corresponding policies.
 
 
 __Implementation can be iterative and gradual and not every application needs all the features__
