@@ -43,8 +43,6 @@ However, the FHIR Security Label module provides only some minimal details about
 
 - Requiring that a Privacy Mark tag be displayed to end users
 
-- Granular data segmentation at the sub-resource level known as inline labeling.
-
 - Granular data segmentation at the sub-resource level known as [inline labeling](inline.html).
 
 An implementer relying on the general documentation of [`Resource.meta.security`](http://build.fhir.org/resource-definitions.html#Resource.meta) would not have the tools for labeling a resource which is, for example, governed under both US 42 CFR Part 2 for _substance use disorder_ confidentiality and under CFR 32 Part 2002 for _Controlled Unclassified Information (CUI)_, because there are no built-in security label “set” delimiters. To address this need, the FHIR DS4P IG specifies the [`sec-label-basis` extension](StructureDefinition-extension-sec-label-basis.html) which enables an implementer to group relevant  security label tags in `Resource.meta.security` into an HCS-conformant security label to represent each applicable policy as a separate _security label_.
