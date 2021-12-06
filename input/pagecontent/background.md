@@ -146,7 +146,7 @@ Receiver creates a discoverable/shareable Security Labeling Capability Statement
 - Listing the security label tags required to convey each applicable policy, using the `sec-label-basis` extension.
 - Indicating that the Receiver supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
 
-Receiver implements ability to assign security labels at both the Bundle (High Water Mark) and `Resource.meta.security`.
+Receiver implements the capabilities required for enforcing security labels at both the Resource-, and Bundle-level (High Water Mark).
 
 Receiver posts discoverable Security Labeling Capability Statements for each supported policy.
 
