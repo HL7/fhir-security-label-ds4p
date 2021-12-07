@@ -57,7 +57,7 @@ Like the abstract FHIR Resource definition, this guide provides a foundation for
  
 Generally, this guide is not intended or expected to be implemented except as a tool to enable development of use case specific security labels.
  
-The main utility of this GI is to enable the development of  privacy, security, provenance, or trust policy specific security label implementation guides to address use case requirements.
+The main utility of this IG is to enable the development of  privacy, security, provenance, or trust policy specific security label implementation guides to address use case requirements.
  
 It is necessary for solutions to be designed with a policy use case in mind to ensure that there's affirmation of technical support between systems, and a shared understanding of business obligations required by the policy represented by security labeled resources.
 
