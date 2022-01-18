@@ -70,16 +70,6 @@ FHIR DS4P IG is an evolving specification that will encompass increasing capabil
 - Use of Business Process Modeling Notation (BPMN) to describe shared workflows in which labeled content is collected, accessed, used or disclosed.  Purpose of use labels are not sufficient to convey the activities that a policy may permit or deny a recipient to conduct. A security label conveying a FHIR Consent for example, where a patient only permits access and use, but not collection or disclosure of protected health information for treatment purposes in an emergency and inpatient setting needs more than a policy tag with a reference to the specific FHIR consent and a purpose of use tag for treatment.
 - The range of use cases and possible algorithms for calculating a High Water Mark (HWM) and approaches for communicating how a HWM is intended to be understood and handled by receivers.  See the HL7 FHIR Zulip thread, _[Meaning of Security Labels on Bundles](https://chat.fhir.org/#narrow/stream/179247-Security-and.20Privacy/topic/Meaning.20of.20Security.20Labels.20on.20Bundles)_ for some perspectives on the role of HWMs in FHIR.
 
-### Technical Overview
-
-This provides guidance in the following areas:
-
-- Use Cases.
-- FAQ.
-- Conceptual Syntactic Structure.
-- Constructing a Security Label to Convey a Policy.
-- Assigning and Enforcing Security Labels.
-
 ### Walk-Through
 The main sections of this IG are:
 
