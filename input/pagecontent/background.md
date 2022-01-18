@@ -20,27 +20,27 @@ By providing more flexibility and fine-grained control, security labeling can ar
 
 #### Information Blocking
 
-Does the implementation of security labeling and data segmentation for privacy lead to "information blocking"?
+Does the implementation of data segmentation for privacy and security labeling lead to withholding  health information (e.g., all or part of a patient's health record) from legitimate requesters (known in the US as "information blocking")?
 
 __Information blocking is a matter of policy; security labeling is a policy-neutral technology__
 
-Security labeling is a technological building block which enables fine-grained control over healthcare information by identifying and marking different types of sensitive data. It does not prescribe, per se, whether or not access to any part of the information should be blocked for a requester based on these markings. On the contrary, it can be argued that security labeling enables more data to flow as the data can be tagged for special handling enabled by a Data Use and Reciprocal Support Agreement (DURSA).
+Security labeling is a technological building block which enables fine-grained control over healthcare information by identifying and marking different types of sensitive data. It does not prescribe, per se, whether or not access to any part of the information should be blocked for a requester based on these markings. On the contrary, it can be argued that security labeling enables more data to flow as the data can be tagged to communicate the specific handling requirements, in the context of a trust agreement between the sender and receiver (known in the US as Data Use and Reciprocal Support Agreement  or DURSA).
 
-Information blocking (i.e. when a provider blocks access to all or parts of a patient’s health information), is a matter of policy and can happen with or without security labels based on the policy decisions made by a provider. Simply because a piece of information is marked with a certain sensitivity or confidentiality label does not mean that the provider must block access to that piece of information.
+Withholding health information, or as known in the US, "information blocking", is a matter of policy and can happen with or without security labels based on policy decisions made by a provider. Just because a piece of information is marked with a certain security label does not mean that the provider must or will deny access to that piece of information.
 
-It is important to delineate the policy-enhancing, yet policy-neutral technological infrastructure, provided by the security labeling system, from different types of policy decisions that may rely, among other factors, on security labels. Particularly, disagreeing with a specific policy which can be implemented based on security labels should not be conflated as an argument against the use of security labeling.
+It is important to delineate the policy-enhancing, yet policy-neutral infrastructure, provided by the security labeling system, from different types of policy decisions that may rely, among other factors, on security labels. Particularly, disagreeing with certain policies that can be enforced by utilizing security labels should not be conflated as an argument against the use of security labeling in general.
 
 __Security Labels Could be Informative__
 
-Even though some security labels such as confidentiality and sensitivity labels could be used for blocking access to certain information for unauthorized parties, there is more to security labels than that. Some security labels such as handling instructions or integrity labels are informative and assist the recipient with understanding the reliability of the information and how it should be handled.
-
-Enforcement of authorization policies based on law is not information blocking
-
-Information blocking, as defined by Section 4004 of the 21st Century Cures Act (Cures Act) does not include controlling access based on legitimate policies backed by law, or the regulations set by the Secretary of Health and Human Services (HHS). Current laws allow controlling access to certain sensitive information by the patient, therefore, any application of security labeling for enforcing such lawful policies is not information blocking and more particularly, using security labeling as a tool in enforcing these laws does not constitute information blocking.
+Even though some security labels (e.g.,  confidentiality and sensitivity labels) could be used for denying access to certain information for unauthorized parties, other types of security labels (e.g., handling instructions or integrity labels) are informative and assist the recipient with understanding the reliability of the information and how it should be handled.
 
 __Future laws may require more instances of access control based on the sensitivity of information__
 
 As clinical practices, societal norms, and common-sense expectations of privacy change, future laws at various jurisdictional levels may give patients the control over sharing of new types of sensitive information. Security labeling is the underlying technology which guarantees that enforcement of such laws remains technologically possible.
+
+__Enforcement of authorization policies based on law does not constitute "information blocking" (US-Specific)__
+
+In the US, "information blocking," is defined by Section 4004 of the _21st Century Cures Act (Cures Act)_ but exempts controlling access based on legitimate policies backed by law or regulations set by the Secretary of Health and Human Services (HHS). Many different laws and regulations in the US allow and require controlling access to certain sensitive information; any application of security labeling in enforcing such lawful policies does not constitute information blocking.
 
 #### Patient Safety
 
