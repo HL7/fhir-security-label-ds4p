@@ -152,7 +152,7 @@ Refrain tags represent explicitly-prohibited actions which may be required by th
 ##### Assigning Privacy Marks `0..*`
 Privacy Marks are human-readable security labels on accessed electronic information, such as markings rendered in the user interface or in a printout.
 
-Per [ISO 22600-3 (Section A.3.4.3)](https://www.iso.org/standard/62655.html), privacy marks are not used for access control. _"The content of the privacy-mark may be defined by the security policy in force (identified by the security-policy-identifier) which may define a list of values to be used. Alternately, the value may be determined by the originator of the security-label.”_ 
+Per [ISO 22600-3 (Section A.3.4.3)](https://www.iso.org/standard/62655.html), privacy marks are not used for access control. _The content of the privacy-mark may be defined by the security policy in force (identified by the security-policy-identifier) which may define a list of values to be used. Alternately, the value may be determined by the originator of the security-label._ 
 
 ### Security Label with Example Tags
 ![HCS](hcs-example.png)
