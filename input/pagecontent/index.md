@@ -53,7 +53,7 @@ While stated with respect to FHIR content, this [FHIR Security Label Module](htt
 
 ### Intended Applications
 
-Like the abstract FHIR Resource definition, this guide provides a foundation for a variety of security labeling capabilities that systems may find useful to communicate the policy governing  information conveyed by concrete Resources. This IG is policy-agnostic.
+This guide provides a foundation for a variety of security labeling capabilities that systems may find useful to communicate the policy governing  information conveyed by concrete Resources. This IG is policy-agnostic.
  
 Generally, this guide is not intended or expected to be implemented except as a tool to enable development of use case specific security labels.
  
