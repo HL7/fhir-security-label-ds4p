@@ -16,6 +16,9 @@ The [`display` extension](StructureDefinition-extension-display.html) is based o
 
 This extension SHOULD be used in the context of `Resource.meta` when codes from the [`PrivacyMark`](ValueSet-valueset-cui-mark.html) or [`SecurityLabelMark`](ValueSet-valueset-security-label-mark.html) value sets, e.g., CUI or COPYMark codes, are used on the Resource which indicate that certain information is to be rendered to end users. The `PrivacyMark` or `SecurityLabelMark` code definitions include the information to be displayed. The display extension supports inclusion of the Annotation’s author and contact, and markdown for how the information is to be displayed.
 
+Policies SHALL describe the details and conditions for where and in what context these markings must or must not be displayed; for example, whether and how the markings should be rendered in summary forms or condensed displays.
+
+
 The ability to convey renderable `PrivacyMark` or `SecurityLabelMark` security labels, including the author and the markdown role may be required by classification policies within a domain.
 
 #### `sec-label-basis` Extension 
