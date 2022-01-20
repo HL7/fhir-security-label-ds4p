@@ -28,8 +28,6 @@ A Security Label instance represents applicable policy as a specified set of Nam
 This pattern is followed explicitly in HL7 V2.9 and DS4P CDA IG.
 In FHIR, there's no differentiation between Named Tag Sets/Tag Sets, so there is no built-in way to delineate the `<security>` elements belonging to a specific policy.
 In order to address this in the FHIR DS4P IG, we propose the use of `extension-sec-label-basis` on each `<security>` within a group of `<security>` elements belonging to a specific policy.
-
-The [`sec-label-basis` extension](StructureDefinition-extension-sec-label-basis.html) is not based on an existing FHIR artifact, unlike the `display` extension which is based on the [Annotation](https://www.hl7.org/fhir/datatypes.html#Annotation), and the [`sec-label-classifier` extension](StructureDefinition-extension-sec-label-classifier.html) which is based on [Contributor](http://build.fhir.org/metadatatypes.html#contributor).
  
 #### `sec-label-classifier` Extension
 
