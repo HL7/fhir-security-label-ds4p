@@ -133,7 +133,7 @@ Receiver has implemented Security Labeling and Privacy-Preserving Authorization 
     - listing the security label tags required to convey each applicable policy using the `sec-label-basis` extension.
     - indicating that the Receiver supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
     - posting the discoverable Security Labeling Capability Statements for each supported policy.
-- implementing the capabilities required for enforcing security labels at both the Resource- and Bundle-level (High Water Mark).
+- implementing the capabilities required for consuming security labels and enforcing all the policies implied by them at both the Resource- and Bundle-level (High Water Mark).
 
 ##### Pre-Condition
 Receiver determines applicable security labels to convey applicable policy.
