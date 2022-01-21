@@ -14,7 +14,7 @@ Security labeling can also be used in implementing risk-mitigation techniques to
 
 Thus, when used properly, security labeling reduces information blocking. Appropriately labeling information allows more restricted information to be shared with authorized recipients. Recipients not authorized to receive the more restricted data may still be able to receive data which does not have more restrictive labels. The net result is that more information can be appropriately shared.
 
-By providing more flexibility and fine-grained control, security labeling can arguably increase the exchange of information –since the options provided to a sender will no longer be "share all" vs. "share nothing”. Therefore, it can be argued that adoption of security labeling can improve one of the core components in interoperability which is the trust between physicians, patients, and other entities involved in access, use, and exchange of information. 
+By providing more flexibility and fine-grained control, security labeling can increase the exchange of information –since the options provided to a sender will no longer be "share all" vs. "share nothing”. Implementing security labeling can also increase the sender's confidence that the recipient understands of the sensitivity of the data and how it should be processed. Therefore, adoption of security labeling may improve one of the core components in interoperability which is the trust between the entities involved in access, use, and exchange of information. 
 
 ### Security Labeling FAQ
 
