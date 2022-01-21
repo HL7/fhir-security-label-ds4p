@@ -38,10 +38,6 @@ __Future laws may require more instances of access control based on the sensitiv
 
 As clinical practices, societal norms, and common-sense expectations of privacy change, future laws at various jurisdictional levels may give patients the control over sharing of new types of sensitive information. Security labeling is the underlying technology which guarantees that enforcement of such laws remains technologically possible.
 
-__Enforcement lawful authorization policies is not "information blocking" (US-Specific)__
-
-In the US, "information blocking," is defined by Section 4004 of the _21st Century Cures Act (Cures Act)_ which exempts controlling access based on legitimate policies backed by law or regulations set by the Secretary of Health and Human Services (HHS). Many different laws and regulations in the US allow and require controlling access to certain sensitive information, so,  using security labeling in enforcing such lawful policies does not fall under the definition of information blocking.
-
 #### Patient Safety
 
 Can security labeling and data segmentation jeopardize patient safety by enabling patients to hide information from a clinician and thereby impeding the clinician’s ability to make the best decision based on a complete picture?
