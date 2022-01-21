@@ -31,8 +31,6 @@ A Security Label instance represents applicable policy as a specified set of Nam
 This pattern is followed explicitly in HL7 V2.9 and DS4P CDA IG.
 In FHIR, there's no differentiation between Named Tag Sets/Tag Sets, so there is no built-in way to delineate the `<security>` elements belonging to a specific policy.
 In order to address this in the FHIR DS4P IG, we propose the use of `extension-sec-label-basis` on each `<security>` within a group of `<security>` elements belonging to a specific policy.
-
-The [`sec-label-basis` extension](StructureDefinition-extension-sec-label-basis.html) is not based on an existing FHIR artifact, unlike the `display` extension which is based on the [Annotation](https://www.hl7.org/fhir/datatypes.html#Annotation), and the [`sec-label-classifier` extension](StructureDefinition-extension-sec-label-classifier.html) which is based on [Contributor](http://build.fhir.org/metadatatypes.html#contributor).
  
 #### `sec-label-classifier` Extension
 
@@ -63,7 +61,7 @@ This extension SHOULD be used on a security label code for which justification o
 Value-sets used and defined by this IG are discussed below.
 
 #### [Security Classification](https://terminology.hl7.org/ValueSet-v3-SecurityClassificationObservationType.html)
-Type of security metadata observation made about the classification of an IT resource (data, information object, service, or system capability), which may be used to make access control decisions. Security classification is defined by ISO/IEC 2382-8:1998(E/F)/ T-REC-X.812-1995 as: _"The determination of which specific degree of protection against access the data or information requires, together with a designation of that degree of protection."_ 
+Type of security metadata observation made about the classification of an IT resource (data, information object, service, or system capability), which may be used to make access control decisions. Security classification is defined by ISO/IEC 2382-8:1998(E/F)/ T-REC-X.812-1995 as: _The determination of which specific degree of protection against access the data or information requires, together with a designation of that degree of protection._ 
 
 Security classification metadata is based on an analysis of applicable policies and the risk of financial, reputational, or other harm that could result from unauthorized disclosure.
 
@@ -72,7 +70,7 @@ Security classification metadata is based on an analysis of applicable policies 
 |[Confidentiality](https://terminology.hl7.org/ValueSet-v3-Confidentiality.html)|`1..1` | Security label metadata classifying an IT resource (clinical fact, data, information object, service, or system capability) according to its level of sensitivity, which is based on an analysis of applicable privacy policies and the risk of financial, reputational, or other harm to an individual or entity that could result if made available or disclosed to unauthorized individuals, entities, or processes.|Unrestricted, Normal, Very Restricted |
 
 #### [Security Category](https://terminology.hl7.org/ValueSet-v3-SecurityCategoryObservationType.html)
-Type of security metadata observation made about the category of an IT resource (data, information object, service, or system capability), which may be used to make access control decisions. Security category metadata is defined by ISO/IEC 2382-8:1998(E/F)/ T-REC-X.812-1995 as: _"A nonhierarchical grouping of sensitive information used to control access to data more finely than with hierarchical security classification alone."_
+Type of security metadata observation made about the category of an IT resource (data, information object, service, or system capability), which may be used to make access control decisions. Security category metadata is defined by ISO/IEC 2382-8:1998(E/F)/ T-REC-X.812-1995 as: _A nonhierarchical grouping of sensitive information used to control access to data more finely than with hierarchical security classification alone._
 
 |Tag Set|Card. |  Description | Example Tags | 
 |-------|------|-------------|--------------|
