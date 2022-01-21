@@ -1,38 +1,37 @@
 ### Introduction
 This IG provides guidance for applying security labels in FHIR. Security labels are used in access control systems governing the collection, access, use, and disclosure of the target information to which they are assigned, as required by applicable organizational, jurisdictional, or personal policies related to privacy, security, and trust.
 
-Using security labels is an essential part of [the Share with Protection paradigm](https://confluence.hl7.org/display/SEC/Share+with+Protections+White+Paper+Project) by enabling information to be shared after assigning the security labels specifying how the information can be used and the restrictions to which it may be subject.
+The FHIR model has supported security labels from the start with a dedicated element on every resources (regardless of the type of resource), enabling security label processing in a unified method independent of resource type.
 
 The syntactic and semantic rules of the [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1 (HCS)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345) specify conceptually how to construct security labels in order to convey computable and interoperable privacy, security, and trust policies within a policy domain.
 
-While stated with respect to FHIR content, this holds for other labeled content as well, “The intent of a security label is that the recipient of resources or bundles with security tags is obligated to enforce the handling caveats of the tags and carry the security labels forward as appropriate.”
+As quoted above from the [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html), the caveat that the recipient must implement and enforce policies holds for labeled content: _The intent of a security label is that the recipient of resources or bundles with security tags is obligated to enforce the handling caveats of the tags and carry the security labels forward as appropriate._
 
 These policies represented by security labels may be stipulated by laws and/or agreed to in contracts, such as Data Use Reciprocal Service Agreements (DURSA).  While such agreements are typically documented in hard-copy media, they may also be established computably through trust contracts with binding sender and receiver system capability statements about how policy specific security labels will be assigned, consumed, persisted, reclassification rules, and any information handling restrictions and obligations.  The manner in which computable trust agreements may be negotiated, established, discovered and shared in a federated ecosystem is described in the [HL7 Privacy and Security Architecture Framework](http://www.hl7.org/implement/standards/la.cfm?file=/documentcenter/private/standards/HL7_V3_PSAF_R1_2020JUL_supplement.zip) Volumes 1 & 2 Trust Framework for Federated Authorization Conceptual and Behavioral Models, which could be leveraged for trust agreements between senders and receivers of labeled HL7 content. This IG sets the groundwork for doing so in future iterations of this guide as discussed in the Roadmap section below.
 
+#### Related Work 
 HL7 has already developed HL7 Version 2 (V2) and Clinical Document Architecture (CDA) platform specific syntactical standards for segmenting information using security labels in accordance with the normative, platform independent [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1 (HCS)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345) conceptual model.
 
 The HL7 V2 security label guidance is incorporated in HL7 Version 2.9, Chapter 3, Patient Administration [Access Control Restriction Value Segment (ARV)](http://www.hl7.eu/refactored/segARV.html), and the Chapter 2 Control description of the [Batch Header Segment (BHS)](http://www.hl7.eu/refactored/segBHS.html), the [File Header Segment (FHS)](http://www.hl7.eu/refactored/segFHS.html), and the [Message Header Segment (MSH)](http://www.hl7.eu/refactored/segMSH.html). 
 
-The [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P) [for CDA], Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354) specifies the use of security labeling at the CDA Header, Section and Entry levels.
+The [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P) [for CDA], Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354) specifies the use of security labeling at the CDA Header, Section and Entry levels. Implementation of the CDA DS4P IG at the Header Level was included as an optional Certified EHR Certification criteria in the original 2015 Edition Health Information Technology (Health IT) Certification Criteria, 2015 Edition Base Electronic Health Record (EHR) Definition, and ONC Health IT Certification Program Modifications [[1]](index.html#end-notes) ([Final Rule – October 16, 2015](https://www.federalregister.gov/articles/2015/10/16/2015-25597/2015-edition-health-information-technology-certification-criteria-2015-edition-base-electronic)).
 
-Implementation of the CDA DS4P IG at the Header Level was included as an optional Certified EHR Certification criteria in the original 2015 Edition Health Information Technology (Health IT) Certification Criteria, 2015 Edition Base Electronic Health Record (EHR) Definition, and ONC Health IT Certification Program Modifications [[1]](index.html#end-notes) ([Final Rule – October 16, 2015](https://www.federalregister.gov/articles/2015/10/16/2015-25597/2015-edition-health-information-technology-certification-criteria-2015-edition-base-electronic)).
+In V2 and CDA, the HCS security label semantics are conveyed by valuing the security label tag elements within their security label syntactic structures with codes from normative HL7 security label value sets. The FHIR DS4P IG binding to the same value sets as specified in the [Value Set Summary](spec.html#value-sets-summary).
 
-In the [21st Century Cures Act: Interoperability, Information Blocking, and the ONC Health IT Certification Program](https://www.federalregister.gov/documents/2020/05/01/2020-07419/21st-century-cures-act-interoperability-information-blocking-and-the-onc-health-it-certification), ONC revised the security tag certification criteria in [45 CFR § 170.315 - 2015 Edition health IT certification criteria](https://www.law.cornell.edu/cfr/text/45/170.315) at [(b)(7)](https://www.federalregister.gov/d/2020-07419/p-3368) and [(b)(8)](https://www.federalregister.gov/d/2020-07419/p-3371) by requiring certification at the more granular Section and Entry levels after December 31, 2022.
+In the US, [21st Century Cures Act: Interoperability, Information Blocking, and the ONC Health IT Certification Program](https://www.federalregister.gov/documents/2020/05/01/2020-07419/21st-century-cures-act-interoperability-information-blocking-and-the-onc-health-it-certification), ONC revised the security tag certification criteria in [45 CFR § 170.315 - 2015 Edition health IT certification criteria](https://www.law.cornell.edu/cfr/text/45/170.315) at [(b)(7)](https://www.federalregister.gov/d/2020-07419/p-3368) and [(b)(8)](https://www.federalregister.gov/d/2020-07419/p-3371) by requiring certification at the more granular Section and Entry levels after December 31, 2022.
 
 According to the ONC [Certified HIT Product List (CHLP)](https://chpl.healthit.gov/#/search), 64 EHR Products are certified to meet segmentation at the Header level, which requires appropriately valuing the Clinical Document confidentiality element with a confidentiality code from the CDA Basic Confidentiality value set.  Two EHR Products have been certified to granular DS4P criteria updated in the 2020 CURES Rule.
 
-The [HL7 CDA® R2 Implementation Guide: Data Provenance, Release 1 - US Realm](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=420) provides more detailed description about all tags available for use in security labels, and how provenance capabilities in CDA can be used to persist a chain of security labels so as to, for example, record when a label was reclassified by a previous CDA author or custodian. 
+The [HL7 CDA® R2 Implementation Guide: Data Provenance, Release 1 - US Realm](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=420) provides more detailed description about all tags available for use in security labels, and how provenance capabilities in CDA can be used to persist a chain of security labels so as to, for example, record when a label was reclassified by a previous CDA author or custodian.
 
-The HCS security label semantics are conveyed in V2 and CDA content by valuing the security label tag elements within their security label syntactic structures with codes from normative HL7 security label value sets. The FHIR DS4P IG binding to the same value sets as specified in the [Value Set Summary](spec.html#value-sets-summary).
+Using security labels is an essential part of [the Share with Protection paradigm](https://confluence.hl7.org/display/SEC/Share+with+Protections+White+Paper+Project) by enabling information to be shared after assigning the security labels specifying how the information can be used and the restrictions to which it may be subject.
 
 ### The Need for a FHIR DS4P Implementation Guide
-Unlike HCS-based security labeling guidance provided by HL7 Version 2.9, the  [CDA Data Segmentation for Privacy (DS4P) Implementation Guide](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354), and the [CDA Data Provenance IG](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=420), the [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html#6.1.1) does not provide detailed implementation guidance for FHIR implementers, because the FHIR core is agnostic to the HCS syntax requirements (although this guidance will likely be updated to reflect this IG’s specifications to some extent.)
-
 The [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) specifies several [Core Security Labels](http://hl7.org/fhir/security-labels.html#core), such as purpose of use and confidentiality tags, which all conformant FHIR Applications SHOULD use where appropriate. There are explanations about high-water mark requirements, “break the glass”, and references to the HCS and its security label terminology.
 
 Importantly, the [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) points out that security labels are intended to convey a policy to which participants in an exchange ecosystem are bound by a trust contract:
 
-_“Security labels are only a device to connect specific resources, bundles, or operations to a wider security framework; a full set of policy and consent statements and their consequent obligations is needed to give the labels meaning. Because of this, security labels are most effective in fully trusted environments - that is, where all trading partners have agreed to abide by them in a Mutual Trust Framework. Note also that security labels support policy, and specific tagging of individual resources is not always required to implement policy correctly.”_
+_Security labels are only a device to connect specific resources, bundles, or operations to a wider security framework; a full set of policy and consent statements and their consequent obligations is needed to give the labels meaning. Because of this, security labels are most effective in fully trusted environments - that is, where all trading partners have agreed to abide by them in a Mutual Trust Framework. Note also that security labels support policy, and specific tagging of individual resources is not always required to implement policy correctly._
 
 However, the FHIR Security Label module provides only some minimal details about how to construct a label to convey a specific policy per the HCS or guidance on which security label values should be included to convey any particular privacy, security, or trust policy, particularly because it does not provide an approach for: 
 - Differentiating which set of `Resource.meta.security` elements belongs to which policy in the (not uncommon) case where more than one policy applies to a resource, 
@@ -53,7 +52,7 @@ While stated with respect to FHIR content, this [FHIR Security Label Module](htt
 
 ### Intended Applications
 
-Like the abstract FHIR Resource definition, this guide provides a foundation for a variety of security labeling capabilities that systems may find useful to communicate the policy governing  information conveyed by concrete Resources. This IG is policy-agnostic.
+This guide provides a foundation for a variety of security labeling capabilities that systems may find useful to communicate the policy governing  information conveyed by concrete Resources. This IG is policy-agnostic.
  
 Generally, this guide is not intended or expected to be implemented except as a tool to enable development of use case specific security labels.
  
@@ -66,19 +65,9 @@ FHIR DS4P IG is an evolving specification that will encompass increasing capabil
 - How security labels are used in Attribute Based Access Control (ABAC) 
 - Use cases for security labels representing trust contracts and inclusion of trust tags in security labels generally to convey expectations of senders and receivers such as persisting labels and whether labels can be reclassified or removed
 - Using Structured Definitions and Capability Statements as Security Policy Information Files (SPIF) to establish rules for constructing and interpreting shared security labels, which can be negotiated, executed, and registered in a discoverable manner
-- Use of [Clinical Quality Language (CQL)](https://cql.hl7.org) to specify the access control rules for enforcing security labels 
+- Use of [Clinical Quality Language (CQL)](https://cql.hl7.org) to specify security labeling rules.
 - Use of Business Process Modeling Notation (BPMN) to describe shared workflows in which labeled content is collected, accessed, used or disclosed.  Purpose of use labels are not sufficient to convey the activities that a policy may permit or deny a recipient to conduct. A security label conveying a FHIR Consent for example, where a patient only permits access and use, but not collection or disclosure of protected health information for treatment purposes in an emergency and inpatient setting needs more than a policy tag with a reference to the specific FHIR consent and a purpose of use tag for treatment.
 - The range of use cases and possible algorithms for calculating a High Water Mark (HWM) and approaches for communicating how a HWM is intended to be understood and handled by receivers.  See the HL7 FHIR Zulip thread, _[Meaning of Security Labels on Bundles](https://chat.fhir.org/#narrow/stream/179247-Security-and.20Privacy/topic/Meaning.20of.20Security.20Labels.20on.20Bundles)_ for some perspectives on the role of HWMs in FHIR.
-
-### Technical Overview
-
-This provides guidance in the following areas:
-
-- Use Cases.
-- FAQ.
-- Conceptual Syntactic Structure.
-- Constructing a Security Label to Convey a Policy.
-- Assigning and Enforcing Security Labels.
 
 ### Walk-Through
 The main sections of this IG are:

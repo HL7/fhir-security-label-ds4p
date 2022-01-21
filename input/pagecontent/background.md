@@ -8,35 +8,31 @@ Security labeling in fact improves and protects information sharing. Without sec
 
 In the US, as long as security labeling assignment and enforcement is conducted in accordance with privacy policies and is well-documented and consistently applied in a non-discriminatory manner, covered senders may meet [the Information Blocking provisions of the CURES Act regulations](https://www.healthit.gov/topic/information-blocking).
 
-Security labeling technology is used for enforcing more than just privacy policies expressed as an individual’s meaningful choice. It can be used to enforce any type of individual, organizational, or jurisdictional policy to computably determine whether a requester asking to collect, access, use, disclose or receive information should be permitted to do so and what, if any, security controls are required by senders and receivers; for examples  limitation on workflows/contexts in which the information may be used as well as obligations and prohibitions related to handling the information.
+Security labeling is used for enforcing more than just privacy policies expressed as an individual’s meaningful choice. It can be used to enforce any type of individual, organizational, or jurisdictional policy to computably determine whether a requester asking to collect, access, use, disclose or receive information should be permitted to do so and what, if any, security controls are required by senders and receivers; for examples  limitation on workflows/contexts in which the information may be used as well as obligations and prohibitions related to handling the information.
 
-In addition, security labeling technology can be used to implement risk-mitigation techniques to ensure that policy priorities prevail when risks related to security labeling must be averted. For example, security labels can be used by a Clinical Decision Support Systems (CDS) to alert clinicians about potential patient safety issue related to filtered health information, about which the clinician might not previously have had a “need to know”, and therefore, had not been provisioned to access.  Based on access to the sensitive information security label, the CDS could trigger an alert about the potential of an adverse drug-drug interaction, and advise the clinician to “break the glass”, i.e., assert an emergency “need to know,” in order to retrieve the redacted information.
+Security labeling can also be used in implementing risk-mitigation techniques to ensure that policy priorities prevail when risks must be averted. For example, security labels can be used by a Clinical Decision Support Systems (CDS) to alert clinicians about potential patient safety issue related to filtered health information, about which the clinician might not previously have had a “need to know”, and therefore, had not been provisioned to access.  Based on access to the sensitive information security label, the CDS could trigger an alert about the potential of an adverse drug-drug interaction, and advise the clinician to “break the glass”, i.e., assert an emergency “need to know,” in order to retrieve the redacted information.
 
 Thus, when used properly, security labeling reduces information blocking. Appropriately labeling information allows more restricted information to be shared with authorized recipients. Recipients not authorized to receive the more restricted data may still be able to receive data which does not have more restrictive labels. The net result is that more information can be appropriately shared.
 
-Wide adoption of security labels can help build trust between physicians, patients, and other entities involved in access, use, and exchange of information. Trust is a core component of interoperability. Adding security labels may help increase the exchange of information because the options will no longer be send “all or nothing”.
+By providing more flexibility and fine-grained control, security labeling can increase the exchange of information –since the options provided to a sender will no longer be "share all" vs. "share nothing”. Implementing security labeling can also increase the sender's confidence that the recipient understands of the sensitivity of the data and how it should be processed. Therefore, adoption of security labeling may improve one of the core components in interoperability which is the trust between the entities involved in access, use, and exchange of information. 
 
 ### Security Labeling FAQ
 
 #### Information Blocking
 
-Does the implementation of security labeling and data segmentation for privacy lead to "information blocking"?
+Does the implementation of data segmentation for privacy and security labeling lead to withholding  health information (e.g., all or part of a patient's health record) from legitimate requesters (known in the US as "information blocking")?
 
 __Information blocking is a matter of policy; security labeling is a policy-neutral technology__
 
-Security labeling is a technological building block which enables fine-grained control over healthcare information by identifying and marking different types of sensitive data. It does not prescribe, per se, whether or not access to any part of the information should be blocked for a requester based on these markings. On the contrary, it can be argued that security labeling enables more data to flow as the data can be tagged for special handling enabled by a Data Use and Reciprocal Support Agreement (DURSA).
+Security labeling is a technological building block which enables fine-grained control over healthcare information by identifying and marking different types of sensitive data. It does not prescribe, per se, whether or not access to any part of the information should be blocked for a requester based on these markings. On the contrary, it can be argued that security labeling enables more data to flow as the data can be tagged to communicate the specific handling requirements, in the context of a trust agreement between the sender and receiver (known in the US as Data Use and Reciprocal Support Agreement  or DURSA).
 
-Information blocking (i.e. when a provider blocks access to all or parts of a patient’s health information), is a matter of policy and can happen with or without security labels based on the policy decisions made by a provider. Simply because a piece of information is marked with a certain sensitivity or confidentiality label does not mean that the provider must block access to that piece of information.
+Withholding health information, or as known in the US, "information blocking", is a matter of policy and can happen with or without security labels based on policy decisions made by a provider. Just because a piece of information is marked with a certain security label does not mean that the provider must or will deny access to that piece of information.
 
-It is important to delineate the policy-enhancing, yet policy-neutral technological infrastructure, provided by the security labeling system, from different types of policy decisions that may rely, among other factors, on security labels. Particularly, disagreeing with a specific policy which can be implemented based on security labels should not be conflated as an argument against the security labeling technology.
+It is important to delineate the policy-enhancing, yet policy-neutral infrastructure, provided by the security labeling system, from different types of policy decisions that may rely, among other factors, on security labels. Particularly, disagreeing with certain policies that can be enforced by utilizing security labels should not be conflated as an argument against the use of security labeling in general.
 
 __Security Labels Could be Informative__
 
-Even though some security labels such as confidentiality and sensitivity labels could be used for blocking access to certain information for unauthorized parties, there is more to security labels than that. Some security labels such as handling instructions or integrity labels are informative and assist the recipient with understanding the reliability of the information and how it should be handled.
-
-Enforcement of authorization policies based on law is not information blocking
-
-Information blocking, as defined by Section 4004 of the 21st Century Cures Act (Cures Act) does not include controlling access based on legitimate policies backed by law, or the regulations set by the Secretary of Health and Human Services (HHS). Current laws allow controlling access to certain sensitive information by the patient, therefore, any application of security labeling for enforcing such lawful policies is not information blocking and more particularly, using the security labeling technology to enforce these laws does not constitute information blocking.
+Even though some security labels (e.g.,  confidentiality and sensitivity labels) could be used for denying access to certain information for unauthorized parties, other types of security labels (e.g., handling instructions or integrity labels) are informative and assist the recipient with understanding the reliability of the information and how it should be handled.
 
 __Future laws may require more instances of access control based on the sensitivity of information__
 
@@ -48,7 +44,7 @@ Can security labeling and data segmentation jeopardize patient safety by enablin
 
 __Security labeling does not equate to unfettered patient control over all the information__
 
-Security labeling does not enable patients to have complete and unfettered control over sharing their healthcare information. Identifying and marking different type of healthcare information does not automatically grant the patient control over sharing them. What the patient, and other policy makers, get to control, and the extent to which such control is permitted, is a matter of policy determined by applicable laws and regulations. So, the patient’s ability to hide information from certain clinicians is strictly controlled by existing laws and regulations and is not determined by the security labeling technology. Ultimately, any clinician with legitimate treatment relationship with the patient has elevated privileges including the ability to invoke a break-glass access when justified by patient safety concerns.
+Identifying and marking different type of healthcare information does not automatically grant the patient control over sharing them, so, security labeling does not enable patients to have complete and unfettered control over sharing their healthcare information. What the patient, and other policy makers, can control, and the extent to which such control is permitted, is a matter of policy, determined by applicable laws and regulations. So, the patient’s ability to hide information from certain clinicians is strictly controlled by existing laws and regulations and is not an automatic result of implementing security labeling. Ultimately, any clinician with legitimate treatment relationship with the patient has elevated privileges including the ability to invoke a break-glass access when justified by patient safety concerns.
 
 __Lack of control over sharing can also jeopardize patient safety__
 
@@ -85,15 +81,27 @@ Note that this only applies on the provider side; on the consumer side, proper p
 
 __Implementation can be iterative and gradual and not every application needs all the features__
 
-Although the HL7 standards for security labeling is quite thorough and defines a rather comprehensive system, not every implementation or every application area needs to implement all the aspects of this technology. By defining profiles and maturity models for the security labeling system, subsets of the security labeling systems can be selected in a way that is tailored to suit specific application areas and use cases. This creates an incremental roadmap for implementers and enables different systems to adhere to a subset of the security labeling technology sufficient for their application. In other words, instead of an all-or-nothing approach, we can take a more gradual approach to implementing security labeling.
+Although the HL7 standards for security labeling is quite thorough and defines a rather comprehensive system, not every implementation or every application area needs to implement all the aspects of this technology. By defining profiles and maturity models for the security labeling system, subsets of the security labeling systems can be selected in a way that is tailored to suit specific application areas and use cases. This creates an incremental roadmap for implementers and enables different systems to adhere to implementing a subset of security labeling capabilities, sufficient for their application. In other words, instead of an all-or-nothing approach, we can take a more gradual approach to implementing security labeling.
 
 ### Use Cases
 
 #### Sender Security Labeling Capability
 
 ##### Assumption
-Sender has implemented Security Labeling.
+Sender has implemented Security Labeling Service, including: 
 
+- creating a discoverable/shareable Security Labeling Capability Statement, including:
+    - listing the security label tags required to convey each applicable policy using the `sec-label-basis` extension.
+    - indicating that the Sender supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions, and
+    - posting the discoverable Security Labeling Capability Statements for each supported policy.
+
+- implementing the ability to assign security labels at both Resource- and Bundle-level (High Water Mark).
+
+##### Artifacts
+- Discoverable Capability Statement, which includes:
+    - Labeling levels supported: Bundle & Resource
+    - Supported Extensions
+- Appropriately-labeled Bundles and Resources.
 ##### Pre-Condition
 Sender determines applicable security labels to convey applicable policy.
 
@@ -103,14 +111,6 @@ Sender is able to audit Receiver enforcement of disclosed labeled Resource.
 Sender is able to determine whether the Receiver reclassified disclosed labeled Resource upon further disclosure by monitoring Resource Provenance chain.
 
 ##### Actors & Actions
-Sender creates a discoverable/shareable Security Labeling Capability Statement, including:
-
-- Listing the security label tags required to convey each applicable policy, using the `sec-label-basis` extension.
-- Indicating that the Sender supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
-
-Sender implements ability to assign security labels at both the Bundle (High Water Mark) and `Resource.meta.security`.
-
-Sender posts discoverable Security Labeling Capability Statements for each supported policy.
 
 Sender receives Receiver Client Registration request, which includes Receiver Capability Statement.
 
@@ -120,17 +120,16 @@ Sender inspects Receiver's Security Labeling Capability Statements to determine 
 
 Sender returns requested Resources with applicable security labels.
 
-##### Artifacts
-Discoverable Capability Statement, which includes:
-- Labeling levels supported: Bundle & Resource
-- Supported Extensions
-
-Appropriately labeled Bundles and Resources.
-
 #### Receiver Security Labeling Capability
 
 ##### Assumption
-Receiver has implemented Security Labeling and Privacy-Preserving Authorization Services.
+Receiver has implemented Security Labeling and Privacy-Preserving Authorization Services, including: 
+
+- creating a discoverable/shareable Security Labeling Capability Statement: 
+    - listing the security label tags required to convey each applicable policy using the `sec-label-basis` extension.
+    - indicating that the Receiver supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
+    - posting the discoverable Security Labeling Capability Statements for each supported policy.
+- implementing the capabilities required for consuming security labels and enforcing all the policies implied by them at both the Resource- and Bundle-level (High Water Mark).
 
 ##### Pre-Condition
 Receiver determines applicable security labels to convey applicable policy.
@@ -143,15 +142,6 @@ Receiver is able to audit downstream Recipient enforcement of disclosed Resource
 Receiver is able to determine whether a downstream Recipient reclassified disclosed Resource security labels by monitoring Resource Provenance chain.
 
 ##### Actors & Actions
-Receiver creates a discoverable/shareable Security Labeling Capability Statement: 
-
-- Listing the security label tags required to convey each applicable policy, using the `sec-label-basis` extension.
-- Indicating that the Receiver supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
-
-Receiver implements the capabilities required for enforcing security labels at both the Resource-, and Bundle-level (High Water Mark).
-
-Receiver posts discoverable Security Labeling Capability Statements for each supported policy.
-
 Receiver discovers and retrieves prospective Sender Security Labeling Capability Statement.
 
 (Happy Path) Receiver compares Sender Security Labeling Capability Statements with Receiver Security Labeling Capability Statements, and determines that it is able to support security labels for applicable policies.
