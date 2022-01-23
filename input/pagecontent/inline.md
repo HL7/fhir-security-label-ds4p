@@ -5,6 +5,8 @@ Inline security labels are defined to enable recording a security label on a por
 
 Processing inline labels is more computationally costly for the resource consumer since, instead of simply looking at `Resource.meta.security`, it has to parse and scan the entire resource to look for inline security labels. To assist consumers in this process, another extension (`extension-has-inline-sec-label`) has been defined to indicate whether a resource contains inline security labels. This extension has a fixed place (in `Resource.meta`). Security labeling service must include this extension on any resource containing inline labels. The consumer of a resource can look for this extension before invoking a deep inspection of the resource for inline security labels.
 
+As shown in the example below, in case where multiple labels are applicable to the same portion of the resource, these labels are modeled with recurring instances of the extension (in the form of an extension array in JSON or repeated elements in XML).
+
 Inline security labels may be used in conjunction with resource-wide labels. Resource-wide labels specify labels that apply to the entire resource. In some cases resource-wide labels are orthogonal to inline labels; for example, a confidentiality label at the resource level and an inline integrity label for a portion of the resource. Inline labels may also express _additional_ restrictions further to resource-wide labels to provide a more precise and granular assignment of labels; for example, a _very restricted_ label for a portion of the resource, alongside a _restricted_ label at the resource level, indicates that a specific portion of a _restricted_ resource is of a higher level of confidentiality at the _very restricted_ level. In such cases, the implementers may choose to use resource-wide labels (either alone or alongside inline labels) to record the high-water mark label in order to accommodate clients that are unable to process inline labels. Another reason for setting the resource-wide label as the [High Water Mark](glossary.html#hwm) is for cases where  the sender and receiver follow a High Water Mark rule that requires that the result be assigned the highest classification level when information is combined from several targets.
 
 When both inline and resource-wide labels are present, a consumer must apply the highest level of protection resulting from all the resource-wide as well as inline labels, when processing the labeled portion of the resource. For example, when a resource is labeled with [CUI marking](ValueSet-valueset-cui-mark.html) and a portion of the resource is marked with an inline confidentiality label, the labeled portion is subject to the protective measures implied by both of those labels (e.g., masking _and_ privacy marking when unmasked).
@@ -42,7 +44,15 @@ The following excerpt shows an example of using of extensions for inline labelin
             "code": "R",
             "display": "restricted"
           }
-        }
+        },
+        {
+          "url" : "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-inline-sec-label",
+          "valueCoding" : {
+            "system" : "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+            "code" : "PATRPT",
+            "display" : "patient reported"
+          }
+       }
       ]
     }
   ]
