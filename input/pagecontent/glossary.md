@@ -1,5 +1,5 @@
 
-These defintions are based on the glossary of the [HL7 Healthcare Privacy and Security Classification System (HCS)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345), Release 1, Volume 1.
+These definitions are based on the glossary of the [HL7 Healthcare Privacy and Security Classification System (HCS)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345), Release 1, Volume 1.
 
 **Access (Security) Level**
 The combination of a hierarchical security classification and a security category that represents the sensitivity of an object or the security clearance of an individual [[ISO 2382-8](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.812-199511-I!!PDF-E&amp;type=items)].
