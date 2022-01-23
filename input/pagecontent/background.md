@@ -24,7 +24,7 @@ Does the implementation of data segmentation for privacy and security labeling l
 
 __Information blocking is a matter of policy; security labeling is a policy-neutral technology__
 
-Security labeling is a technological building block which enables fine-grained control over healthcare information by identifying and marking different types of sensitive data. It does not prescribe, per se, whether or not access to any part of the information should be blocked for a requester based on these markings. On the contrary, it can be argued that security labeling enables more data to flow as the data can be tagged to communicate the specific handling requirements, in the context of a trust agreement between the sender and receiver (known in the US as Data Use and Reciprocal Support Agreement  or DURSA).
+Security labeling is a technological building block which enables fine-grained control over healthcare information by identifying and marking different types of sensitive data. It does not prescribe, per se, whether or not access to any part of the information should be blocked for a requester based on these markings. On the contrary, it can be argued that security labeling enables more data to flow as the data can be tagged to communicate the specific handling requirements, in the context of a trust agreement between the sender and receiver (known in the US as [Data Use and Reciprocal Support Agreement or DURSA](glossary.html#dursa)).
 
 Withholding health information, or as known in the US, "information blocking", is a matter of policy and can happen with or without security labels based on policy decisions made by a provider. Just because a piece of information is marked with a certain security label does not mean that the provider must or will deny access to that piece of information.
 
@@ -95,7 +95,7 @@ Sender has implemented Security Labeling Service, including:
     - indicating that the Sender supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions, and
     - posting the discoverable Security Labeling Capability Statements for each supported policy.
 
-- implementing the ability to assign security labels at both Resource- and Bundle-level (High Water Mark).
+- implementing the ability to assign security labels at both Resource- and Bundle-level ([High Water Mark](glossary.html#hwm)).
 
 ##### Artifacts
 - Discoverable Capability Statement, which includes:
@@ -129,7 +129,7 @@ Receiver has implemented Security Labeling and Privacy-Preserving Authorization 
     - listing the security label tags required to convey each applicable policy using the `sec-label-basis` extension.
     - indicating that the Receiver supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
     - posting the discoverable Security Labeling Capability Statements for each supported policy.
-- implementing the capabilities required for consuming security labels and enforcing all the policies implied by them at both the Resource- and Bundle-level (High Water Mark).
+- implementing the capabilities required for consuming security labels and enforcing all the policies implied by them at both the Resource- and Bundle-level ([High Water Mark](glossary.html#hwm)).
 
 ##### Pre-Condition
 Receiver determines applicable security labels to convey applicable policy.

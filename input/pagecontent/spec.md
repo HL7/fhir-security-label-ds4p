@@ -55,7 +55,7 @@ The ability to convey the authority or agent name, contact, and classification r
 
 The [`sec-label-related-artifact` extension](StructureDefinition-extension-sec-label-related-artifact.html) is based on the [Related Artifact `MetaData` Type](http://hl7.org/fhir/R4/metadatatypes.html#RelatedArtifact). The `RelatedArtifact` structure defines resources related to a module such as previous and next versions of documents, documentation, citations, etc. Note that the name resource here is being used in a more general sense than the FHIR-specific Resource. The related resource may be a FHIR resource, or it may be another type of resource, represented using the Attachment data type.
 
-This extension SHOULD be used on a security label code for which justification or documentation can be found in an attached or discoverable information instance.  Examples include a policy security label code, which is justified based on a law, patient consent directive, or organizational policy; a provenance security label, which is documented by a Provenance Resource; a trust security label code, which is documented by a trust accreditation certificate, trust mark,  or a trust agreement such as a Data Use and Reciprocal Support Agreement (DURSA).
+This extension SHOULD be used on a security label code for which justification or documentation can be found in an attached or discoverable information instance.  Examples include a policy security label code, which is justified based on a law, patient consent directive, or organizational policy; a provenance security label, which is documented by a Provenance Resource; a trust security label code, which is documented by a trust accreditation certificate, trust mark,  or a trust agreement, such as a [Data Use and Reciprocal Support Agreement (DURSA)](glossary.html#dursa).
 
 ### Value Sets Summary
 Value-sets used and defined by this IG are discussed below.
@@ -97,7 +97,7 @@ Type of security metadata observation made about the control of an IT resource (
 |[Security Authorization Policy](ValueSet-valueset-security-authorization.html) * |`0..*`|  Security label metadata that segments an IT resource by conveying specific permissions used for access control.| Authorization policy, Delegation policy|
 
 (*) Value-sets defined by this IG.
-(**) Privacy-revealing Obligation or Refrain tags (e.g., the Obligation Policy `MASK` (mask) or the Refrain Policy `NODSCLCD` (no disclosure without consent directive)) shall not be included in the High Water Mark labels of a `Bundle`, `DocumentReference`, or `Message Resources`.
+(**) Privacy-revealing Obligation or Refrain tags (e.g., the Obligation Policy `MASK` (mask) or the Refrain Policy `NODSCLCD` (no disclosure without consent directive)) shall not be included in the [High Water Mark](glossary.html#hwm) labels of a `Bundle`, `DocumentReference`, or `Message Resources`.
 
 #### Not a Security Label
 

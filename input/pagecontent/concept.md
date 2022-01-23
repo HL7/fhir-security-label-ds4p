@@ -1,6 +1,6 @@
 
 ### FHIR DS4P IG Goal
-The goal of this specification is to develop implementation guidance for the use of security labels based on the syntactical structure for security labeling as defined in the [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1 (HCS)](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=345), in FHIR `Resource.meta.security` as well as the sub-resource level. The HCS is the normative conceptual model upon which  [HL7 Messaging Version 2.9](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=516), the [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P), Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354), and the [HL7 CDA® R2 Implementation Guide: Data Provenance, Release 1 - US Realm](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=420) are based. The syntactical structure of security labels dictates how HL7 security labeling terminology is used to populate specific fields or "Named Tag Sets" in a security label with appropriate "Security Label Tags" in order to represent a computable policy.
+The goal of this specification is to develop implementation guidance for the use of security labels based on the syntactical structure for security labeling as defined in the [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1 (HCS)](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=345), in FHIR `Resource.meta.security` as well as the sub-resource level. The HCS is the normative conceptual model upon which  [HL7 Messaging Version 2.9](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=516), the [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P), Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354), and the [HL7 CDA® R2 Implementation Guide: Data Provenance, Release 1 - US Realm](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=420) are based. The syntactical structure of security labels dictates how HL7 security labeling terminology is used to populate specific fields or [Named Tag Sets](glossary.html#named-tag-set) in a security label with appropriate "Security Label Tags" in order to represent a computable policy.
 
 In addition, there is a need for guidance and examples for how a community can develop consensus security labels for specific policies to minimize variance in policy representations in order to ensure uniform enforcement among trading partners.
 
@@ -24,13 +24,13 @@ The HCS designates the following four Named Tag Set fields:
 - Security Control (aka Handling Caveat), and 
 - Security Trust
 
-A Named Tag Set is a field type within a security label, which has characteristics that indicate what types of elements or "Tag Set Names" it may contain.
+A Named Tag Set is a field type within a security label, which has characteristics that indicate what types of elements or [Tag Set Names](glossary.html#tag-set-name) it may contain.
 
-A Tag Set Name is the identifier associated with a set of security tags (aka “privacy tags”). In HL7 terms, this is the name of the value set from which allowable codes may be drawn to populate a Named Tag Set field.
+A [Tag Set Name](glossary.html#tag-set-name) is the identifier associated with a set of security tags (aka “privacy tags”). In HL7 terms, this is the name of the value set from which allowable codes may be drawn to populate a Named Tag Set field.
 
 The HCS adopted characteristics for these that follow the allowable types specified in the foundational standards, which are suitable for conveying policies governing access control in healthcare. For example, the Security Classification Label Field is mandatory and only one value `[1..1]` from the HL7 Confidentiality code system is permitted because this field is used to determine whether a requester meets the minimum bar for accessing information protected at or below a given level of confidentiality protection. For this reason, the Confidentiality code system is a total range hierarchy of protection levels.   In HCS terms, a security label without a Confidentiality code is not a security label because without this minimum bar for entry, such a label would be useless for interoperable access control, and should be regarded as some other type of meta data.
 
-Unlike Security Classification, all of the other Named Tag Set fields are non-hierarchical and are not mandatory, i.e., `[0..*]` unless required by a policy. Their characteristics, how they are assigned to convey policy, and how they are used for access control is discussed below.  The following discussion is high level.  For a more complete explanation of the terms, please reference the definitions of the Named Tag Sets and the Tag Set Names included in the [Detailed Specification Value Sets Summary](spec.html#value-sets-summary).
+Unlike Security Classification, all of the other Named Tag Set fields are non-hierarchical and are not mandatory, i.e., `[0..*]` unless required by a policy. Their characteristics, how they are assigned to convey policy, and how they are used for access control is discussed below.  The following discussion is high level.  For a more complete explanation of the terms, please reference the definitions of the Named Tag Sets and the [Tag Set Names](glossary.html#tag-set-name) included in the [Detailed Specification Value Sets Summary](spec.html#value-sets-summary).
 
 ### How to assign a Security Label
 Generally, a Security Label is assigned in accordance with a policy, which deems an aspect of a valued information object warrant a level of confidentiality protection. The policy is _based on an assessment of the potential impact that a loss of confidentiality, integrity, or availability of such information or information system would have on organizational operations, organizational assets, or individuals_ (this definition of Security Category is used in a number of NIST publications, which are listed [here](http://fismapedia.org/index.php/Security_Category)).
@@ -38,9 +38,9 @@ Generally, a Security Label is assigned in accordance with a policy, which deems
 
 #### Step 1: Determine the Security Categories indicated by the policy governing the information
 To be conveyed as a security label, a policy must categorize the aspects of information that require a specific level of confidentiality protection.  
-These aspects are valued as "Tags" in the Security Category portion of a security label using the codes in the value sets associated with the Security Category “Tag Set Names”.
+These aspects are valued as "Tags" in the Security Category portion of a security label using the codes in the value sets associated with the Security Category [Tag Set Names](glossary.html#tag-set-name).
 
-The current HCS-conformant Security Category Tag Set Names are: Sensitivity, Policy, Compartment, Integrity, and Provenance. These value sets are listed in the [Detailed Specification Value Sets Summary](spec.html#value-sets-summary).
+The current HCS-conformant Security Category [Tag Set Names](glossary.html#tag-set-name) are: Sensitivity, Policy, Compartment, Integrity, and Provenance. These value sets are listed in the [Detailed Specification Value Sets Summary](spec.html#value-sets-summary).
 
 ##### Assigning Sensitivity Tag `0..*`
 
@@ -83,13 +83,13 @@ If more than one policy applies to the information (e.g., the case with consent 
 Additional Security Category Tag Sets specified by policy may include compartment, integrity, provenance, and trust attributes pertinent to the governed information.  
 
 ##### Assigning Compartment `0..*`
-A policy may require that the information may only be made available within a specific workflow or project, thereby isolating the information and limiting access to entities provisioned with clearance for that compartment (i.e., members of a group entitled to access). An entity’s access to information in a compartment may be further constrained by privileges based on roles or attributes.
+A policy may require that the information may only be made available within a specific workflow or project, thereby isolating the information and limiting access to entities provisioned with [clearance](glossary.html#clearance) for that [compartment](glossary.html#compartment) (i.e., members of a group entitled to access). An entity’s access to information in a compartment may be further constrained by privileges based on roles or attributes.
 
 ##### Assigning Integrity `0..*` 
 A policy may require that information be tagged to indicate confidence in its reliability, its status in being attested to or verified, any data alteration or syntactic/semantic transformation that it may have undergone, and whether it has been protected against any tampering or made non-repudiable. A hierarchical grading of confidence tag may be accompanied with other integrity or with provenance tags to support the assigned confidence level.
 
 ##### Assigning Provenance `0..*`
-A policy may require that the provenance of the information be accessible to end users to assist with the determination of their level of confidence in the trustworthiness, authenticity, and reliability of the labeled information, and the degree to which the information has been exchanged within a trust framework. Provenance tags are not a replacement for a provenance record but can be considered a flag indicating that such a record may be important. For example, a patient reporting that a provider asserted the patient’s allergy has a different weight in terms of reliability than a provider asserting a patient reported family history.
+A policy may require that the provenance of the information be accessible to end users to assist with the determination of their level of confidence in the trustworthiness, authenticity, and reliability of the labeled information, and the degree to which the information has been exchanged within a [trust framework](glossary.html#trust-framework). Provenance tags are not a replacement for a provenance record but can be considered a flag indicating that such a record may be important. For example, a patient reporting that a provider asserted the patient’s allergy has a different weight in terms of reliability than a provider asserting a patient reported family history.
 
 #### Step 2: Determine the Security Classification Tag indicated by the Security Categories
 
@@ -128,9 +128,9 @@ This is to convey the handling instructions or “caveats” to which senders an
 ##### HCS Handling Caveat Description
 Handling caveats are instructions about mandatory and prohibited actions (obligations and refrain policies) within a permitted use context or “purpose of use”.
 
-Assign handling caveats as access control decision information to an information resource as required by policy to obtain an end-user’s implicit or explicit acceptance of a source rule prior to use or access.
+Assign handling caveats as [access control decision information](glossary.html#adi) to an information resource as required by policy to obtain an end-user’s implicit or explicit acceptance of a source rule prior to use or access.
 
-The acceptance of a handling caveat may be implicit (e.g., in an Memorandum of Understanding, Data Use and Reciprocal Support Agreement, or contract) or explicit as in a returned response (e.g. a promise). The pre-established trust framework defines specific rules for complying with such handling caveat codes.  
+The acceptance of a handling caveat may be implicit (e.g., in an Memorandum of Understanding, Data Use and Reciprocal Support Agreement, or contract) or explicit as in a returned response (e.g. a promise). The pre-established [trust framework](glossary.html#trust-framework) defines specific rules for complying with such handling caveat codes.  
 
 The Security Controls include: 
 
