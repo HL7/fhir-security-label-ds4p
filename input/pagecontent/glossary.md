@@ -3,19 +3,16 @@ These definitions are based on the glossary of the [HL7 Healthcare Privacy and S
 
 <a name="access-security-level"></a>
 **Access (Security) Level**
-
 The combination of a hierarchical security classification and a security category that represents the sensitivity of an object or the security clearance of an individual [[ISO 2382-8](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.812-199511-I!!PDF-E&amp;type=items)].
 
 A level associated with an individual who may be accessing information (for example, a clearance level) or with the information which may be accessed (for example, a classification level) [[HIPAA Security Glossary](http://aspe.hhs.gov/admnsimp/nprm/seclist.htm)].
 
 <a name="adi"></a>
 **Access Control Decision Information (ADI)**
-
 The portion (possibly all) of the ACI made available to the ADF in making a particular access control decision [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
 
 <a name="aci"></a>
 **Access Control Information (ACI)**
-
 Any information used for access control purposes, including contextual information [[ISO 10181-3](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
 
 <!--- 
@@ -26,88 +23,72 @@ ACS generates information made available to other elements includes transformed 
 --->
 <a name="classification"></a>
 **Classification**
-
 Confidential protection of data elements by segmentation into restricted and specifically controlled categories set by policies [Adapted from [ASTM E-1986](#ASTME1986)].
 
 <a name="clearance"></a>
 **Clearance**
-
 Initiator-bound access control information (ACI) that can be compared with security labels of targets [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
 
 Permission granted to an individual to access data or information at or below a particular security level [[ISO/IEC 2382-8:1998](http://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.812-199511-I!!PDF-E&type=items)].
 
 <a name="clinical-attribute"></a>
 **Clinical Attribute** 
-
 Any clinical characteristic that binds a health care relevant parameter to a clinical element by a rule. Parameters may include authorship, category of information, terminological characteristics, history of permutations, integrity and provenance, as well as the relationship to and inclusive of associated clinical facts necessary to provide context essential for applying security labels. ([PCAST](http://www.whitehouse.gov/sites/default/files/microsites/ostp/pcast-health-it-report.pdf) discusses attributes that provide context to clinical data elements such as patient demographics).
 
 <a name="clinical-attribute-set"></a>
 **Clinical Attribute Set** 
-
 The complete collection of parameters that in total describe the relevant characteristics of a clinical fact.   These include, clinical attributes, security labels and provenance:    For example, the patient's name and birthdate, diagnosis code, the applicable privacy rules and policies, including any patient's pre-consented privacy choices security label classification and sensitivity codes, and the data source (provider).
 
 
 <a name="clinical-element"></a>
 **Clinical Element**
-
 A clinical object that has been disaggregated into the smallest possible data element suitable for use in a healthcare context. ([PCAST](http://www.whitehouse.gov/sites/default/files/microsites/ostp/pcast-health-it-report.pdf) p. 70 description of clinical elements as the smallest clinical data units that make sense to exchange and aggregate.)
 
 <a name="clinical-fact"></a> 
 **Clinical Fact**
-
 A healthcare data IT resource comprised of a clinical element associated or "tagged" with at least one clinical attribute such as a clinical information category, patient information, and provenance. A clinical fact is a type of "tagged data element." ([PCAST](http://www.whitehouse.gov/sites/default/files/microsites/ostp/pcast-health-it-report.pdf) p. 89 "Tagged data element: Data accompanied by metadata describing the data.").
 
 <a name="clinical-rule"></a> 
 **Clinical Rule** 
-
 A computational algorithm used for assigning a clinical attribute to a clinical element.
 
 <a name="compartment"></a> 
 **Compartment**
-
 A security label tag that "segments" an IT resource by indicating that access and use is restricted to members of a defined community or project.
 A set of categories in a security label [Sandhu].
 
 <a name="compartment-based-policies"></a> 
 **Compartment-Based Policies**
-
 In a compartment-based policy, sets of targets are associated with a named security compartment or category, which isolates them from other targets. Users need to be given a distinct clearance for a compartment to be able to access targets in the compartment [Ford; chapter 6, p.155].
 
 <a name="compartmentalization"></a> 
 **Compartmentalization**
-
 A division of data into isolated blocks with separate security controls for the purpose of reducing risk [[ISO 7498-2](http://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.800-199103-I!!PDF-E&type=items)]. For example, the division of data in a major project into blocks corresponding to sub-projects, each with its own security protection, in order to limit exposure of the overall project.
 
 <a name="confidentiality"></a>
 **Confidentiality** 
-
 Privacy metadata classifying an IT resource (data, information object, service, or system capability) according to its level of sensitivity, which is based on an analysis of applicable privacy policies and the risk of financial, reputational, or other harm to an individual or entity that could result if made available or disclosed to unauthorized individuals, entities, or processes.Usage Notes: Confidentiality codes are used in security labels and privacy markings to classify IT resources based on sensitivity to indicate the custodian or receiver obligation to ensure that the protected resource is not made available or redisclosed to individuals, entities, or processes (security principals) per applicable policies. Confidentiality codes are also used in the clearances of initiators requesting access to protected resources. 
 
 Definition aligns with ISO 7498-2: Confidentiality is the property that information is not made available or disclosed to unauthorized individuals, entities, or processes. (HL7 Confidentiality code system `2.16.840.1.113883.5.25` and value set `2.16.840.1.113883.1.11.10228`).
 
 <a name="cui"></a>
 **Controlled Unclassified Information (CUI)** 
-
 CUI is information the Government creates or possesses, or that an entity creates or possesses for or on behalf of the Government, that a law, regulation, or Government-wide policy requires or permits an agency to handle using safeguarding or dissemination controls. However, CUI does not include classified information (see definition above) or information a non-executive branch entity possesses and maintains in its own systems that did not come from, or was not created or possessed by or for, an executive branch agency or an entity acting for an agency. Law, regulation, or Government-wide policy may require or permit safeguarding or dissemination controls in three ways: Requiring or permitting agencies to control or protect the information but providing no specific controls, which makes the information CUI Basic; requiring or permitting agencies to control or protect the information and providing specific controls for doing so, which makes the information CUI Specified; or requiring or permitting agencies to control the information and specifying only some of those controls, which makes the information CUI Specified, but with CUI Basic controls where the authority does not specify.
 
 <a name="data-segmentation"></a>
 **Data Segmentation**
-
 Process of sequestering from capture, access or view certain data elements that are perceived by a legal entity, institution, organization or individual as being undesirable to share [GWU].
 
 <a name="dursa"></a>
 **Data Use and Reciprocal Support Agreement (DURSA)**
-
 A comprehensive, multi-party trust agreement signed by all eligible entities who wish to exchange data.
 
 <a name="hcs"></a> 
 **Healthcare Privacy and Security Classification System (HCS)**
-
 A defined scheme for the classification and handling of health care and healthcare related information.
 
 <a name="hwm"></a> 
 **High Water Mark (HWM)**
-
 "Rule that when information is combined from several targets, the result is assigned the highest classification level."
 [_Warwick Ford, Computer Communications Security: Principles, Standard Protocols & Techniques 29-30 (1994)_]
  
@@ -116,7 +97,6 @@ A defined scheme for the classification and handling of health care and healthca
 
 <a name="it-resource"></a> 
 **IT Resource**
-
 Any data, information object, operation, process, service, or system capability. An IT resource that is assigned a security label is sometimes referred to as a "security object". An IT resource that is represented as a requested security object of an initiator's access request is sometimes referred to as a "target".
 
 <!---
@@ -139,7 +119,6 @@ Security labels are a type of security metadata that is associated with a securi
 -->
 <a name="named-tag-set"></a> 
 **Named Tag Set**
-
 Field containing a Tag Set Name and its associated set of security tags [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
 <!---
@@ -164,14 +143,12 @@ Individual&#39;s or organization&#39;s right to determine whether, when, and to 
 
 <a name="privacy-mark"></a> 
 **Privacy Mark**
-
 Human readable security labels, which are rendered in the graphic user interface on accessed electronic information, are called privacy marks. The act of enabling the rendering of a privacy mark is called "privacy marking."
 
 If present, the privacy-mark is not used for access control. The content of the privacy-mark may be defined by the security policy in force (identified by the security-policy-identifier) which may define a list of values to be used. Alternately, the value may be determined by the originator of the security-label [[ISO 22600-3](https://www.iso.org/standard/45376.html) Section A.3.4.3].
 
 <a name="provenance"></a> 
 **Provenance**
-
 The history of the ownership of an object, especially when documented or authenticated.   For example, references to a type of equipment, standard clinical procedure, attestable content author, data source, provider or other clinical facts [[PCAST](http://www.whitehouse.gov/sites/default/files/microsites/ostp/pcast-health-it-report.pdf)].
 
 Information about entities, activities, and people involved in producing a piece of data or thing, which can be used to form assessments about its quality, reliability or trustworthiness [[W3C PROV-Overview](http://www.w3.org/TR/2012/WD-prov-overview-20121211/)].
@@ -184,14 +161,12 @@ The information that documents the history of the Content Information. This info
 
 <a name="security-attribute"></a> 
 **Security Attribute**
-
 A security-related quality of an object. Security attributes may be represented as hierarchical levels, bits in a bit map, or numbers. Compartments, caveats, and release markings are examples of security attributes [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
 Characteristic of a subject, resource, action or environment that may be referenced in a predicate or target [[XACML](http://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-cs-01-en.pdf)].
 
 <a name="security-category"></a> 
 **Security Category**
-
 A non-hierarchical grouping of sensitive information used to control access to data more finely than with hierarchical security classification alone [[ISO 2382-8](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.812-199511-I!!PDF-E&amp;type=items)].
 
 The characterization of information or an information system based on an assessment of the potential impact that a loss of confidentiality, integrity, or availability of such information or information system would have on organizational operations, organizational assets, or individuals [[FIPS](http://fismapedia.org/index.php?title=Security_category)].
@@ -200,17 +175,14 @@ If present, the security categories provide further granularity for the sensitiv
 
 <a name="security-classification"></a> 
 **Security Classification**
-
 The determination of which specific degree of protection against access the data or information requires, together with a designation of that degree of protection; for example, "Top Secret", "Secret", "Confidential" [[ISO 2382-8](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.812-199511-I!!PDF-E&amp;type=items)].
 
 <a name="security-clearance"></a> 
 **Security Clearance**
-
 See _Clearance_.
 
 <a name="security-label"></a> 
 **Security Label**
-
 _(In the definitions below, &quot;security label&quot; is defined as both a verb: "means used to associate security attributes" as in "security labeling", and as noun: "the markings bound to a resource." As a noun, the term is sometimes considered synonymous with "security metadata" and "security tag." As a verb, the term is sometimes considered synonymous with "tagging." However, security standards sometimes use the term "security label" for both the classification given to IT resources and the classification level in an initiator's clearance. In addition, some standards use the term "marking bound to a resource" to refer to both computable security labels and the human-readable rendering of security label fields, better known as "privacy markings")._
 
 The means used to associate a set of security attributes with a specific information object as part of the data structure for that object [[ISO 10181-3/ITU X.812](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
@@ -229,17 +201,14 @@ A security label is a type of [PCAST](http://www.whitehouse.gov/sites/default/fi
 
 <a name="security-labeling-policy"></a> 
 **Security (Labeling) Policy**
-
 The definition of which classification and category values are used and how security labels are checked against clearances.
 
 <a name="security-labeling-rule"></a> 
 **Security Labeling Rule**
-
 A computational algorithm used for assigning a security label to an IT resource such as a clinical fact.
 
 <a name="spif"></a> 
 **Security Policy Information File (SPIF)**
-
 A construct that conveys domain-specific security policy information [[ISO/IEC 15816](http://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-X.841-200010-I!!PDF-E&type=items)].
 
 An XML schema, that provides a high level representation of a security labeling policy in a generic and open fashion [[Open XML SPIF](http://www.xmlspif.org/?page_id=51)].
@@ -263,27 +232,22 @@ The Security Policy Information File is a signed object to protect it from unaut
 
 <a name="security-tag"></a> 
 **Security Tag**
-
 Information unit containing a representation of certain security-related information (e.g., a restrictive attribute bit map) [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
 <a name="segmentation"></a> 
 **Segmentation** 
-
 The process of sequestering from capture, access or view certain data elements or "datatypes" (clinical information categories) that are perceived by a legal entity, institution, organization, or individual as being undesirable to share.
 
 <a name="sensitivity"></a> 
 **Sensitivity** 
-
 The characteristic of a resource which implies its value or importance and may include its vulnerability [[ISO/IEC 7498-2](http://www.itu.int/rec/dologin_pub.asp?lang=e&amp;id=T-REC-X.800-199103-I!!PDF-E&amp;type=items)].
 
 <a name="sensitivity-label"></a> 
 **Sensitivity Label** 
-
 Security labels which support data confidentiality models, like the Bell and LaPadula model. The sensitivity label tells the amount of damage that will result from the disclosure of the data and also indicates which measures the data requires for protection from disclosure. The amount of damage that results from unauthorized disclosure depends on who obtains the data; the sensitivity label should reflect the worst case [[IETF RFC 1457](http://www.faqs.org/rfcs/rfc1457.html)].
 
 <a name="share-with-protections"></a> 
 **Share with Protections** 
-
 Share with Protections is an information exchange paradigm that describes an environment of continuous end-to-end protection and trust for information shared by senders, thereafter received, retained and used by receivers, and backed by healthcare systems using automation. Core features include:
 - Senders attach standards-based security labels to information indicating its relative sensitivity for sharing with trusted recipients and any handling instructions,
 - Recipients honor, retain, and enforce senders’ labels  by managing policy-driven access to information based on machine-computable sensitivity rules, “need to know,” and application of least privilege and segregation of duties within their own workforce, and
@@ -293,12 +257,10 @@ Share with Protections recommends standard Role- or Attribute-based access contr
 
 <a name="tag-set-name"></a> 
 **Tag Set Name** 
-
 Numeric identifier associated with a set of security tags [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
 <a name="target"></a>
 **Target**
-
 A target is a IT resource subject to access control [Ford].
 
 <!---
@@ -309,22 +271,18 @@ A target is an [IT resource](#ITResourceDF) for which an initiator seeks access.
 
 <a name="target-label"></a>
 **Target Label**
-
 See _Security Label_.
 
 <a name="trust-contract"></a>
 **Trust Contract**
-
 Sets of rules followed by the parties involved for achieving interoperability [[ISO 22600-2](https://www.iso.org/standard/62654.html)].
 
 <a name="trust-framework"></a>
 **Trust Framework**
-
 Policy that rules the behavior of a system. The Trust Framework facilitates trustworthy co-operation between domains by defining a common set of security and privacy policies that applies to all collaborating entities, derived from the relevant domain-specific policies across all of those policy domains [[ISO 22600-2](https://www.iso.org/standard/62654.html)].
 
 <a name="trustmark"></a>
 **Trustmark**
-
 Trustmarks are a visual indication that a service provider is compliant with a federation’s requirements. Trustmarks comprise a very specific subset of compliance marks. In addition to being electronically verifiable, these logos or seals are backed by rigorous third party validation, assessment, or auditing. Certification of conformance and associated trustmarks may be issued by the assessor, the federation, or a separate certifying body on behalf of the federation. The key point is that certification trustmarks result from independent 3rd- party assessments and both the assessing and the certifying organizations stand behind the certifications with their own brand name and reputation. Therefore, trustmarks serve as a reliable and high assurance means to convey compliance with federation rules [[NISTIR 8149](https://www.nist.gov/privacy-framework/nistir-8149)].
 
 **_References:_**
