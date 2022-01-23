@@ -1,6 +1,6 @@
 Adoption and use of electronic health records and other health information technologies have contributed to the increasing exchange of electronic health information. Many organizations, however, remain hesitant to share certain types of information, including information considered particularly sensitive or information associated with special legal protections.
 
-Lacking mechanisms to appropriately segment this data, organizations often decline to share anything at all. 
+Lacking mechanisms to appropriately [segment](glossary.html#data-segmentation) this data, organizations often decline to share anything at all. 
 Security labeling provides the technical capabilities for segmenting information to enable organizations to appropriately control access to sensitive health information and share with authorized parties.
 
 Concern has been raised that data segmentation results in information blocking and incomplete medical records due to the redaction of sensitive health information in compliance with privacy laws. 
