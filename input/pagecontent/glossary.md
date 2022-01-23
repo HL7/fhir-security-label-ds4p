@@ -91,6 +91,8 @@ A defined scheme for the classification and handling of health care and healthca
 **High Water Mark (HWM)**
 "Rule that when information is combined from several targets, the result is assigned the highest classification level."
 [_Warwick Ford, Computer Communications Security: Principles, Standard Protocols & Techniques 29-30 (1994)_]
+
+"high water mark [is the] maximum potential impact values for each security objective from the information types resident on the acquisition system." [FIPS.199](https://csrc.nist.gov/publications/detail/fips/199/final)
  
 "If individual portions are classified at one level, but the compilation is a higher classification, mark each portion with its own classification, and mark the document and pages with the classification of the compilation."
 [_DOD Information Security Chapter 5 Marking:  5-206 Identification of Specific Classified Information_]
