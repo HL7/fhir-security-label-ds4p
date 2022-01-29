@@ -22,10 +22,12 @@ Policies SHALL describe the details and conditions for where and in what context
 The ability to convey renderable `PrivacyMark` or `SecurityLabelMark` security labels, including the author and the markdown role may be required by classification policies within a domain.
 
 #### `sec-label-basis` Extension 
-The [`sec-label-basis` extension](StructureDefinition-extension-sec-label-basis.html) MAY be used on a security label (i.e., in the context of `Resource.meta.security`) if there is only one policy being conveyed by the all of the security label elements in meta. When more than one policy is conveyed by the security label elements in meta, this extension SHALL be used with each security label element used to convey a specific policy. 
+The [`sec-label-basis` extension](StructureDefinition-extension-sec-label-basis.html) MAY be used on a security label (i.e., in the context of `Resource.meta.security`) if there is only one policy being conveyed by the all of the security label elements in meta. When more than one policy is conveyed by the security label elements in meta, this extension SHALL be used with each security label element used to convey a specific policy.
  
-For example, if a federal agency labels a Resource as 42 CFR Part 2 information, then the Resource would have both Part 2 and CUI security labels in the meta. As a result, all the Part 2 security labels would have a `sec-label-basis` extension indicating that the basis for the label is Part 2, and all the CUI security labels would have a `sec-label-basis` extension indicating that the basis for the label is 32 CFR Part 2002.
+For example, in the US, if a federal agency labels a Resource as _42 CFR Part 2_ information, then the Resource would have both _42 CFR Part 2_ and _Controlled Unclassified Information (CUI)_ security labels in the meta. Security labels on the resource would leverage the `sec-label-basis` extension to indicate whether the basis for the label is _42 CFR Part 2_ or _32 CFR Part 2002_ (the law behind CUI).
  
+This extension specifies the policy using a code from the [privacy policy value set](ValueSet-valueset-privacy-policy.html). Note that the strength of this binding is currently set to `example`. Use-case-specific profiles of this IG are encouraged to narrow down the values with a more strict binding to ensure a consistent understanding of codes across different providers and consumers.
+
 The need: In HCS, the key/value pairs in a Security Label are called Named Tag Sets/Tag Sets and the values are Tags.
 A Security Label instance represents applicable policy as a specified set of Named Tag Sets/Tag Sets with applicable Tag values.
 This pattern is followed explicitly in HL7 V2.9 and DS4P CDA IG.
