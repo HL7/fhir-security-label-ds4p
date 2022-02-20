@@ -14,17 +14,21 @@ HL7 has already developed HL7 Version 2 (V2) and Clinical Document Architecture 
 
 The HL7 V2 security label guidance is incorporated in HL7 Version 2.9, Chapter 3, Patient Administration [Access Control Restriction Value Segment (ARV)](http://www.hl7.eu/refactored/segARV.html), and the Chapter 2 Control description of the [Batch Header Segment (BHS)](http://www.hl7.eu/refactored/segBHS.html), the [File Header Segment (FHS)](http://www.hl7.eu/refactored/segFHS.html), and the [Message Header Segment (MSH)](http://www.hl7.eu/refactored/segMSH.html). 
 
-The [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P) [for CDA], Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354) specifies the use of security labeling at the CDA Header, Section and Entry levels. Implementation of the CDA DS4P IG at the Header Level was included as an optional Certified EHR Certification criteria in the original 2015 Edition Health Information Technology (Health IT) Certification Criteria, 2015 Edition Base Electronic Health Record (EHR) Definition, and ONC Health IT Certification Program Modifications [[1]](index.html#end-notes) ([Final Rule – October 16, 2015](https://www.federalregister.gov/articles/2015/10/16/2015-25597/2015-edition-health-information-technology-certification-criteria-2015-edition-base-electronic)).
+The [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P) [for CDA], Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354) specifies the use of security labeling at the CDA Header, Section and Entry levels.
 
 In V2 and CDA, the HCS security label semantics are conveyed by valuing the security label tag elements within their security label syntactic structures with codes from normative HL7 security label value sets. The FHIR DS4P IG binding to the same value sets as specified in the [Value Set Summary](spec.html#value-sets-summary).
 
-In the US, [21st Century Cures Act: Interoperability, Information Blocking, and the ONC Health IT Certification Program](https://www.federalregister.gov/documents/2020/05/01/2020-07419/21st-century-cures-act-interoperability-information-blocking-and-the-onc-health-it-certification), ONC revised the security tag certification criteria in [45 CFR § 170.315 - 2015 Edition health IT certification criteria](https://www.law.cornell.edu/cfr/text/45/170.315) at [(b)(7)](https://www.federalregister.gov/d/2020-07419/p-3368) and [(b)(8)](https://www.federalregister.gov/d/2020-07419/p-3371) by requiring certification at the more granular Section and Entry levels after December 31, 2022.
+In the US: 
+- implementation of the CDA DS4P IG at the Header Level was included as an optional Certified EHR Certification criteria in the original 2015 Edition Health Information Technology (Health IT) Certification Criteria,  
+[45 CFR § 170.315 - 2015 Edition Health IT Certification Criteria](https://www.law.cornell.edu/cfr/text/45/170.315) and ONC Health IT Certification Program Modifications ([Final Rule – October 16, 2015](https://www.federalregister.gov/articles/2015/10/16/2015-25597/2015-edition-health-information-technology-certification-criteria-2015-edition-base-electronic)).
 
-According to the ONC [Certified HIT Product List (CHLP)](https://chpl.healthit.gov/#/search), 64 EHR Products are certified to meet segmentation at the Header level, which requires appropriately valuing the Clinical Document confidentiality element with a confidentiality code from the CDA Basic Confidentiality value set.  Two EHR Products have been certified to granular DS4P criteria updated in the 2020 CURES Rule.
+- In [21st Century Cures Act: Interoperability, Information Blocking, and the ONC Health IT Certification Program](https://www.federalregister.gov/documents/2020/05/01/2020-07419/21st-century-cures-act-interoperability-information-blocking-and-the-onc-health-it-certification), the ONC revised the security tag certification criteria in [45 CFR § 170.315 - 2015 Edition health IT certification criteria](https://www.law.cornell.edu/cfr/text/45/170.315) at [(b)(7)](https://www.federalregister.gov/d/2020-07419/p-3368) and [(b)(8)](https://www.federalregister.gov/d/2020-07419/p-3371) by requiring certification at the more granular Section and Entry levels after December 31, 2022.
 
-The [HL7 CDA® R2 Implementation Guide: Data Provenance, Release 1 - US Realm](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=420) provides more detailed description about all tags available for use in security labels, and how provenance capabilities in CDA can be used to persist a chain of security labels so as to, for example, record when a label was reclassified by a previous CDA author or custodian.
+- According to the ONC [Certified HIT Product List (CHLP)](https://chpl.healthit.gov/#/search), 64 EHR Products are certified to meet segmentation at the Header level, which requires appropriately valuing the Clinical Document confidentiality element with a confidentiality code from the CDA Basic Confidentiality value set.  Two EHR Products have been certified to granular DS4P criteria updated in the 2020 CURES Rule.
 
-Using security labels is an essential part of the [Share with Protection paradigm](glossary.html#share-with-protections) by enabling information to be shared after assigning the security labels specifying how the information can be used and the restrictions to which it may be subject.
+- The [HL7 CDA® R2 Implementation Guide: Data Provenance, Release 1 - US Realm](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=420) provides more detailed description about all tags available for use in security labels, and how provenance capabilities in CDA can be used to persist a chain of security labels so as to, for example, record when a label was reclassified by a previous CDA author or custodian.
+
+- Using security labels is an essential part of the [Share with Protection paradigm](glossary.html#share-with-protections) by enabling information to be shared after assigning the security labels specifying how the information can be used and the restrictions to which it may be subject.
 
 ### The Need for a FHIR DS4P Implementation Guide
 The [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) specifies several [Core Security Labels](http://hl7.org/fhir/security-labels.html#core), such as purpose of use and confidentiality tags, which all conformant FHIR Applications SHOULD use where appropriate. There are explanations about high-water mark requirements, “break the glass”, and references to the HCS and its security label terminology.
@@ -98,20 +102,3 @@ The following sections are informative:
 - [Security Labeling FAQ](background.html#security-labeling-faq)
 - [Use Cases](background.html#use-cases)
 - [Road Map](index.html#fhir-ds4p-ig-road-map)
-
-### End Notes
-
-[1] [45 CFR § 170.315 - 2015 Edition health IT certification criteria](https://www.law.cornell.edu/cfr/text/45/170.315)
-
-_(7) Security tags - summary of care - send._
-
-Enable a user to create a summary record formatted in accordance with the standard adopted in § 170.205(a)(4) that is tagged as restricted and subject to restrictions on re-disclosure according to the standard adopted in § 170.205(o)(1) at the:  
-(i)Document, section, and entry (data element) level; or 
-(ii)Document level for the period before December 31, 2022. 
-
-_(8) Security tags - summary of care - receive._
-
-(i) Enable a user to receive a summary record that is formatted in accordance with the standard adopted in § 170.205(a)(4) that is tagged as restricted and subject to restrictions on re-disclosure according to the standard adopted in § 170.205(o)(1) at the:  
-(A) Document, section, and entry (data element) level; or 
-(B)Document level for the period before December 31, 2022; and  
-(ii)Preserve privacy markings to ensure fidelity to the tagging based on consent and with respect to sharing and re-disclosure restrictions.
