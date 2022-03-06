@@ -16,7 +16,7 @@ The HL7 V2 security label guidance is incorporated in HL7 Version 2.9, Chapter 3
 
 The [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P) [for CDA], Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354) specifies the use of security labeling at the CDA Header, Section and Entry levels.
 
-In V2 and CDA, the HCS security label semantics are conveyed by valuing the security label tag elements within their security label syntactic structures with codes from normative HL7 security label value sets. The FHIR DS4P IG binding to the same value sets as specified in the [Value Set Summary](spec.html#value-sets-summary).
+In V2 and CDA, the HCS security label semantics are conveyed by assigning codes from normative HL7 security label value sets to the respective security label elements. This IG uses the same value sets as detailed in the [Value Set Summary](spec.html#value-sets-summary).
 
 In the US: 
 - implementation of the CDA DS4P IG at the Header Level was included as an optional Certified EHR Certification criteria in the original 2015 Edition Health Information Technology (Health IT) Certification Criteria,  
