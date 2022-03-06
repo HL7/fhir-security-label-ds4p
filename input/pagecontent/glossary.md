@@ -250,12 +250,18 @@ Security labels which support data confidentiality models, like the Bell and LaP
 
 <a name="share-with-protections"></a> 
 **Share with Protections** 
-Share with Protections is an information exchange paradigm that describes an environment of continuous end-to-end protection and trust for information shared by senders, thereafter received, retained and used by receivers, and backed by healthcare systems using automation. Core features include:
-- Senders attach standards-based security labels to information indicating its relative sensitivity for sharing with trusted recipients and any handling instructions,
-- Recipients honor, retain, and enforce senders’ labels  by managing policy-driven access to information based on machine-computable sensitivity rules, “need to know,” and application of least privilege and segregation of duties within their own workforce, and
-- Patient safety enabled through Emergency Access, utilizing Clinical Decision Support, and clinician break-glass priorities.
+Share with Protections is an information exchange paradigm that refers to an ecosystem where sharing of information is encouraged and enables by: 
 
-Share with Protections recommends standard Role- or Attribute-based access control (RBAC/ABAC) services for information classification and user clearances as a best approach to protecting an organization’s healthcare mission, patient privacy and to optimize clinician support. See the [Share with Protections White Paper Project](https://confluence.hl7.org/display/SEC/Share+with+Protections+White+Paper+Project).
+- communicating policies and handling instructions via security labels, 
+- continuous end-to-end protections, and 
+- overarching trust agreements between senders and receivers. 
+
+The core concepts are:
+- Senders and receivers establish a broad trust relationship by agreeing on, and ensuring a mutual understanding of machine-readable standards-based security labels,
+- Senders use standards-based security labels to shared data to indicate its relative sensitivity and any handling instructions, and
+- Recipients honor, retain, and enforce senders’ security labels  (in addition to all other local policy requirements)
+
+See the "Share with Protections" [project page](https://confluence.hl7.org/display/SEC/Share+with+Protections+White+Paper+Project).
 
 <a name="tag-set-name"></a> 
 **Tag Set Name** 

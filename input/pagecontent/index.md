@@ -28,7 +28,7 @@ In the US:
 
 - The [HL7 CDA® R2 Implementation Guide: Data Provenance, Release 1 - US Realm](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=420) provides more detailed description about all tags available for use in security labels, and how provenance capabilities in CDA can be used to persist a chain of security labels so as to, for example, record when a label was reclassified by a previous CDA author or custodian.
 
-- Using security labels is an essential part of the [Share with Protection paradigm](glossary.html#share-with-protections) by enabling information to be shared after assigning the security labels specifying how the information can be used and the restrictions to which it may be subject.
+- Using security labels is an essential part of the [Share with Protections paradigm](glossary.html#share-with-protections) by enabling information to be shared after assigning the security labels specifying how the information can be used and the restrictions to which it may be subject.
 
 ### The Need for a FHIR DS4P Implementation Guide
 The [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) specifies several [Core Security Labels](http://hl7.org/fhir/security-labels.html#core), such as purpose of use and confidentiality tags, which all conformant FHIR Applications SHOULD use where appropriate. There are explanations about high-water mark requirements, “break the glass”, and references to the HCS and its security label terminology.
