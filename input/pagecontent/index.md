@@ -18,6 +18,8 @@ The [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P) [for CDA], R
 
 In V2 and CDA, the HCS security label semantics are conveyed by assigning codes from normative HL7 security label value sets to the respective security label elements. This IG uses the same value sets as detailed in the [Value Set Summary](spec.html#value-sets-summary).
 
+Note that the DS4P CDA IG is constrained to the "Basic Confidentiality" value set, a subset of the full Confidentiality code system, although this constraint does not apply to this IG. Therefore, the DS4P CDA IG will not be able to support security labels with Confidentiality codes `U` (unrestricted), `L` (low), and `M` (moderate).
+
 In the US: 
 - implementation of the CDA DS4P IG at the Header Level was included as an optional Certified EHR Certification criteria in the original 2015 Edition Health Information Technology (Health IT) Certification Criteria,  
 [45 CFR § 170.315 - 2015 Edition Health IT Certification Criteria](https://www.law.cornell.edu/cfr/text/45/170.315) and ONC Health IT Certification Program Modifications ([Final Rule – October 16, 2015](https://www.federalregister.gov/articles/2015/10/16/2015-25597/2015-edition-health-information-technology-certification-criteria-2015-edition-base-electronic)).
