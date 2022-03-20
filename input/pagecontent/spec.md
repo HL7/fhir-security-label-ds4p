@@ -68,6 +68,9 @@ Type of security metadata observation made about the classification of an IT res
 
 Security classification metadata is based on an analysis of applicable policies and the risk of financial, reputational, or other harm that could result from unauthorized disclosure.
 
+Security Classification label is mandatory and can take only a single value (`[1..1]`) since this label is used to determine whether a requester meets the minimum bar for accessing information and also to ensure that the recipient can understand without ambiguity the level of protection that must be applied to the resource. Note that this does not mean that a resource is globally and permanently assigned a single confidentiality label regardless of context.
+Unlike some other labels that are tied to the clinical content of a resource (such as Sensitivity labels discussed below), the confidentiality label for a resource is context- and policy-dependent and therefore must often be determined dynamically and should be assigned based on the context (e.g., a jurisdiction, organization, or transaction). So, it is possible for a resource to have one confidentiality label in one context and a different confidentiality label in another context.
+
 |Tag Set|Card. | Description | Example Tags | 
 |-------|------|-------------|--------------|
 |[Confidentiality](https://terminology.hl7.org/ValueSet-v3-Confidentiality.html)|`1..1` | Security label metadata classifying an IT resource (clinical fact, data, information object, service, or system capability) according to its level of sensitivity, which is based on an analysis of applicable privacy policies and the risk of financial, reputational, or other harm to an individual or entity that could result if made available or disclosed to unauthorized individuals, entities, or processes.|Unrestricted, Normal, Very Restricted |
