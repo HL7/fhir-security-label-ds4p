@@ -10,10 +10,9 @@ Classification is the act or process by which information (which is determined t
 
 Classification is at the discretion of the Authority ("Classifier"), which controls the classified information and determines the appropriate level of protection, i.e., the confidentiality of the information. A Classifier may be required to retain the Security Label assigned by a previous Classifier per policy or trading partner agreement.
 
-The appropriate level of confidentiality protection is determined by the Classifier’s assessment of the disclosure risks, usually identified by the magnitude or type of damage caused by disclosure, such as the risk of harm, discrimination, or safety to an individual. 
+The appropriate level of confidentiality protection is determined by the Classifier’s assessment of the disclosure risks, usually identified by the magnitude or type of damage caused by disclosure, such as the risk of harm (including reputational harm), discrimination, or safety to an individual. 
 
-The appropriate level of confidentiality protection for a type of sensitive information is ultimately dictated by jurisdictional, organizational, or individual policy. HL7 HCS leverages the security label models from foundational standards as diagrammed at a high level below and available in detail [here](hcs-detail.png).
-
+The appropriate level of confidentiality protection for a type of sensitive information is  dictated by jurisdictional, organizational, or individual policy. HL7 HCS leverages the security label models from foundational standards as diagrammed at a high level below and available in detail [here](hcs-detail.png).
 
 ![HCS](hcs.png)
 <br clear="all" />
