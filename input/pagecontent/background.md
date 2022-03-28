@@ -146,3 +146,21 @@ Receiver requests Resource with security labels.
 Sender sends Receiver the labeled Resource.
 
 Receiver consumes labeled Resource and persists associated security labels.
+
+
+#### EHR uses Security Labeling Service as a Utility
+##### Assumption
+- The EHR has established a trust relation with a SLS provider that enables the EHR to access the SLS API.
+- The EHR has implemented the integration logic required to connect with the SLS API and to incorporate security labeling into the EHR workflows compliant with policies and requirements.
+- The SLS API recognizes and supports the security labeling policies applicable the data in custody of the EHR.
+- If the EHR operations in multiple jurisdictions the SLS API allows the EHR  to specify the applicable jurisdictions (that determine the security labeling policies) for a given resource of bundle.
+  
+##### Pre-Condition
+The EHR determines the jurisdiction/context applicable to the resource/bundle.
+
+##### Post-Condition
+Resource/bundle, labeled by the SLS, is incorporated back in the EHR workflow.
+
+##### Actors & Actions
+- Triggered by local workflow events, the EHR system makes an API call to the SLS specifying the resource/bundle that needs to be labeled, alongside, context attributes that could include a range of additional information including jurisdictional, policy, or workflow context.
+- Considering all the applicable policies and based on the context attributes, the SLS determine the labels and returns a labeled version of the resource/bundle.
