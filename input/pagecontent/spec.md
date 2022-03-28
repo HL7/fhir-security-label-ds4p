@@ -12,12 +12,11 @@ Furthermore, the following extensions are defined to enable fine-grained labelin
 The concept of inline security labels and the corresponding extensions are defined in a [separate page](inline.html).
 
 #### `display` Extension
-The [`display` extension](StructureDefinition-extension-display.html) is based on the [`Annotation` Data Type](https://www.hl7.org/fhir/datatypes.html#Annotation), which is text note that also contains information about who made the statement and when.
+The [`display` extension](StructureDefinition-extension-display.html) is based on the [`Annotation` Data Type](https://www.hl7.org/fhir/datatypes.html#Annotation) to record information about who made the statement and when. (Note that the `author` and `time` attributes in this data structure refer to the author and time for the display marking and should not be confused with the author of the Resource itself.)
 
-This extension SHOULD be used in the context of `Resource.meta` when codes from the [`PrivacyMark`](ValueSet-valueset-cui-mark.html) or [`SecurityLabelMark`](ValueSet-valueset-security-label-mark.html) value sets, e.g., CUI or COPYMark codes, are used on the Resource which indicate that certain information is to be rendered to end users. The `PrivacyMark` or `SecurityLabelMark` code definitions include the information to be displayed. The display extension supports inclusion of the Annotation’s author and contact, and markdown for how the information is to be displayed.
+This extension SHOULD be used in the context of `Resource.meta` when codes from the [`PrivacyMark`](ValueSet-valueset-cui-mark.html) or [`SecurityLabelMark`](ValueSet-valueset-security-label-mark.html) value sets (e.g., `CUI` or `COPYMark`) are used on the Resource to indicate that certain information is to be rendered to end users. The `PrivacyMark` or `SecurityLabelMark` code definitions include the information to be displayed. The display extension supports inclusion of the Annotation’s author and contact, and markdown for how the information is to be displayed.
 
 Policies SHALL describe the details and conditions for where and in what context these markings must or must not be displayed; for example, whether and how the markings should be rendered in summary forms or condensed displays.
-
 
 The ability to convey renderable `PrivacyMark` or `SecurityLabelMark` security labels, including the author and the markdown role may be required by classification policies within a domain.
 
