@@ -1,6 +1,6 @@
 ### Extensions Summary
 The following extensions are defined by this IG:
-- The [`display` extension](StructureDefinition-extension-display.html) to require the consumer to display a specific mark on any rendering of the resource in print or electronic user interfaces.
+- The [`display` extension](StructureDefinition-extension-display.html) to require the consumer to display a specific mark when rendering the resource content in print or electronic user interfaces.
 - The [`sec-label-basis` extension](StructureDefinition-extension-sec-label-basis.html) which enables specifying the policy or regulation based on which a label has been assigned.
 - The [`sec-label-related-artifact` extension](StructureDefinition-extension-sec-label-related-artifact.html) which enables recording a pointer to an artifact related to the label, particularly, a consent directive based on which the label has been assigned, or a provenance resource which further backs up the integrity label.
 - The [`sec-label-classifier`](StructureDefinition-extension-sec-label-classifier.html) extension which enables recording the entity that has assigned or updated the label.
