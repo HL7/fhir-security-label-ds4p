@@ -84,7 +84,7 @@ Although the HL7 standards for security labeling is quite thorough and defines a
 Sender has implemented Security Labeling Service, including: 
 
 - creating a discoverable/shareable Security Labeling Capability Statement, including:
-    - listing the security label tags required to convey each applicable policy using the `sec-label-basis` extension.
+    - listing the security label tags required to convey each applicable policy used by the `sec-label-basis` extension.
     - indicating that the Sender supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions, and
     - posting the discoverable Security Labeling Capability Statements for each supported policy.
 
@@ -119,7 +119,7 @@ Sender returns requested Resources with applicable security labels.
 Receiver has implemented Security Labeling and Privacy-Preserving Authorization Services, including: 
 
 - creating a discoverable/shareable Security Labeling Capability Statement: 
-    - listing the security label tags required to convey each applicable policy using the `sec-label-basis` extension.
+    - listing the security label tags required to convey each applicable policy used by `sec-label-basis` extension.
     - indicating that the Receiver supports `display`, `sec-label-classifier`, and `sec-label-related-artifact` extensions.
     - posting the discoverable Security Labeling Capability Statements for each supported policy.
 - implementing the capabilities required for consuming security labels and enforcing all the policies implied by them at both the Resource- and Bundle-level ([High Water Mark](glossary.html#hwm)).
