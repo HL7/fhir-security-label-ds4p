@@ -112,14 +112,14 @@ The following HL7 Confidentiality Code criteria are intended to meet a healthcar
 
 The descriptions of Confidentiality Codes are based on variance from “normative” level of protection as a metric for differentiating the total order hierarchical demarcations for this multi-level security model.
 
-This results in the following relationships, which form a hierarchy (or total order) in which _Very Restricted_ is the parent and each lower child _is-a_ lesser protection level than its predecessor with _Unrestricted_ being the lowest protection level:
+This results in the following hierarchy from high to low (a _total order_): _Very Restricted_ (`V`), _Restricted_ (`R`), _Normal_ (`N`), _Moderate_ (`M`), _Low_ (`L`), and _Unrestricted_ (`U`), where _Very Restricted_ is the parent, and each subsequent label _is-a_ lesser protection level than its predecessor with _Unrestricted_ being the lowest protection level:
 
--   _Unrestricted_ (`U`) is less protective than `V`, `R`, `N`, `M`, and `L`, and is the lowest protection levels.
--   _Low_ (`L`) is less protective than `V`, `R`, `N`, and `M`, and subsumes `U`.
--   _Moderate_ (`M`) is less protective than `V`, `R`, and `N`, and subsumes all other protection levels, i.e. `L` and `U`.
--   _Normal_ (`N`) is less protective than `V` and `R`, and subsumes all other protection levels, i.e. `M`, `L`, and `U`.
--   _Restricted_ (`R`) is less protective than `V`, and subsumes all other protection levels, i.e. `N`, `M`, `L`, and `U`.
--   _Very Restricted_ (`V`) is the highest protection level and subsumes all other protection levels, i.e. `R`, `N`, `M`, `L`, and `U`.
+-   _Unrestricted_ (`U`) is the lowest protection level, less protective than `V`, `R`, `N`, `M`, and `L`.
+-   _Low_ (`L`) is less protective than `V`, `R`, `N`, and `M`, but more protective than `U`.
+-   _Moderate_ (`M`) is less protective than `V`, `R`, and `N`, but more protective than  `L` and `U`.
+-   _Normal_ (`N`) is less protective than `V` and `R`, but more protective than `M`, `L`, and `U`.
+-   _Restricted_ (`R`) is less protective than `V`, but more protective than `N`, `M`, `L`, and `U`.
+-   _Very Restricted_ (`V`) is the highest protection level, more protective than `R`, `N`, `M`, `L`, and `U`.
 
 #### Step 3: Determine the Security Control Tags indicated by the Security Categories
 This is to convey the handling instructions or “caveats” to which senders and receivers must comply to access information labeled with specific Security Category tags (e.g., sensitivity tags). This security label includes `0..*` Security Control Tags, each of which may have `1..*` values.
