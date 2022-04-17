@@ -9,6 +9,8 @@ Security labeling is used for enforcing more than just restrictions around sensi
 
 A common concern about implementing security labels is that data segmentation may result in incomplete medical records due to restricting access to sensitive health information. While data segmentation is only one of the applications of security labeling, this concern is addressed by ensuring that data segmentation is in compliance with privacy laws and regulations and appropriate mechanisms are provided for practitioners to access any information that is needed in matters of patient safety. Security labels can often facilitate such risk-mitigating mechanisms by providing more insight about the health information in the form of security-related metadata. For example, sensitive information withheld from a practitioner can be used by a Clinical Decision Support Systems (CDS) to alert the practitioner about potential patient safety issues. 
 
+This specification is a common platform standard that must be adapted to particular use cases. Some particular use cases are common or important enough to be described as a part of the specification itself. These are published as groups of Structure Definitions (profiles or extensions), which are often found in implementation guides, along with Value Sets and examples.
+
 ### Security Labeling FAQ
 
 #### Information Blocking
