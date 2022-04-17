@@ -1,3 +1,4 @@
+(Note that the details of capability statements, audit profiles, and the ability to programmatically verify security labeling capabilities based on the capability statement are roadmap item for this IG and have not been fully addressed in this version.)
 ### Sender Security Labeling Capability
 #### Assumption
 Sender has implemented Security Labeling Service, including: 
