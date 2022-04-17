@@ -229,6 +229,11 @@
         <generation value="markdown"/>
       </page>
       <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="concept.html"/>
         <title value="Security Labeling Conceptual Structure"/>
         <generation value="markdown"/>
@@ -261,7 +266,7 @@
       <page>
         <nameUrl value="changes.html"/>
         <title value="IG Change History"/>
-        <generation value="html"/>
+        <generation value="markdown"/>
       </page>
     </page>
     <!-- copyright year is a mandatory parameter -->
