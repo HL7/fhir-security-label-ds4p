@@ -42,18 +42,20 @@ These aspects are valued as "Tags" in the Security Category portion of a securit
 The current HCS-conformant Security Category [Tag Set Names](glossary.html#tag-set-name) are: Sensitivity, Policy, Compartment, Integrity, and Provenance. These value sets are listed in the [Detailed Specification Value Sets Summary](spec.html#value-sets-summary).
 
 ##### Assigning Sensitivity Tag `0..*`
+Information Sensitivity is the characteristic of an IT resource which implies its value or importance and may include its vulnerability [[ISO 7498-2]](https://www.iso.org/standard/14256.html). This label captures privacy metadata for information perceived as undesirable to share (HL7 Healthcare Classification System).
 
 Sensitivity is a key Security Category Tag Set. Along with any relevant policy, information sensitivity is a strong determinant of the required level of confidentiality protection.
 
 If the sensitive information increases the risk of subjecting the information target (i.e., a patient) to stigmatization or discrimination (which might in turn deter seeking treatment or other services), then, the need to protect the confidentiality of that information is more stringent than the “normal,” and therefore, the confidentiality protections will be heightened beyond the “normal.” 
 
-In the US, the norm of confidentiality protections under HIPAA are the baseline policy. Privacy laws that preempt HIPAA by offering more stringent protections which require heightened levels of confidentiality protection are assigned Security Labels with more restrictive Confidentiality Tag, i.e., `R` (restricted). For example, some state laws related to adolescent health or an individual’s HIV-status.
+ 
+**Examples from the US:**
+
+In the US, the norm of confidentiality protections under HIPAA are the baseline policy. Privacy laws that preempt HIPAA by offering more stringent protections and heightened levels of confidentiality protection are assigned Security Labels with more restrictive Confidentiality Tag, i.e., `R` (restricted), for example, some state laws related to adolescent health or an individual’s HIV-status.
 
 In the US, information governed by privacy laws, which do not preempt HIPAA, such as protections under FTC, Workers Compensation, or Gramm-Leach-Bliley Act, will be assigned the Confidentiality Tag `M` (moderate).
 
 Information governed by policies addressing ad hoc, extremely sensitive information, such as victim of abuse or a legal hold, are typically assigned `V` (very restricted) by privacy officials.
-
-Information Sensitivity is the characteristic of an IT resource which implies its value or importance and may include its vulnerability (ISO 7492-2). This label captures privacy metadata for information perceived as undesirable to share (HL7 Healthcare Classification System).
 
 Sensitive information is data that must be protected from unauthorized access and disclosure to safeguard the privacy or security of an individual or organization. 
 
