@@ -79,14 +79,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/valueset-integrity"/>
-      </reference>
-      <name value="Value set definition for Integrity"/>
-      <description value="Security label metadata that 'segments' an IT resource by conveying the completeness, veracity, reliability, trustworthiness, and provenance of an IT resource."/>
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/valueset-trust"/>
       </reference>
       <name value="Value set definition for Trust"/>
