@@ -63,14 +63,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/valueset-privacy-policy"/>
-      </reference>
-      <name value="Value set definition for Privacy Policy"/>
-      <description value="Security label metadata that 'segments' an IT resource by conveying a mandate, obligation, requirement, rule, or expectation relating to its privacy."/>
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/valueset-security-authorization"/>
       </reference>
       <name value="Value set definition for Security Authorization"/>
