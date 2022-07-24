@@ -79,7 +79,7 @@ Type of security metadata observation made about the category of an IT resource 
 
 |Tag Set|Card. |  Description | Example Tags | 
 |-------|------|-------------|--------------|
-| [Policy](https://terminology.hl7.org/ValueSet-v3-ActPolicyType.html)*|`0..1`| Security label metadata that segments an IT resource by conveying a mandate, obligation, requirement, rule, or expectation relating to its privacy.|  |
+| [Policy](https://terminology.hl7.org/ValueSet-v3-ActPolicyType.html)|`0..1`| Security label metadata that segments an IT resource by conveying a mandate, obligation, requirement, rule, or expectation relating to its privacy.|  |
 | [Sensitivity](https://terminology.hl7.org/ValueSet-v3-InformationSensitivityPolicy.html) |`0..*`| Security label metadata that segments an IT resource by categorizing the value, importance, and vulnerability of an IT resource perceived as undesirable to share.| `STD`, `HIV`, `SUD`  |
 | [Compartment](https://terminology.hl7.org/ValueSet-v3-Compartment.html) |`0..*`| Security label metadata that segments an IT resource by indicating that access and use is restricted to members of a defined community or project.| Care Team, Research Project  |
 | [Integrity](https://terminology.hl7.org/ValueSet-v3-SecurityIntegrityObservationValue.html)*  |`0..*`| Security label metadata that segments an IT resource by conveying the completeness, veracity, reliability, trustworthiness, and provenance of an IT resource.| Anonymized,  Digitally signed  |

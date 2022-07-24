@@ -42,7 +42,7 @@
         ],
         "binding": {
           "strength": "example",
-          "valueSet": "http://hl7.org/fhir/uv/security-label-ds4p/ValueSet/valueset-privacy-policy"
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-ActPolicyType"
         }
       }
     ]
