@@ -84,7 +84,7 @@ Type of security metadata observation made about the category of an IT resource 
 | [Compartment](https://terminology.hl7.org/ValueSet-v3-Compartment.html) |`0..*`| Security label metadata that segments an IT resource by indicating that access and use is restricted to members of a defined community or project.| Care Team, Research Project  |
 | [Integrity](https://terminology.hl7.org/ValueSet-v3-SecurityIntegrityObservationValue.html)  |`0..*`| Security label metadata that segments an IT resource by conveying the completeness, veracity, reliability, trustworthiness, and provenance of an IT resource.| Anonymized,  Digitally signed  |
 | [Provenance](https://terminology.hl7.org/ValueSet-v3-SecurityIntegrityProvenanceObservationValue.html) |`0..*`| Security label metadata that segments an IT resource by conveying the provenance of the IT resource's asserted or reported source.| Patient reported, Clinician asserted  |
-| [Trust](https://terminology.hl7.org/ValueSet-v3-SecurityTrustObservationValue.html)*  |`0..*`| Security label metadata that segments an IT resource by conveying the basis for trusting the source.| Trust Accreditation, Trust Agreement  |
+| [Trust](https://terminology.hl7.org/ValueSet-v3-SecurityTrustObservationValue.html)  |`0..*`| Security label metadata that segments an IT resource by conveying the basis for trusting the source.| Trust Accreditation, Trust Agreement  |
 
 (*) Value-sets defined by this IG.
 

@@ -71,14 +71,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/valueset-trust"/>
-      </reference>
-      <name value="Value set definition for Trust"/>
-      <description value="Security label metadata that 'segments' an IT resource by conveying the basis for trusting the source."/>
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/extension-has-inline-sec-label"/>
       </reference>
       <name value="Structure definition for the has-inline-sec-label extension"/>
