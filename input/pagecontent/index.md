@@ -4,7 +4,7 @@ The syntactic and semantic rules of the [HL7 Healthcare Privacy and Security Cla
 
 From the outset, FHIR has supported security labels with a dedicated optional element ([`Resource.meta.security`](https://build.fhir.org/resource-definitions.html#Meta.security)) that can appear on any resource (regardless of resource type), therefore, enabling recording and processing of security labels in a unified manner. 
 ### Terminology Caveats
-In FHIR, a security label is defined as a simple value of type [`Coding`](https://build.fhir.org/datatypes.html#Coding) which is composed of (among other details), a _code_ and the identifier of the _system_ in which the code is defined, together with a human readable _display_ name for the _code_. For example, the following data structure represents a FHIR security label for _restricted_ confidentiality as defined by HL7 terminology: 
+In FHIR, a security label is defined as a simple value of type [`Coding`](https://build.fhir.org/datatypes.html#Coding) which is composed of (among other details), a `code` and the identifier of the `system` in which the code is defined, together with a human readable `display` name for the `code`. For example, the following data structure represents a FHIR security label for _restricted_ confidentiality as defined by HL7 terminology: 
 
 ```json
 { 
@@ -14,7 +14,7 @@ In FHIR, a security label is defined as a simple value of type [`Coding`](https:
  }
 ```
 
-The HCS, however, defines Security Label as a different, more complex structure based on the concept of [Named Tag Set](glossary.html#named-tag-set). As implied by the title, a _Named Tag Set_ is a collection of _Tags_ together with a _Tag Set Name_. Each _Tag_ is a simple code and the _Tag Set Name_ assigns a name to the collection. Conceptually, this is equivalent to a JSON object similar to the following (note that this is not valid FHIR JSON and is presented only for conceptual clarity):
+The HCS, however, defines Security Label as a different, more complex structure based on the concept of [Named Tag Set](glossary.html#named-tag-set). As implied by the title, a _Named Tag Set_ is a collection of _Tags_ together with a _Tag Set Name_. Each _Tag_ is a simple code and the _Tag Set Name_ assigns a name to the collection. Conceptually, this is equivalent to the following abstract object (note that this is not valid FHIR JSON and is presented only for conceptual clarity):
 ```json
 { 
   "TagSetName" : "some name",
@@ -22,7 +22,7 @@ The HCS, however, defines Security Label as a different, more complex structure 
  }
 ```
 
-In HCS, A Security Label is defined as a composite structure of four _Named Tag Sets_ that record  _security classification_, _security category_, _security control_ (also known as _handling caveat_), and _security trust_. Conceptually, this would be equivalent to a JSON object similar to the following (note that this is not valid FHIR JSON and is presented only for conceptual clarity):
+In HCS, A Security Label is defined as a composite structure of four _Named Tag Sets_ that record  _security classification_, _security category_, _security control_ (also known as _handling caveat_), and _security trust_. Conceptually, this would be equivalent to the following abstract object (note that this is not valid FHIR JSON and is presented only for conceptual clarity):
 
 ```json
 [ 
@@ -60,8 +60,6 @@ The [FHIR Security Labels Module](http://hl7.org/fhir/security-labels.html) defi
 - Requiring that a _privacy mark_ be displayed to end users, and
 
 - Granular data segmentation at the sub-resource level, known as [inline labeling](inline.html).
-
-For example, defining the [`sec-label-basis` extension](StructureDefinition-extension-sec-label-basis.html) in this IG enables an implementer to group relevant security labels in `Resource.meta.security` into an HCS-conformant Security Labels, with  each applicable policy represented as a separate named tag set. For example, when the information in a resource is governed by both US _42 CFR Part 2_ for _substance use disorder_ confidentiality as well as _CFR 32 Part 2002_ for _Controlled Unclassified Information (CUI)_, the label assigned based on each of these policies will be distinguished using an instance of the [`sec-label-basis` extension](StructureDefinition-extension-sec-label-basis.html).
 
 ### Trust and Enforcement
 The [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) points out that security labels are intended to convey a policy to which participants in an exchange ecosystem are bound by a [trust contract](glossary.html#trust-contract):
