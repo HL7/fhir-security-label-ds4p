@@ -53,7 +53,7 @@ Confidentiality labels are assigned based on the sensitivity of the information 
 
 
 **Examples from the US:**
-In the US, the norm of confidentiality protections under HIPAA are the baseline policy. Privacy laws that preempt HIPAA by offering more stringent protections and heightened levels of confidentiality protection are assigned Security Labels with more restrictive Confidentiality Tag, i.e., `R` (restricted), for example, some state laws related to adolescent health or an individual’s HIV-status.
+In the US, the norm of confidentiality protections under HIPAA are the baseline policy. Privacy laws that preempt HIPAA by offering more stringent protections and heightened levels of confidentiality protection are assigned Security Labels with more restrictive Confidentiality Tag, i.e., `R` (restricted), for example, some state laws related to adolescent health or an individual’s HIV status.
 
 In the US, information governed by privacy laws, which do not preempt HIPAA, such as protections under FTC, Workers Compensation, or Gramm-Leach-Bliley Act, will be assigned the Confidentiality Tag `M` (moderate).
 
