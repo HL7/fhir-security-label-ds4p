@@ -4,47 +4,7 @@ The syntactic and semantic rules of the [HL7 Healthcare Privacy and Security Cla
 
 From the outset, FHIR has supported security labels with a dedicated optional element ([`Resource.meta.security`](https://build.fhir.org/resource-definitions.html#Meta.security)) that can appear on any resource (regardless of resource type), therefore, enabling recording and processing of security labels in a unified manner. 
 ### Terminology Caveats
-In FHIR, a security label is defined as a simple value of type [`Coding`](https://build.fhir.org/datatypes.html#Coding) which is composed of (among other details), a `code` and the identifier of the `system` in which the code is defined, together with a human readable `display` name for the `code`. For example, the following data structure represents a FHIR security label for _restricted_ confidentiality as defined by HL7 terminology: 
-
-```json
-{ 
-  "system" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
-  "code" : "R",
-  "display" : "restricted"
- }
-```
-
-The HCS, however, defines Security Label as a different, more complex structure based on the concept of [Named Tag Set](glossary.html#named-tag-set). As implied by the title, a _Named Tag Set_ is a collection of _Tags_ together with a _Tag Set Name_. Each _Tag_ is a simple code and the _Tag Set Name_ assigns a name to the collection. Conceptually, this is equivalent to the following abstract object (note that this is not valid FHIR JSON and is presented only for conceptual clarity):
-```json
-{ 
-  "TagSetName" : "some name",
-  "Tags" : ["tag 1", "tag 2", "tag 3"],
- }
-```
-
-In HCS, A Security Label is defined as a composite structure of four _Named Tag Sets_ that record  _security classification_, _security category_, _security control_ (also known as _handling caveat_), and _security trust_. Conceptually, this would be equivalent to the following abstract object (note that this is not valid FHIR JSON and is presented only for conceptual clarity):
-
-```json
-[ 
-  {
-    "TagSetName" : "Security Classification",
-    "Tags" : ["..."]
-  },
-  {
-    "TagSetName" : "Security Category",
-    "Tags" : ["..."]
-  },
-  {
-    "TagSetName" : "Security Control",
-    "Tags" : ["..."]
-  },
-  {
-    "TagSetName" : "Security Trust",
-    "Tags" : ["..."]
-  }
-]
-```
-As one can immediately notice, `TagSetName` is similar (although not quite conceptually identical) to the `system` attribute in a `Coding` data structure for a FHIR security label. Part of the contribution of this IG is to provide guidance on how to map the abstract structures defined by the HCS to FHIR. This is further discussed in detail in the section on [Security Labeling Conceptual Structure](concept.html), but it is important to bear in mind that the term "security label" refers to different concepts in HCS and in FHIR.
+FHIR defines a security label as a data structure of type [`Coding`](https://build.fhir.org/datatypes.html#Coding) which is composed of (among other details), a `code`, the identifier of the `system` in which the code is defined, and a human readable `display` name. The HCS, however, defines Security Label as a different, more complex structure based on the concept of [Named Tag Set](glossary.html#named-tag-set). This is further discussed in detail in the section on [Security Labeling Conceptual Structure](concept.html), but it is important to bear in mind that the term "security label" refers to different concepts in HCS and in FHIR. Part of the contribution of this IG is to provide guidance on how to map the abstract structures defined by the HCS to FHIR. 
 
 Another terminology caveat is the difference between _Tags_ in HCS and in FHIR. In FHIR, `meta.tag` is a data structure for capturing general metadata and observations about a resource and is a collection of objects of type [`Coding`](https://build.fhir.org/datatypes.html#Coding). _Tags_ in HCS, however, are opaque values (equivalent to the `code` in a `Coding` data structure).
 
