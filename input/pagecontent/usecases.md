@@ -1,4 +1,10 @@
-(Note that the details of capability statements, audit profiles, and the ability to programmatically verify security labeling capabilities based on the capability statement are roadmap item for this IG and have not been fully addressed in this version.)
+Note that the details of capability statements, audit profiles, and the ability to programmatically verify security labeling capabilities based on the capability statement are roadmap items for this IG and have not been fully addressed in this version.
+
+### Actors
+- Sender: an entity or system in custody of health information, such as an EHR or Personal Health Record (PHR) system, that initiates or responds to a request to share health information with a Receiver.
+
+- Receiver: an entity or system, such as an EHR or PHR that initiates a request to receive, health information, or is the intended recipient of health information.
+
 ### Sender Security Labeling Capability
 #### Assumption
 Sender has implemented Security Labeling Service, including: 
@@ -23,7 +29,7 @@ Sender is able to audit Receiver enforcement of disclosed labeled Resource.
 
 Sender is able to determine whether the Receiver reclassified disclosed labeled Resource upon further disclosure by monitoring Resource Provenance chain.
 
-#### Actors & Actions
+#### Actions
 
 Sender receives Receiver Client Registration request, which includes Receiver Capability Statement.
 
@@ -54,7 +60,7 @@ Receiver is able to audit downstream Recipient enforcement of disclosed Resource
 
 Receiver is able to determine whether a downstream Recipient reclassified disclosed Resource security labels by monitoring Resource Provenance chain.
 
-#### Actors & Actions
+#### Actions
 Receiver discovers and retrieves prospective Sender Security Labeling Capability Statement.
 
 (Happy Path) Receiver compares Sender Security Labeling Capability Statements with Receiver Security Labeling Capability Statements, and determines that it is able to support security labels for applicable policies.
