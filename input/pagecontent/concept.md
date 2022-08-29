@@ -6,11 +6,10 @@ In addition, there is a need for guidance and examples for how a community can d
 
 ### Security Labeling requires Classification
 
-Classification is the act or process by which information (which is determined to be sensitive or non-sensitive per applicable policy) is assigned a level of confidentiality protection.
+Classification is the act or process by which information is assigned a level of confidentiality protection. Classification is conducted by a _classifier_, which controls the classified information and has the authority to determine the appropriate level of protection. 
+Note that there may be more than one classifier during the lifetime of the information since custodians of the information are sometimes authorized by policy to change the classification. Not every custodian of information is a classifier, however, and some custodians do not have the authority to change the classification. Downstream classifiers may be required by policies to retain security labels assigned by previous classifiers.
 
-Classification is conducted by the Classifier, which controls the classified information and determines the appropriate level of protection, i.e., the confidentiality of the information. A Classifier may be required to retain the Security Label assigned by a previous Classifier per policy or trading partner agreement.
-
-The appropriate level of confidentiality protection is determined by the Classifier’s assessment of the disclosure risks, usually identified by the magnitude or type of damage caused by disclosure, such as the risk of harm (including reputational harm), discrimination, or safety to an individual. 
+The appropriate level of confidentiality protection is determined by the classifier’s assessment of the disclosure risks, usually identified by the magnitude or type of damage caused by disclosure, such as the risk of harm (including reputational harm), discrimination, or safety to an individual. 
 
 The appropriate level of confidentiality protection for a type of sensitive information is  dictated by jurisdictional, organizational, or individual policy. HL7 HCS leverages the security label models from foundational standards as diagrammed at a high level below and available in detail [here](hcs-detail.png).
 
