@@ -57,7 +57,7 @@ In the US, the norm of confidentiality protections under HIPAA are the baseline 
 
 In the US, information governed by privacy laws, which do not preempt HIPAA, such as protections under FTC, Workers Compensation, or Gramm-Leach-Bliley Act, will be assigned the Confidentiality Tag `M` (moderate).
 
-Information governed by policies addressing ad hoc, extremely sensitive information, such as victim of abuse or a legal hold, are typically assigned `V` (very restricted) by privacy officials.
+Information governed by policies addressing ad hoc, extremely sensitive information, such as victim of abuse or a legal hold, are typically assigned `V` (very restricted) by the appropriate classifier (e.g., privacy officials).
 
 Sensitive information is data that must be protected from unauthorized access and disclosure to safeguard the privacy or security of an individual or organization. 
 
