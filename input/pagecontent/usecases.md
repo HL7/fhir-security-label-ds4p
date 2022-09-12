@@ -97,6 +97,6 @@ The EHR determines the jurisdiction/context applicable to the resource/bundle.
 #### Post-Condition
 Resource/bundle, labeled by the SLS, is incorporated back in the EHR workflow.
 
-#### Actors & Actions
+#### Actions
 - Triggered by local workflow events, the EHR system makes an API call to the SLS specifying the resource/bundle that needs to be labeled, alongside, context attributes that could include a range of additional information including jurisdictional, policy, or workflow context.
 - Considering all the applicable policies and based on the context attributes, the SLS determine the labels and returns a labeled version of the resource/bundle.
