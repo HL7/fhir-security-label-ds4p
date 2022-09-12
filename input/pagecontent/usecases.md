@@ -5,7 +5,7 @@ Note that the details of capability statements, audit profiles, and the ability 
 
 - Receiver: an entity or system, such as an EHR or PHR that initiates a request to receive, health information, or is the intended recipient of health information.
 
-### Sender Security Labeling Capability
+### Sender-Side Enforcement
 #### Assumption
 Sender has implemented Security Labeling Service, including: 
 
@@ -35,11 +35,18 @@ Sender receives Receiver Client Registration request, which includes Receiver Ca
 
 Sender inspects Receiver's Security Labeling Capability Statements to determine whether Receiver Capabilities exceed, match, or are less than Sender Security Labeling Capabilities.
 
-(Happy Path) Receiver Security Labeling Capabilities matches Sender Security Labeling Capabilities.
+*Happy Path:* 
 
-Sender returns requested Resources with applicable security labels.
+- Receiver's Security Labeling Capabilities match Sender Security Labeling Capabilities.
 
-### Receiver Security Labeling Capability
+- Sender returns requested Resources with applicable security labels.
+
+*Unhappy Path:*
+- Sender determines that the Receiver's Security Labeling Capabilities are not aligned and declines the request. 
+- The Sender or Receiver may invoke a trust negotiation to resolve the incompatibilities for future interactions.
+ 
+
+### Receiver-Side Enforcement 
 
 #### Assumption
 Receiver has implemented Security Labeling and Privacy-Preserving Authorization Services, including: 
@@ -63,18 +70,21 @@ Receiver is able to determine whether a downstream Recipient reclassified disclo
 #### Actions
 Receiver discovers and retrieves prospective Sender Security Labeling Capability Statement.
 
-(Happy Path) Receiver compares Sender Security Labeling Capability Statements with Receiver Security Labeling Capability Statements, and determines that it is able to support security labels for applicable policies.
+*Happy Path*: 
+- Receiver compares Sender Security Labeling Capability Statements with its own and determines that it is able to support security labels for applicable policies.
 
-Receiver requests Client Registration, thereby agreeing to the Sender Security Labeling Capability Statement.
+- Receiver requests Client Registration, thereby agreeing to the Sender Security Labeling Capability Statement.
 
-Receiver requests Resource with security labels.
+- Receiver requests Resource with security labels.
 
-Sender sends Receiver the labeled Resource.
+- Sender sends Receiver the labeled Resource.
 
-Receiver consumes labeled Resource and persists associated security labels.
+- Receiver consumes labeled Resource and persists associated security labels.
 
-
-### EHR uses Security Labeling Service as a Utility
+*Unhappy Path:*
+- Receiver determines that its Security Labeling Capabilities are not aligned with the Sender's and avoids requesting information from the Sender. 
+- The Sender or Receiver may invoke a trust negotiation to resolve the incompatibilities for future interactions.
+### Security Labeling Service as a Utility
 #### Assumption
 - The EHR has established a trust relation with a SLS provider that enables the EHR to access the SLS API.
 - The EHR has implemented the integration logic required to connect with the SLS API and to incorporate security labeling into the EHR workflows compliant with policies and requirements.
