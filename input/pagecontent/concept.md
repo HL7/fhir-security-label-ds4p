@@ -100,13 +100,19 @@ A policy may require that the provenance of the information be accessible to end
 #### Step 2: Determine the Security Classification Tag indicated by the Security Categories
 
 ##### Assigning the Confidentiality Tag `1..1`
-Confidentiality labels are assigned based on the sensitivity of the information contained in the resources. If the sensitive information increases the risk of subjecting the information target (i.e., a patient) to stigmatization or discrimination (which might in turn deter seeking treatment or other services), then, the need to protect the confidentiality of that information is more stringent than the “normal,” and therefore, the confidentiality protections will be heightened beyond the “normal.” 
+Confidentiality labels are assigned based on the sensitivity of the information contained in the resources. 
+If the sensitive information increases the risk of subjecting the information target (i.e., a patient) to stigmatization or discrimination (which might in turn deter seeking treatment or other services), then, 
+the need to protect the confidentiality of that information is more stringent than the “normal,” and therefore, the confidentiality protections will be heightened beyond the “normal” level. 
 
 The process of assigning confidentiality level of the information is referred to as _classification_, which is the act or process by which information is assigned a level of confidentiality protection.
 
-Classification is conducted by a _Classifier_ who controls the classified information and determines the appropriate level of protection for the information. A Classifier may be required to retain the Security Label assigned by a previous Classifier (per policy or trading partner agreement).
+Classification is conducted by a _Classifier_ who controls the classified information and has the authority to determine the appropriate level of protection. 
 
-The appropriate level of confidentiality protection is determined by the Classifier’s assessment of the disclosure risks, usually identified by the magnitude or type of damage caused by disclosure, such as the risk of harm (including reputational harm), discrimination, or safety to an individual. 
+Note that there may be more than one classifier during the lifetime of the information 
+since custodians of the information are sometimes authorized by policy to change the classification. 
+Not every custodian of information is a classifier, however, and some custodians do not have the authority to re-classify. Downstream classifiers may be required by policies to retain security labels assigned by previous classifiers.
+
+The appropriate level of confidentiality protection is determined by the classifier’s assessment of the disclosure risks, usually identified by the magnitude or type of damage caused by disclosure, such as the risk of harm (including reputational harm), discrimination, or safety to an individual. 
 
 Ultimately, the appropriate level of confidentiality protection for a type of sensitive information is  dictated by jurisdictional, organizational, or individual policy. 
 
