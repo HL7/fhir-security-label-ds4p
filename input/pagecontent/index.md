@@ -84,6 +84,7 @@ The main sections of this IG are:
     - [Security Labeling FAQ](background.html#security-labeling-faq)
     - [Use Cases](usecases.html)
     - [Security Labeling Conceptual Structure](concept.html)
+    - [Implementation Notes](implementation.html)
 - Specification
     - [Detailed Specification](spec.html)
     - [Extensions Summary](spec.html#extensions-summary)
@@ -103,4 +104,5 @@ The following sections are informative:
 - [Glossary](glossary.html)
 - [Security Labeling FAQ](background.html#security-labeling-faq)
 - [Use Cases](usecases.html)
+- [Implementation Notes](implementation.html)
 - [Road Map](index.html#fhir-ds4p-ig-road-map)
