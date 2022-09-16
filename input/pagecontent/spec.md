@@ -36,22 +36,21 @@ In order to address this in the FHIR DS4P IG, we propose the use of `extension-s
  
 #### `sec-label-classifier` Extension
 
-The [`sec-label-classifier` extension](StructureDefinition-extension-sec-label-classifier.html) is based on [`Contributor` MetaData Type](http://build.fhir.org/metadatatypes.html#contributor).
+The [`sec-label-classifier` extension](StructureDefinition-extension-sec-label-classifier.html) is a reference to the classifying entity (e.g., individual or organization).
 
-This extension SHOULD be used on a security label (i.e., in the context of `Resource.meta.security`) so that the type, name, and contact information for the contributor of a security label can be identified and retrieved. 
+The ability to convey the authority, organization, or agent name, contact, and classification role may be required by classification policies within a domain.
 
-For example, the security label codes may originally be assigned by a classifier authority or agent.
+This extension SHOULD be used on a security label (i.e., in the context of `Resource.meta.security`) so that the entity that has assigned the security label can be identified and retrieved. 
 
-Later, the security label code may be reclassified with a different code when the governing policy of a Resource changes.  Use cases for changing security labels include:
+For example, the security label codes may originally be assigned by a classifier authority or agent, then later, the security label code may be reclassified with a different code when the governing policy of a Resource changes. Use cases for changing security labels include:
 
-Permitting more or less restrictive confidentiality level protection, e.g., in the US, from _normal_ under HIPAA to _moderate_ once released via an Individual Right of Access Directive. For example, if a patient discloses a HIPAA governed Resource to a non-HIPAA covered entity, that Resource is no longer protected at the level of HIPAA, which is the “norm” for protection in the US. The patient disclosed information would be protected under laws that are different from the norm, and are typically less protective. So, the confidentiality label would be downgraded from _normal_ to _moderate_. The entity downgrading the patient disclosed information may or may not be the patient. It could be done by the disclosing Covered Entity or a third party App based on the patient’s Right of Access Directive.
+- Permitting more or less restrictive confidentiality level protection, e.g., in the US, from _normal_ under HIPAA to _moderate_ once released via an Individual Right of Access Directive. For example, if a patient discloses a HIPAA governed Resource to a non-HIPAA covered entity, that Resource is no longer protected at the level of HIPAA, which is the “norm” for protection in the US. The patient disclosed information would be protected under laws that are different from the norm, and are typically less protective. So, the confidentiality label would be downgraded from _normal_ to _moderate_. The entity downgrading the patient disclosed information may or may not be the patient. It could be done by the disclosing Covered Entity or a third party App based on the patient’s Right of Access Directive.
 
-Different, broader, or narrower sensitivity, e.g., access may be to all substance use disorder information rather than limited to opioid use disorder information.
+- Different, broader, or narrower sensitivity, e.g., access may be to all substance use disorder information rather than limited to opioid use disorder information.
 
-Different, broader, or narrower purposes of use, e.g., from all types of research purposes to disease specific purposes.
-When information is aggregated or disaggregated, there may be a need to change classification of the resulting content Declassified, i.e., removing a security label code, e.g., when information is made public with no restrictions on access. 
+- Different, broader, or narrower purposes of use, e.g., from all types of research purposes to disease specific purposes.
 
-The ability to convey the authority or agent name, contact, and classification role may be required by classification policies within a domain.
+- When information is aggregated or disaggregated, there may be a need to change classification of the resulting content Declassified, i.e., removing a security label code, e.g., when information is made public with no restrictions on access. 
 
 #### `sec-label-related-artifact` Extension
 

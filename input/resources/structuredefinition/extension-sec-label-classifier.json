@@ -32,12 +32,12 @@
         "fixedUri": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-sec-label-classifier"
       },
       {
-        "id": "Extension.valueContributor",
-        "path": "Extension.valueContributor",
+        "id": "Extension.valueReference",
+        "path": "Extension.valueReference",
         "min": 1,
         "type": [
           {
-            "code": "Contributor"
+            "code": "Reference"
           }
         ]
       }
