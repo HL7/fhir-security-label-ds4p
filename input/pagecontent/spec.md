@@ -25,7 +25,7 @@ The [`sec-label-basis` extension](StructureDefinition-extension-sec-label-basis.
  
 For example, in the US, if a federal agency labels a Resource as _42 CFR Part 2_ information, then the Resource would have both _42 CFR Part 2_ and _Controlled Unclassified Information (CUI)_ security labels in the meta. Security labels on the resource would leverage the `sec-label-basis` extension to indicate whether the basis for the label is _42 CFR Part 2_ or _32 CFR Part 2002_ (the law behind CUI).
  
-This extension specifies the policy using a code from the [privacy policy value set](ValueSet-valueset-privacy-policy.html). Note that the strength of this binding is currently set to `example`. Use-case-specific profiles of this IG are encouraged to narrow down the values with a more strict binding to ensure a consistent understanding of codes across different providers and consumers.
+This extension specifies the policy using a code from the [privacy policy value set](https://terminology.hl7.org/ValueSet-v3-ActPolicyType.html). Note that the strength of this binding is currently set to `example`. Use-case-specific profiles of this IG are encouraged to narrow down the values with a more strict binding to ensure a consistent understanding of codes across different providers and consumers.
 Further information about the policy can be conveyed via the `sec-label-related-artifact` extension that allows more metadata including references and URLs.
 
 The need: In HCS, the key/value pairs in a Security Label are called Named Tag Sets/Tag Sets and the values are Tags.
