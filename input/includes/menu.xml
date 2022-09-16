@@ -13,6 +13,9 @@
         <a href="usecases.html">Use Cases</a>
       </li>
       <li>
+        <a href="implementation.html">Implementation Notes</a>
+      </li>
+      <li>
         <a href="concept.html">Security Labeling Conceptual Structure</a>
       </li>
     </ul>
