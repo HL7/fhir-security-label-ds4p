@@ -1,7 +1,7 @@
 
 
-- [current](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/toc.html)
-    - Editorial updates to the introduction and background material according to ballot reconciliation comments.
+- [current](http://build.fhir.org/ig/HL7/fhir-security-label-ds4p/branches/master/toc.html)
+    - Several editorial updates, new diagrams, and adjustments according to ballot reconciliation comments.
 
 - [0.3.0](http://hl7.org/fhir/uv/security-label-ds4p/2021May/toc.html)
     - Editorial updates to the introduction and background material.
