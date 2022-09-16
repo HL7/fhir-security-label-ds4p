@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "valueset-security-authorization",
-  "url": "http://hl7.org/fhir/uv/security-label-ds4p/ValueSet/valueset-security-authorization-policy",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/ValueSet/valueset-security-authorization",
   "version": "0.1.0",
   "name": "ValueSetSecurityAuthorizationPolicy",
   "title": "Security Authorization Policy ValueSet",
