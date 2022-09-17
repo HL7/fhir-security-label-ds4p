@@ -18,12 +18,12 @@ The portion (possibly all) of the ACI made available to the ADF in making a part
 **Access Control Information (ACI)**
 Any information used for access control purposes, including contextual information [[ISO 10181-3](http://www.itu.int/rec/T-REC-X.812-199511-I/en)].
 
-<!--- 
+<!--
 ### Access Control Service
 A service that provides the basic operational aspects of access control such as making access control decision information (ADI) available to access decision components and performing access control functions. The service also provides security labeling and privacy and security protection functions.The service, known as an Access Control Service (ACS), requires the following information: access policy rules, contextual information needed to interpret ADI, initiator, target, and access request ADI, security labeling rules and vocabulary, and transform rules and services.
 
 ACS generates information made available to other elements includes transformed information response to an information request as well as handling caveats. [[HL7 PASS-Security Labeling Service](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=360)].
---->
+-->
 
 
 <a name="classification"></a>
@@ -123,7 +123,7 @@ A defined scheme for the classification and handling of health care and healthca
 **IT Resource**
 Any data, information object, operation, process, service, or system capability. An IT resource that is assigned a security label is sometimes referred to as a "security object". An IT resource that is represented as a requested security object of an initiator's access request is sometimes referred to as a "target".
 
-<!---
+<!--
 Data, service or system component. [[XACML](#XACML)]
 
 The term resource embraces, e.g., information resources, processing resources, communication resources, and physical resources. [[Ford](#Ford)]
@@ -146,7 +146,7 @@ Security labels are a type of security metadata that is associated with a securi
 **Named Tag Set**
 Field containing a Tag Set Name and its associated set of security tags [[NIST FIPS PUB 188](http://www.itl.nist.gov/fipspubs/fip188.htm)].
 
-<!---
+<!--
 ### Object
 An object is an entity that contains or receives information. The objects can represent information containers (e.g., files or directories in an operating system, and/or columns, rows, tables, and views within a database management system) or objects can represent exhaustible system resources, such as printers, disk space, and central processing unit (CPU) cycles. [[ANSI RBAC](#HL7RBAC)] Synonymous with [IT resource.](#ITResourceDF). 
 
@@ -311,11 +311,11 @@ Numeric identifier associated with a set of security tags [[NIST FIPS PUB 188](h
 **Target**
 A target is a IT resource subject to access control [Ford].
 
-<!---
+<!--
 The set of decision requests, identified by definitions for resource, subject and action that a rule, policy or policy set is intended to evaluate. [[XACML](#XACML)].
 
 A target is an [IT resource](#ITResourceDF) for which an initiator seeks access.
---->
+-->
 
 <a name="target-label"></a>
 
