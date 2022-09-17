@@ -75,14 +75,18 @@ Definition aligns with ISO 7498-2: Confidentiality is the property that informat
 **Controlled Unclassified Information (CUI)** 
 CUI is information the Government creates or possesses, or that an entity creates or possesses for or on behalf of the Government, that a law, regulation, or Government-wide policy requires or permits an agency to handle using safeguarding or dissemination controls. However, CUI does not include classified information (see definition above) or information a non-executive branch entity possesses and maintains in its own systems that did not come from, or was not created or possessed by or for, an executive branch agency or an entity acting for an agency. Law, regulation, or Government-wide policy may require or permit safeguarding or dissemination controls in three ways: Requiring or permitting agencies to control or protect the information but providing no specific controls, which makes the information CUI Basic; requiring or permitting agencies to control or protect the information and providing specific controls for doing so, which makes the information CUI Specified; or requiring or permitting agencies to control the information and specifying only some of those controls, which makes the information CUI Specified, but with CUI Basic controls where the authority does not specify.
 
-### Data Segmentation
+<a name="data-segmentation"></a>
+
+**Data Segmentation**
 Process of sequestering from capture, access, or view certain data elements that are perceived by a legal entity, institution, organization or individual as being undesirable to share [GWU].
 
 <a name="dursa"></a>
+
 **Data Use and Reciprocal Support Agreement (DURSA)**
 A comprehensive, multi-party trust agreement signed by all eligible entities who wish to exchange data.
 
 <a name="hcs"></a> 
+
 **Healthcare Privacy and Security Classification System (HCS)**
 A defined scheme for the classification and handling of health care and healthcare related information.
 
