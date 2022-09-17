@@ -1,7 +1,1 @@
 == Suppressed Messages ==
-# profile validation for resources
-Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
-Validate resource against profile http://hl7.org/fhir/StructureDefinition/Observation
-Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
