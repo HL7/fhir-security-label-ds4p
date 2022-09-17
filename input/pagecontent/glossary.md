@@ -24,6 +24,8 @@ A service that provides the basic operational aspects of access control such as 
 
 ACS generates information made available to other elements includes transformed information response to an information request as well as handling caveats. [[HL7 PASS-Security Labeling Service](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=360)].
 --->
+
+
 <a name="classification"></a>
 
 **Classification**
