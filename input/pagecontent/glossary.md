@@ -29,7 +29,7 @@ ACS generates information made available to other elements includes transformed 
 <a name="classification"></a>
 
 **Classification**
-Confidential protection of data elements by segmentation into restricted and specifically controlled categories set by policies [Adapted from [ASTM E-1986](#ASTME1986)].
+Confidential protection of data elements by segmentation into restricted and specifically controlled categories set by policies [Adapted from [ASTM E1986-98(2005)](https://www.astm.org/e1986-98r05.html)].
 
 <a name="clearance"></a>
 
