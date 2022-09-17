@@ -337,7 +337,7 @@ Policy that rules the behavior of a system. The Trust Framework facilitates trus
 ### Trustmark
 Trustmarks are a visual indication that a service provider is compliant with a federation’s requirements. Trustmarks comprise a very specific subset of compliance marks. In addition to being electronically verifiable, these logos or seals are backed by rigorous third party validation, assessment, or auditing. Certification of conformance and associated trustmarks may be issued by the assessor, the federation, or a separate certifying body on behalf of the federation. The key point is that certification trustmarks result from independent 3rd- party assessments and both the assessing and the certifying organizations stand behind the certifications with their own brand name and reputation. Therefore, trustmarks serve as a reliable and high assurance means to convey compliance with federation rules [[NISTIR 8149](https://www.nist.gov/privacy-framework/nistir-8149)].
 
-**_References:_**
+**References:**
 - [GWU] Mellissa M. Goldstein, JD et al, Data Segmentation in Electronic Health Information Exchange: Policy Considerations and Analysis, George Washington University Medical Center, September 29, 2010.
 - [Ford] Warwick Ford, Computer Communications Security, Prentice Hall, ISBN 0-13-799453-2, 1994.
 - [Sandhu] Sandhu, Ravi S. (1993). "Lattice-based access control models". IEEE Computer 26 (11): 9–19. doi:10.1109/2.241422
