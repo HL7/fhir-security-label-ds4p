@@ -23,7 +23,9 @@ The SLS must often be integrated with the rest of the system workflows in order 
 Because of the tight coupling with business workflows, the details of the implementation for labeling orchestrators depend on the use case requirements and the system in which they are integrated. Some of the patterns for implementing the labeling orchestrator are discussed below. Note that most implementations may need a combination of these patterns in order to address all the requirements for their use cases. 
 
 #### Batch Orchestrator
-A batch orchestrator submits resources for labeling on an offline basis, outside of active transactions. Because this takes place in an offline workflow, it can tolerate longer processing times and asynchronous responses such as when the NLP service must be invoked. On the other hand, since the labeling is outside the context of a transaction, transaction-specific information such as the identity and attributes of client or the transaction (e.g., purpose of use) cannot be determined by this type of orchestrator, so some labels may not be able to be determined this way.
+A batch orchestrator submits resources for labeling on an offline basis, either outside of an active transactions, or in the context of an asynchronous transaction such as a bulk data export. A batch orchestrator can tolerate longer processing times and asynchronous responses, therefore, it can accommodate more computationally-heavy components such as natural language processing. 
+
+On the other hand, since the labeling may take place outside the context of a transaction, some transaction-specific information (e.g., the requester's attributes or purpose of use) may not be available at the time of labeling in which case labels that depend on such attributes would not be assignable by this type of orchestrator. 
 
 <img src="sls-batch.png" alt="Batch Orchestrator" width="60%"/>
 
