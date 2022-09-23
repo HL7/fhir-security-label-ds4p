@@ -1,15 +1,44 @@
-### Introduction
 This IG provides guidance for applying security labels in FHIR. Security labels are used in access control systems governing the collection, access, use, and disclosure of the target information to which they are assigned, as required by applicable organizational, jurisdictional, or personal policies related to privacy, security, and trust.
 
-The FHIR model has supported security labels from the start with a dedicated element on every resources (regardless of the type of resource), enabling security label processing in a unified method independent of resource type.
+The syntactic and semantic rules of the [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1 (HCS)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345) provide a conceptual framework for constructing security labels in order to convey computable and interoperable privacy, security, and trust policies. One of the goals of this IG is to provide guidance on how to map and model HCS concepts in FHIR.
 
-The syntactic and semantic rules of the [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1 (HCS)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345) specify conceptually how to construct security labels in order to convey computable and interoperable privacy, security, and trust policies within a policy domain.
+From the outset, FHIR has supported security labels with a dedicated optional element ([`Resource.meta.security`](https://build.fhir.org/resource-definitions.html#Meta.security)) that can appear on any resource (regardless of resource type), therefore, enabling recording and processing of security labels in a unified manner. 
+### Terminology Caveats
+FHIR defines a security label as a data structure of type [`Coding`](https://build.fhir.org/datatypes.html#Coding) which is composed of (among other details), a `code`, the identifier of the `system` in which the code is defined, and a human readable `display` name. The HCS, however, defines Security Label as a different, more complex structure based on the concept of [Named Tag Set](glossary.html#named-tag-set). This is further discussed in detail in the section on [Security Labeling Conceptual Structure](concept.html), but it is important to bear in mind that the term "security label" refers to different concepts in HCS and in FHIR. Part of the contribution of this IG is to provide guidance on how to map the abstract structures defined by the HCS to FHIR. 
 
-As quoted above from the [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html), the caveat that the recipient must implement and enforce policies holds for labeled content: _The intent of a security label is that the recipient of resources or bundles with security tags is obligated to enforce the handling caveats of the tags and carry the security labels forward as appropriate._
+Another terminology caveat is the difference between _Tags_ in HCS and in FHIR. In FHIR, `meta.tag` is a data structure for capturing general metadata and observations about a resource and is a collection of objects of type [`Coding`](https://build.fhir.org/datatypes.html#Coding). _Tags_ in HCS, however, are opaque values (equivalent to the `code` in a `Coding` data structure).
 
-These policies represented by security labels may be stipulated by laws and/or agreed to in contracts, such as [Data Use Reciprocal Service Agreements (DURSA)](glossary.html#dursa).  While such agreements are typically documented in hard-copy media, they may also be established computably through [trust contracts](glossary.html#trust-contract) with binding sender and receiver system capability statements about how policy specific security labels will be assigned, consumed, persisted, reclassification rules, and any information handling restrictions and obligations.  The manner in which computable trust agreements may be negotiated, established, discovered and shared in a federated ecosystem is described in the [HL7 Privacy and Security Architecture Framework](http://www.hl7.org/implement/standards/la.cfm?file=/documentcenter/private/standards/HL7_V3_PSAF_R1_2020JUL_supplement.zip) Volumes 1 & 2 Trust Framework for Federated Authorization Conceptual and Behavioral Models, which could be leveraged for trust agreements between senders and receivers of labeled HL7 content. This IG sets the groundwork for doing so in future iterations of this guide as discussed in the Roadmap section below.
+### The Need for a FHIR DS4P Implementation Guide
+The [FHIR Security Labels Module](http://hl7.org/fhir/security-labels.html) defines the core mechanism for assigning security labels to a FHIR resource and specifies some [Core Security Labels](http://hl7.org/fhir/security-labels.html#core), such as _purpose of use_ and _confidentiality_ tag sets. This IG expands on the baseline provided by [FHIR Security Labels Module](http://hl7.org/fhir/security-labels.html), particularly in the following areas:
 
-#### Related Work 
+- Differentiating which set of `Resource.meta.security` elements belongs to which policy in the (not uncommon) case where more than one policy applies to a resource, 
+
+- Designating the entity responsible for classifying the content with the assigned security label, 
+
+- Referencing related artifacts that are the basis for the policy being conveyed by the label, such as a patient privacy consent directive, the [trust contract](glossary.html#trust-contract) (which specifies agreed-upon system capabilities between the sender and the receiver), or the source of one or more provenance labels (e.g., FHIR Provenance resources),
+
+- Requiring that a _privacy mark_ be displayed to end users, and
+
+- Granular data segmentation at the sub-resource level, known as [inline labeling](inline.html).
+
+### Trust and Enforcement
+The [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) points out that security labels are intended to convey a policy to which participants in an exchange ecosystem are bound by a [trust contract](glossary.html#trust-contract):
+
+_"Security labels are only a device to connect specific resources, bundles, or operations to a wider security framework; a full set of policy and consent statements and their consequent obligations is needed to give the labels meaning. Because of this, security labels are most effective in fully trusted environments - that is, where all trading partners have agreed to abide by them in a Mutual Trust Framework. Note also that security labels support policy, and specific tagging of individual resources is not always required to implement policy correctly."_
+
+The [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) also notes that the recipient must implement and abide by the policies conveyed or implied by security labels: 
+
+_"The intent of a security label is that the recipient of resources or bundles with security tags is obligated to enforce the handling caveats of the tags and carry the security labels forward as appropriate."_
+
+These policies represented by security labels may be stipulated by laws and/or agreed to in contracts (e.g., [Data Use Reciprocal Service Agreements (DURSA)](glossary.html#dursa)). While such agreements are typically documented in the form of legal documents, they may also be established computably through [trust contracts](glossary.html#trust-contract) with system capability statements that are binding for the sender and receiver and describe: 
+
+- how policy-specific security labels will be assigned, consumed, and persisted,
+- reclassification rules, and
+- any information-handling restrictions and obligations. 
+
+The manner in which computable trust agreements may be negotiated, established, discovered, and shared in a federated ecosystem is described in the [HL7 Privacy and Security Architecture Framework, Volumes 1 & 2, Trust Framework for Federated Authorization Conceptual and Behavioral Models](http://www.hl7.org/implement/standards/la.cfm?file=/documentcenter/private/standards/HL7_V3_PSAF_R1_2020JUL_supplement.zip), which could be leveraged for trust agreements between senders and receivers of labeled HL7 content such as FHIR resources. This IG sets the groundwork for doing so in future iterations of this guide –as discussed in the Roadmap section below.
+
+### Related Work 
 HL7 has already developed HL7 Version 2 (V2) and Clinical Document Architecture (CDA) platform specific syntactical standards for segmenting information using security labels in accordance with the normative, platform independent [HL7 Healthcare Privacy and Security Classification System (HCS), Release 1 (HCS)](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=345) conceptual model.
 
 The HL7 V2 security label guidance is incorporated in HL7 Version 2.9, Chapter 3, Patient Administration [Access Control Restriction Value Segment (ARV)](http://www.hl7.eu/refactored/segARV.html), and the Chapter 2 Control description of the [Batch Header Segment (BHS)](http://www.hl7.eu/refactored/segBHS.html), the [File Header Segment (FHS)](http://www.hl7.eu/refactored/segFHS.html), and the [Message Header Segment (MSH)](http://www.hl7.eu/refactored/segMSH.html). 
@@ -32,42 +61,14 @@ In the US:
 
 - Using security labels is an essential part of the [Share with Protections paradigm](glossary.html#share-with-protections) by enabling information to be shared after assigning the security labels specifying how the information can be used and the restrictions to which it may be subject.
 
-### The Need for a FHIR DS4P Implementation Guide
-The [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) specifies several [Core Security Labels](http://hl7.org/fhir/security-labels.html#core), such as purpose of use and confidentiality tags, which all conformant FHIR Applications SHOULD use where appropriate. There are explanations about high-water mark requirements, “break the glass”, and references to the HCS and its security label terminology.
-
-Importantly, the [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) points out that security labels are intended to convey a policy to which participants in an exchange ecosystem are bound by a [trust contract](glossary.html#trust-contract):
-
-_Security labels are only a device to connect specific resources, bundles, or operations to a wider security framework; a full set of policy and consent statements and their consequent obligations is needed to give the labels meaning. Because of this, security labels are most effective in fully trusted environments - that is, where all trading partners have agreed to abide by them in a Mutual Trust Framework. Note also that security labels support policy, and specific tagging of individual resources is not always required to implement policy correctly._
-
-However, the FHIR Security Label module provides only some minimal details about how to construct a label to convey a specific policy per the HCS or guidance on which security label values should be included to convey any particular privacy, security, or trust policy, particularly because it does not provide an approach for: 
-- Differentiating which set of `Resource.meta.security` elements belongs to which policy in the (not uncommon) case where more than one policy applies to a resource, 
-
-- Designating the entity responsible for classifying the content with the assigned security label 
-
-- Referencing related artifacts that are the basis for the policy being conveyed by the label, such as a patient privacy consent directive, the [trust contract](glossary.html#trust-contract), which specifies agreed to  sender and receiver system capabilities, or the source of one or more provenance label tags, e.g., FHIR Provenance Resource(s)
-
-- Requiring that a Privacy Mark tag be displayed to end users
-
-- Granular data segmentation at the sub-resource level known as [inline labeling](inline.html).
-
-An implementer relying on the general documentation of [`Resource.meta.security`](http://build.fhir.org/resource-definitions.html#Resource.meta) would not have the tools for labeling a resource which is, for example, governed under both US 42 CFR Part 2 for _substance use disorder_ confidentiality and under CFR 32 Part 2002 for _Controlled Unclassified Information (CUI)_, because there are no built-in security label “set” delimiters. To address this need, the FHIR DS4P IG specifies the [`sec-label-basis` extension](StructureDefinition-extension-sec-label-basis.html) which enables an implementer to group relevant  security label tags in `Resource.meta.security` into an HCS-conformant security label to represent each applicable policy as a separate _security label_.
-
-Likewise, the [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) does not currently support an approach for the other capabilities listed above.  However, the additional capabilities for using labels to segment FHIR content to represent policies is not necessarily a short-coming. There may be use cases for labeling that are not policy driven, e.g., for general content management purposes. Another use case that might form the basis for a different FHIR Security IG could be labeling for access control and traceability of content creation and modifications such as a multiparty research or commercial development project.
-
-While stated with respect to FHIR content, this [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) caveat holds for other labeled content as well: “The intent of a security label is that the recipient of resources or bundles with security tags is obligated to enforce the handling caveats of the tags and carry the security labels forward as appropriate.” And, regardless of the content syntax, “Security Labels enable more data to flow as they enable policy fragments to accompany the resource data.”
-
 ### Intended Applications
+This IG is policy agnostic. It provides a foundation for a variety of security labeling capabilities that systems may find useful for communicating policies governing information conveyed by FHIR Resources.
+ 
+Generally, this guide is intended to be implemented as a tool to enable development of use-case-specific security labels. More specific implementation guides to address the requirements of specific use cases can be derived from this IG. It is necessary for solutions to be designed with a policy use case in mind to ensure that there's affirmation of technical support between systems, and a shared understanding of business obligations and policies represented by security labeled resources.
 
-This guide provides a foundation for a variety of security labeling capabilities that systems may find useful to communicate the policy governing  information conveyed by concrete Resources. This IG is policy-agnostic.
- 
-Generally, this guide is not intended or expected to be implemented except as a tool to enable development of use case specific security labels.
- 
-The main utility of this IG is to enable the development of  privacy, security, provenance, or trust policy specific security label implementation guides to address use case requirements.
- 
-It is necessary for solutions to be designed with a policy use case in mind to ensure that there's affirmation of technical support between systems, and a shared understanding of business obligations required by the policy represented by security labeled resources.
+### Roadmap 
+FHIR DS4P IG is an evolving specification that will encompass more capabilities in future ballots. Anticipated enhancements on the roadmap for the upcoming ballot cycles include:
 
-### FHIR DS4P IG Road Map 
-FHIR DS4P IG is an evolving specification that will encompass increasing capabilities in future ballots. Anticipated enhancements on the roadmap for the 2022 ballot cycles include clean up and additions to the label tag value sets as well as exploration of more new capabilities such as:
 - How security labels are used in Attribute Based Access Control (ABAC) 
 - Use cases for security labels representing [trust contracts](glossary.html#trust-contract) and inclusion of trust tags in security labels generally to convey expectations of senders and receivers such as persisting labels and whether labels can be reclassified or removed
 - Using Structured Definitions and Capability Statements as Security Policy Information Files (SPIF) to establish rules for constructing and interpreting shared security labels, which can be negotiated, executed, and registered in a discoverable manner
