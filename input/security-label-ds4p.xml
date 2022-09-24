@@ -2,7 +2,12 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
   <id value="hl7.fhir.uv.security-label-ds4p"/>
-
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="draft" />
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2" />
+  </extension>
   <url value="http://hl7.org/fhir/uv/security-label-ds4p/ImplementationGuide/hl7.fhir.uv.security-label-ds4p"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="1.0.0-current"></version>
@@ -259,6 +264,6 @@
     <parameter>
       <code value="jira-code"/>
       <value value="security-label-ds-for-p"/>
-    </parameter>
+    </parameter> 
   </definition>
 </ImplementationGuide>
