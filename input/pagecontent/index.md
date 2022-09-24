@@ -108,4 +108,4 @@ The following sections are informative:
 - [Security Labeling FAQ](background.html#security-labeling-faq)
 - [Use Cases](usecases.html)
 - [Implementation Notes](implementation.html)
-- [Road Map](index.html#fhir-ds4p-ig-road-map)
+- [Roadmap](#roadmap)
