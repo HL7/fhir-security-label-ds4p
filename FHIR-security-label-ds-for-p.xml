@@ -38,6 +38,7 @@
 <page key="spec" name="Detailed Specification"/>
 <page key="glossary" name="Glossary"/>
 <page key="changes" name="IG Change History"/>
+<page key="implementation" name="Implementation Notes"/>
 <page key="inline" name="Inline Security Labels"/>
 <page key="index" name="Security Label DS4P Home Page"/>
 <page key="concept" name="Security Labeling Conceptual Structure"/>
