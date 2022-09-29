@@ -70,12 +70,12 @@ Generally, this guide is intended to be implemented as a tool to enable developm
 FHIR DS4P IG is an evolving specification that will encompass more capabilities in future ballots. Anticipated enhancements on the roadmap for the upcoming ballot cycles include:
 
 - More examples and use cases from jurisdictions other than the US.
+- More comprehensive discussion and guidelines on [High Water Mark (HWM)](glossary.html#hwm) labels, including use cases and possible algorithms for calculating a HWM and approaches for communicating how a HWM is intended to be understood and handled by receivers.
 - How security labels are used in Attribute-Based Access Control (ABAC) 
 - Use cases for security labels representing [trust contracts](glossary.html#trust-contract) and inclusion of trust tags in security labels generally to convey expectations of senders and receivers such as persisting labels and whether labels can be reclassified or removed
 - Using Structured Definitions and Capability Statements as Security Policy Information Files (SPIF) to establish rules for constructing and interpreting shared security labels, which can be negotiated, executed, and registered in a discoverable manner
 - Use of [Clinical Quality Language (CQL)](https://cql.hl7.org) to specify [security labeling rules](glossary.html#security-labeling-rule).
 - Use of Business Process Modeling Notation (BPMN) to describe shared workflows in which labeled content is collected, accessed, used or disclosed.  Purpose of use labels are not sufficient to convey the activities that a policy may permit or deny a recipient to conduct. A security label conveying a FHIR Consent for example, where a patient only permits access and use, but not collection or disclosure of protected health information for treatment purposes in an emergency and inpatient setting needs more than a policy tag with a reference to the specific FHIR consent and a purpose of use tag for treatment.
-- The range of use cases and possible algorithms for calculating a [High Water Mark (HWM)](glossary.html#hwm) and approaches for communicating how a HWM is intended to be understood and handled by receivers. See the HL7 FHIR Zulip thread, _[Meaning of Security Labels on Bundles](https://chat.fhir.org/#narrow/stream/179247-Security-and.20Privacy/topic/Meaning.20of.20Security.20Labels.20on.20Bundles)_ for some perspectives on the role of HWMs in FHIR.
 
 ### Walk-Through
 The main sections of this IG are:
