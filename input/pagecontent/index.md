@@ -69,8 +69,8 @@ Generally, this guide is intended to be implemented as a tool to enable developm
 ### Roadmap 
 FHIR DS4P IG is an evolving specification that will encompass more capabilities in future ballots. Anticipated enhancements on the roadmap for the upcoming ballot cycles include:
 
-- How security labels are used in Attribute Based Access Control (ABAC) 
 - More examples and use cases from jurisdictions other than the US.
+- How security labels are used in Attribute-Based Access Control (ABAC) 
 - Use cases for security labels representing [trust contracts](glossary.html#trust-contract) and inclusion of trust tags in security labels generally to convey expectations of senders and receivers such as persisting labels and whether labels can be reclassified or removed
 - Using Structured Definitions and Capability Statements as Security Policy Information Files (SPIF) to establish rules for constructing and interpreting shared security labels, which can be negotiated, executed, and registered in a discoverable manner
 - Use of [Clinical Quality Language (CQL)](https://cql.hl7.org) to specify [security labeling rules](glossary.html#security-labeling-rule).
