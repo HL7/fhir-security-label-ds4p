@@ -76,6 +76,14 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CodeSystem/inline-labels"/>
+      </reference>
+      <name value="Code system definition for the HAS-INLINE-SEC-LABEL code"/>
+      <description value="Temporary codes for marking inline security labels (these codes will eventually migrat into the terminology service)."/>
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/extension-has-inline-sec-label"/>
       </reference>
       <name value="Structure definition for the has-inline-sec-label extension"/>
