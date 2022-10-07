@@ -76,7 +76,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/inline-labels"/>
+        <reference value="CodeSystem/codesystem-inline-labels"/>
       </reference>
       <name value="Code system definition for the HAS-INLINE-SEC-LABEL code"/>
       <description value="Temporary codes for marking inline security labels (these codes will eventually migrat into the terminology service)."/>
