@@ -1,0 +1,37 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "codesystem-inline-labels",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/CodeSystem/inline-labels",
+  "name": "Inline Security Labels",
+  "status": "active",
+  "experimental": false,
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
+      "valueCode": "sec"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    },
+    {
+      "url": "http://hl7.org/fhir/build/StructureDefinition/summary",
+      "valueString": "Temporary codes for marking resources with inline security labels (these codes will eventually migrat into the terminology service)."
+    }
+  ],
+
+  "description": "Temporary codes for marking inline security labels (these codes will eventually migrat into the terminology service).",
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "HAS-INLINE-SEC-LABELS",
+      "display": "Has Inline Security Labels",
+      "definition": "The resource contains inline security labels."
+    }
+  ]
+}
