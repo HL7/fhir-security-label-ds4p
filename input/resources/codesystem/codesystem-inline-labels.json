@@ -2,6 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "codesystem-inline-labels",
   "url": "http://hl7.org/fhir/uv/security-label-ds4p/CodeSystem/codesystem-inline-labels",
+  "title": "Inline Security Labels",
   "name": "Inline Security Labels",
   "status": "active",
   "experimental": false,
