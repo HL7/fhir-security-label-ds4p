@@ -103,10 +103,10 @@ Type of security metadata observation made about the control of an IT resource (
 (*) Value-sets defined by this IG.
 (**) Privacy-revealing Obligation or Refrain tags (e.g., the Obligation Policy `MASK` (mask) or the Refrain Policy `NODSCLCD` (no disclosure without consent directive)) shall not be included in the [High Water Mark](glossary.html#hwm) labels of a `Bundle`, `DocumentReference`, or `Message Resources`.
 
-#### Not a Security Label
+<!-- #### Not a Security Label
 
 |Tag Set|Card. |  Description | Example Tags | 
 |-------|------|-------------|--------------|
-|[Contributor Type](ValueSet-valueset-sec-label-contributor-type.html) * |`0..1`|  The type of security label contributor.| author, editor, classifier, declassifier|
+|[Contributor Type](ValueSet-valueset-sec-label-contributor-type.html) * |`0..1`|  The type of security label contributor.| author, editor, classifier, declassifier| -->
 
 (*) Value-sets defined by this IG.
