@@ -82,14 +82,14 @@
       <description value="Temporary codes for marking inline security labels (these codes will eventually migrat into the terminology service)."/>
       <exampleBoolean value="false" />
     </resource>
-    <resource>
+    <!-- <resource>
       <reference>
         <reference value="StructureDefinition/extension-has-inline-sec-label"/>
       </reference>
       <name value="Structure definition for the has-inline-sec-label extension"/>
       <description value="Structure definition for the has-inline-sec-label extension."/>
       <exampleBoolean value="false" />
-    </resource>
+    </resource> -->
     <resource>
       <reference>
         <reference value="StructureDefinition/extension-inline-sec-label"/>
@@ -151,7 +151,7 @@
         <reference value="Patient/P002"/>
       </reference>
       <name value="Simple use of inline security labels on a patient resource"/>
-      <description value="A simple example showing how to use the has-inline-sec-label and inline-sec-label extensions to 1) indicate that the resource contains inline security labels and 2) mark the patient's SSN as restricted."/>
+      <description value="A simple example showing how to use the has-inline-sec-label code and inline-sec-label extensions to 1) indicate that the resource contains inline security labels and 2) mark the patient's SSN as restricted."/>
       <exampleBoolean value="true" />
     </resource>
     <resource>
@@ -159,7 +159,7 @@
         <reference value="Immunization/I001"/>
       </reference>
       <name value="Simple use of inline security labels on a reference"/>
-      <description value="A simple example showing how to use the has-inline-sec-label and inline-sec-label extensions to 1) indicate that the resource contains inline security labels and 2) mark the link between the immunization resource and the patient resource (the reference to the patient) with integrity and provenance labels indicating the confidence in the link and its origin."/>
+      <description value="A simple example showing how to use the has-inline-sec-label code and inline-sec-label extensions to 1) indicate that the resource contains inline security labels and 2) mark the link between the immunization resource and the patient resource (the reference to the patient) with integrity and provenance labels indicating the confidence in the link and its origin."/>
       <exampleBoolean value="true" />
     </resource>
     <resource>

@@ -3,7 +3,7 @@ There are some use cases, however, where a security label only applies to an ele
 
 Inline security labels are defined to enable recording a security label on a portion of a FHIR resource via an extension (`extension-inline-sec-label`). This extension can appear on any element of a resource where an extension is allowed, so, it provides a powerful mechanism to assign security labels at the sub-resources level and at various levels of granularity.
 
-Processing inline labels is more computationally costly for the resource consumer since, instead of simply looking at `Resource.meta.security`, it has to parse and scan the entire resource to look for inline security labels. To assist consumers in this process, another extension (`extension-has-inline-sec-label`) has been defined to indicate whether a resource contains inline security labels. This extension has a fixed place (in `Resource.meta`). Security labeling service must include this extension on any resource containing inline labels. The consumer of a resource can look for this extension before invoking a deep inspection of the resource for inline security labels.
+Processing inline labels is more computationally costly for the resource consumer since, instead of simply looking at `Resource.meta.security`, it has to parse and scan the entire resource to look for inline security labels. To assist consumers in this process, a code (`HAS-INLINE-SEC-LABELS`) has been defined to indicate whether a resource contains inline security labels. Security labeling service must include this code at the resource level (`meta.security`) on any resource containing inline labels. The consumer of a resource can look for this code before invoking a deep inspection of the resource for inline security labels.
 
 As shown in the example below, in case where multiple labels are applicable to the same portion of the resource, these labels are modeled with recurring instances of the extension (in the form of an extension array in JSON or repeated elements in XML).
 
@@ -16,19 +16,17 @@ Details of computing HWM labels is a matter of policy and often depends on the v
 When both inline and resource-wide labels are present, a consumer must apply the highest level of protection resulting from all the resource-wide as well as inline labels, when processing the labeled portion of the resource. For example, when a resource is labeled with [CUI marking](ValueSet-valueset-cui-mark.html) and a portion of the resource is marked with an inline confidentiality label, the labeled portion is subject to the protective measures implied by both of those labels (e.g., masking _and_ privacy marking when unmasked).
 Note that the inline label of a sub-resource may include any of the other extensions that may be used in a resource-wide label.
 
-The following excerpt shows an example of using of extensions for inline labeling. First, the `extension-has-inline-sec-label` indicates that the resource includes inline security labels. Then, in the `identifier` element, using the `extension-inline-sec-label` extension, one of the identifiers that records the US Social Security Number (SSN) is tagged with a _restricted_ (`R`) confidentiality label. A resource-wide label is also present to indicate the CUI marking (note that this example leaves out the HWM labels).
+The following excerpt shows an example of inline labeling. First, the code `HAS-INLINE-SEC-LABELS` is added to `meta.security` to indicate that the resource includes inline security labels. Then, in the `identifier` element, using the `extension-inline-sec-label` extension, one of the identifiers that records the US Social Security Number (SSN) is tagged with a _restricted_ (`R`) confidentiality label. A resource-wide label is also present to indicate the CUI marking (note that this example leaves out the HWM labels).
 
 ```json
 {
   "resourceType": "Patient",
   "meta": {
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/uv/security-label-ds4p/StructureDefinition/extension-has-inline-sec-label",
-        "valueBoolean": true
-      }
-    ],
     "security": [
+      {
+        "system": "http://hl7.org/fhir/uv/security-label-ds4p/CodeSystem/codesystem-inline-labels",
+        "code": "HAS-INLINE-SEC-LABELS"
+      },
       {
         "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
         "code": "CUIHLTH"
