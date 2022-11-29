@@ -16,7 +16,7 @@ Details of computing HWM labels is a matter of policy and often depends on the v
 When both inline and resource-wide labels are present, a consumer must apply the highest level of protection resulting from all the resource-wide as well as inline labels, when processing the labeled portion of the resource. For example, when a resource is labeled with [CUI marking](ValueSet-valueset-cui-mark.html) and a portion of the resource is marked with an inline confidentiality label, the labeled portion is subject to the protective measures implied by both of those labels (e.g., masking _and_ privacy marking when unmasked).
 Note that the inline label of a sub-resource may include any of the other extensions that may be used in a resource-wide label.
 
-The following excerpt shows an example of inline labeling. First, the code `HAS-INLINE-SEC-LABELS` is added to `meta.security` to indicate that the resource includes inline security labels. Then, in the `identifier` element, using the `extension-inline-sec-label` extension, one of the identifiers that records the US Social Security Number (SSN) is tagged with a _restricted_ (`R`) confidentiality label. A resource-wide label is also present to indicate the CUI marking (note that this example leaves out the HWM labels).
+The following excerpt shows an example of inline labeling. First, the code `HAS-INLINE-SEC-LABELS` is added to `meta.security` to indicate that the resource includes inline security labels. Then, in the `identifier` element, using the `extension-inline-sec-label` extension, one of the identifiers that records the US Social Security Number (SSN) is tagged with a _restricted_ (`R`) confidentiality label. A resource-wide label is also present to indicate a mark. Note that this example leaves out the HWM labels.
 
 ```json
 {
@@ -29,7 +29,7 @@ The following excerpt shows an example of inline labeling. First, the code `HAS-
       },
       {
         "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-        "code": "CUIHLTH"
+        "code": "RedisclosureProhibitionMark"
       }
     ]
   },

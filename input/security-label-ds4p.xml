@@ -127,7 +127,7 @@
         <reference value="Observation/example-extension-display"/>
       </reference>
       <name value="Simple use of the display extension"/>
-      <description value="A simple example showing how to use the display extension to require the consumer to display privacy markings Controlled Unclassified Information (CUI) markings."/>
+      <description value="A simple example showing how to use the display extension to require the consumer to display a US-realm Controlled Unclassified Information (CUI) mark."/>
       <exampleBoolean value="true" />
     </resource>
     <resource>
@@ -135,7 +135,7 @@
         <reference value="Patient/P001"/>
       </reference>
       <name value="Simple use of the display extension on a patient"/>
-      <description value="A simple example showing how to use the display extension to require the consumer to display Controlled Unclassified Information (CUI) markings."/>
+      <description value="A simple example showing how to use the display extension to require the consumer to display a US-realm Controlled Unclassified Information (CUI) mark."/>
       <exampleBoolean value="true" />
     </resource>
     <resource>

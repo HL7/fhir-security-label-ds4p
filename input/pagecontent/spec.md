@@ -14,16 +14,16 @@ The concept of inline security labels and the corresponding extensions are defin
 #### `display` Extension
 The [`display` extension](StructureDefinition-extension-display.html) is based on the [`Annotation` Data Type](https://www.hl7.org/fhir/datatypes.html#Annotation) to record information about who made the statement and when. (Note that the `author` and `time` attributes in this data structure refer to the author and time for the display marking and should not be confused with the author of the Resource itself.)
 
-This extension SHOULD be used in the context of `Resource.meta` when codes from the [`PrivacyMark`](ValueSet-valueset-cui-mark.html) or [`SecurityLabelMark`](ValueSet-valueset-security-label-mark.html) value sets (e.g., `CUI` or `COPYMark`) are used on the Resource to indicate that certain information is to be rendered to end users. The `PrivacyMark` or `SecurityLabelMark` code definitions include the information to be displayed. The display extension supports inclusion of the Annotation’s author and contact, and markdown for how the information is to be displayed.
+This extension SHOULD be used in the context of `Resource.meta` when codes from the [`SecurityLabelMark`](ValueSet-valueset-security-label-mark.html) value set (e.g., `COPYMark` and `ConfidentialMark`) are used on the resource to indicate that a prompt is to be rendered to end users. The `SecurityLabelMark` code definitions include the information to be displayed. 
 
 Policies SHALL describe the details and conditions for where and in what context these markings must or must not be displayed; for example, whether and how the markings should be rendered in summary forms or condensed displays.
 
-The ability to convey renderable `PrivacyMark` or `SecurityLabelMark` security labels, including the author and the markdown role may be required by classification policies within a domain.
+The ability to convey renderable `SecurityLabelMark` security labels, including the author and the markdown role may be required by classification policies within a domain.
 
 #### `sec-label-basis` Extension 
 The [`sec-label-basis` extension](StructureDefinition-extension-sec-label-basis.html) MAY be used on a security label (i.e., in the context of `Resource.meta.security`) if there is only one policy being conveyed by the all of the security label elements in meta. When more than one policy is conveyed by the security label elements in meta, this extension SHALL be used with each security label element used to convey a specific policy.
  
-For example, in the US, if a federal agency labels a Resource as _42 CFR Part 2_ information, then the Resource would have both _42 CFR Part 2_ and _Controlled Unclassified Information (CUI)_ security labels in the meta. Security labels on the resource would leverage the `sec-label-basis` extension to indicate whether the basis for the label is _42 CFR Part 2_ or _32 CFR Part 2002_ (the law behind CUI).
+For example, in the US, if a federal agency labels a Resource as _42 CFR Part 2_ information, then the Resource would have both _42 CFR Part 2_ and [_Controlled Unclassified Information (CUI)_](glossary.html#cui) security labels in the meta. Security labels on the resource would leverage the `sec-label-basis` extension to indicate whether the basis for the label is _42 CFR Part 2_ or _32 CFR Part 2002_ (the law behind CUI).
  
 This extension specifies the policy using a code from the [privacy policy value set](https://terminology.hl7.org/ValueSet-v3-ActPolicyType.html). Note that the strength of this binding is currently set to `example`. Use-case-specific profiles of this IG are encouraged to narrow down the values with a more strict binding to ensure a consistent understanding of codes across different providers and consumers.
 Further information about the policy can be conveyed via the `sec-label-related-artifact` extension that allows more metadata including references and URLs.
