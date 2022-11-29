@@ -46,6 +46,16 @@
 		</tbody>
 	</table>
 
-<h3> Intellectual Property </h3>
+<h2> Dependency Table </h2>
+{% include dependency-table.xhtml %}
+
+<h2> Globals Table </h2>
+{% include globals-table.xhtml %}
+
+<h2> Cross Version Analysis </h2>
+{% include cross-version-analysis.xhtml %}
+{% include cross-version-analysis-inline.xhtml %}
+
+<h2> Intellectual Property </h2>
 {% include ip-statements.xhtml %}
 </div>
