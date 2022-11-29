@@ -45,4 +45,6 @@
 			</tr>
 		</tbody>
 	</table>
+
+{% include ip-statements.xhtml %}
 </div>
