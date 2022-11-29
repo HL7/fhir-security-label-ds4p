@@ -54,8 +54,10 @@
 
 <h2> Cross Version Analysis </h2>
 {% include cross-version-analysis.xhtml %}
+
 {% include cross-version-analysis-inline.xhtml %}
 
 <h2> Intellectual Property </h2>
 {% include ip-statements.xhtml %}
+
 </div>
