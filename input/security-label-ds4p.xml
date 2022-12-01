@@ -238,8 +238,8 @@
       </page>
       <page>
         <nameUrl value="downloads.html"/>
-        <title value="Useful Downloads"/>
-        <generation value="html"/>
+        <title value="Downloads and Notes"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="changes.html"/>
