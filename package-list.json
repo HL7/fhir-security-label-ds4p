@@ -2,7 +2,7 @@
   "package-id": "hl7.fhir.uv.security-label-ds4p",
   "title": "FHIR Data Segmentation for Privacy",
   "canonical": "http://hl7.org/fhir/uv/security-label-ds4p",
-  "introduction": "Application of FHIR meta.security to segment FHIR Bundles and Resources per applicable policy.",
+  "introduction": "Secuirty labeling for segmentation of FHIR resources.",
   "category": "Security",
   "fhirversion": "4.0.1",
   "list": [
