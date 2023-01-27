@@ -66,14 +66,14 @@
       <description value="Security label metadata that 'segments' an IT resource by conveying specific permissions used for access control."/>
       <exampleBoolean value="false" />
     </resource>
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="CodeSystem/codesystem-inline-labels"/>
       </reference>
       <name value="Code system definition for the HAS-INLINE-SEC-LABEL code"/>
       <description value="Temporary codes for marking inline security labels (these codes will eventually migrat into the terminology service)."/>
       <exampleBoolean value="false" />
-    </resource>
+    </resource> -->
     <!-- <resource>
       <reference>
         <reference value="StructureDefinition/extension-has-inline-sec-label"/>
