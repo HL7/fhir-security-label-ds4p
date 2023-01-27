@@ -1,0 +1,216 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.uv.security-label-ds4p",
+  "url": "http://hl7.org/fhir/uv/security-label-ds4p/ImplementationGuide/hl7.fhir.uv.security-label-ds4p",
+  "version": "current",
+  "name": "FHIRDataSegmentationforPrivacy",
+  "status": "draft",
+  "publisher": "HL7 Security Working Group",
+  "contact": [
+    {
+      "name": "HL7 Security Working Group",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/secure/index.cfm"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.fhir.uv.security-label-ds4p",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-display"
+        },
+        "description": "Specifies that a marking must be displayed when the resource is rendered in print or in electronic form.",
+        "exampleBoolean": false,
+        "name": "Must Display"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-inline-sec-label"
+        },
+        "description": "An element-specific security label appearing inline within the element.",
+        "exampleBoolean": false,
+        "name": "Inline Security Label"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-sec-label-basis"
+        },
+        "description": "Specifies the basis (e.g., policy, regulation, etc.) for assigning the security label.",
+        "exampleBoolean": false,
+        "name": "The Basis for Security Label"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-sec-label-classifier"
+        },
+        "description": "The entity responsible for assigning the security label.",
+        "exampleBoolean": false,
+        "name": "Classifier of Security Label"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-sec-label-related-artifact"
+        },
+        "description": "Related artifacts to the security label (e.g., consent or provenance).",
+        "exampleBoolean": false,
+        "name": "Related Artifacts to the Security Label"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/valueset-security-authorization"
+        },
+        "description": "Security label metadata that 'segments' an IT resource by conveying specific permissions used for access control.",
+        "exampleBoolean": false,
+        "name": "Security Authorization Policy ValueSet"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/valueset-security-label-mark"
+        },
+        "description": "Security label metadata that 'segments' an IT resource by conveying a displayed mark rendered as specified.",
+        "exampleBoolean": false,
+        "name": "Security Label Mark ValueSet"
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-extension-display"
+        },
+        "name": "example-extension-display",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/P001"
+        },
+        "name": "P001",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Immunization/I001"
+        },
+        "name": "I001",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/P002"
+        },
+        "name": "P002",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-extension-sec-label-basis"
+        },
+        "name": "example-extension-sec-label-basis",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-extension-sec-label-related-artifact-consent"
+        },
+        "name": "example-extension-sec-label-related-artifact-consent",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-extension-sec-label-related-artifact-provenance"
+        },
+        "name": "example-extension-sec-label-related-artifact-provenance",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Observation/example-extension-sec-label-classifier"
+        },
+        "name": "example-extension-sec-label-classifier",
+        "exampleBoolean": true
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "background.html",
+          "title": "Background",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "Changes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "concept.html",
+          "title": "Concept",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "glossary.html",
+          "title": "Glossary",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "implementation.html",
+          "title": "Implementation",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "inline.html",
+          "title": "Inline",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "security.html",
+          "title": "Security",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "spec.html",
+          "title": "Spec",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "usecases.html",
+          "title": "Usecases",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2023+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "path-history",
+        "value": "http://hl7.org/fhir/uv/security-label-ds4p/history.html"
+      }
+    ]
+  }
+}
