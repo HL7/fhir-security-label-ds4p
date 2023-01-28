@@ -153,17 +153,17 @@
         },
         {
           "nameUrl": "changes.html",
-          "title": "Changes",
+          "title": "IG Change History",
           "generation": "markdown"
         },
         {
           "nameUrl": "concept.html",
-          "title": "Concept",
+          "title": "Security Labeling Conceptual Structure",
           "generation": "markdown"
         },
         {
           "nameUrl": "downloads.html",
-          "title": "Downloads",
+          "title": "Useful Downloads",
           "generation": "markdown"
         },
         {
@@ -173,27 +173,27 @@
         },
         {
           "nameUrl": "implementation.html",
-          "title": "Implementation",
+          "title": "Implementation Notes",
           "generation": "markdown"
         },
         {
           "nameUrl": "inline.html",
-          "title": "Inline",
+          "title": "Inline Security Labels",
           "generation": "markdown"
         },
         {
           "nameUrl": "security.html",
-          "title": "Security",
+          "title": "Security and Privacy Considerations",
           "generation": "markdown"
         },
         {
           "nameUrl": "spec.html",
-          "title": "Spec",
+          "title": "Detailed Specification",
           "generation": "markdown"
         },
         {
           "nameUrl": "usecases.html",
-          "title": "Usecases",
+          "title": "Use Cases",
           "generation": "markdown"
         }
       ]
