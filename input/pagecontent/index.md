@@ -100,7 +100,7 @@ The main sections of this IG are:
     - [Examples](artifacts.html#example-example-instances)
 - [Glossary](glossary.html)
 - [Downloads](downloads.html)
-- [Change History](changes_history.html)
+- [Change History](change_history.html)
 
 ### Informative Sections
 The following sections are informative:
