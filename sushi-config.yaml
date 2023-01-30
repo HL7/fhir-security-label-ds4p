@@ -18,7 +18,30 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 publisher:
   name: HL7 Security Working Group
   url: http://www.hl7.org/Special/committees/secure/index.cfm
-  # email: test@example.org
+  email: security-cc@lists.hl7.org
+
+dependencies:
+  hl7.terminology:
+    version: current
+    uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - fsh-generated/resources
+    - resources
+#  path-pages:
+#    - input/pagecontent
+#    - fsh-generated/includes
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'false'
+  logging: progress
+  shownav: 'true'
+  active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+  propagate-status: 'true'
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
