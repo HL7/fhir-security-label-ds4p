@@ -24,7 +24,7 @@
     <a data-toggle="dropdown" href="#" class="dropdown-toggle">Specification<b class="caret"></b></a>
     <ul class="dropdown-menu">
       <li>
-        <a href="spec.html">Detailed Specification</a>
+        <a href="detailed_specifications.html">Detailed Specification</a>
       </li>
       <li>
         <a href="inline_security_labels.html">Inline Security Labels</a>

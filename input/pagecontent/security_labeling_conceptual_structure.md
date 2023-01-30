@@ -70,7 +70,7 @@ Generally, a Security Label is assigned in accordance with a policy, which deems
 To be conveyed as a security label, a policy must categorize the aspects of information that require a specific level of confidentiality protection.  
 These aspects are valued as "Tags" in the Security Category portion of a security label using the codes in the value sets associated with the Security Category [Tag Set Names](glossary.html#tag-set-name).
 
-The current HCS-conformant Security Category [Tag Set Names](glossary.html#tag-set-name) are: Sensitivity, Policy, Compartment, Integrity, and Provenance. These value sets are listed in the [Detailed Specification Value Sets Summary](spec.html#value-sets-summary).
+The current HCS-conformant Security Category [Tag Set Names](glossary.html#tag-set-name) are: Sensitivity, Policy, Compartment, Integrity, and Provenance. These value sets are listed in the [Detailed Specification Value Sets Summary](detailed_specifications.html#value-sets-summary).
 
 ##### Assigning Sensitivity Tags `0..*`
 Information Sensitivity is the characteristic of an IT resource which implies its value or importance and may include its vulnerability [[ISO 7498-2]](https://www.iso.org/standard/14256.html). Along with any relevant policy, information sensitivity is a strong determinant of the required level of confidentiality protection.

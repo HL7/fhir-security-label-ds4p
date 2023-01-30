@@ -45,7 +45,7 @@ The HL7 V2 security label guidance is incorporated in HL7 Version 2.9, Chapter 3
 
 The [HL7 Implementation Guide: Data Segmentation for Privacy (DS4P) [for CDA], Release 1](http://www.hl7.org/implement/standards/product_brief.cfm?product_id=354) specifies the use of security labeling at the CDA Header, Section and Entry levels.
 
-In V2 and CDA, the HCS security label semantics are conveyed by assigning codes from normative HL7 security label value sets to the respective security label elements. This IG uses the same value sets as detailed in the [Value Set Summary](spec.html#value-sets-summary).
+In V2 and CDA, the HCS security label semantics are conveyed by assigning codes from normative HL7 security label value sets to the respective security label elements. This IG uses the same value sets as detailed in the [Value Set Summary](detailed_specifications.html#value-sets-summary).
 
 Note that the DS4P CDA IG is constrained to the "Basic Confidentiality" value set, a subset of the full Confidentiality code system, although this constraint does not apply to this IG. Therefore, the DS4P CDA IG will not be able to support security labels with Confidentiality codes `U` (unrestricted), `L` (low), and `M` (moderate).
 
@@ -88,9 +88,9 @@ The main sections of this IG are:
     - [Security Labeling Conceptual Structure](security_labeling_conceptual_structure.html)
     - [Implementation Notes](implementation_notes.html)
 - Specification
-    - [Detailed Specification](spec.html)
-    - [Extensions Summary](spec.html#extensions-summary)
-    - [Value Sets Summary](spec.html#value-sets-summary)
+    - [Detailed Specification](detailed_specifications.html)
+    - [Extensions Summary](detailed_specifications.html#extensions-summary)
+    - [Value Sets Summary](detailed_specifications.html#value-sets-summary)
     - [Inline Security Labels](inline_security_labels.html) 
     - [Inline Security Labels Sample Use Cases](inline_security_labels.html#sample-use-cases)
     - [Security and Privacy Considerations](security_and_privacy_considerations.html)
