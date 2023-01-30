@@ -128,13 +128,18 @@ publisher:
 # The following are simple examples to demonstrate what this might
 # look like:
 #
-# resources:
-#   Patient/my-example-patient:
-#     name: My Example Patient
-#     description: An example Patient
-#     exampleBoolean: true
-#   Patient/bad-example: omit
-#
+resources:
+  Patient/P001:
+    name: Simple use of the display extension on a patient
+    description: A simple example showing how to use the display extension to require the consumer to display a US-realm Controlled Unclassified Information (CUI) mark.
+    exampleBoolean: true
+
+  Patient/P002:
+    name: Simple use of inline security labels on a patient resource
+    description: A simple example showing how to use the has-inline-sec-label code and inline-sec-label extensions to 1) indicate that the resource contains inline security labels and 2) mark the patient's SSN as restricted.
+    exampleBoolean: true
+
+
 #
 # Groups can control certain aspects of the IG generation.  The IG
 # documentation recommends that authors use the default groups that
