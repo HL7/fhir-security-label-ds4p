@@ -16,7 +16,7 @@
         <a href="implementation_notes.html">Implementation Notes</a>
       </li>
       <li>
-        <a href="concept.html">Security Labeling Conceptual Structure</a>
+        <a href="security_labeling_conceptual_structure.html">Security Labeling Conceptual Structure</a>
       </li>
     </ul>
   </li>
@@ -30,7 +30,7 @@
         <a href="inline_security_labels.html">Inline Security Labels</a>
       </li>
       <li>
-        <a href="security.html">Security and Privacy Considerations</a>
+        <a href="security_and_privacy_considerations.html">Security and Privacy Considerations</a>
       </li>
     </ul>
   </li>
