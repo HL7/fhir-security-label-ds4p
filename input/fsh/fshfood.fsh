@@ -1,4 +1,3 @@
-
 // history - http://playgroundjungle.com/2018/02/origins-of-john-jacob-jingleheimer-schmidt.html
 Instance:   ex-patient
 InstanceOf: Patient
@@ -29,4 +28,3 @@ Usage: #example
 * birthDate = "1923-07-25"
 * address.state = "WI"
 * address.country = "USA"
-
