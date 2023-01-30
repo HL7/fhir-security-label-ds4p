@@ -84,7 +84,7 @@ The main sections of this IG are:
     - [Introduction](index.html)
     - [Background](background.html)
     - [Security Labeling FAQ](background.html#security-labeling-faq)
-    - [Use Cases](usecases.html)
+    - [Use Cases](use_cases.html)
     - [Security Labeling Conceptual Structure](concept.html)
     - [Implementation Notes](implementation.html)
 - Specification
@@ -106,6 +106,6 @@ The main sections of this IG are:
 The following sections are informative:
 - [Glossary](glossary.html)
 - [Security Labeling FAQ](background.html#security-labeling-faq)
-- [Use Cases](usecases.html)
+- [Use Cases](use_cases.html)
 - [Implementation Notes](implementation.html)
 - [Roadmap](#roadmap)
