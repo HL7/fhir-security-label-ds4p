@@ -129,6 +129,10 @@ publisher:
 # look like:
 #
 resources:
+  Observation/example-extension-display:
+    name: Simple use of the display extension
+    description: A simple example showing how to use the display extension to require the consumer to display a US-realm Controlled Unclassified Information (CUI) mark.
+
   Patient/P001:
     name: Simple use of the display extension on a patient
     description: A simple example showing how to use the display extension to require the consumer to display a US-realm Controlled Unclassified Information (CUI) mark.
@@ -139,7 +143,26 @@ resources:
     description: A simple example showing how to use the has-inline-sec-label code and inline-sec-label extensions to 1) indicate that the resource contains inline security labels and 2) mark the patient's SSN as restricted.
     exampleBoolean: true
 
+  Immunization/I001:
+    name: Simple use of inline security labels on a reference
+    description: A simple example showing how to use the has-inline-sec-label code and inline-sec-label extensions to 1) indicate that the resource contains inline security labels and 2) mark the link between the immunization resource and the patient resource (the reference to the patient) with integrity and provenance labels indicating the confidence in the link and its origin.
+    exampleBoolean: true
 
+  Observation/example-extension-sec-label-basis:
+    name: Simple use of the sec-label-basis extension on an observation
+    description: A simple example showing how to use the sec-label-basis extension to specify the basis for assigning the security label.
+
+  Observation/example-extension-sec-label-related-artifact-consent:
+    name: Simple use of the sec-label-related-artifact extension with a consent
+    description: A simple example showing how to use the sec-label-related-artifact extension to specify related artifacts to a security label, in this case, a patient consent resource.
+
+  Observation/example-extension-sec-label-related-artifact-provenance:
+    name: Simple use of the sec-label-related-artifact extension with a provenance
+    description: A simple example showing how to use the sec-label-related-artifact extension to specify related artifacts to a security label, in this case, a provenance resource.
+
+  Observation/example-extension-sec-label-classifier:
+    name: Simple use of the sec-label-classifier extension
+    description: A simple example showing how to use the sec-label-classifier extension to specify the entity that assigned the security label.
 #
 # Groups can control certain aspects of the IG generation.  The IG
 # documentation recommends that authors use the default groups that
