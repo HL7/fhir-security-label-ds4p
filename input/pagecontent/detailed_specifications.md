@@ -10,7 +10,7 @@ Furthermore, the following extension is defined to enable fine-grained labeling 
 
 This extension is used in tandem with the `PROCESSINLINELABEL` code (from the `ObligationPolicy` value set in [v3-ActCode](http://terminology.hl7.org/CodeSystem/v3-ActCode)) that enables specifying whether a resource contains inline security labels and assists consumers in deciding whether they should invoke a deep inspection of the resource content to look for inline security labels.
 
-The concept of inline security labels and the corresponding extension are defined and discussed further in a [separate page](inline.html).
+The concept of inline security labels and the corresponding extension are defined and discussed further in a [separate page](inline_security_labels.html).
 
 #### `display` Extension
 The [`display` extension](StructureDefinition-extension-display.html) is based on the [`Annotation` Data Type](https://www.hl7.org/fhir/datatypes.html#Annotation) to record information about who made the statement and when. (Note that the `author` and `time` attributes in this data structure refer to the author and time for the display marking and should not be confused with the author of the Resource itself.)

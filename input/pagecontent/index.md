@@ -19,7 +19,7 @@ The [FHIR Security Labels Module](http://hl7.org/fhir/security-labels.html) defi
 
 - Requiring that a _privacy mark_ be displayed to end users, and
 
-- Granular data segmentation at the sub-resource level, known as [inline labeling](inline.html).
+- Granular data segmentation at the sub-resource level, known as [inline labeling](inline_security_labels.html).
 
 ### Trust and Enforcement
 The [FHIR Security Label Module](http://hl7.org/fhir/security-labels.html) points out that security labels are intended to convey a policy to which participants in an exchange ecosystem are bound by a [trust contract](glossary.html#trust-contract):
@@ -91,8 +91,8 @@ The main sections of this IG are:
     - [Detailed Specification](spec.html)
     - [Extensions Summary](spec.html#extensions-summary)
     - [Value Sets Summary](spec.html#value-sets-summary)
-    - [Inline Security Labels](inline.html) 
-    - [Inline Security Labels Sample Use Cases](inline.html#sample-use-cases)
+    - [Inline Security Labels](inline_security_labels.html) 
+    - [Inline Security Labels Sample Use Cases](inline_security_labels.html#sample-use-cases)
     - [Security and Privacy Considerations](security.html)
 - [Artifacts Index](artifacts.html)
     - [Structures: Extension Definitions](artifacts.html#structures-extension-definitions)
