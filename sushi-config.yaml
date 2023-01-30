@@ -5,11 +5,11 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.security-label-ds4p
 canonical: http://hl7.org/fhir/uv/security-label-ds4p
-name: FHIR Data Segmentation for Privacy
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+name: HL7_fhir_security_label_ds4p
+title: "FHIR Data Segmentation for Privacy"
+description: FHIR data segmentation for privacy security label implementation guide
 status: draft # draft | active | retired | unknown
-version: 0.4.0
+version: 0.4.0-current
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -18,7 +18,30 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 publisher:
   name: HL7 Security Working Group
   url: http://www.hl7.org/Special/committees/secure/index.cfm
-  # email: test@example.org
+  email: security-cc@lists.hl7.org
+
+dependencies:
+  hl7.terminology:
+    version: current
+    uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - fsh-generated/resources
+    - resources
+#  path-pages:
+#    - input/pagecontent
+#    - fsh-generated/includes
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'false'
+  logging: progress
+  shownav: 'true'
+  active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+  propagate-status: 'true'
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced

@@ -26,3 +26,8 @@ org.hl7.fhir.publisher.jar
 publisher*.jar
 
 
+/fsh-generated
+/_genonce.sh
+/_gencontinuous.bat
+/_gencontinuous.sh
+/_genonce.bat
