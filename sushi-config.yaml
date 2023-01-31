@@ -42,6 +42,7 @@ parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
   apply-publisher: "true"
   apply-version: "true"
   propagate-status: "true"
+  jira-code: "security-label-ds-for-p"
 
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
