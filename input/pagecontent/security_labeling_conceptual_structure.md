@@ -9,7 +9,7 @@ In FHIR, a security label is defined as a simple value of type [`Coding`](https:
   "system" : "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
   "code" : "R",
   "display" : "restricted"
- }
+}
 ```
 
 The HCS, on the other hand, defines Security Label as a more complex data structure based on the concept of [Named Tag Set](glossary.html#named-tag-set). 
@@ -21,7 +21,7 @@ Conceptually, this is equivalent to the following abstract object (note that thi
 { 
   "TagSetName" : "some name",
   "Tags" : ["tag 1", "tag 2", "tag 3"],
- }
+}
 ```
 
 <img src="named-tagset.png" alt="HCS Named Tag Set" width="50%"/>
