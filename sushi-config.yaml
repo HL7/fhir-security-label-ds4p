@@ -157,6 +157,7 @@ resources:
   Observation/example-extension-display:
     name: Simple use of the display extension
     description: A simple example showing how to use the display extension to require the consumer to display a US-realm Controlled Unclassified Information (CUI) mark.
+    exampleBoolean: true
 
   Patient/P001:
     name: Simple use of the display extension on a patient
