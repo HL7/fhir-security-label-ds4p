@@ -177,18 +177,23 @@ resources:
   Observation/example-extension-sec-label-basis:
     name: Simple use of the sec-label-basis extension on an observation
     description: A simple example showing how to use the sec-label-basis extension to specify the basis for assigning the security label.
+    exampleBoolean: true
 
   Observation/example-extension-sec-label-related-artifact-consent:
     name: Simple use of the sec-label-related-artifact extension with a consent
     description: A simple example showing how to use the sec-label-related-artifact extension to specify related artifacts to a security label, in this case, a patient consent resource.
+    exampleBoolean: true
 
   Observation/example-extension-sec-label-related-artifact-provenance:
     name: Simple use of the sec-label-related-artifact extension with a provenance
     description: A simple example showing how to use the sec-label-related-artifact extension to specify related artifacts to a security label, in this case, a provenance resource.
+    exampleBoolean: true
 
   Observation/example-extension-sec-label-classifier:
     name: Simple use of the sec-label-classifier extension
     description: A simple example showing how to use the sec-label-classifier extension to specify the entity that assigned the security label.
+    exampleBoolean: true
+
 #
 # Groups can control certain aspects of the IG generation.  The IG
 # documentation recommends that authors use the default groups that
