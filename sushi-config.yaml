@@ -99,9 +99,25 @@ parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
 # │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-# menu:
-#   Home: index.html
-#   Artifacts: artifacts.html
+menu:
+  Home: index.html
+  Guidance:
+    Introduction: index.html
+    Background: background.html
+    Use Cases: use_cases.html
+    Implementation Notes: implementation_notes.html
+    Security Labeling Conceptual Structure: security_labeling_conceptual_structure.html
+  Specification: 
+    Detailed Specification: detailed_specifications.html
+    Inline Security Labels: inline_security_labels.html
+    Security and Privacy Considerations: security_and_privacy_considerations.html
+  Artifact Index:
+    Extension Definitions: artifacts.html#structures-extension-definitions
+    Terminology: artifacts.html#terminology-value-sets
+    Example Instances: artifacts.html#example-example-instances
+  Glossary: glossary.html
+  Downloads and Notes: downloads.html
+  Change History: change_history.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
