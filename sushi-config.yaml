@@ -20,18 +20,18 @@ publisher:
   url: http://www.hl7.org/Special/committees/secure/index.cfm
   email: security-cc@lists.hl7.org
 
-dependencies:
-  hl7.terminology:
-    version: current
-    uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+# dependencies:
+#   hl7.terminology:
+#     version: current
+#     uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
 
 parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
     - fsh-generated/resources
     - resources
-  #  path-pages:
-  #    - input/pagecontent
-  #    - fsh-generated/includes
+  # path-pages:
+  #   - input/pagecontent
+  #   - fsh-generated/includes
   show-inherited-invariants: "false"
   usage-stats-opt-out: "false"
   logging: progress
