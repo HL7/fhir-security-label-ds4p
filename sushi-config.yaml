@@ -20,10 +20,10 @@ publisher:
   url: http://www.hl7.org/Special/committees/secure/index.cfm
   email: security-cc@lists.hl7.org
 
-# dependencies:
-#   hl7.terminology:
-#     version: current
-#     uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
+dependencies:
+  hl7.terminology:
+    version: 5.1.0
+    uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
 
 parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
   path-resource:
