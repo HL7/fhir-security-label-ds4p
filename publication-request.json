@@ -1,0 +1,14 @@
+{
+  "package-id": "hl7.fhir.uv.security-label-ds4p",
+  "version": "0.4.0",
+  "path": "http://hl7.org/fhir/uv/security-label-ds4p/STU1",
+  "mode": "working",
+  "status": "rial-use",
+  "sequence": "STU1",
+  "changes": "change_history.html",
+  "first": true,
+  "title": "FHIR Data Segmentation for Privacy (DS4P) Implementation Guide",
+  "ci-build": "https://build.fhir.org/ig/HL7/fhir-security-label-ds4p/",
+  "category": "Infrastructure",
+  "introduction": "Provides FHIR guidance for applying security labels with coded tags for use in access control systems governing the collection, access, use, and disclosure of the target FHIR Resource(s) as required by applicable organizational or jurisdictional policies."
+}
