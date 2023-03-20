@@ -20,10 +20,6 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
       "valueCode": "trial-use"
-    },
-    {
-      "url": "http://hl7.org/fhir/build/StructureDefinition/summary",
-      "valueString": "Security label metadata that may be used to 'segment' an IT resource by conveying a displayed mark, required to be rendered to indicate that the electronic or hardcopy information is protected at the level of the subset of CUI for which the authorizing law, regulation, or Government-wide policy does not set out specific handling or dissemination controls."
     }
   ],
   "experimental" : false,
@@ -37,7 +33,7 @@
       ]
     }
   ],
-  "description": "Security label metadata that 'segments' an IT resource by conveying specific permissions used for access control.",
+  "description": "Security label metadata that may be used to 'segment' an IT resource by conveying a displayed mark, required to be rendered to indicate that the electronic or hardcopy information is protected at the level of the subset of CUI for which the authorizing law, regulation, or Government-wide policy does not set out specific handling or dissemination controls.",
   "compose": {
     "include": [
       {
