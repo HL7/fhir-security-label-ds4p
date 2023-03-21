@@ -4,7 +4,7 @@
   "path": "http://hl7.org/fhir/uv/security-label-ds4p/STU1",
   "mode": "working",
   "status": "trial-use",
-  "sequence": "STU1",
+  "sequence": "STU 1",
   "changes": "change_history.html",
   "first": true,
   "title": "FHIR Data Segmentation for Privacy (DS4P) Implementation Guide",
