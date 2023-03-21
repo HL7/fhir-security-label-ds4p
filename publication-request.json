@@ -8,6 +8,5 @@
   "sequence": "STU 1",
   "changes": "change_history.html",
   "first": true,
-  "title": "FHIR Data Segmentation for Privacy (DS4P) Implementation Guide",
   "ci-build": "https://build.fhir.org/ig/HL7/fhir-security-label-ds4p/"
 }
