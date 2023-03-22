@@ -9,7 +9,7 @@ name: HL7_fhir_security_label_ds4p
 title: "FHIR Data Segmentation for Privacy"
 description: FHIR data segmentation for privacy security label implementation guide
 status: draft # draft | active | retired | unknown
-version: 0.4.0
+version: 1.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2023+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
