@@ -2,7 +2,7 @@
   "package-id": "hl7.fhir.uv.security-label-ds4p",
   "version": "1.0.0",
   "path": "http://hl7.org/fhir/uv/security-label-ds4p/STU1",
-  "mode": "working",
+  "mode": "milestone",
   "status": "trial-use",
   "desc": "Provides guidance for applying security labels for use in access control systems governing the collection, access, use, and disclosure of the target FHIR Resource(s) as required by applicable organizational or jurisdictional policies.",
   "sequence": "STU 1",
